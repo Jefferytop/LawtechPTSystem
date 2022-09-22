@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>H3Operator.DBModels</name>
+    </assembly>
+    <members>
+        <member name="T:H3Operator.DBModels.SqlDataType">
+            <summary>
+            Table 資料型別列舉
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.NVarChar">
+            <summary>
+            Unicode字串
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.VarChar">
+            <summary>
+            字串(非Unicode,1~8000)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.BigInt">
+            <summary>
+            數字(8位元組)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Int">
+            <summary>
+            數字(4位元組)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.SmallInt">
+            <summary>
+            數字(2位元組)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.TinyInt">
+            <summary>
+            數字(1位元組)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Bit">
+            <summary>
+            SqlBoolean
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Binary">
+            <summary>
+            SqlBinary
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.VarBinary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Float">
+            <summary>
+            SqlDouble
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Money">
+            <summary>
+            money(8 位元組)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Decimal">
+            <summary>
+            decimal(儲存體依長度不同)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Date">
+             <summary>
+            日期(3 個位元組,精確度:一天)
+             </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.SmallDateTime">
+            <summary>
+            日期(4 個位元組,精確度:一分鐘)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.DateTime">
+            <summary>
+            日期時間(8 個位元組,精確度:毫秒)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.UniqueIdentifier">
+            <summary>
+            資料類型中儲存做為全域唯一識別碼 (GUID) 
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.NText">
+            <summary>
+            可變長度的 Unicode 資料，最大長度為 2^30 - 1 (1,073,741,823) 個字元
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.NChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.SqlDataType.Char">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBModels.TranscationIsolationLevel">
+            <summary>
+            執行交易的隔離等級
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.Chaos">
+            <summary>
+            無法覆寫來自隔離程度更深之異動的暫止變更
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.ReadCommitted">
+            <summary>
+            當正在讀取資料來避免 Dirty 讀取時，會使用共用鎖定，但是在異動結束之前，資料可以變更，這將會產生非重複讀取或虛設資料
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.ReadUncommitted">
+            <summary>
+            可以進行 Dirty 讀取，這表示未發出共用鎖定，並且沒有生效的獨佔鎖定
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.RepeatableRead">
+            <summary>
+            鎖定是加諸於查詢中使用的所有資料，以防止其他使用者更新資料。 防止非重複讀取，但是仍然可能造成虛設資料列
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.Serializable">
+            <summary>
+            範圍鎖定會置於 DataSet 上，以免其他使用者在異動完成前將資料列更新或插入至資料集中
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.Snapshot">
+            <summary>
+            在其他應用程式正在修改相同資料時，儲存應用程式可以讀取的資料版本，藉此減少封鎖。 指出即使重新查詢，您也無法從某個異動看到在其他異動中所產生的變更
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBModels.TranscationIsolationLevel.Unspecified">
+            <summary>
+            使用與指定不同的隔離等級，但無法判斷該等級。
+            使用 OdbcTransaction 時，如果您沒有設定 IsolationLevel，或是將 IsolationLevel 設為 Unspecified，交易會根據正在使用的驅動程式所決定的隔離等級執行
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBModels.SysBaseModel">
+            <summary>
+            基底類別
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.SysBaseModel.CreateDateTime">
+            <summary>
+            sys 建立日(預設值 DateTime.Now)
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.SysBaseModel.LastModifyDateTime">
+            <summary>
+            sys 最後修改日
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBModels.TableColumnSettingAttribute">
+            <summary>
+            自定義屬性(property 對映 DB 中的設定 : 有此屬性之類別可直接用 obj 存取 DB)
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBModels.TableColumnSettingAttribute.#ctor(System.String,H3Operator.DBModels.SqlDataType,System.Boolean,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            初始化
+            </summary>
+            <param name="sColumnName">對應的DB欄位名稱</param>
+            <param name="oDbType">對應的DB欄位型態</param>
+            <param name="isPrimary">是否為主要欄位(PrimaryKey)，預設為false</param>
+            <param name="isCumulative">否為自動累加，預設為false</param>
+            <param name="isCanNull">是否允許null，預設為true</param>
+            <param name="iDataLength">資料長度</param>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.ColumnName">
+            <summary>
+            1.屬性於DB中的欄位名稱 (空值取屬性名) 
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.DbType">
+            <summary>
+            2.欄位的型態  (預設值為NVarChar)
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.IsPrimary">
+            <summary>
+            3.是否為主索引鍵 (預設值為False)
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.IsCumulative">
+            <summary>
+            4.是否自動累加 (預設值為False)
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.IsCanNull">
+            <summary>
+            5.是否允許Null (預設值為True)
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableColumnSettingAttribute.DataLength">
+            <summary>
+            6.資料長度 (當長度為0時，會採用型態的預設長度)
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBModels.TableMappingAttribute">
+            <summary>
+            自定義屬性(class 對映 DB 中的 Table name)
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBModels.TableMappingAttribute.#ctor(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="tableName">對映到DB中的資料表名稱(ConnectionString將使用預設的 DBSet.ConnectionListDefaultConnectionString)</param>
+        </member>
+        <member name="M:H3Operator.DBModels.TableMappingAttribute.#ctor(System.String,System.String)">
+            <summary>
+            初始化
+            </summary>
+            <param name="tableName">對映到DB中的資料表名稱</param>
+            <param name="strConnectionName">存在於DBSet.ConnectionList裏的連線名稱</param>
+        </member>
+        <member name="P:H3Operator.DBModels.TableMappingAttribute.TableName">
+            <summary>
+            對映的資料表名稱
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.TableMappingAttribute.ConnectionName">
+            <summary>
+            連線字串名稱(請從Config檔設定連線字串)
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBModels.ViewTableMappingAttribute">
+            <summary>
+            多資料表合併屬性
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBModels.ViewTableMappingAttribute.#ctor(System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="strSqlQuery">Sql查詢語句</param>
+        </member>
+        <member name="M:H3Operator.DBModels.ViewTableMappingAttribute.get_ConnectionName(System.Boolean)">
+            <summary>
+            true:回傳ConnectionName ; false:回傳SqlQuerySchema
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:H3Operator.DBModels.ViewTableMappingAttribute.SqlQuerySchema">
+            <summary>
+            多資料表的Sql 語法
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBModels.ViewTableMappingAttribute.ConnectionName">
+            <summary>
+            連線字串名稱(請從Config檔設定連線字串)
+            </summary>
+        </member>
+    </members>
+</doc>

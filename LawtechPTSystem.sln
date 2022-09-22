@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{6935B6DD-5B4C-4D21-95AB-F541A24E8B58}"
+	ProjectSection(SolutionItems) = preProject
+		Dll\H3Operator.DBHelper.dll = Dll\H3Operator.DBHelper.dll
+		Dll\H3Operator.DBHelper.xml = Dll\H3Operator.DBHelper.xml
+		Dll\H3Operator.DBModels.dll = Dll\H3Operator.DBModels.dll
+		Dll\H3Operator.DBModels.xml = Dll\H3Operator.DBModels.xml
+		Dll\Interop.Excel.dll = Dll\Interop.Excel.dll
+		Dll\Microsoft.mshtml.dll = Dll\Microsoft.mshtml.dll
+		Dll\Microsoft.Office.Interop.Excel.dll = Dll\Microsoft.Office.Interop.Excel.dll
+		Dll\Microsoft.Office.Interop.Outlook.dll = Dll\Microsoft.Office.Interop.Outlook.dll
+		packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll = packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll
+		packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll = packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll
+		packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll = packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll
+		packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll = packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll
+		Dll\Microsoft.ReportViewer.WebForms.dll = Dll\Microsoft.ReportViewer.WebForms.dll
+		packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll = packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawtechPTSystem", "QuotationSystem\LawtechPTSystem.csproj", "{8DB52EE9-CE2C-4C39-84FA-FC7301A1B5AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawtechPTWeb", "LawtechPTWeb\LawtechPTWeb.csproj", "{68CB0E8D-1932-4C21-9DF9-80D683282CFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DB52EE9-CE2C-4C39-84FA-FC7301A1B5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB52EE9-CE2C-4C39-84FA-FC7301A1B5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB52EE9-CE2C-4C39-84FA-FC7301A1B5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB52EE9-CE2C-4C39-84FA-FC7301A1B5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CB0E8D-1932-4C21-9DF9-80D683282CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CB0E8D-1932-4C21-9DF9-80D683282CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CB0E8D-1932-4C21-9DF9-80D683282CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CB0E8D-1932-4C21-9DF9-80D683282CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF00D692-03D9-4520-873A-FC3DC65C14C6}
+	EndGlobalSection
+EndGlobal

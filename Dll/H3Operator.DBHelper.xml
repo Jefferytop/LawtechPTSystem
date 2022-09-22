@@ -1,0 +1,971 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>H3Operator.DBHelper</name>
+    </assembly>
+    <members>
+        <member name="T:H3Operator.DBHelper.CommonFunction">
+            <summary>
+            通用的方法
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.CommonFunction.getSqlDbType(H3Operator.DBModels.SqlDataType)">
+            <summary>
+            將列舉轉換成對映的SqlDbType
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.CommonFunction.writeLog(System.String)">
+            <summary>
+            寫下記錄檔--將ErorrMsg記錄在txt文件中
+            <para>(txt路徑:根目錄 ; txt名稱:DBOperatorHelper[yyyyMMdd] )</para>
+            </summary>
+            <param name="ErorrMsg"></param>
+        </member>
+        <member name="M:H3Operator.DBHelper.CommonFunction.ThreadWriteLog(System.String)">
+            <summary>
+            以非同步的方式寫下記錄檔; 輸出Log 到txt文件 ;
+            <para>檔案路徑為組件的根目錄下，檔案名稱 DBOperatorHelper[yyyyMMdd].txt</para>
+            </summary>
+            <param name="ErorrMsg"></param>
+        </member>
+        <member name="M:H3Operator.DBHelper.CommonFunction.ConvertModeltoString``1(``0,System.String@)">
+            <summary>
+            將Model轉出成字串
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+            <param name="strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.CommonFunction.ConvertModeltoString``1(``0,System.String[]@)">
+            <summary>
+            將Model轉出成字串陣列
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item">帶入Model 物件</param>
+            <param name="strResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:H3Operator.DBHelper.DBAccess">
+            <summary>
+             [ADO.net] 用於命令DB的類別(類似DBHelper)
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBHelper.DBSetConnection">
+            <summary>
+            DB的連線管理、設定
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.DBSetConnection.decryptKey">
+            <summary>
+            DBSetConnection使用的加解密金鑰
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.DBSetConnection.connectionDictionaryCollection">
+            <summary>
+            連線字串集合
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.DBSetConnection.defaultConnectionName">
+            <summary>
+            預設的DB連線名稱
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.AddConnectionList(System.String,System.String,System.Boolean)">
+            <summary>
+            新增連線字串到ConnectionList裏
+            </summary>
+            <param name="CnnName">連線字串的名稱(唯一值; 會檢查是否有相同的名稱存在;)</param>
+            <param name="strConnectionString">SQL 完整連線字串</param>
+            <param name="bDecrypt">是否解密; true:表示來源已加密則需進行解密</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.AddConnectionListByConfigALL(System.Boolean)">
+            <summary>
+            加入Config的所有ConnectionStrings 到ConnectionList裏
+            </summary>
+            <param name="bDecrypt">是否解密; true:表示來源已加密則需進行解密(注意:如有多組ConnectionStrings需都同樣要經過加密，若只有一組有加密會報出error)</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.RemoveConnection(System.String)">
+            <summary>
+            ConnectionList移除連線字串
+            </summary>
+            <param name="CnnName">連線字串的名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.RemoveConnectionALL">
+            <summary>
+            ConnectionList清空所有連線字串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.SetDefaultConnection(System.String)">
+            <summary>
+            設定ConnectionList指定的連線字串名稱為主要連線字串
+            </summary>
+            <param name="strConnectionName">連線字串的名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBSetConnection.GetConnectionString(System.String)">
+            <summary>
+            取得ConnectionList 裏的連線字串
+            </summary>
+            <param name="strConnectionStringName">ConnectionList裏的key(如果參數為空時，就帶 ConnectionListDefaultConnectionString)</param>
+            <returns></returns>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBSetConnection.Version">
+            <summary>
+            DBSetConnection 的版本號
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBSetConnection.DecryptKey">
+            <summary>
+            加解密金鑰
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBSetConnection.ConnectionList">
+            <summary>
+            所有連線字串集合       
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBSetConnection.ConnectionListDefaultConnectionName">
+            <summary>
+            ConnectionList所預設的連線字串名稱;
+            當沒有指定時，預設為第一組的連線字串; 當ConnectionListCount=0時，則回傳空字串
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBSetConnection.ConnectionListDefaultConnectionString">
+            <summary>
+            預設的連線字串
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.#ctor">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.#ctor(System.String)">
+            <summary>
+             初始化
+            </summary>
+            <param name="strMark">標示用(可以傳空;建議長度為100字元內)</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteNonQuery(System.String,System.Int32@,System.Boolean,System.String,System.Data.SqlClient.SqlParameter[],System.Int32)">
+            <summary>
+            執行SqlCommand.ExecuteNonQuery(連接執行T-SQL陳述式)
+            </summary>
+            <param name="sqlstring">sql command string(T-SQL陳述式)</param>
+            <param name="iExecuteCount">執行後回傳受影響的資料列數目</param>
+            <param name="isStoreProdure">是否為預存程序; true: 是  ; false : 不是</param>
+            <param name="strConnectionString">資料庫連線字串</param>
+            <param name="param">sql parameter array</param>
+            <param name="iCommandTimeout">SqlCommand的Timeout設定時間(秒)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteNonQuery(System.String,System.Boolean,System.String,System.Data.SqlClient.SqlParameter[],System.Int32)">
+            <summary>
+            執行SqlCommand.ExecuteNonQuery(連接執行T-SQL陳述式)
+            </summary>
+            <param name="sqlstring">sql command string(T-SQL陳述式)</param>      
+            <param name="isStoreProdure">是否為預存程序; true: 是  ; false : 不是</param>
+            <param name="strConnectionString">資料庫連線字串</param>
+            <param name="param">sql parameter array</param>
+            <param name="iCommandTimeout">SqlCommand的Timeout設定時間(秒)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteNonQuery(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            執行SqlCommand.ExecuteNonQuery(連接執行T-SQL陳述式)
+            </summary>
+            <param name="MyCommand">SqlCommand 物件</param>       
+            <returns>int 0: 表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteNonQuery(System.String,System.Data.SqlClient.SqlParameter[],System.Boolean,System.String)">
+            <summary>
+            執行 SQL陳述式 , 同 SqlCommand.ExecuteNonQuery
+            </summary>
+            <param name="sqlstring">sql command string(T-SQL陳述式)</param>
+            <param name="para">sql parameter array</param>
+            <param name="isStoreProdure">是否為預存程序; true: 是  ; false : 不是</param>
+            <param name="strConnectionString">資料庫連線字串</param>
+            <returns>int 0: 表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteNonQuery(System.String,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            連線位址預設帶DBSetConnection.ConnectionListDefaultConnectionString
+            </summary>
+            <param name="sqlstring">sql command string</param>
+            <param name="isStoreProdure">是否為預存程序; true: 是  ; false : 不是</param>
+            <param name="para">Sql parameter array</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataTableByDataReader(System.String,System.Data.DataTable@,System.String)">
+            <summary>
+            Ⅹ 執行sql command 查詢，以 DataTable 輸出結果(使用DataReader當載具,DataReader使用完畢後會直接關閉)
+            </summary>
+            <param name="sqlstring">sql command string</param>
+            <param name="dt">傳址的DataTable (查詢結果)</param>
+            <param name="strConnectionString">資料庫連線字串(為空時就預設為DBSetConnection.ConnectionListDefaultConnectionString)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataTableByDataAdapter(System.Data.SqlClient.SqlCommand,System.Data.DataTable@)">
+            <summary>
+            執行sql command 查詢，以 DataTable 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="MyCommand">SqlCommand 物件</param>
+            <param name="dt">傳址的DataTable (查詢結果)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataTableByDataAdapter(System.String,System.Data.DataTable@,System.Data.SqlClient.SqlParameter[],System.Int32,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            執行sql command 查詢，以 DataTable 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="sqlstring">sql command string(查詢語句)</param>
+            <param name="dt">傳址的DataTable (查詢結果)</param>       
+            <param name="param">sql parameter array</param>
+            <param name="iCommandTimeout">Sqlcommand 的timeout 時間設定(單位:秒)</param>
+            <param name="IsStoredProcedure">是否為預存程序: true 是 ; false 否 ; 預設為false ,不是預存程序</param>
+            <param name="isFillSchema">是否要明確指定 DataTable 的結構描述</param>
+            <param name="strConnectionString">資料庫連線字串(為空時就預設為DBSetConnection.ConnectionListDefaultConnectionString)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataTableByDataAdapter(System.String,System.Data.DataTable@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            執行sql command 查詢，以 DataTable 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="sqlstring">sql command string(查詢語句)</param>
+            <param name="dt">傳址的DataTable (查詢結果)</param>
+            <param name="param">sql parameter array</param>
+            <param name="IsStoredProcedure">是否為預存程序: true 是 ; false 否 ; 預設為false ,不是預存程序</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteScaler(System.String,System.Object@,System.Data.SqlClient.SqlParameter[],System.String)">
+            <summary>
+            select 返回單個結果物件（第一行第一列)
+            <para>select top 1 name from user orderby id desc</para>
+            </summary>
+            <param name="sqlstring">sql command string</param>        
+            <param name="ReturnValue">執行結果 ExecuteScalar 所回傳的值（查詢結果的第一行第一列)</param>
+            <param name="param">sql 參數</param>
+            <param name="strConnectionString">資料庫連線字串(為空時就預設為DBSetConnection.ConnectionListDefaultConnectionString)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.ExecuteScaler(System.Data.SqlClient.SqlCommand,System.Object@)">
+            <summary>
+            select 返回單個結果物件（第一行第一列)
+            <para>select top 1 name from user orderby id desc</para>
+            </summary>
+            <param name="MyCommand"></param>
+            <param name="ReturnValue">執行結果 ExecuteScalar 所回傳的值（查詢結果的第一行第一列)</param>      
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataSetByDataAdapter(System.String,System.Data.DataSet@,System.String)">
+            <summary>
+            [DataSet]執行sql command 查詢，以 DataTable 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="sqlstring">sql command string</param>
+            <param name="myDataSet">傳址的DataSet (查詢結果)</param>
+            <param name="strConnectionString">資料庫連線字串(為空時就預設為DBSetConnection.ConnectionListDefaultConnectionString)</param>
+            <returns>int 0:表成功 ; string : 表例外發生的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataSetByDataAdapter(System.Data.SqlClient.SqlCommand,System.Data.DataSet@)">
+            <summary>
+            [DataSet]執行sql command 查詢，以 DataTable 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="myCommand">SqlCommand 物件</param>
+            <param name="myDs">接收多資料表的值 DataSet </param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataSetByDataAdapter(System.String,System.Data.DataSet@,System.Data.SqlClient.SqlParameter[],System.Int32,System.Boolean,System.String)">
+            <summary>
+            [DataSet]執行sql command 查詢，以 DataSet 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="sqlstring">sql command string(查詢語句)</param>
+            <param name="myDs">傳址的DataSet (查詢結果)</param>
+             <param name="IsStoredProcedure">是否為預存程序: true 是 ; false 否 ; 預設為false ,不是預存程序</param>
+            <param name="param">sql parameter array</param>
+            <param name="iCommandTimeout">Sqlcommand 的timeout 時間設定(單位:秒)</param>
+            <param name="strConnectionString">資料庫連線字串(為空時就預設為DBSetConnection.ConnectionListDefaultConnectionString)</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.QueryToDataSetByDataAdapter(System.String,System.Data.DataSet@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [DataSet]執行sql command 查詢，以 DataSet 輸出結果(使用DataAdapter當載具)
+            </summary>
+            <param name="sqlstring">sql command string(查詢語句)</param>
+            <param name="myDs">傳址的DataSet (查詢結果)</param>
+            <param name="param">sql parameter array</param>
+            <param name="IsStoredProcedure">是否為預存程序: true 是 ; false 否 ; 預設為false ,不是預存程序</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.SqlBulkCopyWriteToServer(System.Data.DataTable,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            [建議使用]SqlBulkCopy 批次 Insert 大量資料，失敗時會進行資料 Rollback
+            </summary>
+            <param name="DtSource">資料來源的 DataTable 的 ColumnName 跟要寫入的資料表的 ColumnName 是一樣的，或是DataTable只寫入部分的欄位</param>
+            <param name="strConnectionString">sql連線字串</param>
+            <param name="strDestinationTableName">要寫入的資料表名稱</param>
+            <param name="iBatchSize">設定一個批次量寫入多少筆資料</param>
+            <param name="iBulkCopyTimeout">設定逾時的秒數</param>
+            <param name="isNotifyAfter">設定 NotifyAfter 屬性為true，以便在每複製 [iNotifyAfterCount] 個資料列至資料表後，記錄事件處理log</param>
+            <param name="iNotifyAfterCount">設定筆數， NotifyAfter 屬性為true，以便在每複製 [iNotifyAfterCount] 個資料列至資料表後，呼叫事件處理常</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.SqlBulkCopyDataAdapterUpdate(System.Data.DataTable,System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            [建議使用]SqlDataAdapter 批次 Update 大量資料，失敗時會進行資料 Rollback
+            </summary>
+            <param name="DtSource">資料來源的 DataTable 的 ColumnName 跟要寫入的資料表的 ColumnName 是一樣的 且要提供PrimaryKey DataColumn</param>
+            <param name="strConnectionString">sql連線字串</param>
+            <param name="strDestinationTableName">要寫入的資料表名稱</param>
+            <param name="iCommandTimeout">設定逾時的秒數</param>
+            <param name="iUpdateBatchSize">每一次來回存取伺服器的資料筆數</param>
+            <param name="bDirectlyUpdate">直接地進行Update;預設為false，針對DataRow有異動的狀態進行更新 ; true為對所有的DataRow進行更新</param>
+            <returns>int 0: 表成功 ; string :  表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.SqlBulkCopyDataAdapterUpdateAll(System.Data.DataTable,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            [建議使用]SqlDataAdapter 批次 Update 大量資料，失敗時會進行資料 Rollback
+            </summary>
+            <param name="DtSource">資料來源的 DataTable 的 ColumnName 跟要寫入的資料表的 ColumnName 是一樣的 且要提供PrimaryKey DataColumn</param>
+            <param name="strConnectionString">sql連線字串</param>
+            <param name="strDestinationTableName">要寫入的資料表名稱</param>
+            <param name="iCommandTimeout">設定逾時的秒數</param>
+            <param name="iUpdateBatchSize">每一次來回存取伺服器的資料筆數</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.GetConnectionString(System.String@)">
+            <summary>
+            當連線字串為空時，先依DBSetConnection.ConnectionListDefaultConnectionString來決定連線字串，若連線字串再為空時，就用註冊類別
+            </summary>
+            <param name="strConnectionString">為空字串時，預設帶DBSetConnection.ConnectionListDefaultConnectionString</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.MakeInParam(System.String,H3Operator.DBModels.SqlDataType,System.Object)">
+            <summary>
+            Make SqlParameter
+            </summary>
+            <param name="paraName">參數名稱</param>
+            <param name="paraType">DB資料型別列舉</param>
+            <param name="value">該參數的值; 若為null 則轉換為DBNull.Value</param>
+            <returns>回傳一個SqlParameter物件</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.DBAccess.MakeInParam(System.String,H3Operator.DBModels.SqlDataType,System.Int32,System.Object,System.Nullable{System.Byte},System.Data.ParameterDirection)">
+            <summary>
+            Make SqlParameter
+            </summary>
+            <param name="paraName">參數名稱</param>
+            <param name="paraType">DB資料型別列舉</param>
+            <param name="len">資料長度</param>
+            <param name="value">該參數的值; 若為null 則轉換為DBNull.Value</param>
+            <param name="iScale">精確度:小數點位數</param>
+            <param name="Direction">指定參數為「輸入參數」或「輸出參數」</param>
+            <returns>回傳一個SqlParameter物件</returns>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBAccess.ORMVersion">
+            <summary>
+            版本號
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBAccess.ORMVersionDescription">
+            <summary>
+            版本號描述
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.DBAccess.MarkName">
+            <summary>
+            標示名稱(標註用，並無一定要給予值，可以隨便填;建議最大長度為100字元)
+            </summary>
+        </member>
+        <member name="T:H3Operator.DBHelper.EncryptorClass">
+            <summary>
+            加、解密類別
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.EncryptorClass.Encrypt(System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="encryptString">要加密的資料</param>
+            <param name="encryptKey">用來加密的 Key, 長度需等於 8</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.EncryptorClass.Decrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="decryptString">要解密的資料</param>
+            <param name="decryptKey">用來解密的 Key</param>
+            <returns></returns>
+        </member>
+        <member name="T:H3Operator.DBHelper.EncryptorMD5Class">
+            <summary>
+            MD5 加、解密類別
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.EncryptorMD5Class.Encrypt(System.String,System.String@,System.String)">
+            <summary>
+            md5加密
+            </summary>
+            <param name="text">未加密文字</param>
+            <param name="cipher">已加密過字串</param>
+            <param name="md5Key">加密金鑰</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.EncryptorMD5Class.Decrypt(System.String,System.String@,System.String)">
+            <summary>
+            md5解密
+            </summary>
+            <param name="cipher">已加密過字串</param>
+            <param name="text">已解密文字</param>
+            <param name="md5Key">加密金鑰</param>
+            <returns></returns>
+        </member>
+        <member name="T:H3Operator.DBHelper.ORMFactory">
+            <summary>
+            ORM Factory 
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.ORMFactory.strCreateDate">
+            <summary>
+            建立日期(系統必要欄位)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.ORMFactory.strLastModifyDate">
+            <summary>
+            最後修改日期(系統必要欄位)
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.ORMFactory.strDBTableName">
+            <summary>
+            自定義資料表名稱
+            </summary>
+        </member>
+        <member name="F:H3Operator.DBHelper.ORMFactory.dtLastUpdate">
+            <summary>
+            OBFactory 的最後更新時間
+            </summary>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.InsertByObj``1(``0,System.String)">
+            <summary>
+            由物件類別屬性定義轉換成 sqlstring 進行 insert
+            </summary>
+            <typeparam name="T">泛型類別 ORM物件</typeparam>
+            <param name="obj">要存入的物件</param>
+            <param name="CusTableName">指定的資料表; 若為空則採預設的Model所綁定的資料表</param>
+            <returns>int 0 表示成功; string : 錯誤訊息</returns>      
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetInsertCommand``1(``0,System.String)">
+            <summary>
+            取得 SqlCommand for Insert
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="myInsertObj">要新增的物件</param>   
+            <param name="CusTableName">指定的資料表; 若為空則採預設的Model所綁定的資料表</param> 
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.InsertString``1(System.String)">
+            <summary>
+            自動產生 Insert sql 語法
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="CusTableName">指定資料表; 若為空則帶Model所綁定的資料表</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SetPrimaryByobj``1(``0@,System.Object)">
+            <summary>
+            將自動累加的主鍵值回寫到object (限於自動累加的Primary欄位使用)
+            <para>呼叫程序: InsertByObj</para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="myObj">寫入 DB 的 Object</param>
+            <param name="objPrimaryKey">Object 於 DB 中的主鍵值</param>
+            <returns>0: 成功 ; 1 :沒有符合條件 ; 2: 失敗</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadOneToObj``1(System.Int32,``0@,System.String)">
+            <summary>
+            由 DB 中取出一筆資料 並轉換成 T 類別的物件(只適用於單一鍵值的資料表，給予PrimaryKey欄位的值; DefinedTableName屬性有效)
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="key">要搜尋物件的識別碼(key 值)</param>       
+            <param name="obj">回傳搜尋物件</param>
+            <param name="CusTableName">指定的資料表; 若為空則採預設的Model所綁定的資料表</param>
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadOneToObj``1(System.Collections.Generic.Dictionary{System.String,System.Object},``0@,System.String)">
+            <summary>
+            由 DB 中取出一筆資料 並轉換成 T 類別的物件(適合複合Key值的Table使用，需指定keys值)
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="keys">要搜尋物件的識別碼(key 值)</param>
+            <param name="obj">回傳搜尋物件</param>     
+            <param name="CusTableName">指定的資料表; 若為空則採預設的Model所綁定的資料表</param>      
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadOneToObj``1(``0@,System.String)">
+            <summary>
+            由 DB 中取出一筆資料 並轉換成 T 類別的物件
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="obj">回傳搜尋物件</param> 
+            <param name="CusTableName">指定的資料表; 若為空則採預設的Model所綁定的資料表</param> 
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetSelectCommand``1(System.Int32,System.String)">
+            <summary>
+            取得 SqlCommand for Select 單筆查詢 ;
+            <para>適用於單一主鍵的Table( 主鍵是 Int or BigInt ) </para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="PrimaryKey">主鍵值(適用於單一主鍵值的Table)</param> 
+            <param name="CusTableName">指定資料表; 若為空則帶Model所綁定的資料表</param> 
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetSelectCommand``1(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            取得 SqlCommand for Select 單筆查詢 ;
+            <para>適用於複合主鍵的Table </para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="PrimaryKey">主鍵值,例:PrimaryKey[欄位名稱]= 值 (適用於複合鍵值的table，注意:[欄位名稱]需和DB欄位相同，有區分大小寫)></param>   
+            <param name="CusTableName">指定資料表; 若為空則帶Model所綁定的資料表</param>   
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetSelectCommand``1(``0,System.String)">
+            <summary>
+            取得 SqlCommand for Select 單筆查詢 ;
+            <para>適用於複合主鍵的Table (由obj當search條件) </para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="myModel">object</param>
+            <param name="CusTableName">指定資料表; 若為空則帶Model所綁定的資料表</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SelectString``1(System.String)">
+            <summary>
+            自動產生 Select one sql 語法
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="strDbTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SetDataValue``1(System.Data.DataTable,``0@,System.Int32)">
+            <summary>
+            將單一搜尋結果轉成 Object
+            <para>呼叫程序: ReadOneToObj </para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="dtObjT">從 db 搜尋出來的結果</param>
+            <param name="myObj">要轉出的 object</param>
+            <param name="PrimaryKey">搜尋的主鍵</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SetDataValue``1(System.Data.DataTable,``0@,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            將單一搜尋結果轉成 Object
+            <para>呼叫程序: ReadOneToObj</para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="dtObjT">從 db 搜尋出來的結果</param>
+            <param name="myObj">要轉出的 object</param>
+            <param name="PrimaryKeys">複合鍵的值</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SetDataValue``1(System.Data.DataTable,``0@)">
+            <summary>
+            將單一搜尋結果轉成 Object
+            <para>呼叫程序: ReadOneToObj</para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="dtObjT">從 db 搜尋出來的結果</param>
+            <param name="myObj">要轉出的 object</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.SetDataValue``1(System.Data.DataTable,System.Collections.Generic.List{``0}@)">
+            <summary>
+            將搜尋結果轉成 Object List
+            <para>呼叫程序: ReadListToObjs</para>
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="dtObjT">從 db 搜尋出來的結果</param>
+            <param name="myObjList">要轉出的 object List</param>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.FillDataToObj``1(System.Data.DataRow@,``0@)">
+            <summary>
+            將一筆資料庫的record之欄位值填入單一個object
+            <para>呼叫程序: SetDataValue</para>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dr"></param>
+            <param name="myObj"></param>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjs``1(System.String,System.Collections.Generic.List{``0}@,System.Data.SqlClient.SqlParameter[],System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並轉換成 T 類別的物件 List
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="objList">回傳搜尋物件列表</param>
+            <param name="sqlParameterList">Sql 參數</param>
+            <param name="iTop">取得查詢結果的前n筆數</param>
+            <param name="OrderBy">SQL排序式 (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>       
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjs``1(System.String,System.Collections.Generic.List{``0}@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並轉換成 T 類別的物件 List (ORM 自動補上帶 with(nolock) )
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="objList">回傳搜尋物件列表</param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql 參數</param>
+            <param name="OrderBy">SQL排序式 (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>       
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjs``1(System.String,System.Data.DataTable@,System.Data.SqlClient.SqlParameter[],System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並回傳 DataTable 物件 
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="ResultDataTable">回傳搜尋物件DataTable</param>
+            <param name="sqlParameterList">Sql 參數</param>
+            <param name="iTop">取得查詢結果的前n筆數</param>
+            <param name="OrderBy">SQL排序式 (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>       
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjs``1(System.Int32,System.Int32,System.String,System.Collections.Generic.List{``0}@,System.Data.SqlClient.SqlParameter[],System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並轉換成 T 類別的物件 List (有分頁)
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為 0 時，預設帶 1(預設帶第1頁)</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="objList">回傳搜尋物件列表</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="OrderBy">SQL排序式 , 當空值時，預設帶[ CreateDateTime Desc] (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>      
+            
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjs``1(System.Int32,System.Int32,System.String,System.Collections.Generic.List{``0}@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並轉換成 T 類別的物件 List (使用MSSQL 2008的分頁做法，效能不佳)
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為 0 時，預設帶 1(預設帶第1頁)</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="objList">回傳搜尋物件列表</param>
+            <param name="TotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="OrderBy">SQL排序式 , 當空值時，預設帶[ CreateDateTime Desc] (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>        
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Collections.Generic.List{``0}@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並轉換成 T 類別的物件 List (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">從 0 起算，當值小於0時，預設帶0 (0即表示第一頁)</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="objList">回傳搜尋物件列表</param>
+            <param name="TotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="OrderBy">SQL排序式 , 當空值時，預設帶[ CreateDateTime Desc] (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>        
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Data.DataTable@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.String)">
+            <summary>
+            由 DB 中取出多筆資料 並 ref  DataTable (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">從 0 起算，當值小於0時，預設帶0 (0即表示第一頁)</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="ResultDataTable">回傳搜尋物件ResultDataTable</param>
+            <param name="TotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="OrderBy">SQL排序式 , 當空值時，預設帶[ CreateDateTime Desc] (不用加「Order by 」關鑵字, 例 "uid desc,createDateTime asc ")</param>        
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <!-- 忽略成員 "M:H3Operator.DBHelper.ORMFactory.UpdateObj``1(``0,System.String)" 中格式錯誤的 XML 註解 -->
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetUpdateCommand``1(``0@,System.String)">
+            <summary>
+            取得 SqlCommand for Update
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="myUpdateObj">要更新的Object</param>
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.UpdateString``1(System.String)">
+            <summary>
+            自動產生 Update sql 語法
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>
+            <returns>Update sql 語法</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.DeleteObj``1(``0,System.String)">
+            <summary>
+            由物件類別屬性定義轉換成 sqlstring 進行 Delete 
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="obj">要刪除的物件</param>      
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>
+            <returns>int 0:表示成功 ; string : 表例外的錯誤訊息</returns>       
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.DeleteObj``1(System.Int32,System.String)">
+            <summary>
+             由物件類別屬性定義進行 Delete(只適用於單一鍵值的資料表，給予PrimaryKey欄位的值，直接進行刪除動作;不適用自定義屬性 DefinedTableName，以TableMappingAttribute指定的Table為主)
+            </summary>
+            <typeparam name="T">泛型類別 ORM物件</typeparam> 
+            <param name="iPrimaryKey">必要值，要刪除的PrimaryKey 值，限用於單一索引(需數字欄位且自動累加)</param> 
+            <param name="CusTableName">指定的Table;若為空，則以DBMapping所綁定的Table為主;若不為空則以指定的Table</param>   
+            <returns>int 0:表示成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.DeleteObj``1(System.String,System.String)">
+            <summary>
+            由SQL查詢條件義進行批次 Delete(注意: 謹慎使用Delete，where不得為空)
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>       
+            <param name="strWhere">SQL條件式 (不用加「where」關鍵字);(不得使用"")</param>   
+            <param name="CusTableName">指定的Table;若為空，則以DBMapping所綁定的Table為主;若不為空則以指定的Table</param> 
+            <returns>int 0:表示成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetDelCommand``1(System.Int32,System.String)">
+            <summary>
+            取得 SqlCommand for Delete
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>       
+            <param name="iPrimaryKey">授予要刪除的PrimaryKey</param>
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetDelCommand``1(``0,System.String)">
+            <summary>
+            取得 SqlCommand for Delete
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>
+            <param name="myModel">授予要刪除的object</param>     
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱; 注意:指定的資料表欄位需能將資料綁定到該類別的屬性上)</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.DelString``1(System.String)">
+            <summary>
+            自動產生 Delete sql 語法
+            </summary>
+            <typeparam name="T">泛型類別</typeparam>      
+            <param name="CusTableName">指定的Table;若為空，則以DBMapping所綁定的Table為主;若不為空則以指定的Table</param>
+            <returns>Delete sql 語法</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjs``1(System.Collections.Generic.List{``0}@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+             [ViewTableMapping]多資料表join時使用，將結果繫結至Models
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="objList">Models</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>       
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Collections.Generic.List{``0}@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+             [ViewTableMapping]多資料表join時使用，將結果繫結至Models (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>
+            <typeparam name="T">泛型</typeparam>
+            <param name="objList">Models</param>
+            <param name="TotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjs``1(System.Data.DataTable@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+             [ViewTableMapping]多資料表join時使用，將結果繫結 DataTable
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="ResultDataTable">DataTable</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>       
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Data.DataTable@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+             [ViewTableMapping]多資料表join時使用，將結果繫結至Models (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>
+            <typeparam name="T">泛型</typeparam>
+            <param name="ResultDataTable">ref DataTable</param>
+            <param name="TotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjs``1(System.String,System.Collections.Generic.List{``0}@,System.Data.SqlClient.SqlParameter[],System.String,System.Boolean)">
+            <summary>
+             [ViewDBMapping]多資料表join時使用，將結果繫結至Models
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="strSqlScript">提供完整的Sql Script 語法(注意select出來的資料需和物件的屬性對應)</param>
+            <param name="objList"></param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="strConnectionString">預設為空字串，不為空字串時，以帶的連線字串為主; 若為空字串則以類別指定的連線字串(當類別連線名稱為空則帶DBSetConnection.ConnectionListDefaultConnectionString); </param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.List{``0}@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.Boolean)">
+            <summary>
+            [ViewTableMapping]多資料表join時使用，將結果繫結至Models (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值(不得為空)，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>
+            <typeparam name="T">泛型</typeparam>
+            <param name="strSqlScript">提供完整的Sql Script 語法(注意select出來的資料需和物件的屬性對應)</param>
+            <param name="objList"></param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="strConnectionString">預設為空字串，不為空字串時，以帶的連線字串為主; 若為空字串則以類別指定的連線字串(當類別連線名稱為空則帶DBSetConnection.ConnectionListDefaultConnectionString); </param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.String,System.Data.DataTable@,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.Boolean)">
+            <summary>
+            [ViewTableMapping]多資料表join時使用，將結果繫結至Models (使用MSSQL 2014的分頁做法OFFSET FETCH ，效能佳, §注意 MSSQL2008 無法使用)
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值(不得為空)，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>       
+            <param name="strSqlScript">提供完整的Sql Script 語法(注意select出來的資料需和物件的屬性對應)</param>
+            <param name="ResultDataTable">DataTable 物件</param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="strConnectionString">預設為空字串，不為空字串時，以帶的連線字串為主; 若為空字串則以類別指定的連線字串(當類別連線名稱為空則帶DBSetConnection.ConnectionListDefaultConnectionString); </param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjs``1(System.Collections.Generic.List{``0}@,System.String,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [ViewDBMapping]多資料表join時使用，將結果繫結至Models
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objList"></param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Collections.Generic.List{``0}@,System.String,System.Int32@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [ViewTableMapping]多資料表join時使用，將結果繫結至Models
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值(不得為空)，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>
+            <typeparam name="T"></typeparam>
+            <param name="objList"></param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjsByFetch``1(System.Int32,System.Int32,System.String,System.Data.DataTable@,System.String,System.Int32@,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [ViewTableMapping]多資料表join時使用，將結果繫結至Models
+            </summary>
+            <param name="pagesize"> 一頁的筆數 (當 值為 0 時，系統預設帶 30筆)</param>
+            <param name="pageIndex">當值為小於 0 時，預設帶 0 (從 0 起算，0即表示第1頁)</param>
+            <param name="OrderBy">必要值(不得為空)，排序時需有指定排序的欄位, 例:「SiteKey desc , Account asc」 </param>        
+            <param name="ResultDataTable">DataTable 物件</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewDBListToObjs``1(System.Data.DataTable@,System.String,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [ViewDBMapping]多資料表join時使用，將結果繫結至Models
+            </summary>        
+            <param name="ResultDataTable">DataTable</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.GetSelectColumnsString``1(System.String)">
+            <summary>
+            取得Model上有指定的欄位(只有欄位，DBSetting)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="CusTableName">指定的Table;若為空，則以DBMapping所綁定的Table為主;若不為空則以指定的Table</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadCountRows``1(System.Int32@,System.String,System.Data.SqlClient.SqlParameter[],System.String)">
+            <summary>
+            [TableMapping] 取得查詢後的總筆數
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="iTotalCountRows">回傳此次查詢的總筆數</param>
+            <param name="sqlWhere">SQL條件式，可帶空字串，即表示取該資料表所有的筆數 (不用加「where」關鑵字)</param>       
+            <param name="sqlParameterList">Sql 參數</param>        
+            <param name="CusTableName">指定的資料表名稱(預設為類別所綁定的資料表，當不為空字串時，則以指定的資料表名稱)</param>    
+            <returns>int 0:表成功 ; string : 表例外的錯誤訊息</returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewCountRows``1(System.Int32@,System.String,System.Data.SqlClient.SqlParameter[],System.Boolean)">
+            <summary>
+            [ViewDBMapping]多資料表join時使用，回傳查詢後的總筆數
+            </summary>       
+            <typeparam name="T"></typeparam>
+            <param name="objList"></param>
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlWhere">SQL條件式 (不用加「where」關鑵字)</param>        
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="M:H3Operator.DBHelper.ORMFactory.ReadViewCountRows``1(System.String,System.Int32@,System.Data.SqlClient.SqlParameter[],System.String,System.Boolean)">
+            <summary>
+            [ViewDBMapping]多資料表join時使用，回傳查詢後的總筆數
+            </summary>
+            <typeparam name="T">泛型</typeparam>        
+            <param name="strSqlScript">提供完整的Sql Script 語法</param> 
+            <param name="iTotalCountRow">回傳此次查詢的總筆數</param>
+            <param name="sqlParameterList">Sql參數</param>
+            <param name="strConnectionString">預設為空字串，不為空字串時，以帶的連線字串為主; 若為空字串則以類別指定的連線字串(當類別連線名稱為空則帶DBSetConnection.ConnectionListDefaultConnectionString); </param>
+            <param name="isStoredProcedure">是否為預存程序, 預設為False</param>
+            <returns></returns>
+        </member>
+        <member name="P:H3Operator.DBHelper.ORMFactory.ORMVersion">
+            <summary>
+            ORMFactory 的版本號
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.ORMFactory.ORMLastUpdateDate">
+            <summary>
+            OBFactory 的最後更新時間
+            </summary>
+        </member>
+        <member name="P:H3Operator.DBHelper.ORMFactory.AuthorizedPersons">
+            <summary>
+            授權者
+            </summary>
+        </member>
+    </members>
+</doc>

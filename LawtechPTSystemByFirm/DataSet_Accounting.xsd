@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Accounting" targetNamespace="http://tempuri.org/DataSet_Accounting.xsd" xmlns:mstns="http://tempuri.org/DataSet_Accounting.xsd" xmlns="http://tempuri.org/DataSet_Accounting.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataBaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LawtechPTSystemByFirm.Properties.Settings.GlobalReference.Default.DataBaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingSelectDateTableAdapter" GeneratorDataComponentClassName="AccountingSelectDateTableAdapter" Name="AccountingSelectDate" UserDataComponentName="AccountingSelectDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT         '收據日期' AS String, 'PatentFeeT.ReceiptDate' AS Value, 1 AS sort
+UNION
+SELECT         '收款日期' AS String, 'PatentFeeT.PayDate' AS Value, 20 AS sort
+UNION
+SELECT         '申請日' AS String, 'PatentManagementT.ApplicationDate' AS Value, 
+                          30 AS sort
+UNION
+SELECT         '請款日期' AS String, 'PatentFeeT.RDate' AS Value, 2 AS sort
+ORDER BY  sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="String" DataSetColumn="String" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingSelectValueTableAdapter" GeneratorDataComponentClassName="AccountingSelectValueTableAdapter" Name="AccountingSelectValue" UserDataComponentName="AccountingSelectValueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          '本所卷號' AS String, 'EventNo' AS Value, 10 AS sort
+UNION
+SELECT          '貴方卷號' AS String, 'MainCustomerRefNo' AS Value, 20 AS sort
+UNION
+SELECT          '主委託人' AS String, 'CustomerName' AS Value, 50 AS sort
+UNION
+SELECT          '國別' AS String, 'CountryT.CountrySymbol' AS Value, 60 AS sort
+UNION
+SELECT          '申請號' AS String, 'ApplicationNo' AS Value, 30 AS sort
+UNION
+SELECT          '請款單號' AS String, 'PPP' AS Value, 1 AS sort
+UNION
+SELECT          '請款人' AS String, 'WorkerT.EmployeeName' AS Value, 2 AS sort
+ORDER BY   Sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="String" DataSetColumn="String" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingpaymentDateTableAdapter" GeneratorDataComponentClassName="AccountingpaymentDateTableAdapter" Name="AccountingpaymentDate" UserDataComponentName="AccountingpaymentDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT         '收件日期' AS String, 'ReciveDate' AS Value, 1 AS sort
+UNION
+SELECT         '付款期限' AS String, 'PayDueDate' AS Value, 2 AS sort
+UNION
+SELECT         '付款日期' AS String, 'PaymentDate' AS Value, 3 AS sort
+UNION
+SELECT         '預估付款日' AS String, 'EstimatedPaymentDate' AS Value, 5 AS sort
+ORDER BY  sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="String" DataSetColumn="String" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingPaymentSelectTableAdapter" GeneratorDataComponentClassName="AccountingPaymentSelectTableAdapter" Name="AccountingPaymentSelect" UserDataComponentName="AccountingPaymentSelectTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT         '收據號碼' AS String, 'IReceiptNo' AS Value, 1 AS sort
+UNION
+SELECT         '請款單編號' AS String, 'BillingNo' AS Value, 5 AS sort
+UNION
+SELECT         '幣別' AS String, 'IMoney' AS Value, 7 AS sort
+UNION
+SELECT         '本所卷號' AS String, 'EventNo' AS Value, 10 AS sort
+UNION
+SELECT         '貴方卷號' AS String, 'MainCustomerRefNo' AS Value, 20 AS sort
+UNION
+SELECT         '主委託人' AS String, 'CustomerName' AS Value, 50 AS sort
+UNION
+SELECT         '國別' AS String, 'CountryT.CountrySymbol' AS Value, 60 AS sort
+UNION
+SELECT         '申請號' AS String, 'ApplicationNo' AS Value, 30 AS sort
+UNION
+SELECT         '受款人' AS String, 'PatentPaymentT.Attorney' AS Value, 70 AS sort
+UNION
+SELECT         '付款人' AS String, 'PatentPaymentT.AcountingFirmKey' AS Value, 
+                          80 AS sort
+ORDER BY  Sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="String" DataSetColumn="String" />
+              <Mapping SourceColumn="Value" DataSetColumn="Value" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingCombinSearchDateTableAdapter" GeneratorDataComponentClassName="AccountingCombinSearchDateTableAdapter" Name="AccountingCombinSearchDate" UserDataComponentName="AccountingCombinSearchDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT         'PatentFeeT_1.RDate' AS ValueString, '請款日期(請款)' AS ShowString, 
+                          10 AS Sort
+UNION
+SELECT         'PatentFeeT_1.ReceiptDate' AS ValueString, '收據日期(請款)' AS ShowString, 
+                          20 AS Sort
+UNION
+SELECT         'PatentFeeT_1.PayDate' AS ValueString, '收款日期(請款)' AS ShowString, 
+                          30 AS Sort
+UNION
+SELECT         'PatentPaymentT.ReciveDate' AS ValueString, '收件日期(付款)' AS ShowString, 
+                          50 AS Sort
+UNION
+SELECT         'PatentPaymentT.PayDueDate' AS ValueString, '付款期限(付款)' AS ShowString, 
+                          60 AS Sort
+UNION
+SELECT         'PatentPaymentT.PaymentDate' AS ValueString, '付款日期(付款)' AS ShowString,
+                           70 AS Sort
+UNION
+SELECT         'PatentPaymentT.IReceiptDate' AS ValueString, '收據日期(付款)' AS ShowString, 
+                          80 AS Sort
+ORDER BY  Sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ValueString" DataSetColumn="ValueString" />
+              <Mapping SourceColumn="ShowString" DataSetColumn="ShowString" />
+              <Mapping SourceColumn="Sort" DataSetColumn="Sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingCombinSearchPatentTableAdapter" GeneratorDataComponentClassName="AccountingCombinSearchPatentTableAdapter" Name="AccountingCombinSearchPatent" UserDataComponentName="AccountingCombinSearchPatentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select 'PatentFeeT.PPP' as ValueString , '請款單號' as ShowString, 10 as Sort
+union
+Select 'PatentManagementT.PatentNo' as ValueString , '申請案卷號' as ShowString, 20 as Sort
+UNION
+Select 'PatentManagementT.Country' as ValueString , '國別' as ShowString, 30 as Sort
+union
+Select 'CustomerName' as ValueString , '主委託人' as ShowString, 40 as Sort
+UNION
+Select 'PatentManagementT.Kind' as ValueString , '種類' as ShowString, 50 as Sort
+UNION
+Select 'PatentManagementT.Nature' as ValueString , '性質' as ShowString, 60 as Sort
+order by Sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ValueString" DataSetColumn="ValueString" />
+              <Mapping SourceColumn="ShowString" DataSetColumn="ShowString" />
+              <Mapping SourceColumn="Sort" DataSetColumn="Sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AccountingCombinSearchTradenarkTableAdapter" GeneratorDataComponentClassName="AccountingCombinSearchTradenarkTableAdapter" Name="AccountingCombinSearchTradenark" UserDataComponentName="AccountingCombinSearchTradenarkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT         'PPP' AS ValueString, '請款單號' AS ShowString, 10 AS Sort
+UNION
+SELECT         'TrademarkNo' AS ValueString, '本所案號' AS ShowString, 20 AS Sort
+UNION
+SELECT         'Country' AS ValueString, '國別' AS ShowString, 30 AS Sort
+UNION
+SELECT         'CustomerName' AS ValueString, '主委託人' AS ShowString, 40 AS Sort
+UNION
+SELECT         'StyleName' AS ValueString, '商標樣式' AS ShowString, 50 AS Sort
+UNION
+SELECT         'TMTypeName' AS ValueString, '案件類別' AS ShowString, 60 AS Sort
+ORDER BY  Sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ValueString" DataSetColumn="ValueString" />
+              <Mapping SourceColumn="ShowString" DataSetColumn="ShowString" />
+              <Mapping SourceColumn="Sort" DataSetColumn="Sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Accounting" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Accounting" msprop:Generator_UserDSName="DataSet_Accounting">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccountingSelectDate" msprop:Generator_UserTableName="AccountingSelectDate" msprop:Generator_RowEvArgName="AccountingSelectDateRowChangeEvent" msprop:Generator_TableVarName="tableAccountingSelectDate" msprop:Generator_TablePropName="AccountingSelectDate" msprop:Generator_RowDeletingName="AccountingSelectDateRowDeleting" msprop:Generator_RowChangingName="AccountingSelectDateRowChanging" msprop:Generator_RowDeletedName="AccountingSelectDateRowDeleted" msprop:Generator_RowEvHandlerName="AccountingSelectDateRowChangeEventHandler" msprop:Generator_TableClassName="AccountingSelectDateDataTable" msprop:Generator_RowChangedName="AccountingSelectDateRowChanged" msprop:Generator_RowClassName="AccountingSelectDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="String" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnString" msprop:Generator_ColumnPropNameInRow="String" msprop:Generator_ColumnPropNameInTable="StringColumn" msprop:Generator_UserColumnName="String" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" msprop:Generator_UserColumnName="sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingSelectValue" msprop:Generator_UserTableName="AccountingSelectValue" msprop:Generator_RowEvArgName="AccountingSelectValueRowChangeEvent" msprop:Generator_TableVarName="tableAccountingSelectValue" msprop:Generator_TablePropName="AccountingSelectValue" msprop:Generator_RowDeletingName="AccountingSelectValueRowDeleting" msprop:Generator_RowChangingName="AccountingSelectValueRowChanging" msprop:Generator_RowDeletedName="AccountingSelectValueRowDeleted" msprop:Generator_RowEvHandlerName="AccountingSelectValueRowChangeEventHandler" msprop:Generator_TableClassName="AccountingSelectValueDataTable" msprop:Generator_RowChangedName="AccountingSelectValueRowChanged" msprop:Generator_RowClassName="AccountingSelectValueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="String" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnString" msprop:Generator_ColumnPropNameInRow="String" msprop:Generator_ColumnPropNameInTable="StringColumn" msprop:Generator_UserColumnName="String" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" msprop:Generator_UserColumnName="sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingpaymentDate" msprop:Generator_UserTableName="AccountingpaymentDate" msprop:Generator_RowEvArgName="AccountingpaymentDateRowChangeEvent" msprop:Generator_TableVarName="tableAccountingpaymentDate" msprop:Generator_TablePropName="AccountingpaymentDate" msprop:Generator_RowDeletingName="AccountingpaymentDateRowDeleting" msprop:Generator_RowChangingName="AccountingpaymentDateRowChanging" msprop:Generator_RowDeletedName="AccountingpaymentDateRowDeleted" msprop:Generator_RowEvHandlerName="AccountingpaymentDateRowChangeEventHandler" msprop:Generator_TableClassName="AccountingpaymentDateDataTable" msprop:Generator_RowChangedName="AccountingpaymentDateRowChanged" msprop:Generator_RowClassName="AccountingpaymentDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="String" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnString" msprop:Generator_ColumnPropNameInRow="String" msprop:Generator_ColumnPropNameInTable="StringColumn" msprop:Generator_UserColumnName="String" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" msprop:Generator_UserColumnName="sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingPaymentSelect" msprop:Generator_UserTableName="AccountingPaymentSelect" msprop:Generator_RowEvArgName="AccountingPaymentSelectRowChangeEvent" msprop:Generator_TableVarName="tableAccountingPaymentSelect" msprop:Generator_TablePropName="AccountingPaymentSelect" msprop:Generator_RowDeletingName="AccountingPaymentSelectRowDeleting" msprop:Generator_RowChangingName="AccountingPaymentSelectRowChanging" msprop:Generator_RowDeletedName="AccountingPaymentSelectRowDeleted" msprop:Generator_RowEvHandlerName="AccountingPaymentSelectRowChangeEventHandler" msprop:Generator_TableClassName="AccountingPaymentSelectDataTable" msprop:Generator_RowChangedName="AccountingPaymentSelectRowChanged" msprop:Generator_RowClassName="AccountingPaymentSelectRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="String" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnString" msprop:Generator_ColumnPropNameInRow="String" msprop:Generator_ColumnPropNameInTable="StringColumn" msprop:Generator_UserColumnName="String" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" msprop:Generator_UserColumnName="sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingCombinSearchDate" msprop:Generator_UserTableName="AccountingCombinSearchDate" msprop:Generator_RowEvArgName="AccountingCombinSearchDateRowChangeEvent" msprop:Generator_TableVarName="tableAccountingCombinSearchDate" msprop:Generator_TablePropName="AccountingCombinSearchDate" msprop:Generator_RowDeletingName="AccountingCombinSearchDateRowDeleting" msprop:Generator_RowChangingName="AccountingCombinSearchDateRowChanging" msprop:Generator_RowDeletedName="AccountingCombinSearchDateRowDeleted" msprop:Generator_RowEvHandlerName="AccountingCombinSearchDateRowChangeEventHandler" msprop:Generator_TableClassName="AccountingCombinSearchDateDataTable" msprop:Generator_RowChangedName="AccountingCombinSearchDateRowChanged" msprop:Generator_RowClassName="AccountingCombinSearchDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValueString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValueString" msprop:Generator_ColumnPropNameInRow="ValueString" msprop:Generator_ColumnPropNameInTable="ValueStringColumn" msprop:Generator_UserColumnName="ValueString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="27" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShowString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShowString" msprop:Generator_ColumnPropNameInRow="ShowString" msprop:Generator_ColumnPropNameInTable="ShowStringColumn" msprop:Generator_UserColumnName="ShowString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSort" msprop:Generator_ColumnPropNameInRow="Sort" msprop:Generator_ColumnPropNameInTable="SortColumn" msprop:Generator_UserColumnName="Sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingCombinSearchPatent" msprop:Generator_UserTableName="AccountingCombinSearchPatent" msprop:Generator_RowEvArgName="AccountingCombinSearchPatentRowChangeEvent" msprop:Generator_TableVarName="tableAccountingCombinSearchPatent" msprop:Generator_TablePropName="AccountingCombinSearchPatent" msprop:Generator_RowDeletingName="AccountingCombinSearchPatentRowDeleting" msprop:Generator_RowChangingName="AccountingCombinSearchPatentRowChanging" msprop:Generator_RowDeletedName="AccountingCombinSearchPatentRowDeleted" msprop:Generator_RowEvHandlerName="AccountingCombinSearchPatentRowChangeEventHandler" msprop:Generator_TableClassName="AccountingCombinSearchPatentDataTable" msprop:Generator_RowChangedName="AccountingCombinSearchPatentRowChanged" msprop:Generator_RowClassName="AccountingCombinSearchPatentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValueString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValueString" msprop:Generator_ColumnPropNameInRow="ValueString" msprop:Generator_ColumnPropNameInTable="ValueStringColumn" msprop:Generator_UserColumnName="ValueString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="26" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShowString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShowString" msprop:Generator_ColumnPropNameInRow="ShowString" msprop:Generator_ColumnPropNameInTable="ShowStringColumn" msprop:Generator_UserColumnName="ShowString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSort" msprop:Generator_ColumnPropNameInRow="Sort" msprop:Generator_ColumnPropNameInTable="SortColumn" msprop:Generator_UserColumnName="Sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingCombinSearchTradenark" msprop:Generator_UserTableName="AccountingCombinSearchTradenark" msprop:Generator_RowEvArgName="AccountingCombinSearchTradenarkRowChangeEvent" msprop:Generator_TableVarName="tableAccountingCombinSearchTradenark" msprop:Generator_TablePropName="AccountingCombinSearchTradenark" msprop:Generator_RowDeletingName="AccountingCombinSearchTradenarkRowDeleting" msprop:Generator_RowChangingName="AccountingCombinSearchTradenarkRowChanging" msprop:Generator_RowDeletedName="AccountingCombinSearchTradenarkRowDeleted" msprop:Generator_RowEvHandlerName="AccountingCombinSearchTradenarkRowChangeEventHandler" msprop:Generator_TableClassName="AccountingCombinSearchTradenarkDataTable" msprop:Generator_RowChangedName="AccountingCombinSearchTradenarkRowChanged" msprop:Generator_RowClassName="AccountingCombinSearchTradenarkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ValueString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValueString" msprop:Generator_ColumnPropNameInRow="ValueString" msprop:Generator_ColumnPropNameInTable="ValueStringColumn" msprop:Generator_UserColumnName="ValueString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShowString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShowString" msprop:Generator_ColumnPropNameInRow="ShowString" msprop:Generator_ColumnPropNameInTable="ShowStringColumn" msprop:Generator_UserColumnName="ShowString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSort" msprop:Generator_ColumnPropNameInRow="Sort" msprop:Generator_ColumnPropNameInTable="SortColumn" msprop:Generator_UserColumnName="Sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:AccountingSelectDate" />
+      <xs:field xpath="mstns:sort" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

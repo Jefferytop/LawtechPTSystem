@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_KM" targetNamespace="http://tempuri.org/DataSet_KM.xsd" xmlns:mstns="http://tempuri.org/DataSet_KM.xsd" xmlns="http://tempuri.org/DataSet_KM.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataBaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LawtechPTSystemByFirm.Properties.Settings.GlobalReference.Default.DataBaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UploadTTableAdapter" GeneratorDataComponentClassName="UploadTTableAdapter" Name="UploadT" UserDataComponentName="UploadTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          WorkerT_1.EmployeeName AS EditWorker, UploadT.UploadKey, UploadT.ArticleTitle, UploadT.Description, 
+                            UploadT.Author, UploadT.KeyWods, UploadT.FilePath, UploadT.BuildDate, UploadT.EditedDate, UploadT.Reference, 
+                            UploadT.RefURL, UploadT.FKEY, UploadT.SubTable, WorkerT.EmployeeName AS BuildWorker, CountryT.Country, 
+                            KindT.Kind
+FROM              UploadT INNER JOIN
+                            KindT ON UploadT.KindSN = KindT.KindSN LEFT OUTER JOIN
+                            CountryT ON UploadT.CountrySymbol = CountryT.CountrySymbol LEFT OUTER JOIN
+                            WorkerT ON UploadT.BuildWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON UploadT.EditedWorker = WorkerT_1.WorkerKey</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EditWorker" DataSetColumn="EditWorker" />
+              <Mapping SourceColumn="UploadKey" DataSetColumn="UploadKey" />
+              <Mapping SourceColumn="ArticleTitle" DataSetColumn="ArticleTitle" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Author" DataSetColumn="Author" />
+              <Mapping SourceColumn="KeyWods" DataSetColumn="KeyWods" />
+              <Mapping SourceColumn="FilePath" DataSetColumn="FilePath" />
+              <Mapping SourceColumn="BuildDate" DataSetColumn="BuildDate" />
+              <Mapping SourceColumn="EditedDate" DataSetColumn="EditedDate" />
+              <Mapping SourceColumn="Reference" DataSetColumn="Reference" />
+              <Mapping SourceColumn="RefURL" DataSetColumn="RefURL" />
+              <Mapping SourceColumn="FKEY" DataSetColumn="FKEY" />
+              <Mapping SourceColumn="SubTable" DataSetColumn="SubTable" />
+              <Mapping SourceColumn="BuildWorker" DataSetColumn="BuildWorker" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+              <Mapping SourceColumn="Kind" DataSetColumn="Kind" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_KM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_KM" msprop:Generator_UserDSName="DataSet_KM">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UploadT" msprop:Generator_TableClassName="UploadTDataTable" msprop:Generator_RowEvArgName="UploadTRowChangeEvent" msprop:Generator_TableVarName="tableUploadT" msprop:Generator_TablePropName="UploadT" msprop:Generator_RowDeletingName="UploadTRowDeleting" msprop:Generator_RowChangingName="UploadTRowChanging" msprop:Generator_RowEvHandlerName="UploadTRowChangeEventHandler" msprop:Generator_RowDeletedName="UploadTRowDeleted" msprop:Generator_UserTableName="UploadT" msprop:Generator_RowChangedName="UploadTRowChanged" msprop:Generator_RowClassName="UploadTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EditWorker" msprop:Generator_ColumnVarNameInTable="columnEditWorker" msprop:Generator_ColumnPropNameInRow="EditWorker" msprop:Generator_ColumnPropNameInTable="EditWorkerColumn" msprop:Generator_UserColumnName="EditWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UploadKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUploadKey" msprop:Generator_ColumnPropNameInRow="UploadKey" msprop:Generator_ColumnPropNameInTable="UploadKeyColumn" msprop:Generator_UserColumnName="UploadKey" type="xs:int" />
+              <xs:element name="ArticleTitle" msprop:Generator_ColumnVarNameInTable="columnArticleTitle" msprop:Generator_ColumnPropNameInRow="ArticleTitle" msprop:Generator_ColumnPropNameInTable="ArticleTitleColumn" msprop:Generator_UserColumnName="ArticleTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Author" msprop:Generator_ColumnVarNameInTable="columnAuthor" msprop:Generator_ColumnPropNameInRow="Author" msprop:Generator_ColumnPropNameInTable="AuthorColumn" msprop:Generator_UserColumnName="Author" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KeyWods" msprop:Generator_ColumnVarNameInTable="columnKeyWods" msprop:Generator_ColumnPropNameInRow="KeyWods" msprop:Generator_ColumnPropNameInTable="KeyWodsColumn" msprop:Generator_UserColumnName="KeyWods" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilePath" msprop:Generator_ColumnVarNameInTable="columnFilePath" msprop:Generator_ColumnPropNameInRow="FilePath" msprop:Generator_ColumnPropNameInTable="FilePathColumn" msprop:Generator_UserColumnName="FilePath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuildDate" msprop:Generator_ColumnVarNameInTable="columnBuildDate" msprop:Generator_ColumnPropNameInRow="BuildDate" msprop:Generator_ColumnPropNameInTable="BuildDateColumn" msprop:Generator_UserColumnName="BuildDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EditedDate" msprop:Generator_ColumnVarNameInTable="columnEditedDate" msprop:Generator_ColumnPropNameInRow="EditedDate" msprop:Generator_ColumnPropNameInTable="EditedDateColumn" msprop:Generator_UserColumnName="EditedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RefURL" msprop:Generator_ColumnVarNameInTable="columnRefURL" msprop:Generator_ColumnPropNameInRow="RefURL" msprop:Generator_ColumnPropNameInTable="RefURLColumn" msprop:Generator_UserColumnName="RefURL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FKEY" msprop:Generator_ColumnVarNameInTable="columnFKEY" msprop:Generator_ColumnPropNameInRow="FKEY" msprop:Generator_ColumnPropNameInTable="FKEYColumn" msprop:Generator_UserColumnName="FKEY" type="xs:int" minOccurs="0" />
+              <xs:element name="SubTable" msprop:Generator_ColumnVarNameInTable="columnSubTable" msprop:Generator_ColumnPropNameInRow="SubTable" msprop:Generator_ColumnPropNameInTable="SubTableColumn" msprop:Generator_UserColumnName="SubTable" type="xs:int" minOccurs="0" />
+              <xs:element name="BuildWorker" msprop:Generator_ColumnVarNameInTable="columnBuildWorker" msprop:Generator_ColumnPropNameInRow="BuildWorker" msprop:Generator_ColumnPropNameInTable="BuildWorkerColumn" msprop:Generator_UserColumnName="BuildWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kind" msprop:Generator_ColumnVarNameInTable="columnKind" msprop:Generator_ColumnPropNameInRow="Kind" msprop:Generator_ColumnPropNameInTable="KindColumn" msprop:Generator_UserColumnName="Kind" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UploadT" />
+      <xs:field xpath="mstns:UploadKey" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_TrademarkControversy" targetNamespace="http://tempuri.org/DataSet_TrademarkControversy.xsd" xmlns:mstns="http://tempuri.org/DataSet_TrademarkControversy.xsd" xmlns="http://tempuri.org/DataSet_TrademarkControversy.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataBaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LawtechPTSystem.Properties.Settings.GlobalReference.Default.DataBaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrademarkControversyManagementTTableAdapter" GeneratorDataComponentClassName="TrademarkControversyManagementTTableAdapter" Name="TrademarkControversyManagementT" UserDataComponentName="TrademarkControversyManagementTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          TrademarkControversyManagementT.TrademarkControversyID, TrademarkControversyManagementT.TrademarkNo, 
+                            TrademarkControversyManagementT.TrademarkName, TrademarkControversyManagementT.ApplicantKey, 
+                            TrademarkControversyManagementT.Country, TrademarkControversyManagementT.StyleName, 
+                            TrademarkControversyManagementT.TMTypeName, TrademarkControversyManagementT.Status, 
+                            TrademarkControversyManagementT.StatusExplain, TrademarkControversyManagementT.WorkerKey, 
+                            TrademarkControversyManagementT.EntrustDate, TrademarkControversyManagementT.OutsourcingAttorney, 
+                            TrademarkControversyManagementT.OutsourcingAttorneyWorker, 
+                            TrademarkControversyManagementT.OutsourcingTrademarkNo, 
+                            TrademarkControversyManagementT.OutsourcingDate, TrademarkControversyManagementT.ApplicationDate, 
+                            TrademarkControversyManagementT.ApplicationNo, TrademarkControversyManagementT.RegistrationDate, 
+                            TrademarkControversyManagementT.RegistrationNo, TrademarkControversyManagementT.LawDate, 
+                            TrademarkControversyManagementT.RegisterProduct, TrademarkControversyManagementT.ExtendedDate, 
+                            TrademarkControversyManagementT.CloseDate, TrademarkControversyManagementT.Remarks, 
+                            TrademarkControversyManagementT.PicPath, TMStatusT.Status AS StatusName, WorkerT_1.EmployeeName, 
+                            AttorneyT.AttorneyFirm, AttLiaisonerT.Liaisoner AS AttLiaisoner, CountryT.Country AS CountryName, 
+                            TrademarkControversyManagementT.DelegateType, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN '申請人直接委託' WHEN TrademarkControversyManagementT.DelegateType
+                             = 2 THEN '複代委託' END AS DelegateTypeName, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN ApplicantNames WHEN TrademarkControversyManagementT.DelegateType
+                             = 2 THEN
+                                (SELECT          AttorneyT.AttorneyFirm
+                                  FROM               AttorneyT
+                                  WHERE           AttorneyKey = TrademarkControversyManagementT.MainCustomer) END AS MainCustomerName, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN
+                                (SELECT          LiaisonerT.LiaisonerName
+                                  FROM               LiaisonerT
+                                  WHERE           LiaisonerKey = TrademarkControversyManagementT.MainCustomerTransactor) 
+                            WHEN TrademarkControversyManagementT.DelegateType = 2 THEN
+                                (SELECT          AttLiaisonerT.Liaisoner
+                                  FROM               AttLiaisonerT
+                                  WHERE           AttLiaisonerT.ALiaisonerKey = TrademarkControversyManagementT.MainCustomerTransactor) 
+                            END AS MainCustomerTransactorName, TrademarkControversyManagementT.MainCustomer, 
+                            TrademarkControversyManagementT.MainCustomerRefNo, 
+                            TrademarkControversyManagementT.MainCustomerTransactor, TrademarkControversyManagementT.IsBySelf, 
+                            TrademarkControversyManagementT.TrademarkOvertureName, 
+                            TrademarkControversyManagementT.RegisterProductName, TrademarkControversyManagementT.ObjectionDate, 
+                            TrademarkControversyManagementT.ObjectionPeople, TrademarkControversyManagementT.ObjectionNo, 
+                            TrademarkControversyManagementT.ObjectionClass, TrademarkControversyManagementT.ObjectionContent, 
+                            TrademarkControversyManagementT.ObjectionPicPath, TrademarkControversyManagementT.TrademarOriginalNo, 
+                            TrademarkControversyManagementT.ObjectionRegistrationNo, 
+                            TrademarkControversyManagementT.ObjectionDueDate, TrademarkControversyManagementT.ApplicantNames, 
+                            TrademarkControversyManagementT.ApplicantKeys, TrademarkControversyManagementT.ObjectionNoticeDate, 
+                            TrademarkControversyManagementT.ObjectionNoticeNo, 
+                            TrademarkControversyManagementT.ObjectionRegistrationDate, 
+                            TrademarkControversyManagementT.ObjectionApplicationNo, 
+                            TrademarkControversyManagementT.ObjectionApplicationDate, 
+                            TrademarkControversyManagementT.LastModifyDate, WorkerT.EmployeeName AS LastModifyWorker, 
+                            TrademarkControversyManagementT.ObjectionTrademarkName, TrademarkControversyManagementT.Introducer, 
+                            TrademarkControversyManagementT.DisagreementNo
+FROM              WorkerT RIGHT OUTER JOIN
+                            TrademarkControversyManagementT ON 
+                            WorkerT.WorkerKey = TrademarkControversyManagementT.LastModifyWorker LEFT OUTER JOIN
+                            CountryT ON TrademarkControversyManagementT.Country = CountryT.CountrySymbol LEFT OUTER JOIN
+                            AttLiaisonerT ON 
+                            TrademarkControversyManagementT.OutsourcingAttorneyWorker = AttLiaisonerT.ALiaisonerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyManagementT.OutsourcingAttorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON 
+                            TrademarkControversyManagementT.WorkerKey = WorkerT_1.WorkerKey LEFT OUTER JOIN
+                            TMStatusT ON TrademarkControversyManagementT.Status = TMStatusT.TMStatusID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TrademarkNo" DataSetColumn="TrademarkNo" />
+              <Mapping SourceColumn="TrademarkName" DataSetColumn="TrademarkName" />
+              <Mapping SourceColumn="CountrySymbol" DataSetColumn="CountrySymbol" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+              <Mapping SourceColumn="TMTypeName" DataSetColumn="TMTypeName" />
+              <Mapping SourceColumn="StatusExplain" DataSetColumn="StatusExplain" />
+              <Mapping SourceColumn="OutsourcingTrademarkNo" DataSetColumn="OutsourcingTrademarkNo" />
+              <Mapping SourceColumn="CountryName" DataSetColumn="CountryName" />
+              <Mapping SourceColumn="DelegateTypeName" DataSetColumn="DelegateTypeName" />
+              <Mapping SourceColumn="MainCustomerRefNo" DataSetColumn="MainCustomerRefNo" />
+              <Mapping SourceColumn="ApplicantNames" DataSetColumn="ApplicantNames" />
+              <Mapping SourceColumn="ApplicantKeys" DataSetColumn="ApplicantKeys" />
+              <Mapping SourceColumn="LastModifyDate" DataSetColumn="LastModifyDate" />
+              <Mapping SourceColumn="LastModifyWorker" DataSetColumn="LastModifyWorker" />
+              <Mapping SourceColumn="TrademarkControversyID" DataSetColumn="TrademarkControversyID" />
+              <Mapping SourceColumn="ApplicantKey" DataSetColumn="ApplicantKey" />
+              <Mapping SourceColumn="WorkerKey" DataSetColumn="WorkerKey" />
+              <Mapping SourceColumn="EntrustDate" DataSetColumn="EntrustDate" />
+              <Mapping SourceColumn="OutsourcingAttorney" DataSetColumn="OutsourcingAttorney" />
+              <Mapping SourceColumn="OutsourcingAttorneyWorker" DataSetColumn="OutsourcingAttorneyWorker" />
+              <Mapping SourceColumn="OutsourcingDate" DataSetColumn="OutsourcingDate" />
+              <Mapping SourceColumn="ApplicationDate" DataSetColumn="ApplicationDate" />
+              <Mapping SourceColumn="ApplicationNo" DataSetColumn="ApplicationNo" />
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="RegistrationNo" DataSetColumn="RegistrationNo" />
+              <Mapping SourceColumn="LawDate" DataSetColumn="LawDate" />
+              <Mapping SourceColumn="RegisterProduct" DataSetColumn="RegisterProduct" />
+              <Mapping SourceColumn="ExtendedDate" DataSetColumn="ExtendedDate" />
+              <Mapping SourceColumn="CloseDate" DataSetColumn="CloseDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="PicPath" DataSetColumn="PicPath" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+              <Mapping SourceColumn="AttorneyFirm" DataSetColumn="AttorneyFirm" />
+              <Mapping SourceColumn="AttLiaisoner" DataSetColumn="AttLiaisoner" />
+              <Mapping SourceColumn="DelegateType" DataSetColumn="DelegateType" />
+              <Mapping SourceColumn="MainCustomerName" DataSetColumn="MainCustomerName" />
+              <Mapping SourceColumn="MainCustomerTransactorName" DataSetColumn="MainCustomerTransactorName" />
+              <Mapping SourceColumn="MainCustomer" DataSetColumn="MainCustomer" />
+              <Mapping SourceColumn="MainCustomerTransactor" DataSetColumn="MainCustomerTransactor" />
+              <Mapping SourceColumn="IsBySelf" DataSetColumn="IsBySelf" />
+              <Mapping SourceColumn="TrademarkOvertureName" DataSetColumn="TrademarkOvertureName" />
+              <Mapping SourceColumn="RegisterProductName" DataSetColumn="RegisterProductName" />
+              <Mapping SourceColumn="ObjectionDate" DataSetColumn="ObjectionDate" />
+              <Mapping SourceColumn="ObjectionPeople" DataSetColumn="ObjectionPeople" />
+              <Mapping SourceColumn="ObjectionNo" DataSetColumn="ObjectionNo" />
+              <Mapping SourceColumn="ObjectionClass" DataSetColumn="ObjectionClass" />
+              <Mapping SourceColumn="ObjectionContent" DataSetColumn="ObjectionContent" />
+              <Mapping SourceColumn="ObjectionPicPath" DataSetColumn="ObjectionPicPath" />
+              <Mapping SourceColumn="TrademarOriginalNo" DataSetColumn="TrademarOriginalNo" />
+              <Mapping SourceColumn="ObjectionRegistrationNo" DataSetColumn="ObjectionRegistrationNo" />
+              <Mapping SourceColumn="ObjectionDueDate" DataSetColumn="ObjectionDueDate" />
+              <Mapping SourceColumn="ObjectionNoticeDate" DataSetColumn="ObjectionNoticeDate" />
+              <Mapping SourceColumn="ObjectionNoticeNo" DataSetColumn="ObjectionNoticeNo" />
+              <Mapping SourceColumn="ObjectionRegistrationDate" DataSetColumn="ObjectionRegistrationDate" />
+              <Mapping SourceColumn="ObjectionApplicationNo" DataSetColumn="ObjectionApplicationNo" />
+              <Mapping SourceColumn="ObjectionApplicationDate" DataSetColumn="ObjectionApplicationDate" />
+              <Mapping SourceColumn="ObjectionTrademarkName" DataSetColumn="ObjectionTrademarkName" />
+              <Mapping SourceColumn="Introducer" DataSetColumn="Introducer" />
+              <Mapping SourceColumn="DisagreementNo" DataSetColumn="DisagreementNo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByID" GeneratorSourceName="FillByID" GetMethodModifier="Public" GetMethodName="GetDataByID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByID" UserSourceName="FillByID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT          TrademarkControversyManagementT.TrademarkControversyID, TrademarkControversyManagementT.TrademarkNo, 
+                            TrademarkControversyManagementT.TrademarkName, TrademarkControversyManagementT.ApplicantKey, 
+                            TrademarkControversyManagementT.Country, TrademarkControversyManagementT.StyleName, 
+                            TrademarkControversyManagementT.TMTypeName, TrademarkControversyManagementT.Status, 
+                            TrademarkControversyManagementT.StatusExplain, TrademarkControversyManagementT.WorkerKey, 
+                            TrademarkControversyManagementT.EntrustDate, TrademarkControversyManagementT.OutsourcingAttorney, 
+                            TrademarkControversyManagementT.OutsourcingAttorneyWorker, 
+                            TrademarkControversyManagementT.OutsourcingTrademarkNo, 
+                            TrademarkControversyManagementT.OutsourcingDate, TrademarkControversyManagementT.ApplicationDate, 
+                            TrademarkControversyManagementT.ApplicationNo, TrademarkControversyManagementT.RegistrationDate, 
+                            TrademarkControversyManagementT.RegistrationNo, TrademarkControversyManagementT.LawDate, 
+                            TrademarkControversyManagementT.RegisterProduct, TrademarkControversyManagementT.ExtendedDate, 
+                            TrademarkControversyManagementT.CloseDate, TrademarkControversyManagementT.Remarks, 
+                            TrademarkControversyManagementT.PicPath, TMStatusT.Status AS StatusName, WorkerT_1.EmployeeName, 
+                            AttorneyT.AttorneyFirm, AttLiaisonerT.Liaisoner AS AttLiaisoner, CountryT.Country AS CountryName, 
+                            TrademarkControversyManagementT.DelegateType, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN '申請人直接委託' WHEN TrademarkControversyManagementT.DelegateType
+                             = 2 THEN '複代委託' END AS DelegateTypeName, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN ApplicantNames WHEN TrademarkControversyManagementT.DelegateType
+                             = 2 THEN
+                                (SELECT          AttorneyT.AttorneyFirm
+                                  FROM               AttorneyT
+                                  WHERE           AttorneyKey = TrademarkControversyManagementT.MainCustomer) END AS MainCustomerName, 
+                            CASE WHEN TrademarkControversyManagementT.DelegateType = 1 THEN
+                                (SELECT          LiaisonerT.LiaisonerName
+                                  FROM               LiaisonerT
+                                  WHERE           LiaisonerKey = TrademarkControversyManagementT.MainCustomerTransactor) 
+                            WHEN TrademarkControversyManagementT.DelegateType = 2 THEN
+                                (SELECT          AttLiaisonerT.Liaisoner
+                                  FROM               AttLiaisonerT
+                                  WHERE           AttLiaisonerT.ALiaisonerKey = TrademarkControversyManagementT.MainCustomerTransactor) 
+                            END AS MainCustomerTransactorName, TrademarkControversyManagementT.MainCustomer, 
+                            TrademarkControversyManagementT.MainCustomerRefNo, 
+                            TrademarkControversyManagementT.MainCustomerTransactor, TrademarkControversyManagementT.IsBySelf, 
+                            TrademarkControversyManagementT.TrademarkOvertureName, 
+                            TrademarkControversyManagementT.RegisterProductName, TrademarkControversyManagementT.ObjectionDate, 
+                            TrademarkControversyManagementT.ObjectionPeople, TrademarkControversyManagementT.ObjectionNo, 
+                            TrademarkControversyManagementT.ObjectionClass, TrademarkControversyManagementT.ObjectionContent, 
+                            TrademarkControversyManagementT.ObjectionPicPath, TrademarkControversyManagementT.TrademarOriginalNo, 
+                            TrademarkControversyManagementT.ObjectionRegistrationNo, 
+                            TrademarkControversyManagementT.ObjectionDueDate, TrademarkControversyManagementT.ApplicantNames, 
+                            TrademarkControversyManagementT.ApplicantKeys, TrademarkControversyManagementT.ObjectionNoticeDate, 
+                            TrademarkControversyManagementT.ObjectionNoticeNo, 
+                            TrademarkControversyManagementT.ObjectionRegistrationDate, 
+                            TrademarkControversyManagementT.ObjectionApplicationNo, 
+                            TrademarkControversyManagementT.ObjectionApplicationDate, 
+                            TrademarkControversyManagementT.LastModifyDate, WorkerT.EmployeeName AS LastModifyWorker, 
+                            TrademarkControversyManagementT.ObjectionTrademarkName, TrademarkControversyManagementT.Introducer, 
+                            TrademarkControversyManagementT.DisagreementNo
+FROM              WorkerT RIGHT OUTER JOIN
+                            TrademarkControversyManagementT ON 
+                            WorkerT.WorkerKey = TrademarkControversyManagementT.LastModifyWorker LEFT OUTER JOIN
+                            CountryT ON TrademarkControversyManagementT.Country = CountryT.CountrySymbol LEFT OUTER JOIN
+                            AttLiaisonerT ON 
+                            TrademarkControversyManagementT.OutsourcingAttorneyWorker = AttLiaisonerT.ALiaisonerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyManagementT.OutsourcingAttorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON 
+                            TrademarkControversyManagementT.WorkerKey = WorkerT_1.WorkerKey LEFT OUTER JOIN
+                            TMStatusT ON TrademarkControversyManagementT.Status = TMStatusT.TMStatusID
+WHERE          (TrademarkControversyManagementT.TrademarkControversyID = @TrademarkControversyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TrademarkControversyID" ColumnName="TrademarkControversyID" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyManagementT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrademarkControversyFeeTTableAdapter" GeneratorDataComponentClassName="TrademarkControversyFeeTTableAdapter" Name="TrademarkControversyFeeT" UserDataComponentName="TrademarkControversyFeeTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          TrademarkControversyFeeT.ControversyFeeKEY, TrademarkControversyFeeT.TrademarkControversyID, 
+                            TrademarkControversyFeeT.RDate, TrademarkControversyFeeT.FeeSubject, TrademarkControversyFeeT.FeePhase, 
+                            TrademarkControversyFeeT.Attorney, TrademarkControversyFeeT.FClientTransactor, 
+                            TrademarkControversyFeeT.IReceiptDate, TrademarkControversyFeeT.IReceiptNo, 
+                            TrademarkControversyFeeT.aBillDate, TrademarkControversyFeeT.aBill, TrademarkControversyFeeT.IAttorneyFee, 
+                            TrademarkControversyFeeT.IMoney, TrademarkControversyFeeT.ItoNT, TrademarkControversyFeeT.ITotall, 
+                            TrademarkControversyFeeT.OReceiptDate, TrademarkControversyFeeT.OReceiptNo, 
+                            TrademarkControversyFeeT.OAttorneyFee, TrademarkControversyFeeT.OMoney, TrademarkControversyFeeT.OtoNT, 
+                            TrademarkControversyFeeT.OTotall, TrademarkControversyFeeT.GReceiptDate, 
+                            TrademarkControversyFeeT.GReceiptNo, TrademarkControversyFeeT.GovFee, TrademarkControversyFeeT.GMoney, 
+                            TrademarkControversyFeeT.GtoNT, TrademarkControversyFeeT.GTotall, 
+                            TrademarkControversyFeeT.OAttorneyGovFee, TrademarkControversyFeeT.Totall, TrademarkControversyFeeT.Pay, 
+                            TrademarkControversyFeeT.PPP, TrademarkControversyFeeT.Withholding, TrademarkControversyFeeT.Tax, 
+                            TrademarkControversyFeeT.PracticalityPay, TrademarkControversyFeeT.NT, TrademarkControversyFeeT.PayKind, 
+                            TrademarkControversyFeeT.Remark, TrademarkControversyFeeT.PayType, TrademarkControversyFeeT.PayMemo, 
+                            TrademarkControversyFeeT.Days, TrademarkControversyFeeT.UpbuildDay, 
+                            FeePhaseT.FeePhase AS FeePhaseName, WorkerT_1.EmployeeName AS WorkerName, 
+                            TrademarkControversyFeeT.PayDate, TrademarkControversyFeeT.ReceiptDate, 
+                            TrademarkControversyFeeT.OtherTotalFee, TrademarkControversyFeeT.SingCode, 
+                            TrademarkControversyFeeT.OthFee, TrademarkControversyFeeT.OthTotal, AttorneyT.AttorneyFirm, 
+                            TrademarkControversyFeeT.IsClosing, TrademarkControversyFeeT.CloseDate, 
+                            TrademarkControversyFeeT.LastModifyDate, WorkerT.EmployeeName AS LastModifyWorker, 
+                            TrademarkControversyFeeT.TMoney, TrademarkControversyFeeT.TtoNT, TrademarkControversyFeeT.TotalNT
+FROM              TrademarkControversyFeeT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControversyFeeT.LastModifyWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyFeeT.Attorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            FeePhaseT ON TrademarkControversyFeeT.FeePhase = FeePhaseT.FeePhaseID LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON TrademarkControversyFeeT.FClientTransactor = WorkerT_1.WorkerKey
+WHERE          (TrademarkControversyFeeT.TrademarkControversyID = @TrademarkControversyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TrademarkControversyID" ColumnName="TrademarkControversyID" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyFeeT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ControversyFeeKEY" DataSetColumn="ControversyFeeKEY" />
+              <Mapping SourceColumn="TrademarkControversyID" DataSetColumn="TrademarkControversyID" />
+              <Mapping SourceColumn="RDate" DataSetColumn="RDate" />
+              <Mapping SourceColumn="FeeSubject" DataSetColumn="FeeSubject" />
+              <Mapping SourceColumn="FeePhase" DataSetColumn="FeePhase" />
+              <Mapping SourceColumn="Attorney" DataSetColumn="Attorney" />
+              <Mapping SourceColumn="FClientTransactor" DataSetColumn="FClientTransactor" />
+              <Mapping SourceColumn="IReceiptDate" DataSetColumn="IReceiptDate" />
+              <Mapping SourceColumn="IReceiptNo" DataSetColumn="IReceiptNo" />
+              <Mapping SourceColumn="aBillDate" DataSetColumn="aBillDate" />
+              <Mapping SourceColumn="aBill" DataSetColumn="aBill" />
+              <Mapping SourceColumn="IAttorneyFee" DataSetColumn="IAttorneyFee" />
+              <Mapping SourceColumn="IMoney" DataSetColumn="IMoney" />
+              <Mapping SourceColumn="ItoNT" DataSetColumn="ItoNT" />
+              <Mapping SourceColumn="ITotall" DataSetColumn="ITotall" />
+              <Mapping SourceColumn="OReceiptDate" DataSetColumn="OReceiptDate" />
+              <Mapping SourceColumn="OReceiptNo" DataSetColumn="OReceiptNo" />
+              <Mapping SourceColumn="OAttorneyFee" DataSetColumn="OAttorneyFee" />
+              <Mapping SourceColumn="OMoney" DataSetColumn="OMoney" />
+              <Mapping SourceColumn="OtoNT" DataSetColumn="OtoNT" />
+              <Mapping SourceColumn="OTotall" DataSetColumn="OTotall" />
+              <Mapping SourceColumn="GReceiptDate" DataSetColumn="GReceiptDate" />
+              <Mapping SourceColumn="GReceiptNo" DataSetColumn="GReceiptNo" />
+              <Mapping SourceColumn="GovFee" DataSetColumn="GovFee" />
+              <Mapping SourceColumn="GMoney" DataSetColumn="GMoney" />
+              <Mapping SourceColumn="GtoNT" DataSetColumn="GtoNT" />
+              <Mapping SourceColumn="GTotall" DataSetColumn="GTotall" />
+              <Mapping SourceColumn="OAttorneyGovFee" DataSetColumn="OAttorneyGovFee" />
+              <Mapping SourceColumn="Totall" DataSetColumn="Totall" />
+              <Mapping SourceColumn="Pay" DataSetColumn="Pay" />
+              <Mapping SourceColumn="PPP" DataSetColumn="PPP" />
+              <Mapping SourceColumn="Withholding" DataSetColumn="Withholding" />
+              <Mapping SourceColumn="Tax" DataSetColumn="Tax" />
+              <Mapping SourceColumn="PracticalityPay" DataSetColumn="PracticalityPay" />
+              <Mapping SourceColumn="NT" DataSetColumn="NT" />
+              <Mapping SourceColumn="PayKind" DataSetColumn="PayKind" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="PayType" DataSetColumn="PayType" />
+              <Mapping SourceColumn="PayMemo" DataSetColumn="PayMemo" />
+              <Mapping SourceColumn="Days" DataSetColumn="Days" />
+              <Mapping SourceColumn="UpbuildDay" DataSetColumn="UpbuildDay" />
+              <Mapping SourceColumn="FeePhaseName" DataSetColumn="FeePhaseName" />
+              <Mapping SourceColumn="WorkerName" DataSetColumn="WorkerName" />
+              <Mapping SourceColumn="PayDate" DataSetColumn="PayDate" />
+              <Mapping SourceColumn="ReceiptDate" DataSetColumn="ReceiptDate" />
+              <Mapping SourceColumn="OtherTotalFee" DataSetColumn="OtherTotalFee" />
+              <Mapping SourceColumn="SingCode" DataSetColumn="SingCode" />
+              <Mapping SourceColumn="OthFee" DataSetColumn="OthFee" />
+              <Mapping SourceColumn="OthTotal" DataSetColumn="OthTotal" />
+              <Mapping SourceColumn="AttorneyFirm" DataSetColumn="AttorneyFirm" />
+              <Mapping SourceColumn="IsClosing" DataSetColumn="IsClosing" />
+              <Mapping SourceColumn="CloseDate" DataSetColumn="CloseDate" />
+              <Mapping SourceColumn="LastModifyDate" DataSetColumn="LastModifyDate" />
+              <Mapping SourceColumn="LastModifyWorker" DataSetColumn="LastModifyWorker" />
+              <Mapping SourceColumn="TMoney" DataSetColumn="TMoney" />
+              <Mapping SourceColumn="TtoNT" DataSetColumn="TtoNT" />
+              <Mapping SourceColumn="TotalNT" DataSetColumn="TotalNT" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByPPP" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPPP" GeneratorSourceName="FillByPPP" GetMethodModifier="Public" GetMethodName="GetDataByPPP" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPPP" UserSourceName="FillByPPP">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT          TrademarkControversyFeeT.ControversyFeeKEY, TrademarkControversyFeeT.TrademarkControversyID, 
+                            TrademarkControversyFeeT.RDate, TrademarkControversyFeeT.FeeSubject, TrademarkControversyFeeT.FeePhase, 
+                            TrademarkControversyFeeT.Attorney, TrademarkControversyFeeT.FClientTransactor, 
+                            TrademarkControversyFeeT.IReceiptDate, TrademarkControversyFeeT.IReceiptNo, 
+                            TrademarkControversyFeeT.aBillDate, TrademarkControversyFeeT.aBill, TrademarkControversyFeeT.IAttorneyFee, 
+                            TrademarkControversyFeeT.IMoney, TrademarkControversyFeeT.ItoNT, TrademarkControversyFeeT.ITotall, 
+                            TrademarkControversyFeeT.OReceiptDate, TrademarkControversyFeeT.OReceiptNo, 
+                            TrademarkControversyFeeT.OAttorneyFee, TrademarkControversyFeeT.OMoney, TrademarkControversyFeeT.OtoNT, 
+                            TrademarkControversyFeeT.OTotall, TrademarkControversyFeeT.GReceiptDate, 
+                            TrademarkControversyFeeT.GReceiptNo, TrademarkControversyFeeT.GovFee, TrademarkControversyFeeT.GMoney, 
+                            TrademarkControversyFeeT.GtoNT, TrademarkControversyFeeT.GTotall, 
+                            TrademarkControversyFeeT.OAttorneyGovFee, TrademarkControversyFeeT.Totall, TrademarkControversyFeeT.Pay, 
+                            TrademarkControversyFeeT.PPP, TrademarkControversyFeeT.Withholding, TrademarkControversyFeeT.Tax, 
+                            TrademarkControversyFeeT.PracticalityPay, TrademarkControversyFeeT.NT, TrademarkControversyFeeT.PayKind, 
+                            TrademarkControversyFeeT.Remark, TrademarkControversyFeeT.PayType, TrademarkControversyFeeT.PayMemo, 
+                            TrademarkControversyFeeT.Days, TrademarkControversyFeeT.UpbuildDay, 
+                            FeePhaseT.FeePhase AS FeePhaseName, WorkerT_1.EmployeeName AS WorkerName, 
+                            TrademarkControversyFeeT.PayDate, TrademarkControversyFeeT.ReceiptDate, 
+                            TrademarkControversyFeeT.OtherTotalFee, TrademarkControversyFeeT.SingCode, 
+                            TrademarkControversyFeeT.OthFee, TrademarkControversyFeeT.OthTotal, AttorneyT.AttorneyFirm, 
+                            TrademarkControversyFeeT.IsClosing, TrademarkControversyFeeT.CloseDate, 
+                            TrademarkControversyFeeT.LastModifyDate, WorkerT.EmployeeName AS LastModifyWorker, 
+                            TrademarkControversyFeeT.TMoney, TrademarkControversyFeeT.TtoNT, TrademarkControversyFeeT.TotalNT
+FROM              TrademarkControversyFeeT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControversyFeeT.LastModifyWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyFeeT.Attorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            FeePhaseT ON TrademarkControversyFeeT.FeePhase = FeePhaseT.FeePhaseID LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON TrademarkControversyFeeT.FClientTransactor = WorkerT_1.WorkerKey
+WHERE          (TrademarkControversyFeeT.PPP = @PPP)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="PPP" ColumnName="PPP" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyFeeT" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@PPP" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="PPP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrademarkControversyPaymentTTableAdapter" GeneratorDataComponentClassName="TrademarkControversyPaymentTTableAdapter" Name="TrademarkControversyPaymentT" UserDataComponentName="TrademarkControversyPaymentTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          TrademarkControversyPaymentT.ControversyPaymentID, TrademarkControversyPaymentT.TrademarkControversyID, 
+                            TrademarkControversyPaymentT.RDate, TrademarkControversyPaymentT.FeeSubject, 
+                            TrademarkControversyPaymentT.FeePhase, TrademarkControversyPaymentT.FClientTransactor, 
+                            TrademarkControversyPaymentT.Attorney, TrademarkControversyPaymentT.PayKind, 
+                            TrademarkControversyPaymentT.IReceiptDate, TrademarkControversyPaymentT.IReceiptNo, 
+                            TrademarkControversyPaymentT.IMoney, TrademarkControversyPaymentT.IServiceFee, 
+                            TrademarkControversyPaymentT.GovFee, TrademarkControversyPaymentT.OtherFee, 
+                            TrademarkControversyPaymentT.Totall, TrademarkControversyPaymentT.Remark, 
+                            TrademarkControversyPaymentT.BillCheck, TrademarkControversyPaymentT.ReciveDate, 
+                            TrademarkControversyPaymentT.PayDueDate, TrademarkControversyPaymentT.IsBilling, 
+                            TrademarkControversyPaymentT.BillingNo, TrademarkControversyPaymentT.IsCopyFile, 
+                            TrademarkControversyPaymentT.IsScan, FeePhaseT.FeePhase AS FeePhaseName, 
+                            WorkerT_1.EmployeeName AS WorkerName, AttorneyT.AttorneyFirm, 
+                            TrademarkControversyPaymentT.ExchangeRate, TrademarkControversyPaymentT.Memo, 
+                            TrademarkControversyPaymentT.PaymentDate, TrademarkControversyPaymentT.SingCode, 
+                            TrademarkControversyPaymentT.EstimatedPaymentDate, TrademarkControversyPaymentT.IsClosing, 
+                            TrademarkControversyPaymentT.CloseDate, TrademarkControversyPaymentT.LastModifyDate, 
+                            WorkerT.EmployeeName AS LastModifyWorker
+FROM              TrademarkControversyPaymentT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControversyPaymentT.LastModifyWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON 
+                            TrademarkControversyPaymentT.FClientTransactor = WorkerT_1.WorkerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyPaymentT.Attorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            FeePhaseT ON TrademarkControversyPaymentT.FeePhase = FeePhaseT.FeePhaseID
+WHERE          (TrademarkControversyPaymentT.TrademarkControversyID = @TrademarkControversyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TrademarkControversyID" ColumnName="TrademarkControversyID" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyPaymentT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ControversyPaymentID" DataSetColumn="ControversyPaymentID" />
+              <Mapping SourceColumn="TrademarkControversyID" DataSetColumn="TrademarkControversyID" />
+              <Mapping SourceColumn="RDate" DataSetColumn="RDate" />
+              <Mapping SourceColumn="FeeSubject" DataSetColumn="FeeSubject" />
+              <Mapping SourceColumn="FeePhase" DataSetColumn="FeePhase" />
+              <Mapping SourceColumn="FClientTransactor" DataSetColumn="FClientTransactor" />
+              <Mapping SourceColumn="Attorney" DataSetColumn="Attorney" />
+              <Mapping SourceColumn="PayKind" DataSetColumn="PayKind" />
+              <Mapping SourceColumn="IReceiptDate" DataSetColumn="IReceiptDate" />
+              <Mapping SourceColumn="IReceiptNo" DataSetColumn="IReceiptNo" />
+              <Mapping SourceColumn="IMoney" DataSetColumn="IMoney" />
+              <Mapping SourceColumn="IServiceFee" DataSetColumn="IServiceFee" />
+              <Mapping SourceColumn="GovFee" DataSetColumn="GovFee" />
+              <Mapping SourceColumn="OtherFee" DataSetColumn="OtherFee" />
+              <Mapping SourceColumn="Totall" DataSetColumn="Totall" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="BillCheck" DataSetColumn="BillCheck" />
+              <Mapping SourceColumn="ReciveDate" DataSetColumn="ReciveDate" />
+              <Mapping SourceColumn="PayDueDate" DataSetColumn="PayDueDate" />
+              <Mapping SourceColumn="IsBilling" DataSetColumn="IsBilling" />
+              <Mapping SourceColumn="BillingNo" DataSetColumn="BillingNo" />
+              <Mapping SourceColumn="IsCopyFile" DataSetColumn="IsCopyFile" />
+              <Mapping SourceColumn="IsScan" DataSetColumn="IsScan" />
+              <Mapping SourceColumn="FeePhaseName" DataSetColumn="FeePhaseName" />
+              <Mapping SourceColumn="WorkerName" DataSetColumn="WorkerName" />
+              <Mapping SourceColumn="AttorneyFirm" DataSetColumn="AttorneyFirm" />
+              <Mapping SourceColumn="ExchangeRate" DataSetColumn="ExchangeRate" />
+              <Mapping SourceColumn="Memo" DataSetColumn="Memo" />
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="SingCode" DataSetColumn="SingCode" />
+              <Mapping SourceColumn="EstimatedPaymentDate" DataSetColumn="EstimatedPaymentDate" />
+              <Mapping SourceColumn="IsClosing" DataSetColumn="IsClosing" />
+              <Mapping SourceColumn="CloseDate" DataSetColumn="CloseDate" />
+              <Mapping SourceColumn="LastModifyDate" DataSetColumn="LastModifyDate" />
+              <Mapping SourceColumn="LastModifyWorker" DataSetColumn="LastModifyWorker" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByBillingNo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBillingNo" GeneratorSourceName="FillByBillingNo" GetMethodModifier="Public" GetMethodName="GetDataByBillingNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBillingNo" UserSourceName="FillByBillingNo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT          TrademarkControversyPaymentT.ControversyPaymentID, TrademarkControversyPaymentT.TrademarkControversyID, 
+                            TrademarkControversyPaymentT.RDate, TrademarkControversyPaymentT.FeeSubject, 
+                            TrademarkControversyPaymentT.FeePhase, TrademarkControversyPaymentT.FClientTransactor, 
+                            TrademarkControversyPaymentT.Attorney, TrademarkControversyPaymentT.PayKind, 
+                            TrademarkControversyPaymentT.IReceiptDate, TrademarkControversyPaymentT.IReceiptNo, 
+                            TrademarkControversyPaymentT.IMoney, TrademarkControversyPaymentT.IServiceFee, 
+                            TrademarkControversyPaymentT.GovFee, TrademarkControversyPaymentT.OtherFee, 
+                            TrademarkControversyPaymentT.Totall, TrademarkControversyPaymentT.Remark, 
+                            TrademarkControversyPaymentT.BillCheck, TrademarkControversyPaymentT.ReciveDate, 
+                            TrademarkControversyPaymentT.PayDueDate, TrademarkControversyPaymentT.IsBilling, 
+                            TrademarkControversyPaymentT.BillingNo, TrademarkControversyPaymentT.IsCopyFile, 
+                            TrademarkControversyPaymentT.IsScan, FeePhaseT.FeePhase AS FeePhaseName, 
+                            WorkerT_1.EmployeeName AS WorkerName, AttorneyT.AttorneyFirm, 
+                            TrademarkControversyPaymentT.ExchangeRate, TrademarkControversyPaymentT.Memo, 
+                            TrademarkControversyPaymentT.PaymentDate, TrademarkControversyPaymentT.SingCode, 
+                            TrademarkControversyPaymentT.EstimatedPaymentDate, TrademarkControversyPaymentT.IsClosing, 
+                            TrademarkControversyPaymentT.CloseDate, TrademarkControversyPaymentT.LastModifyDate, 
+                            WorkerT.EmployeeName AS LastModifyWorker
+FROM              TrademarkControversyPaymentT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControversyPaymentT.LastModifyWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON 
+                            TrademarkControversyPaymentT.FClientTransactor = WorkerT_1.WorkerKey LEFT OUTER JOIN
+                            AttorneyT ON TrademarkControversyPaymentT.Attorney = AttorneyT.AttorneyKey LEFT OUTER JOIN
+                            FeePhaseT ON TrademarkControversyPaymentT.FeePhase = FeePhaseT.FeePhaseID
+WHERE          (TrademarkControversyPaymentT.BillingNo = @BillingNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="BillingNo" ColumnName="BillingNo" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyPaymentT" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@BillingNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="BillingNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrademarkControversyNotifyEventTTableAdapter" GeneratorDataComponentClassName="TrademarkControversyNotifyEventTTableAdapter" Name="TrademarkControversyNotifyEventT" UserDataComponentName="TrademarkControversyNotifyEventTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          TrademarkControversyNotifyEventT.TMNotifyControversyEventID, 
+                            TrademarkControversyNotifyEventT.TrademarkControversyID, 
+                            TrademarkControversyNotifyEventT.NotifyEventContent, TrademarkControversyNotifyEventT.NotifyComitDate, 
+                            TrademarkControversyNotifyEventT.OccurDate, TrademarkControversyNotifyEventT.NotifyOfficerDate, 
+                            TrademarkControversyNotifyEventT.DueDate, TrademarkControversyNotifyEventT.NoticeDate, 
+                            TrademarkControversyNotifyEventT.CustomerAuthorizationDate, 
+                            TrademarkControversyNotifyEventT.OutsourcingDate, TrademarkControversyNotifyEventT.FinishDate, 
+                            TrademarkControversyNotifyEventT.Result, TrademarkControversyNotifyEventT.Remark, 
+                            TrademarkControversyNotifyEventT.EventType, TrademarkControversyNotifyEventT.WorkerKey, 
+                            WorkerT_1.EmployeeName AS WorkerName, TrademarkControversyNotifyEventT.AttorneyDueDate, 
+                            TrademarkControversyNotifyEventT.TMStatusID, TrademarkControversyNotifyEventT.LastModifyDate, 
+                            WorkerT.EmployeeName AS LastModifyWorker
+FROM              TrademarkControversyNotifyEventT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControversyNotifyEventT.LastModifyWorker = WorkerT.WorkerKey LEFT OUTER JOIN
+                            WorkerT AS WorkerT_1 ON TrademarkControversyNotifyEventT.WorkerKey = WorkerT_1.WorkerKey
+WHERE          (TrademarkControversyNotifyEventT.TrademarkControversyID = @TrademarkControversyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TrademarkControversyID" ColumnName="TrademarkControversyID" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControversyNotifyEventT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TMNotifyControversyEventID" DataSetColumn="TMNotifyControversyEventID" />
+              <Mapping SourceColumn="TrademarkControversyID" DataSetColumn="TrademarkControversyID" />
+              <Mapping SourceColumn="NotifyEventContent" DataSetColumn="NotifyEventContent" />
+              <Mapping SourceColumn="NotifyComitDate" DataSetColumn="NotifyComitDate" />
+              <Mapping SourceColumn="OccurDate" DataSetColumn="OccurDate" />
+              <Mapping SourceColumn="NotifyOfficerDate" DataSetColumn="NotifyOfficerDate" />
+              <Mapping SourceColumn="DueDate" DataSetColumn="DueDate" />
+              <Mapping SourceColumn="NoticeDate" DataSetColumn="NoticeDate" />
+              <Mapping SourceColumn="CustomerAuthorizationDate" DataSetColumn="CustomerAuthorizationDate" />
+              <Mapping SourceColumn="OutsourcingDate" DataSetColumn="OutsourcingDate" />
+              <Mapping SourceColumn="FinishDate" DataSetColumn="FinishDate" />
+              <Mapping SourceColumn="Result" DataSetColumn="Result" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="EventType" DataSetColumn="EventType" />
+              <Mapping SourceColumn="WorkerKey" DataSetColumn="WorkerKey" />
+              <Mapping SourceColumn="WorkerName" DataSetColumn="WorkerName" />
+              <Mapping SourceColumn="AttorneyDueDate" DataSetColumn="AttorneyDueDate" />
+              <Mapping SourceColumn="TMStatusID" DataSetColumn="TMStatusID" />
+              <Mapping SourceColumn="LastModifyDate" DataSetColumn="LastModifyDate" />
+              <Mapping SourceColumn="LastModifyWorker" DataSetColumn="LastModifyWorker" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TrademarkControveryEstimateCostTTableAdapter" GeneratorDataComponentClassName="TrademarkControveryEstimateCostTTableAdapter" Name="TrademarkControveryEstimateCostT" UserDataComponentName="TrademarkControveryEstimateCostTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [TrademarkControveryEstimateCostT] WHERE (([TMControveryEstimateCostID] = @Original_TMControveryEstimateCostID) AND ([TrademarkControversyID] = @Original_TrademarkControversyID) AND ((@IsNull_FeeSubject = 1 AND [FeeSubject] IS NULL) OR ([FeeSubject] = @Original_FeeSubject)) AND ((@IsNull_IAttorneyFee = 1 AND [IAttorneyFee] IS NULL) OR ([IAttorneyFee] = @Original_IAttorneyFee)) AND ((@IsNull_IMoney = 1 AND [IMoney] IS NULL) OR ([IMoney] = @Original_IMoney)) AND ((@IsNull_ItoNT = 1 AND [ItoNT] IS NULL) OR ([ItoNT] = @Original_ItoNT)) AND ((@IsNull_ITotall = 1 AND [ITotall] IS NULL) OR ([ITotall] = @Original_ITotall)) AND ((@IsNull_GovFee = 1 AND [GovFee] IS NULL) OR ([GovFee] = @Original_GovFee)) AND ((@IsNull_GMoney = 1 AND [GMoney] IS NULL) OR ([GMoney] = @Original_GMoney)) AND ((@IsNull_GtoNT = 1 AND [GtoNT] IS NULL) OR ([GtoNT] = @Original_GtoNT)) AND ((@IsNull_GTotall = 1 AND [GTotall] IS NULL) OR ([GTotall] = @Original_GTotall)) AND ((@IsNull_OtherFee = 1 AND [OtherFee] IS NULL) OR ([OtherFee] = @Original_OtherFee)) AND ((@IsNull_OtherMoney = 1 AND [OtherMoney] IS NULL) OR ([OtherMoney] = @Original_OtherMoney)) AND ((@IsNull_OtherNT = 1 AND [OtherNT] IS NULL) OR ([OtherNT] = @Original_OtherNT)) AND ((@IsNull_OtherTotal = 1 AND [OtherTotal] IS NULL) OR ([OtherTotal] = @Original_OtherTotal)) AND ((@IsNull_EstimateCost = 1 AND [EstimateCost] IS NULL) OR ([EstimateCost] = @Original_EstimateCost)) AND ((@IsNull_EstimateProfit = 1 AND [EstimateProfit] IS NULL) OR ([EstimateProfit] = @Original_EstimateProfit)) AND ((@IsNull_PayMemo = 1 AND [PayMemo] IS NULL) OR ([PayMemo] = @Original_PayMemo)) AND ((@IsNull_Remark = 1 AND [Remark] IS NULL) OR ([Remark] = @Original_Remark)) AND ((@IsNull_CreateDate = 1 AND [CreateDate] IS NULL) OR ([CreateDate] = @Original_CreateDate)) AND ((@IsNull_RealPrice = 1 AND [RealPrice] IS NULL) OR ([RealPrice] = @Original_RealPrice)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TMControveryEstimateCostID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TMControveryEstimateCostID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FeeSubject" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeSubject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IAttorneyFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IAttorneyFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItoNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ItoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ITotall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ITotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GovFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GovFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GtoNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GtoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GTotall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GTotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OtherMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherTotal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherTotal" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EstimateCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EstimateCost" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EstimateProfit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EstimateProfit" Precision="6" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PayMemo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PayMemo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remark" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RealPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RealPrice" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [TrademarkControveryEstimateCostT] ([TrademarkControversyID], [FeeSubject], [IAttorneyFee], [IMoney], [ItoNT], [ITotall], [GovFee], [GMoney], [GtoNT], [GTotall], [OtherFee], [OtherMoney], [OtherNT], [OtherTotal], [EstimateCost], [EstimateProfit], [PayMemo], [Remark], [CreateDate], [RealPrice]) VALUES (@TrademarkControversyID, @FeeSubject, @IAttorneyFee, @IMoney, @ItoNT, @ITotall, @GovFee, @GMoney, @GtoNT, @GTotall, @OtherFee, @OtherMoney, @OtherNT, @OtherTotal, @EstimateCost, @EstimateProfit, @PayMemo, @Remark, @CreateDate, @RealPrice);
+SELECT TMControveryEstimateCostID, TrademarkControversyID, FeeSubject, IAttorneyFee, IMoney, ItoNT, ITotall, GovFee, GMoney, GtoNT, GTotall, OtherFee, OtherMoney, OtherNT, OtherTotal, EstimateCost, EstimateProfit, PayMemo, Remark, CreateDate, EstimateCost * (100 + EstimateProfit) AS ServicePrice, RealPrice FROM TrademarkControveryEstimateCostT WHERE (TMControveryEstimateCostID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeSubject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IAttorneyFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ItoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ITotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GovFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GtoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GTotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OtherMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherTotal" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EstimateCost" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EstimateProfit" Precision="6" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PayMemo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RealPrice" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          TrademarkControveryEstimateCostT.TMControveryEstimateCostID, 
+                            TrademarkControveryEstimateCostT.TrademarkControversyID, TrademarkControveryEstimateCostT.FeeSubject, 
+                            TrademarkControveryEstimateCostT.IAttorneyFee, TrademarkControveryEstimateCostT.IMoney, 
+                            TrademarkControveryEstimateCostT.ItoNT, TrademarkControveryEstimateCostT.ITotall, 
+                            TrademarkControveryEstimateCostT.GovFee, TrademarkControveryEstimateCostT.GMoney, 
+                            TrademarkControveryEstimateCostT.GtoNT, TrademarkControveryEstimateCostT.GTotall, 
+                            TrademarkControveryEstimateCostT.OtherFee, TrademarkControveryEstimateCostT.OtherMoney, 
+                            TrademarkControveryEstimateCostT.OtherNT, TrademarkControveryEstimateCostT.OtherTotal, 
+                            TrademarkControveryEstimateCostT.EstimateCost, TrademarkControveryEstimateCostT.EstimateProfit, 
+                            TrademarkControveryEstimateCostT.PayMemo, TrademarkControveryEstimateCostT.Remark, 
+                            TrademarkControveryEstimateCostT.CreateDate, 
+                            TrademarkControveryEstimateCostT.EstimateCost * (100 + TrademarkControveryEstimateCostT.EstimateProfit) 
+                            AS ServicePrice, TrademarkControveryEstimateCostT.RealPrice, 
+                            TrademarkControveryEstimateCostT.LastModifyDate, WorkerT.EmployeeName AS LastModifyWorker, 
+                            TrademarkControveryEstimateCostT.OAttorneyFee, TrademarkControveryEstimateCostT.OMoney, 
+                            TrademarkControveryEstimateCostT.OtoNT, TrademarkControveryEstimateCostT.OTotall
+FROM              TrademarkControveryEstimateCostT LEFT OUTER JOIN
+                            WorkerT ON TrademarkControveryEstimateCostT.LastModifyWorker = WorkerT.WorkerKey
+WHERE          (TrademarkControveryEstimateCostT.TrademarkControversyID = @TrademarkControversyID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="TrademarkControversyID" ColumnName="TrademarkControversyID" DataSourceName="DemoLawOfficeDB.dbo.TrademarkControveryEstimateCostT" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [TrademarkControveryEstimateCostT] SET [TrademarkControversyID] = @TrademarkControversyID, [FeeSubject] = @FeeSubject, [IAttorneyFee] = @IAttorneyFee, [IMoney] = @IMoney, [ItoNT] = @ItoNT, [ITotall] = @ITotall, [GovFee] = @GovFee, [GMoney] = @GMoney, [GtoNT] = @GtoNT, [GTotall] = @GTotall, [OtherFee] = @OtherFee, [OtherMoney] = @OtherMoney, [OtherNT] = @OtherNT, [OtherTotal] = @OtherTotal, [EstimateCost] = @EstimateCost, [EstimateProfit] = @EstimateProfit, [PayMemo] = @PayMemo, [Remark] = @Remark, [CreateDate] = @CreateDate, [RealPrice] = @RealPrice WHERE (([TMControveryEstimateCostID] = @Original_TMControveryEstimateCostID) AND ([TrademarkControversyID] = @Original_TrademarkControversyID) AND ((@IsNull_FeeSubject = 1 AND [FeeSubject] IS NULL) OR ([FeeSubject] = @Original_FeeSubject)) AND ((@IsNull_IAttorneyFee = 1 AND [IAttorneyFee] IS NULL) OR ([IAttorneyFee] = @Original_IAttorneyFee)) AND ((@IsNull_IMoney = 1 AND [IMoney] IS NULL) OR ([IMoney] = @Original_IMoney)) AND ((@IsNull_ItoNT = 1 AND [ItoNT] IS NULL) OR ([ItoNT] = @Original_ItoNT)) AND ((@IsNull_ITotall = 1 AND [ITotall] IS NULL) OR ([ITotall] = @Original_ITotall)) AND ((@IsNull_GovFee = 1 AND [GovFee] IS NULL) OR ([GovFee] = @Original_GovFee)) AND ((@IsNull_GMoney = 1 AND [GMoney] IS NULL) OR ([GMoney] = @Original_GMoney)) AND ((@IsNull_GtoNT = 1 AND [GtoNT] IS NULL) OR ([GtoNT] = @Original_GtoNT)) AND ((@IsNull_GTotall = 1 AND [GTotall] IS NULL) OR ([GTotall] = @Original_GTotall)) AND ((@IsNull_OtherFee = 1 AND [OtherFee] IS NULL) OR ([OtherFee] = @Original_OtherFee)) AND ((@IsNull_OtherMoney = 1 AND [OtherMoney] IS NULL) OR ([OtherMoney] = @Original_OtherMoney)) AND ((@IsNull_OtherNT = 1 AND [OtherNT] IS NULL) OR ([OtherNT] = @Original_OtherNT)) AND ((@IsNull_OtherTotal = 1 AND [OtherTotal] IS NULL) OR ([OtherTotal] = @Original_OtherTotal)) AND ((@IsNull_EstimateCost = 1 AND [EstimateCost] IS NULL) OR ([EstimateCost] = @Original_EstimateCost)) AND ((@IsNull_EstimateProfit = 1 AND [EstimateProfit] IS NULL) OR ([EstimateProfit] = @Original_EstimateProfit)) AND ((@IsNull_PayMemo = 1 AND [PayMemo] IS NULL) OR ([PayMemo] = @Original_PayMemo)) AND ((@IsNull_Remark = 1 AND [Remark] IS NULL) OR ([Remark] = @Original_Remark)) AND ((@IsNull_CreateDate = 1 AND [CreateDate] IS NULL) OR ([CreateDate] = @Original_CreateDate)) AND ((@IsNull_RealPrice = 1 AND [RealPrice] IS NULL) OR ([RealPrice] = @Original_RealPrice)));
+SELECT TMControveryEstimateCostID, TrademarkControversyID, FeeSubject, IAttorneyFee, IMoney, ItoNT, ITotall, GovFee, GMoney, GtoNT, GTotall, OtherFee, OtherMoney, OtherNT, OtherTotal, EstimateCost, EstimateProfit, PayMemo, Remark, CreateDate, EstimateCost * (100 + EstimateProfit) AS ServicePrice, RealPrice FROM TrademarkControveryEstimateCostT WHERE (TMControveryEstimateCostID = @TMControveryEstimateCostID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FeeSubject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@IAttorneyFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ItoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ITotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GovFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GtoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GTotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@OtherMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@OtherTotal" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EstimateCost" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@EstimateProfit" Precision="6" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PayMemo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@RealPrice" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TMControveryEstimateCostID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TMControveryEstimateCostID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TrademarkControversyID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TrademarkControversyID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FeeSubject" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FeeSubject" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FeeSubject" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IAttorneyFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_IAttorneyFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="IAttorneyFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItoNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ItoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ItoNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ITotall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ITotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="ITotall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GovFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GovFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GovFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GtoNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GtoNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GtoNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GTotall" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GTotall" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GTotall" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherFee" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherFee" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherFee" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherMoney" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_OtherMoney" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="OtherMoney" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherNT" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherNT" Precision="8" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherNT" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OtherTotal" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_OtherTotal" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="OtherTotal" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EstimateCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EstimateCost" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateCost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EstimateProfit" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_EstimateProfit" Precision="6" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="EstimateProfit" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PayMemo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_PayMemo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PayMemo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Remark" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Remark" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Remark" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CreateDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_CreateDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="CreateDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RealPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_RealPrice" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="RealPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="TMControveryEstimateCostID" ColumnName="TMControveryEstimateCostID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@TMControveryEstimateCostID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="TMControveryEstimateCostID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TMControveryEstimateCostID" DataSetColumn="TMControveryEstimateCostID" />
+              <Mapping SourceColumn="TrademarkControversyID" DataSetColumn="TrademarkControversyID" />
+              <Mapping SourceColumn="FeeSubject" DataSetColumn="FeeSubject" />
+              <Mapping SourceColumn="IAttorneyFee" DataSetColumn="IAttorneyFee" />
+              <Mapping SourceColumn="IMoney" DataSetColumn="IMoney" />
+              <Mapping SourceColumn="ItoNT" DataSetColumn="ItoNT" />
+              <Mapping SourceColumn="ITotall" DataSetColumn="ITotall" />
+              <Mapping SourceColumn="GovFee" DataSetColumn="GovFee" />
+              <Mapping SourceColumn="GMoney" DataSetColumn="GMoney" />
+              <Mapping SourceColumn="GtoNT" DataSetColumn="GtoNT" />
+              <Mapping SourceColumn="GTotall" DataSetColumn="GTotall" />
+              <Mapping SourceColumn="OtherFee" DataSetColumn="OtherFee" />
+              <Mapping SourceColumn="OtherMoney" DataSetColumn="OtherMoney" />
+              <Mapping SourceColumn="OtherNT" DataSetColumn="OtherNT" />
+              <Mapping SourceColumn="OtherTotal" DataSetColumn="OtherTotal" />
+              <Mapping SourceColumn="EstimateCost" DataSetColumn="EstimateCost" />
+              <Mapping SourceColumn="EstimateProfit" DataSetColumn="EstimateProfit" />
+              <Mapping SourceColumn="PayMemo" DataSetColumn="PayMemo" />
+              <Mapping SourceColumn="Remark" DataSetColumn="Remark" />
+              <Mapping SourceColumn="CreateDate" DataSetColumn="CreateDate" />
+              <Mapping SourceColumn="ServicePrice" DataSetColumn="ServicePrice" />
+              <Mapping SourceColumn="RealPrice" DataSetColumn="RealPrice" />
+              <Mapping SourceColumn="LastModifyDate" DataSetColumn="LastModifyDate" />
+              <Mapping SourceColumn="LastModifyWorker" DataSetColumn="LastModifyWorker" />
+              <Mapping SourceColumn="OAttorneyFee" DataSetColumn="OAttorneyFee" />
+              <Mapping SourceColumn="OMoney" DataSetColumn="OMoney" />
+              <Mapping SourceColumn="OtoNT" DataSetColumn="OtoNT" />
+              <Mapping SourceColumn="OTotall" DataSetColumn="OTotall" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_TrademarkControversy" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_TrademarkControversy" msprop:Generator_UserDSName="DataSet_TrademarkControversy">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TrademarkControversyManagementT" msprop:Generator_UserTableName="TrademarkControversyManagementT" msprop:Generator_RowEvArgName="TrademarkControversyManagementTRowChangeEvent" msprop:Generator_TableVarName="tableTrademarkControversyManagementT" msprop:Generator_TablePropName="TrademarkControversyManagementT" msprop:Generator_RowDeletingName="TrademarkControversyManagementTRowDeleting" msprop:Generator_RowChangingName="TrademarkControversyManagementTRowChanging" msprop:Generator_RowDeletedName="TrademarkControversyManagementTRowDeleted" msprop:Generator_RowEvHandlerName="TrademarkControversyManagementTRowChangeEventHandler" msprop:Generator_TableClassName="TrademarkControversyManagementTDataTable" msprop:Generator_RowChangedName="TrademarkControversyManagementTRowChanged" msprop:Generator_RowClassName="TrademarkControversyManagementTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TrademarkNo" msprop:Generator_ColumnVarNameInTable="columnTrademarkNo" msprop:Generator_ColumnPropNameInRow="TrademarkNo" msprop:Generator_ColumnPropNameInTable="TrademarkNoColumn" msprop:Generator_UserColumnName="TrademarkNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrademarkName" msprop:Generator_ColumnVarNameInTable="columnTrademarkName" msprop:Generator_ColumnPropNameInRow="TrademarkName" msprop:Generator_ColumnPropNameInTable="TrademarkNameColumn" msprop:Generator_UserColumnName="TrademarkName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountrySymbol" msprop:Generator_ColumnVarNameInTable="columnCountrySymbol" msprop:Generator_ColumnPropNameInRow="CountrySymbol" msprop:Generator_ColumnPropNameInTable="CountrySymbolColumn" msprop:Generator_UserColumnName="CountrySymbol" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" msprop:Generator_UserColumnName="StyleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TMTypeName" msprop:Generator_ColumnVarNameInTable="columnTMTypeName" msprop:Generator_ColumnPropNameInRow="TMTypeName" msprop:Generator_ColumnPropNameInTable="TMTypeNameColumn" msprop:Generator_UserColumnName="TMTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusExplain" msprop:Generator_ColumnVarNameInTable="columnStatusExplain" msprop:Generator_ColumnPropNameInRow="StatusExplain" msprop:Generator_ColumnPropNameInTable="StatusExplainColumn" msprop:Generator_UserColumnName="StatusExplain" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OutsourcingTrademarkNo" msprop:Generator_ColumnVarNameInTable="columnOutsourcingTrademarkNo" msprop:Generator_ColumnPropNameInRow="OutsourcingTrademarkNo" msprop:Generator_ColumnPropNameInTable="OutsourcingTrademarkNoColumn" msprop:Generator_UserColumnName="OutsourcingTrademarkNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelegateTypeName" msprop:Generator_ColumnVarNameInTable="columnDelegateTypeName" msprop:Generator_ColumnPropNameInRow="DelegateTypeName" msprop:Generator_ColumnPropNameInTable="DelegateTypeNameColumn" msprop:Generator_UserColumnName="DelegateTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MainCustomerRefNo" msprop:Generator_ColumnVarNameInTable="columnMainCustomerRefNo" msprop:Generator_ColumnPropNameInRow="MainCustomerRefNo" msprop:Generator_ColumnPropNameInTable="MainCustomerRefNoColumn" msprop:Generator_UserColumnName="MainCustomerRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApplicantNames" msprop:Generator_ColumnVarNameInTable="columnApplicantNames" msprop:Generator_ColumnPropNameInRow="ApplicantNames" msprop:Generator_ColumnPropNameInTable="ApplicantNamesColumn" msprop:Generator_UserColumnName="ApplicantNames" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApplicantKeys" msprop:Generator_ColumnVarNameInTable="columnApplicantKeys" msprop:Generator_ColumnPropNameInRow="ApplicantKeys" msprop:Generator_ColumnPropNameInTable="ApplicantKeysColumn" msprop:Generator_UserColumnName="ApplicantKeys" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastModifyDate" msprop:Generator_ColumnVarNameInTable="columnLastModifyDate" msprop:Generator_ColumnPropNameInRow="LastModifyDate" msprop:Generator_ColumnPropNameInTable="LastModifyDateColumn" msprop:Generator_UserColumnName="LastModifyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyWorker" msprop:Generator_ColumnVarNameInTable="columnLastModifyWorker" msprop:Generator_ColumnPropNameInRow="LastModifyWorker" msprop:Generator_ColumnPropNameInTable="LastModifyWorkerColumn" msprop:Generator_UserColumnName="LastModifyWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrademarkControversyID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTrademarkControversyID" msprop:Generator_ColumnPropNameInRow="TrademarkControversyID" msprop:Generator_ColumnPropNameInTable="TrademarkControversyIDColumn" msprop:Generator_UserColumnName="TrademarkControversyID" type="xs:int" />
+              <xs:element name="ApplicantKey" msprop:Generator_ColumnVarNameInTable="columnApplicantKey" msprop:Generator_ColumnPropNameInRow="ApplicantKey" msprop:Generator_ColumnPropNameInTable="ApplicantKeyColumn" msprop:Generator_UserColumnName="ApplicantKey" type="xs:int" minOccurs="0" />
+              <xs:element name="WorkerKey" msprop:Generator_ColumnVarNameInTable="columnWorkerKey" msprop:Generator_ColumnPropNameInRow="WorkerKey" msprop:Generator_ColumnPropNameInTable="WorkerKeyColumn" msprop:Generator_UserColumnName="WorkerKey" type="xs:int" minOccurs="0" />
+              <xs:element name="EntrustDate" msprop:Generator_ColumnVarNameInTable="columnEntrustDate" msprop:Generator_ColumnPropNameInRow="EntrustDate" msprop:Generator_ColumnPropNameInTable="EntrustDateColumn" msprop:Generator_UserColumnName="EntrustDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OutsourcingAttorney" msprop:Generator_ColumnVarNameInTable="columnOutsourcingAttorney" msprop:Generator_ColumnPropNameInRow="OutsourcingAttorney" msprop:Generator_ColumnPropNameInTable="OutsourcingAttorneyColumn" msprop:Generator_UserColumnName="OutsourcingAttorney" type="xs:int" minOccurs="0" />
+              <xs:element name="OutsourcingAttorneyWorker" msprop:Generator_ColumnVarNameInTable="columnOutsourcingAttorneyWorker" msprop:Generator_ColumnPropNameInRow="OutsourcingAttorneyWorker" msprop:Generator_ColumnPropNameInTable="OutsourcingAttorneyWorkerColumn" msprop:Generator_UserColumnName="OutsourcingAttorneyWorker" type="xs:int" minOccurs="0" />
+              <xs:element name="OutsourcingDate" msprop:Generator_ColumnVarNameInTable="columnOutsourcingDate" msprop:Generator_ColumnPropNameInRow="OutsourcingDate" msprop:Generator_ColumnPropNameInTable="OutsourcingDateColumn" msprop:Generator_UserColumnName="OutsourcingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApplicationDate" msprop:Generator_ColumnVarNameInTable="columnApplicationDate" msprop:Generator_ColumnPropNameInRow="ApplicationDate" msprop:Generator_ColumnPropNameInTable="ApplicationDateColumn" msprop:Generator_UserColumnName="ApplicationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ApplicationNo" msprop:Generator_ColumnVarNameInTable="columnApplicationNo" msprop:Generator_ColumnPropNameInRow="ApplicationNo" msprop:Generator_ColumnPropNameInTable="ApplicationNoColumn" msprop:Generator_UserColumnName="ApplicationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RegistrationNo" msprop:Generator_ColumnVarNameInTable="columnRegistrationNo" msprop:Generator_ColumnPropNameInRow="RegistrationNo" msprop:Generator_ColumnPropNameInTable="RegistrationNoColumn" msprop:Generator_UserColumnName="RegistrationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LawDate" msprop:Generator_ColumnVarNameInTable="columnLawDate" msprop:Generator_ColumnPropNameInRow="LawDate" msprop:Generator_ColumnPropNameInTable="LawDateColumn" msprop:Generator_UserColumnName="LawDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RegisterProduct" msprop:Generator_ColumnVarNameInTable="columnRegisterProduct" msprop:Generator_ColumnPropNameInRow="RegisterProduct" msprop:Generator_ColumnPropNameInTable="RegisterProductColumn" msprop:Generator_UserColumnName="RegisterProduct" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExtendedDate" msprop:Generator_ColumnVarNameInTable="columnExtendedDate" msprop:Generator_ColumnPropNameInRow="ExtendedDate" msprop:Generator_ColumnPropNameInTable="ExtendedDateColumn" msprop:Generator_UserColumnName="ExtendedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" msprop:Generator_UserColumnName="CloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" msprop:Generator_UserColumnName="Remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PicPath" msprop:Generator_ColumnVarNameInTable="columnPicPath" msprop:Generator_ColumnPropNameInRow="PicPath" msprop:Generator_ColumnPropNameInTable="PicPathColumn" msprop:Generator_UserColumnName="PicPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttorneyFirm" msprop:Generator_ColumnVarNameInTable="columnAttorneyFirm" msprop:Generator_ColumnPropNameInRow="AttorneyFirm" msprop:Generator_ColumnPropNameInTable="AttorneyFirmColumn" msprop:Generator_UserColumnName="AttorneyFirm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttLiaisoner" msprop:Generator_ColumnVarNameInTable="columnAttLiaisoner" msprop:Generator_ColumnPropNameInRow="AttLiaisoner" msprop:Generator_ColumnPropNameInTable="AttLiaisonerColumn" msprop:Generator_UserColumnName="AttLiaisoner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelegateType" msprop:Generator_ColumnVarNameInTable="columnDelegateType" msprop:Generator_ColumnPropNameInRow="DelegateType" msprop:Generator_ColumnPropNameInTable="DelegateTypeColumn" msprop:Generator_UserColumnName="DelegateType" type="xs:int" minOccurs="0" />
+              <xs:element name="MainCustomerName" msprop:Generator_ColumnVarNameInTable="columnMainCustomerName" msprop:Generator_ColumnPropNameInRow="MainCustomerName" msprop:Generator_ColumnPropNameInTable="MainCustomerNameColumn" msprop:Generator_UserColumnName="MainCustomerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MainCustomerTransactorName" msprop:Generator_ColumnVarNameInTable="columnMainCustomerTransactorName" msprop:Generator_ColumnPropNameInRow="MainCustomerTransactorName" msprop:Generator_ColumnPropNameInTable="MainCustomerTransactorNameColumn" msprop:Generator_UserColumnName="MainCustomerTransactorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MainCustomer" msprop:Generator_ColumnVarNameInTable="columnMainCustomer" msprop:Generator_ColumnPropNameInRow="MainCustomer" msprop:Generator_ColumnPropNameInTable="MainCustomerColumn" msprop:Generator_UserColumnName="MainCustomer" type="xs:int" minOccurs="0" />
+              <xs:element name="MainCustomerTransactor" msprop:Generator_ColumnVarNameInTable="columnMainCustomerTransactor" msprop:Generator_ColumnPropNameInRow="MainCustomerTransactor" msprop:Generator_ColumnPropNameInTable="MainCustomerTransactorColumn" msprop:Generator_UserColumnName="MainCustomerTransactor" type="xs:int" minOccurs="0" />
+              <xs:element name="IsBySelf" msprop:Generator_ColumnVarNameInTable="columnIsBySelf" msprop:Generator_ColumnPropNameInRow="IsBySelf" msprop:Generator_ColumnPropNameInTable="IsBySelfColumn" msprop:Generator_UserColumnName="IsBySelf" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TrademarkOvertureName" msprop:Generator_ColumnVarNameInTable="columnTrademarkOvertureName" msprop:Generator_ColumnPropNameInRow="TrademarkOvertureName" msprop:Generator_ColumnPropNameInTable="TrademarkOvertureNameColumn" msprop:Generator_UserColumnName="TrademarkOvertureName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegisterProductName" msprop:Generator_ColumnVarNameInTable="columnRegisterProductName" msprop:Generator_ColumnPropNameInRow="RegisterProductName" msprop:Generator_ColumnPropNameInTable="RegisterProductNameColumn" msprop:Generator_UserColumnName="RegisterProductName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionDate" msprop:Generator_ColumnVarNameInTable="columnObjectionDate" msprop:Generator_ColumnPropNameInRow="ObjectionDate" msprop:Generator_ColumnPropNameInTable="ObjectionDateColumn" msprop:Generator_UserColumnName="ObjectionDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObjectionPeople" msprop:Generator_ColumnVarNameInTable="columnObjectionPeople" msprop:Generator_ColumnPropNameInRow="ObjectionPeople" msprop:Generator_ColumnPropNameInTable="ObjectionPeopleColumn" msprop:Generator_UserColumnName="ObjectionPeople" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionNo" msprop:Generator_ColumnVarNameInTable="columnObjectionNo" msprop:Generator_ColumnPropNameInRow="ObjectionNo" msprop:Generator_ColumnPropNameInTable="ObjectionNoColumn" msprop:Generator_UserColumnName="ObjectionNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionClass" msprop:Generator_ColumnVarNameInTable="columnObjectionClass" msprop:Generator_ColumnPropNameInRow="ObjectionClass" msprop:Generator_ColumnPropNameInTable="ObjectionClassColumn" msprop:Generator_UserColumnName="ObjectionClass" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionContent" msprop:Generator_ColumnVarNameInTable="columnObjectionContent" msprop:Generator_ColumnPropNameInRow="ObjectionContent" msprop:Generator_ColumnPropNameInTable="ObjectionContentColumn" msprop:Generator_UserColumnName="ObjectionContent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionPicPath" msprop:Generator_ColumnVarNameInTable="columnObjectionPicPath" msprop:Generator_ColumnPropNameInRow="ObjectionPicPath" msprop:Generator_ColumnPropNameInTable="ObjectionPicPathColumn" msprop:Generator_UserColumnName="ObjectionPicPath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrademarOriginalNo" msprop:Generator_ColumnVarNameInTable="columnTrademarOriginalNo" msprop:Generator_ColumnPropNameInRow="TrademarOriginalNo" msprop:Generator_ColumnPropNameInTable="TrademarOriginalNoColumn" msprop:Generator_UserColumnName="TrademarOriginalNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionRegistrationNo" msprop:Generator_ColumnVarNameInTable="columnObjectionRegistrationNo" msprop:Generator_ColumnPropNameInRow="ObjectionRegistrationNo" msprop:Generator_ColumnPropNameInTable="ObjectionRegistrationNoColumn" msprop:Generator_UserColumnName="ObjectionRegistrationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionDueDate" msprop:Generator_ColumnVarNameInTable="columnObjectionDueDate" msprop:Generator_ColumnPropNameInRow="ObjectionDueDate" msprop:Generator_ColumnPropNameInTable="ObjectionDueDateColumn" msprop:Generator_UserColumnName="ObjectionDueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObjectionNoticeDate" msprop:Generator_ColumnVarNameInTable="columnObjectionNoticeDate" msprop:Generator_ColumnPropNameInRow="ObjectionNoticeDate" msprop:Generator_ColumnPropNameInTable="ObjectionNoticeDateColumn" msprop:Generator_UserColumnName="ObjectionNoticeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObjectionNoticeNo" msprop:Generator_ColumnVarNameInTable="columnObjectionNoticeNo" msprop:Generator_ColumnPropNameInRow="ObjectionNoticeNo" msprop:Generator_ColumnPropNameInTable="ObjectionNoticeNoColumn" msprop:Generator_UserColumnName="ObjectionNoticeNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionRegistrationDate" msprop:Generator_ColumnVarNameInTable="columnObjectionRegistrationDate" msprop:Generator_ColumnPropNameInRow="ObjectionRegistrationDate" msprop:Generator_ColumnPropNameInTable="ObjectionRegistrationDateColumn" msprop:Generator_UserColumnName="ObjectionRegistrationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObjectionApplicationNo" msprop:Generator_ColumnVarNameInTable="columnObjectionApplicationNo" msprop:Generator_ColumnPropNameInRow="ObjectionApplicationNo" msprop:Generator_ColumnPropNameInTable="ObjectionApplicationNoColumn" msprop:Generator_UserColumnName="ObjectionApplicationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectionApplicationDate" msprop:Generator_ColumnVarNameInTable="columnObjectionApplicationDate" msprop:Generator_ColumnPropNameInRow="ObjectionApplicationDate" msprop:Generator_ColumnPropNameInTable="ObjectionApplicationDateColumn" msprop:Generator_UserColumnName="ObjectionApplicationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ObjectionTrademarkName" msprop:Generator_ColumnVarNameInTable="columnObjectionTrademarkName" msprop:Generator_ColumnPropNameInRow="ObjectionTrademarkName" msprop:Generator_ColumnPropNameInTable="ObjectionTrademarkNameColumn" msprop:Generator_UserColumnName="ObjectionTrademarkName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Introducer" msprop:Generator_ColumnVarNameInTable="columnIntroducer" msprop:Generator_ColumnPropNameInRow="Introducer" msprop:Generator_ColumnPropNameInTable="IntroducerColumn" msprop:Generator_UserColumnName="Introducer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DisagreementNo" msprop:Generator_ColumnVarNameInTable="columnDisagreementNo" msprop:Generator_ColumnPropNameInRow="DisagreementNo" msprop:Generator_ColumnPropNameInTable="DisagreementNoColumn" msprop:Generator_UserColumnName="DisagreementNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmployeeName" msprop:Generator_ColumnVarNameInTable="columnEmployeeName" msprop:Generator_ColumnPropNameInRow="EmployeeName" msprop:Generator_ColumnPropNameInTable="EmployeeNameColumn" msprop:Generator_UserColumnName="EmployeeName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrademarkControversyFeeT" msprop:Generator_UserTableName="TrademarkControversyFeeT" msprop:Generator_RowEvArgName="TrademarkControversyFeeTRowChangeEvent" msprop:Generator_TableVarName="tableTrademarkControversyFeeT" msprop:Generator_TablePropName="TrademarkControversyFeeT" msprop:Generator_RowDeletingName="TrademarkControversyFeeTRowDeleting" msprop:Generator_RowChangingName="TrademarkControversyFeeTRowChanging" msprop:Generator_RowDeletedName="TrademarkControversyFeeTRowDeleted" msprop:Generator_RowEvHandlerName="TrademarkControversyFeeTRowChangeEventHandler" msprop:Generator_TableClassName="TrademarkControversyFeeTDataTable" msprop:Generator_RowChangedName="TrademarkControversyFeeTRowChanged" msprop:Generator_RowClassName="TrademarkControversyFeeTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ControversyFeeKEY" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnControversyFeeKEY" msprop:Generator_ColumnPropNameInRow="ControversyFeeKEY" msprop:Generator_ColumnPropNameInTable="ControversyFeeKEYColumn" msprop:Generator_UserColumnName="ControversyFeeKEY" type="xs:int" />
+              <xs:element name="TrademarkControversyID" msprop:Generator_ColumnVarNameInTable="columnTrademarkControversyID" msprop:Generator_ColumnPropNameInRow="TrademarkControversyID" msprop:Generator_ColumnPropNameInTable="TrademarkControversyIDColumn" msprop:Generator_UserColumnName="TrademarkControversyID" type="xs:int" />
+              <xs:element name="RDate" msprop:Generator_ColumnVarNameInTable="columnRDate" msprop:Generator_ColumnPropNameInRow="RDate" msprop:Generator_ColumnPropNameInTable="RDateColumn" msprop:Generator_UserColumnName="RDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FeeSubject" msprop:Generator_ColumnVarNameInTable="columnFeeSubject" msprop:Generator_ColumnPropNameInRow="FeeSubject" msprop:Generator_ColumnPropNameInTable="FeeSubjectColumn" msprop:Generator_UserColumnName="FeeSubject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FeePhase" msprop:Generator_ColumnVarNameInTable="columnFeePhase" msprop:Generator_ColumnPropNameInRow="FeePhase" msprop:Generator_ColumnPropNameInTable="FeePhaseColumn" msprop:Generator_UserColumnName="FeePhase" type="xs:int" minOccurs="0" />
+              <xs:element name="Attorney" msprop:Generator_ColumnVarNameInTable="columnAttorney" msprop:Generator_ColumnPropNameInRow="Attorney" msprop:Generator_ColumnPropNameInTable="AttorneyColumn" msprop:Generator_UserColumnName="Attorney" type="xs:int" minOccurs="0" />
+              <xs:element name="FClientTransactor" msprop:Generator_ColumnVarNameInTable="columnFClientTransactor" msprop:Generator_ColumnPropNameInRow="FClientTransactor" msprop:Generator_ColumnPropNameInTable="FClientTransactorColumn" msprop:Generator_UserColumnName="FClientTransactor" type="xs:int" minOccurs="0" />
+              <xs:element name="IReceiptDate" msprop:Generator_ColumnVarNameInTable="columnIReceiptDate" msprop:Generator_ColumnPropNameInRow="IReceiptDate" msprop:Generator_ColumnPropNameInTable="IReceiptDateColumn" msprop:Generator_UserColumnName="IReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IReceiptNo" msprop:Generator_ColumnVarNameInTable="columnIReceiptNo" msprop:Generator_ColumnPropNameInRow="IReceiptNo" msprop:Generator_ColumnPropNameInTable="IReceiptNoColumn" msprop:Generator_UserColumnName="IReceiptNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="aBillDate" msprop:Generator_ColumnVarNameInTable="columnaBillDate" msprop:Generator_ColumnPropNameInRow="aBillDate" msprop:Generator_ColumnPropNameInTable="aBillDateColumn" msprop:Generator_UserColumnName="aBillDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="aBill" msprop:Generator_ColumnVarNameInTable="columnaBill" msprop:Generator_ColumnPropNameInRow="aBill" msprop:Generator_ColumnPropNameInTable="aBillColumn" msprop:Generator_UserColumnName="aBill" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IAttorneyFee" msprop:Generator_ColumnVarNameInTable="columnIAttorneyFee" msprop:Generator_ColumnPropNameInRow="IAttorneyFee" msprop:Generator_ColumnPropNameInTable="IAttorneyFeeColumn" msprop:Generator_UserColumnName="IAttorneyFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IMoney" msprop:Generator_ColumnVarNameInTable="columnIMoney" msprop:Generator_ColumnPropNameInRow="IMoney" msprop:Generator_ColumnPropNameInTable="IMoneyColumn" msprop:Generator_UserColumnName="IMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItoNT" msprop:Generator_ColumnVarNameInTable="columnItoNT" msprop:Generator_ColumnPropNameInRow="ItoNT" msprop:Generator_ColumnPropNameInTable="ItoNTColumn" msprop:Generator_UserColumnName="ItoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITotall" msprop:Generator_ColumnVarNameInTable="columnITotall" msprop:Generator_ColumnPropNameInRow="ITotall" msprop:Generator_ColumnPropNameInTable="ITotallColumn" msprop:Generator_UserColumnName="ITotall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OReceiptDate" msprop:Generator_ColumnVarNameInTable="columnOReceiptDate" msprop:Generator_ColumnPropNameInRow="OReceiptDate" msprop:Generator_ColumnPropNameInTable="OReceiptDateColumn" msprop:Generator_UserColumnName="OReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OReceiptNo" msprop:Generator_ColumnVarNameInTable="columnOReceiptNo" msprop:Generator_ColumnPropNameInRow="OReceiptNo" msprop:Generator_ColumnPropNameInTable="OReceiptNoColumn" msprop:Generator_UserColumnName="OReceiptNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OAttorneyFee" msprop:Generator_ColumnVarNameInTable="columnOAttorneyFee" msprop:Generator_ColumnPropNameInRow="OAttorneyFee" msprop:Generator_ColumnPropNameInTable="OAttorneyFeeColumn" msprop:Generator_UserColumnName="OAttorneyFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OMoney" msprop:Generator_ColumnVarNameInTable="columnOMoney" msprop:Generator_ColumnPropNameInRow="OMoney" msprop:Generator_ColumnPropNameInTable="OMoneyColumn" msprop:Generator_UserColumnName="OMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtoNT" msprop:Generator_ColumnVarNameInTable="columnOtoNT" msprop:Generator_ColumnPropNameInRow="OtoNT" msprop:Generator_ColumnPropNameInTable="OtoNTColumn" msprop:Generator_UserColumnName="OtoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OTotall" msprop:Generator_ColumnVarNameInTable="columnOTotall" msprop:Generator_ColumnPropNameInRow="OTotall" msprop:Generator_ColumnPropNameInTable="OTotallColumn" msprop:Generator_UserColumnName="OTotall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GReceiptDate" msprop:Generator_ColumnVarNameInTable="columnGReceiptDate" msprop:Generator_ColumnPropNameInRow="GReceiptDate" msprop:Generator_ColumnPropNameInTable="GReceiptDateColumn" msprop:Generator_UserColumnName="GReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GReceiptNo" msprop:Generator_ColumnVarNameInTable="columnGReceiptNo" msprop:Generator_ColumnPropNameInRow="GReceiptNo" msprop:Generator_ColumnPropNameInTable="GReceiptNoColumn" msprop:Generator_UserColumnName="GReceiptNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GovFee" msprop:Generator_ColumnVarNameInTable="columnGovFee" msprop:Generator_ColumnPropNameInRow="GovFee" msprop:Generator_ColumnPropNameInTable="GovFeeColumn" msprop:Generator_UserColumnName="GovFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GMoney" msprop:Generator_ColumnVarNameInTable="columnGMoney" msprop:Generator_ColumnPropNameInRow="GMoney" msprop:Generator_ColumnPropNameInTable="GMoneyColumn" msprop:Generator_UserColumnName="GMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GtoNT" msprop:Generator_ColumnVarNameInTable="columnGtoNT" msprop:Generator_ColumnPropNameInRow="GtoNT" msprop:Generator_ColumnPropNameInTable="GtoNTColumn" msprop:Generator_UserColumnName="GtoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GTotall" msprop:Generator_ColumnVarNameInTable="columnGTotall" msprop:Generator_ColumnPropNameInRow="GTotall" msprop:Generator_ColumnPropNameInTable="GTotallColumn" msprop:Generator_UserColumnName="GTotall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OAttorneyGovFee" msprop:Generator_ColumnVarNameInTable="columnOAttorneyGovFee" msprop:Generator_ColumnPropNameInRow="OAttorneyGovFee" msprop:Generator_ColumnPropNameInTable="OAttorneyGovFeeColumn" msprop:Generator_UserColumnName="OAttorneyGovFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Totall" msprop:Generator_ColumnVarNameInTable="columnTotall" msprop:Generator_ColumnPropNameInRow="Totall" msprop:Generator_ColumnPropNameInTable="TotallColumn" msprop:Generator_UserColumnName="Totall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Pay" msprop:Generator_ColumnVarNameInTable="columnPay" msprop:Generator_ColumnPropNameInRow="Pay" msprop:Generator_ColumnPropNameInTable="PayColumn" msprop:Generator_UserColumnName="Pay" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PPP" msprop:Generator_ColumnVarNameInTable="columnPPP" msprop:Generator_ColumnPropNameInRow="PPP" msprop:Generator_ColumnPropNameInTable="PPPColumn" msprop:Generator_UserColumnName="PPP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Withholding" msprop:Generator_ColumnVarNameInTable="columnWithholding" msprop:Generator_ColumnPropNameInRow="Withholding" msprop:Generator_ColumnPropNameInTable="WithholdingColumn" msprop:Generator_UserColumnName="Withholding" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Tax" msprop:Generator_ColumnVarNameInTable="columnTax" msprop:Generator_ColumnPropNameInRow="Tax" msprop:Generator_ColumnPropNameInTable="TaxColumn" msprop:Generator_UserColumnName="Tax" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PracticalityPay" msprop:Generator_ColumnVarNameInTable="columnPracticalityPay" msprop:Generator_ColumnPropNameInRow="PracticalityPay" msprop:Generator_ColumnPropNameInTable="PracticalityPayColumn" msprop:Generator_UserColumnName="PracticalityPay" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NT" msprop:Generator_ColumnVarNameInTable="columnNT" msprop:Generator_ColumnPropNameInRow="NT" msprop:Generator_ColumnPropNameInTable="NTColumn" msprop:Generator_UserColumnName="NT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PayKind" msprop:Generator_ColumnVarNameInTable="columnPayKind" msprop:Generator_ColumnPropNameInRow="PayKind" msprop:Generator_ColumnPropNameInTable="PayKindColumn" msprop:Generator_UserColumnName="PayKind" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PayType" msprop:Generator_ColumnVarNameInTable="columnPayType" msprop:Generator_ColumnPropNameInRow="PayType" msprop:Generator_ColumnPropNameInTable="PayTypeColumn" msprop:Generator_UserColumnName="PayType" type="xs:int" minOccurs="0" />
+              <xs:element name="PayMemo" msprop:Generator_ColumnVarNameInTable="columnPayMemo" msprop:Generator_ColumnPropNameInRow="PayMemo" msprop:Generator_ColumnPropNameInTable="PayMemoColumn" msprop:Generator_UserColumnName="PayMemo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Days" msprop:Generator_ColumnVarNameInTable="columnDays" msprop:Generator_ColumnPropNameInRow="Days" msprop:Generator_ColumnPropNameInTable="DaysColumn" msprop:Generator_UserColumnName="Days" type="xs:int" minOccurs="0" />
+              <xs:element name="UpbuildDay" msprop:Generator_ColumnVarNameInTable="columnUpbuildDay" msprop:Generator_ColumnPropNameInRow="UpbuildDay" msprop:Generator_ColumnPropNameInTable="UpbuildDayColumn" msprop:Generator_UserColumnName="UpbuildDay" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FeePhaseName" msprop:Generator_ColumnVarNameInTable="columnFeePhaseName" msprop:Generator_ColumnPropNameInRow="FeePhaseName" msprop:Generator_ColumnPropNameInTable="FeePhaseNameColumn" msprop:Generator_UserColumnName="FeePhaseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkerName" msprop:Generator_ColumnVarNameInTable="columnWorkerName" msprop:Generator_ColumnPropNameInRow="WorkerName" msprop:Generator_ColumnPropNameInTable="WorkerNameColumn" msprop:Generator_UserColumnName="WorkerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PayDate" msprop:Generator_ColumnVarNameInTable="columnPayDate" msprop:Generator_ColumnPropNameInRow="PayDate" msprop:Generator_ColumnPropNameInTable="PayDateColumn" msprop:Generator_UserColumnName="PayDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReceiptDate" msprop:Generator_ColumnVarNameInTable="columnReceiptDate" msprop:Generator_ColumnPropNameInRow="ReceiptDate" msprop:Generator_ColumnPropNameInTable="ReceiptDateColumn" msprop:Generator_UserColumnName="ReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OtherTotalFee" msprop:Generator_ColumnVarNameInTable="columnOtherTotalFee" msprop:Generator_ColumnPropNameInRow="OtherTotalFee" msprop:Generator_ColumnPropNameInTable="OtherTotalFeeColumn" msprop:Generator_UserColumnName="OtherTotalFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SingCode" msprop:Generator_ColumnVarNameInTable="columnSingCode" msprop:Generator_ColumnPropNameInRow="SingCode" msprop:Generator_ColumnPropNameInTable="SingCodeColumn" msprop:Generator_UserColumnName="SingCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OthFee" msprop:Generator_ColumnVarNameInTable="columnOthFee" msprop:Generator_ColumnPropNameInRow="OthFee" msprop:Generator_ColumnPropNameInTable="OthFeeColumn" msprop:Generator_UserColumnName="OthFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OthTotal" msprop:Generator_ColumnVarNameInTable="columnOthTotal" msprop:Generator_ColumnPropNameInRow="OthTotal" msprop:Generator_ColumnPropNameInTable="OthTotalColumn" msprop:Generator_UserColumnName="OthTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AttorneyFirm" msprop:Generator_ColumnVarNameInTable="columnAttorneyFirm" msprop:Generator_ColumnPropNameInRow="AttorneyFirm" msprop:Generator_ColumnPropNameInTable="AttorneyFirmColumn" msprop:Generator_UserColumnName="AttorneyFirm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsClosing" msprop:Generator_ColumnVarNameInTable="columnIsClosing" msprop:Generator_ColumnPropNameInRow="IsClosing" msprop:Generator_ColumnPropNameInTable="IsClosingColumn" msprop:Generator_UserColumnName="IsClosing" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" msprop:Generator_UserColumnName="CloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyDate" msprop:Generator_ColumnVarNameInTable="columnLastModifyDate" msprop:Generator_ColumnPropNameInRow="LastModifyDate" msprop:Generator_ColumnPropNameInTable="LastModifyDateColumn" msprop:Generator_UserColumnName="LastModifyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyWorker" msprop:Generator_ColumnVarNameInTable="columnLastModifyWorker" msprop:Generator_ColumnPropNameInRow="LastModifyWorker" msprop:Generator_ColumnPropNameInTable="LastModifyWorkerColumn" msprop:Generator_UserColumnName="LastModifyWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TMoney" msprop:Generator_ColumnVarNameInTable="columnTMoney" msprop:Generator_ColumnPropNameInRow="TMoney" msprop:Generator_ColumnPropNameInTable="TMoneyColumn" msprop:Generator_UserColumnName="TMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TtoNT" msprop:Generator_ColumnVarNameInTable="columnTtoNT" msprop:Generator_ColumnPropNameInRow="TtoNT" msprop:Generator_ColumnPropNameInTable="TtoNTColumn" msprop:Generator_UserColumnName="TtoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalNT" msprop:Generator_ColumnVarNameInTable="columnTotalNT" msprop:Generator_ColumnPropNameInRow="TotalNT" msprop:Generator_ColumnPropNameInTable="TotalNTColumn" msprop:Generator_UserColumnName="TotalNT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrademarkControversyPaymentT" msprop:Generator_UserTableName="TrademarkControversyPaymentT" msprop:Generator_RowEvArgName="TrademarkControversyPaymentTRowChangeEvent" msprop:Generator_TableVarName="tableTrademarkControversyPaymentT" msprop:Generator_TablePropName="TrademarkControversyPaymentT" msprop:Generator_RowDeletingName="TrademarkControversyPaymentTRowDeleting" msprop:Generator_RowChangingName="TrademarkControversyPaymentTRowChanging" msprop:Generator_RowDeletedName="TrademarkControversyPaymentTRowDeleted" msprop:Generator_RowEvHandlerName="TrademarkControversyPaymentTRowChangeEventHandler" msprop:Generator_TableClassName="TrademarkControversyPaymentTDataTable" msprop:Generator_RowChangedName="TrademarkControversyPaymentTRowChanged" msprop:Generator_RowClassName="TrademarkControversyPaymentTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ControversyPaymentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnControversyPaymentID" msprop:Generator_ColumnPropNameInRow="ControversyPaymentID" msprop:Generator_ColumnPropNameInTable="ControversyPaymentIDColumn" msprop:Generator_UserColumnName="ControversyPaymentID" type="xs:int" />
+              <xs:element name="TrademarkControversyID" msprop:Generator_ColumnVarNameInTable="columnTrademarkControversyID" msprop:Generator_ColumnPropNameInRow="TrademarkControversyID" msprop:Generator_ColumnPropNameInTable="TrademarkControversyIDColumn" msprop:Generator_UserColumnName="TrademarkControversyID" type="xs:int" />
+              <xs:element name="RDate" msprop:Generator_ColumnVarNameInTable="columnRDate" msprop:Generator_ColumnPropNameInRow="RDate" msprop:Generator_ColumnPropNameInTable="RDateColumn" msprop:Generator_UserColumnName="RDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FeeSubject" msprop:Generator_ColumnVarNameInTable="columnFeeSubject" msprop:Generator_ColumnPropNameInRow="FeeSubject" msprop:Generator_ColumnPropNameInTable="FeeSubjectColumn" msprop:Generator_UserColumnName="FeeSubject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FeePhase" msprop:Generator_ColumnVarNameInTable="columnFeePhase" msprop:Generator_ColumnPropNameInRow="FeePhase" msprop:Generator_ColumnPropNameInTable="FeePhaseColumn" msprop:Generator_UserColumnName="FeePhase" type="xs:int" minOccurs="0" />
+              <xs:element name="FClientTransactor" msprop:Generator_ColumnVarNameInTable="columnFClientTransactor" msprop:Generator_ColumnPropNameInRow="FClientTransactor" msprop:Generator_ColumnPropNameInTable="FClientTransactorColumn" msprop:Generator_UserColumnName="FClientTransactor" type="xs:int" minOccurs="0" />
+              <xs:element name="Attorney" msprop:Generator_ColumnVarNameInTable="columnAttorney" msprop:Generator_ColumnPropNameInRow="Attorney" msprop:Generator_ColumnPropNameInTable="AttorneyColumn" msprop:Generator_UserColumnName="Attorney" type="xs:int" minOccurs="0" />
+              <xs:element name="PayKind" msprop:Generator_ColumnVarNameInTable="columnPayKind" msprop:Generator_ColumnPropNameInRow="PayKind" msprop:Generator_ColumnPropNameInTable="PayKindColumn" msprop:Generator_UserColumnName="PayKind" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IReceiptDate" msprop:Generator_ColumnVarNameInTable="columnIReceiptDate" msprop:Generator_ColumnPropNameInRow="IReceiptDate" msprop:Generator_ColumnPropNameInTable="IReceiptDateColumn" msprop:Generator_UserColumnName="IReceiptDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IReceiptNo" msprop:Generator_ColumnVarNameInTable="columnIReceiptNo" msprop:Generator_ColumnPropNameInRow="IReceiptNo" msprop:Generator_ColumnPropNameInTable="IReceiptNoColumn" msprop:Generator_UserColumnName="IReceiptNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IMoney" msprop:Generator_ColumnVarNameInTable="columnIMoney" msprop:Generator_ColumnPropNameInRow="IMoney" msprop:Generator_ColumnPropNameInTable="IMoneyColumn" msprop:Generator_UserColumnName="IMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IServiceFee" msprop:Generator_ColumnVarNameInTable="columnIServiceFee" msprop:Generator_ColumnPropNameInRow="IServiceFee" msprop:Generator_ColumnPropNameInTable="IServiceFeeColumn" msprop:Generator_UserColumnName="IServiceFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GovFee" msprop:Generator_ColumnVarNameInTable="columnGovFee" msprop:Generator_ColumnPropNameInRow="GovFee" msprop:Generator_ColumnPropNameInTable="GovFeeColumn" msprop:Generator_UserColumnName="GovFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherFee" msprop:Generator_ColumnVarNameInTable="columnOtherFee" msprop:Generator_ColumnPropNameInRow="OtherFee" msprop:Generator_ColumnPropNameInTable="OtherFeeColumn" msprop:Generator_UserColumnName="OtherFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Totall" msprop:Generator_ColumnVarNameInTable="columnTotall" msprop:Generator_ColumnPropNameInRow="Totall" msprop:Generator_ColumnPropNameInTable="TotallColumn" msprop:Generator_UserColumnName="Totall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BillCheck" msprop:Generator_ColumnVarNameInTable="columnBillCheck" msprop:Generator_ColumnPropNameInRow="BillCheck" msprop:Generator_ColumnPropNameInTable="BillCheckColumn" msprop:Generator_UserColumnName="BillCheck" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReciveDate" msprop:Generator_ColumnVarNameInTable="columnReciveDate" msprop:Generator_ColumnPropNameInRow="ReciveDate" msprop:Generator_ColumnPropNameInTable="ReciveDateColumn" msprop:Generator_UserColumnName="ReciveDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PayDueDate" msprop:Generator_ColumnVarNameInTable="columnPayDueDate" msprop:Generator_ColumnPropNameInRow="PayDueDate" msprop:Generator_ColumnPropNameInTable="PayDueDateColumn" msprop:Generator_UserColumnName="PayDueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsBilling" msprop:Generator_ColumnVarNameInTable="columnIsBilling" msprop:Generator_ColumnPropNameInRow="IsBilling" msprop:Generator_ColumnPropNameInTable="IsBillingColumn" msprop:Generator_UserColumnName="IsBilling" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BillingNo" msprop:Generator_ColumnVarNameInTable="columnBillingNo" msprop:Generator_ColumnPropNameInRow="BillingNo" msprop:Generator_ColumnPropNameInTable="BillingNoColumn" msprop:Generator_UserColumnName="BillingNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsCopyFile" msprop:Generator_ColumnVarNameInTable="columnIsCopyFile" msprop:Generator_ColumnPropNameInRow="IsCopyFile" msprop:Generator_ColumnPropNameInTable="IsCopyFileColumn" msprop:Generator_UserColumnName="IsCopyFile" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IsScan" msprop:Generator_ColumnVarNameInTable="columnIsScan" msprop:Generator_ColumnPropNameInRow="IsScan" msprop:Generator_ColumnPropNameInTable="IsScanColumn" msprop:Generator_UserColumnName="IsScan" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FeePhaseName" msprop:Generator_ColumnVarNameInTable="columnFeePhaseName" msprop:Generator_ColumnPropNameInRow="FeePhaseName" msprop:Generator_ColumnPropNameInTable="FeePhaseNameColumn" msprop:Generator_UserColumnName="FeePhaseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkerName" msprop:Generator_ColumnVarNameInTable="columnWorkerName" msprop:Generator_ColumnPropNameInRow="WorkerName" msprop:Generator_ColumnPropNameInTable="WorkerNameColumn" msprop:Generator_UserColumnName="WorkerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttorneyFirm" msprop:Generator_ColumnVarNameInTable="columnAttorneyFirm" msprop:Generator_ColumnPropNameInRow="AttorneyFirm" msprop:Generator_ColumnPropNameInTable="AttorneyFirmColumn" msprop:Generator_UserColumnName="AttorneyFirm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExchangeRate" msprop:Generator_ColumnVarNameInTable="columnExchangeRate" msprop:Generator_ColumnPropNameInRow="ExchangeRate" msprop:Generator_ColumnPropNameInTable="ExchangeRateColumn" msprop:Generator_UserColumnName="ExchangeRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Memo" msprop:Generator_ColumnVarNameInTable="columnMemo" msprop:Generator_ColumnPropNameInRow="Memo" msprop:Generator_ColumnPropNameInTable="MemoColumn" msprop:Generator_UserColumnName="Memo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SingCode" msprop:Generator_ColumnVarNameInTable="columnSingCode" msprop:Generator_ColumnPropNameInRow="SingCode" msprop:Generator_ColumnPropNameInTable="SingCodeColumn" msprop:Generator_UserColumnName="SingCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EstimatedPaymentDate" msprop:Generator_ColumnVarNameInTable="columnEstimatedPaymentDate" msprop:Generator_ColumnPropNameInRow="EstimatedPaymentDate" msprop:Generator_ColumnPropNameInTable="EstimatedPaymentDateColumn" msprop:Generator_UserColumnName="EstimatedPaymentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsClosing" msprop:Generator_ColumnVarNameInTable="columnIsClosing" msprop:Generator_ColumnPropNameInRow="IsClosing" msprop:Generator_ColumnPropNameInTable="IsClosingColumn" msprop:Generator_UserColumnName="IsClosing" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CloseDate" msprop:Generator_ColumnVarNameInTable="columnCloseDate" msprop:Generator_ColumnPropNameInRow="CloseDate" msprop:Generator_ColumnPropNameInTable="CloseDateColumn" msprop:Generator_UserColumnName="CloseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyDate" msprop:Generator_ColumnVarNameInTable="columnLastModifyDate" msprop:Generator_ColumnPropNameInRow="LastModifyDate" msprop:Generator_ColumnPropNameInTable="LastModifyDateColumn" msprop:Generator_UserColumnName="LastModifyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyWorker" msprop:Generator_ColumnVarNameInTable="columnLastModifyWorker" msprop:Generator_ColumnPropNameInRow="LastModifyWorker" msprop:Generator_ColumnPropNameInTable="LastModifyWorkerColumn" msprop:Generator_UserColumnName="LastModifyWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrademarkControversyNotifyEventT" msprop:Generator_UserTableName="TrademarkControversyNotifyEventT" msprop:Generator_RowEvArgName="TrademarkControversyNotifyEventTRowChangeEvent" msprop:Generator_TableVarName="tableTrademarkControversyNotifyEventT" msprop:Generator_TablePropName="TrademarkControversyNotifyEventT" msprop:Generator_RowDeletingName="TrademarkControversyNotifyEventTRowDeleting" msprop:Generator_RowChangingName="TrademarkControversyNotifyEventTRowChanging" msprop:Generator_RowDeletedName="TrademarkControversyNotifyEventTRowDeleted" msprop:Generator_RowEvHandlerName="TrademarkControversyNotifyEventTRowChangeEventHandler" msprop:Generator_TableClassName="TrademarkControversyNotifyEventTDataTable" msprop:Generator_RowChangedName="TrademarkControversyNotifyEventTRowChanged" msprop:Generator_RowClassName="TrademarkControversyNotifyEventTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TMNotifyControversyEventID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTMNotifyControversyEventID" msprop:Generator_ColumnPropNameInRow="TMNotifyControversyEventID" msprop:Generator_ColumnPropNameInTable="TMNotifyControversyEventIDColumn" msprop:Generator_UserColumnName="TMNotifyControversyEventID" type="xs:int" />
+              <xs:element name="TrademarkControversyID" msprop:Generator_ColumnVarNameInTable="columnTrademarkControversyID" msprop:Generator_ColumnPropNameInRow="TrademarkControversyID" msprop:Generator_ColumnPropNameInTable="TrademarkControversyIDColumn" msprop:Generator_UserColumnName="TrademarkControversyID" type="xs:int" />
+              <xs:element name="NotifyEventContent" msprop:Generator_ColumnVarNameInTable="columnNotifyEventContent" msprop:Generator_ColumnPropNameInRow="NotifyEventContent" msprop:Generator_ColumnPropNameInTable="NotifyEventContentColumn" msprop:Generator_UserColumnName="NotifyEventContent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NotifyComitDate" msprop:Generator_ColumnVarNameInTable="columnNotifyComitDate" msprop:Generator_ColumnPropNameInRow="NotifyComitDate" msprop:Generator_ColumnPropNameInTable="NotifyComitDateColumn" msprop:Generator_UserColumnName="NotifyComitDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OccurDate" msprop:Generator_ColumnVarNameInTable="columnOccurDate" msprop:Generator_ColumnPropNameInRow="OccurDate" msprop:Generator_ColumnPropNameInTable="OccurDateColumn" msprop:Generator_UserColumnName="OccurDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NotifyOfficerDate" msprop:Generator_ColumnVarNameInTable="columnNotifyOfficerDate" msprop:Generator_ColumnPropNameInRow="NotifyOfficerDate" msprop:Generator_ColumnPropNameInTable="NotifyOfficerDateColumn" msprop:Generator_UserColumnName="NotifyOfficerDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DueDate" msprop:Generator_ColumnVarNameInTable="columnDueDate" msprop:Generator_ColumnPropNameInRow="DueDate" msprop:Generator_ColumnPropNameInTable="DueDateColumn" msprop:Generator_UserColumnName="DueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NoticeDate" msprop:Generator_ColumnVarNameInTable="columnNoticeDate" msprop:Generator_ColumnPropNameInRow="NoticeDate" msprop:Generator_ColumnPropNameInTable="NoticeDateColumn" msprop:Generator_UserColumnName="NoticeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CustomerAuthorizationDate" msprop:Generator_ColumnVarNameInTable="columnCustomerAuthorizationDate" msprop:Generator_ColumnPropNameInRow="CustomerAuthorizationDate" msprop:Generator_ColumnPropNameInTable="CustomerAuthorizationDateColumn" msprop:Generator_UserColumnName="CustomerAuthorizationDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OutsourcingDate" msprop:Generator_ColumnVarNameInTable="columnOutsourcingDate" msprop:Generator_ColumnPropNameInRow="OutsourcingDate" msprop:Generator_ColumnPropNameInTable="OutsourcingDateColumn" msprop:Generator_UserColumnName="OutsourcingDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FinishDate" msprop:Generator_ColumnVarNameInTable="columnFinishDate" msprop:Generator_ColumnPropNameInRow="FinishDate" msprop:Generator_ColumnPropNameInTable="FinishDateColumn" msprop:Generator_UserColumnName="FinishDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Result" msprop:Generator_ColumnVarNameInTable="columnResult" msprop:Generator_ColumnPropNameInRow="Result" msprop:Generator_ColumnPropNameInTable="ResultColumn" msprop:Generator_UserColumnName="Result" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EventType" msprop:Generator_ColumnVarNameInTable="columnEventType" msprop:Generator_ColumnPropNameInRow="EventType" msprop:Generator_ColumnPropNameInTable="EventTypeColumn" msprop:Generator_UserColumnName="EventType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkerKey" msprop:Generator_ColumnVarNameInTable="columnWorkerKey" msprop:Generator_ColumnPropNameInRow="WorkerKey" msprop:Generator_ColumnPropNameInTable="WorkerKeyColumn" msprop:Generator_UserColumnName="WorkerKey" type="xs:int" minOccurs="0" />
+              <xs:element name="WorkerName" msprop:Generator_ColumnVarNameInTable="columnWorkerName" msprop:Generator_ColumnPropNameInRow="WorkerName" msprop:Generator_ColumnPropNameInTable="WorkerNameColumn" msprop:Generator_UserColumnName="WorkerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttorneyDueDate" msprop:Generator_ColumnVarNameInTable="columnAttorneyDueDate" msprop:Generator_ColumnPropNameInRow="AttorneyDueDate" msprop:Generator_ColumnPropNameInTable="AttorneyDueDateColumn" msprop:Generator_UserColumnName="AttorneyDueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TMStatusID" msprop:Generator_ColumnVarNameInTable="columnTMStatusID" msprop:Generator_ColumnPropNameInRow="TMStatusID" msprop:Generator_ColumnPropNameInTable="TMStatusIDColumn" msprop:Generator_UserColumnName="TMStatusID" type="xs:int" minOccurs="0" />
+              <xs:element name="LastModifyDate" msprop:Generator_ColumnVarNameInTable="columnLastModifyDate" msprop:Generator_ColumnPropNameInRow="LastModifyDate" msprop:Generator_ColumnPropNameInTable="LastModifyDateColumn" msprop:Generator_UserColumnName="LastModifyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyWorker" msprop:Generator_ColumnVarNameInTable="columnLastModifyWorker" msprop:Generator_ColumnPropNameInRow="LastModifyWorker" msprop:Generator_ColumnPropNameInTable="LastModifyWorkerColumn" msprop:Generator_UserColumnName="LastModifyWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrademarkControveryEstimateCostT" msprop:Generator_UserTableName="TrademarkControveryEstimateCostT" msprop:Generator_RowEvArgName="TrademarkControveryEstimateCostTRowChangeEvent" msprop:Generator_TableVarName="tableTrademarkControveryEstimateCostT" msprop:Generator_TablePropName="TrademarkControveryEstimateCostT" msprop:Generator_RowDeletingName="TrademarkControveryEstimateCostTRowDeleting" msprop:Generator_RowChangingName="TrademarkControveryEstimateCostTRowChanging" msprop:Generator_RowDeletedName="TrademarkControveryEstimateCostTRowDeleted" msprop:Generator_RowEvHandlerName="TrademarkControveryEstimateCostTRowChangeEventHandler" msprop:Generator_TableClassName="TrademarkControveryEstimateCostTDataTable" msprop:Generator_RowChangedName="TrademarkControveryEstimateCostTRowChanged" msprop:Generator_RowClassName="TrademarkControveryEstimateCostTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TMControveryEstimateCostID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTMControveryEstimateCostID" msprop:Generator_ColumnPropNameInRow="TMControveryEstimateCostID" msprop:Generator_ColumnPropNameInTable="TMControveryEstimateCostIDColumn" msprop:Generator_UserColumnName="TMControveryEstimateCostID" type="xs:int" />
+              <xs:element name="TrademarkControversyID" msprop:Generator_ColumnVarNameInTable="columnTrademarkControversyID" msprop:Generator_ColumnPropNameInRow="TrademarkControversyID" msprop:Generator_ColumnPropNameInTable="TrademarkControversyIDColumn" msprop:Generator_UserColumnName="TrademarkControversyID" type="xs:int" />
+              <xs:element name="FeeSubject" msprop:Generator_ColumnVarNameInTable="columnFeeSubject" msprop:Generator_ColumnPropNameInRow="FeeSubject" msprop:Generator_ColumnPropNameInTable="FeeSubjectColumn" msprop:Generator_UserColumnName="FeeSubject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IAttorneyFee" msprop:Generator_ColumnVarNameInTable="columnIAttorneyFee" msprop:Generator_ColumnPropNameInRow="IAttorneyFee" msprop:Generator_ColumnPropNameInTable="IAttorneyFeeColumn" msprop:Generator_UserColumnName="IAttorneyFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IMoney" msprop:Generator_ColumnVarNameInTable="columnIMoney" msprop:Generator_ColumnPropNameInRow="IMoney" msprop:Generator_ColumnPropNameInTable="IMoneyColumn" msprop:Generator_UserColumnName="IMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItoNT" msprop:Generator_ColumnVarNameInTable="columnItoNT" msprop:Generator_ColumnPropNameInRow="ItoNT" msprop:Generator_ColumnPropNameInTable="ItoNTColumn" msprop:Generator_UserColumnName="ItoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITotall" msprop:Generator_ColumnVarNameInTable="columnITotall" msprop:Generator_ColumnPropNameInRow="ITotall" msprop:Generator_ColumnPropNameInTable="ITotallColumn" msprop:Generator_UserColumnName="ITotall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GovFee" msprop:Generator_ColumnVarNameInTable="columnGovFee" msprop:Generator_ColumnPropNameInRow="GovFee" msprop:Generator_ColumnPropNameInTable="GovFeeColumn" msprop:Generator_UserColumnName="GovFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GMoney" msprop:Generator_ColumnVarNameInTable="columnGMoney" msprop:Generator_ColumnPropNameInRow="GMoney" msprop:Generator_ColumnPropNameInTable="GMoneyColumn" msprop:Generator_UserColumnName="GMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GtoNT" msprop:Generator_ColumnVarNameInTable="columnGtoNT" msprop:Generator_ColumnPropNameInRow="GtoNT" msprop:Generator_ColumnPropNameInTable="GtoNTColumn" msprop:Generator_UserColumnName="GtoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GTotall" msprop:Generator_ColumnVarNameInTable="columnGTotall" msprop:Generator_ColumnPropNameInRow="GTotall" msprop:Generator_ColumnPropNameInTable="GTotallColumn" msprop:Generator_UserColumnName="GTotall" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherFee" msprop:Generator_ColumnVarNameInTable="columnOtherFee" msprop:Generator_ColumnPropNameInRow="OtherFee" msprop:Generator_ColumnPropNameInTable="OtherFeeColumn" msprop:Generator_UserColumnName="OtherFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherMoney" msprop:Generator_ColumnVarNameInTable="columnOtherMoney" msprop:Generator_ColumnPropNameInRow="OtherMoney" msprop:Generator_ColumnPropNameInTable="OtherMoneyColumn" msprop:Generator_UserColumnName="OtherMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtherNT" msprop:Generator_ColumnVarNameInTable="columnOtherNT" msprop:Generator_ColumnPropNameInRow="OtherNT" msprop:Generator_ColumnPropNameInTable="OtherNTColumn" msprop:Generator_UserColumnName="OtherNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OtherTotal" msprop:Generator_ColumnVarNameInTable="columnOtherTotal" msprop:Generator_ColumnPropNameInRow="OtherTotal" msprop:Generator_ColumnPropNameInTable="OtherTotalColumn" msprop:Generator_UserColumnName="OtherTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EstimateCost" msprop:Generator_ColumnVarNameInTable="columnEstimateCost" msprop:Generator_ColumnPropNameInRow="EstimateCost" msprop:Generator_ColumnPropNameInTable="EstimateCostColumn" msprop:Generator_UserColumnName="EstimateCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EstimateProfit" msprop:Generator_ColumnVarNameInTable="columnEstimateProfit" msprop:Generator_ColumnPropNameInRow="EstimateProfit" msprop:Generator_ColumnPropNameInTable="EstimateProfitColumn" msprop:Generator_UserColumnName="EstimateProfit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PayMemo" msprop:Generator_ColumnVarNameInTable="columnPayMemo" msprop:Generator_ColumnPropNameInRow="PayMemo" msprop:Generator_ColumnPropNameInTable="PayMemoColumn" msprop:Generator_UserColumnName="PayMemo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreateDate" msprop:Generator_ColumnVarNameInTable="columnCreateDate" msprop:Generator_ColumnPropNameInRow="CreateDate" msprop:Generator_ColumnPropNameInTable="CreateDateColumn" msprop:Generator_UserColumnName="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ServicePrice" msprop:Generator_ColumnVarNameInTable="columnServicePrice" msprop:Generator_ColumnPropNameInRow="ServicePrice" msprop:Generator_ColumnPropNameInTable="ServicePriceColumn" msprop:Generator_UserColumnName="ServicePrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RealPrice" msprop:Generator_ColumnVarNameInTable="columnRealPrice" msprop:Generator_ColumnPropNameInRow="RealPrice" msprop:Generator_ColumnPropNameInTable="RealPriceColumn" msprop:Generator_UserColumnName="RealPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastModifyDate" msprop:Generator_ColumnVarNameInTable="columnLastModifyDate" msprop:Generator_ColumnPropNameInRow="LastModifyDate" msprop:Generator_ColumnPropNameInTable="LastModifyDateColumn" msprop:Generator_UserColumnName="LastModifyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastModifyWorker" msprop:Generator_ColumnVarNameInTable="columnLastModifyWorker" msprop:Generator_ColumnPropNameInRow="LastModifyWorker" msprop:Generator_ColumnPropNameInTable="LastModifyWorkerColumn" msprop:Generator_UserColumnName="LastModifyWorker" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OAttorneyFee" msprop:Generator_ColumnVarNameInTable="columnOAttorneyFee" msprop:Generator_ColumnPropNameInRow="OAttorneyFee" msprop:Generator_ColumnPropNameInTable="OAttorneyFeeColumn" msprop:Generator_UserColumnName="OAttorneyFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OMoney" msprop:Generator_ColumnVarNameInTable="columnOMoney" msprop:Generator_ColumnPropNameInRow="OMoney" msprop:Generator_ColumnPropNameInTable="OMoneyColumn" msprop:Generator_UserColumnName="OMoney" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OtoNT" msprop:Generator_ColumnVarNameInTable="columnOtoNT" msprop:Generator_ColumnPropNameInRow="OtoNT" msprop:Generator_ColumnPropNameInTable="OtoNTColumn" msprop:Generator_UserColumnName="OtoNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OTotall" msprop:Generator_ColumnVarNameInTable="columnOTotall" msprop:Generator_ColumnPropNameInRow="OTotall" msprop:Generator_ColumnPropNameInTable="OTotallColumn" msprop:Generator_UserColumnName="OTotall" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TrademarkControversyManagementT" />
+      <xs:field xpath="mstns:TrademarkControversyID" />
+    </xs:unique>
+    <xs:unique name="TrademarkControversyFeeT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TrademarkControversyFeeT" />
+      <xs:field xpath="mstns:ControversyFeeKEY" />
+    </xs:unique>
+    <xs:unique name="TrademarkControversyPaymentT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TrademarkControversyPaymentT" />
+      <xs:field xpath="mstns:ControversyPaymentID" />
+    </xs:unique>
+    <xs:unique name="TrademarkControversyNotifyEventT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TrademarkControversyNotifyEventT" />
+      <xs:field xpath="mstns:TMNotifyControversyEventID" />
+    </xs:unique>
+    <xs:unique name="TrademarkControveryEstimateCostT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TrademarkControveryEstimateCostT" />
+      <xs:field xpath="mstns:TMControveryEstimateCostID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

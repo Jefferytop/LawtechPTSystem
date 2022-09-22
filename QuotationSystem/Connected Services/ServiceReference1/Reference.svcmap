@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c500e690-eb40-4d73-b81d-8b345ceacb76" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://sms.bfbip.net/Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="78c09522-f01c-4d45-8c94-89e3545591f4" SourceId="1" SourceUrl="http://sms.bfbip.net/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="f51617ab-920e-4747-9b1f-1b71149792ec" SourceId="1" SourceUrl="http://sms.bfbip.net/Service1.svc?disco" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="bb8fd33b-e92b-4d40-b8a6-03ce72dca272" SourceId="1" SourceUrl="http://sms.bfbip.net/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service131.xsd" MetadataType="Schema" ID="59e0d9fc-c152-4b5d-b5ea-ce505772f900" SourceId="1" SourceUrl="http://sms.bfbip.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service132.xsd" MetadataType="Schema" ID="e1d18f6b-3082-4df9-9e41-e58ceeaa3beb" SourceId="1" SourceUrl="http://sms.bfbip.net/Service1.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

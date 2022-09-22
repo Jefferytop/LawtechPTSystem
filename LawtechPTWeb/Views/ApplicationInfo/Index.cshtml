@@ -1,0 +1,214 @@
+﻿@{
+    ViewBag.Title = "P.T.S-Admin|基本資料";
+    ViewBag.CurrentPage = "基本資料";
+    ViewBag.Catalog = "申請人相關資料";
+    
+    LawtechPTWeb.Models.DB_ApplicantTModel App = (LawtechPTWeb.Models.DB_ApplicantTModel)HttpContext.Current.Session[LawtechPTWeb.Models.PublicFunction.GetEnumString(LawtechPTWeb.Models.SessionCodeName.UserInfo)];
+}
+<div class="container-fluid">
+<div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">基本資料</h4>
+                                <h6 class="card-subtitle">申請人相關資料, 如資料有誤可聯絡本事務所進行資料訂正.</h6>
+                            </div>
+                            <hr class="mt-0">
+                            <form class="form-horizontal striped-rows b-form">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">申請人代碼</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="ApplicantSymbol"><i class="fas fa-briefcase"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="ApplicantSymbol" aria-describedby="ApplicantSymbol" value="@App.ApplicantSymbol">
+                                        </div>
+                                          <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">登入帳號</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="Account"><i class="fas fa-briefcase"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Account" aria-describedby="Account" value="@App.Account">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">申請人名稱</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="ApplicantName"><i class="far fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="ApplicantName" aria-describedby="ApplicantName" value="@App.ApplicantName">
+                                        </div>
+                                    </div>
+                                    @*<div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">Web Site</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="WebSite"><i class="fas fa-share-alt"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="WebSite" aria-describedby="WebSite" value="@App.WebSite">
+                                        </div>                                                                             
+                                    </div>*@
+                                    @*<div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">開始往來時間</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="StartedDate"><i class="far fa-clock"></i></span>
+                                            </div>
+                                            <input type="date" class="form-control" placeholder="Date here" aria-label="StartedDate" aria-describedby="StartedDate" value="@(App.StartedDate.HasValue?App.StartedDate.Value.ToString("yyyy-MM-dd"):"")">
+                                        </div>
+                                         <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">代表人</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="PrincipalName"><i class="far fa-user-circle"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="PrincipalName" aria-describedby="PrincipalName" value="@App.PrincipalName">
+                                        </div>
+                                    </div>*@
+                                     <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">聯絡電話</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="TEL"><i class="fas fa-headphones"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="TEL" aria-describedby="TEL" value="@App.TEL">
+                                        </div>
+                                          <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">傳真</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="FAX"><i class="fas fa-fax"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="FAX" aria-describedby="FAX" value="@App.FAX">
+                                        </div>
+                                    </div>
+                                     <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">Email</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                             <div class="input-group-prepend">
+                                                <span class="input-group-text" id="Email"><i class="fas fa-envelope-open"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Email" aria-describedby="Email" value="@App.Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">地址</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+                                            </div>
+                                           <input type="text" class="form-control" aria-label="Address" aria-describedby="Address" value="@App.Address">
+                                        </div>
+                                    </div>
+                                    @*<div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">地址(英)</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+                                            </div>
+                                           <input type="text" class="form-control" aria-label="AddressEn" aria-describedby="AddressEn" value="@App.AddressEn">
+                                        </div>
+                                    </div>
+                                     <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">信件抬頭</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+                                            </div>
+                                           <input type="text" class="form-control" aria-label="SendTitle" aria-describedby="SendTitle" value="@App.SendTitle">
+                                        </div>
+                                    </div>*@
+                                     @*<div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">收據抬頭</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group col-sm-9">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-bookmark"></i></span>
+                                            </div>
+                                           <input type="text" class="form-control" aria-label="Receiptor" aria-describedby="Receiptor" value="@App.Receiptor">
+                                        </div>
+                                    </div>*@
+                                   <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">異動註記</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" id="Chage" rows="3">@App.Chage</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-3">
+                                            <div class="b-label">
+                                                <label for="inputEmail3" class="control-label col-form-label">備 註</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" id="exampleTextarea" rows="3">@App.Remart</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                               @* <div class="card-body">
+                                    <div class="form-group mb-0 text-right">
+                                        <button type="submit" class="btn btn-info waves-effect waves-light">Save</button>
+                                        <button type="submit" class="btn btn-dark waves-effect waves-light">Cancel</button>
+                                    </div>
+                                </div>*@
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    </div>

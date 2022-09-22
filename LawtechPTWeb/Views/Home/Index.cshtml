@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "P.T.S-Admin";
+    ViewBag.Catalog = "Dashboard";
+    ViewBag.CurrentPage = "儀表板";
+
+    List<LawtechPTWeb.Models.PV_PatentKind> KindList = (List<LawtechPTWeb.Models.PV_PatentKind>)HttpContext.Current.Session["PatentKindList"];
+    List<LawtechPTWeb.Models.PV_TopPatentTrademark> topList = (List<LawtechPTWeb.Models.PV_TopPatentTrademark>)HttpContext.Current.Session["TopPatTm"];
+    List<LawtechPTWeb.Models.PV_FeePracticalityPay> FeeList = (List<LawtechPTWeb.Models.PV_FeePracticalityPay>)HttpContext.Current.Session["feeTotal"];
+   
+}
+
+@section js {
+    @Scripts.Render("~/Scripts/plugins/ECharts/echarts.min.js")
+
+    @Scripts.Render("~/Scripts/UserDefined/Home_Index.js")
+}
+
+<div class="container-fluid">
+    <div class="row">
+                    <div class="col-lg-8 col-xl-6">
+                        <div class="card card-hover">
+                            <div class="card-body">
+                                 <div id="basicDoughnut" style="height: 400px; -webkit-tap-highlight-color: transparent; user-select: none;" ></div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-6">
+                        <div class="card card-hover">
+                            <div class="card-body" style="background:url(Content/assets/images/background/active-bg.png) no-repeat top center;">
+                               @{
+                                   int KindCounts = KindList[0].COUNTs + KindList[1].COUNTs + KindList[2].COUNTs;
+                                 <div class="pt-3 text-center">
+                                    <i class="mdi mdi-file-chart display-4 text-orange d-block"></i>
+                                    <span class="display-4 d-block font-medium">@KindCounts</span>
+                                    <span>專利申請案件數</span>
+                                    <!-- Progress -->
+                                    <div class="progress mt-5" style="height:4px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-orange" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <!-- Progress -->
+                                    <!-- row -->
+                                    <div class="row mt-4 mb-3">
+                                        <!-- column -->
+                                        <div class="col-4 border-right text-left">
+                                            <h3 class="mb-0 font-medium">@KindList[0].COUNTs</h3>@KindList[0].Kind</div>
+                                        <!-- column -->
+                                        <div class="col-4 border-right">
+                                            <h3 class="mb-0 font-medium">@KindList[1].COUNTs</h3>@KindList[1].Kind</div>
+                                        <!-- column -->
+                                        <div class="col-4 text-right">
+                                            <h3 class="mb-0 font-medium">@KindList[2].COUNTs</h3>@KindList[2].Kind</div>
+                                    </div>
+                                    <a href="/PatentInfo/Index" class="waves-effect waves-light mt-3 btn btn-lg btn-info accent-4 mb-3">View More Details</a>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <div class="row">
+        <!-- column -->
+        <div class="col-sm-12 col-lg-6">
+            <div class="card card-hover">
+                <div class="card-body">
+                    <h4 class="card-title">Active Events</h4>
+                    <div class="d-flex">
+                        <h2 class="text-primary"> @topList.Count <small><i class="ti-arrow-up text-success"></i></small></h2>
+                        <span class="ml-auto">活動事件</span>
+                    </div>
+                  @*  <div class="mt-3 mb-4 text-center">
+                        <div id="active-users">
+                            <canvas width="220" height="60" style="display: inline-block; width: 220px; height: 60px; vertical-align: top;"></canvas>
+                        </div>
+                    </div>*@
+                    <h5>Top 10 Active</h5>
+                    <ul class="list-group list-group-flush">
+                        @{                            
+                            foreach (var item in topList)
+                            {
+                                string strType = "";
+                                if (item.TypeName == "Pat")
+                                { strType = "專利"; }
+                                else
+                                { strType = "商標"; }  
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span> <span class="badge badge-pill badge-info">@strType</span> <code>@item.Symbol</code> @item.Title </span>
+                                <span class="badge badge-light badge-pill">@item.LastModifyDateTime.ToString("yyyy-MM-dd")</span>
+                            </li>
+                            }
+                        }                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- column -->
+      <div class="col-sm-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body border-bottom">
+                                <h4 class="card-title">Overview</h4>
+                                <h6 class="card-subtitle">案件費用請款統計</h6>
+                            </div>
+                            <div class="card-body">
+                               
+                                <div class="row mt-2">   
+                                     @{                                 
+                                        decimal patFee = 0.0M;
+                                        decimal tmFee = 0.0M;
+                                        decimal totalFeePT = 0.0M;
+                                        foreach (var itemFee in FeeList)
+                                        {
+                                            if (itemFee.TypeName == "Pat")
+                                            {
+                                                patFee = itemFee.TotalPracticalityPay;
+                                            }
+                                            else
+                                            {
+                                                tmFee = itemFee.TotalPracticalityPay;
+                                            }
+                                            totalFeePT = patFee + tmFee;
+
+                                        }
+                                    <!-- col -->
+                                    <div class="col-md-6 col-sm-12 col-lg-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mr-2"><span class="text-orange display-5"><i class="mdi mdi-wallet"></i></span></div>
+                                            <div><span class="text-muted">付款合計</span>
+                                                <h5 class="font-medium mb-0 text-primary">$@totalFeePT.ToString("#,##0.##")</h5></div>
+                                        </div>
+                                    </div>
+                                    <!-- col -->
+                                    <!-- col -->
+                                    <div class="col-md-6 col-sm-12 col-lg-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mr-2"><span class="text-primary display-5"><i class="mdi mdi-file-powerpoint-box"></i></span></div>
+                                            <div><span class="text-muted">專利付款</span>
+                                                <h6 class="font-medium mb-0">$@patFee.ToString("#,##0.##")</h6></div>
+                                        </div>
+                                    </div>
+                                    <!-- col -->
+                                    <!-- col -->
+                                    <div class="col-md-6 col-sm-12 col-lg-4">
+                                        <div class="d-flex align-items-center">
+                                            <div class="mr-2"><span class="text-success display-5"><i class="mdi mdi-tumblr"></i></span></div>
+                                            <div><span class="text-muted">商標付款</span>
+                                                <h6 class="font-medium mb-0">$@tmFee.ToString("#,##0.##")</h6></div>
+                                        </div>
+                                    </div>
+                                    <!-- col -->
+                                     }
+                                </div>
+                                   
+                            </div>
+                        </div>
+                    </div>
+        <!-- column -->
+      
+    </div>
+</div>
+

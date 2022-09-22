@@ -1,0 +1,205 @@
+﻿@{
+    ViewBag.Title = "P.T.S-Admin|專利基本資料管理";
+    ViewBag.CurrentPage = "專利基本資料管理";
+    ViewBag.Catalog = "專利案件管理";
+
+    int pat = 0;
+    int tm = 0;
+    if (HttpContext.Current.Session["PatentCount"] == null || HttpContext.Current.Session["TrademarkCount"] == null)
+    {
+        Session.RemoveAll();
+        FormsAuthentication.SignOut();
+    }
+    else
+    {
+        pat = (int)HttpContext.Current.Session["PatentCount"];
+        tm = (int)HttpContext.Current.Session["TrademarkCount"];
+    }
+}
+
+@section style {
+    @Styles.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table.min.css")
+
+    <!-- iCheck -->
+    @Styles.Render("~/Scripts/plugins/iCheck/all.css")
+
+    <style>
+        .table-demo {
+            width: 80%;
+            margin: 30px auto 0px auto;
+        }
+
+        .fixed-table-header {
+            border-right: solid 1px #ddd;
+            border-top: solid 1px #ddd;
+        }
+
+            .fixed-table-header table {
+                border-top: solid 0px #ddd !important;
+                margin-top: -1px;
+            }
+    </style>
+}
+
+@section js {
+    @Scripts.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table.min.js")
+    @Scripts.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table-locale-all.min.js")
+
+    <!-- iCheck -->
+    @Scripts.Render("~/Scripts/plugins/iCheck/icheck.min.js")
+    @Scripts.Render("~/Scripts/UserDefined/PatentInfo_Index.js")
+}
+
+
+
+<div class="container-fluid" id="BodyContent">
+    <div class="card">
+        <div class="card-body">
+            <!--Master Start-->
+            @* <div class="card mb-0">
+                    <div class="card-body mb-0">
+
+                        <!--Search Area Start-->
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-inline mt-1 mb-1">
+
+                                    <select class="form-control" id="select1">
+                                        <option>申請人名稱</option>
+                                        <option>身份證/統編</option>
+                                        <option>地址</option>
+                                        <option>4</option>
+                                    </select>
+                                    <input type="text" class="form-control" style="width: 60%" placeholder="Value">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio">And</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-inline mt-1 mb-1">
+                                    <select class="form-control" id="select2">
+                                        <option>申請人名稱</option>
+                                        <option>身份證/統編</option>
+                                        <option>地址</option>
+                                        <option>4</option>
+                                    </select>
+                                    <input type="text" class="form-control" style="width: 60%" placeholder="Value">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optradio">Or</label>
+                                    </div>
+                                    <div class="ml-5">
+                                     <button id="btnAddYearFees" type="button" class="btn btn-success">
+                                    <i class="glyphicon glyphicon-plus"></i>Search
+                                </button>
+                                        </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>*@
+
+            <!--Search Area End-->
+            <!--table Area Start-->
+            <input type="hidden" id="PatCount" value="@pat" />
+            <div class="input-group col-sm-8">
+                <input type="text" class="form-control" id="txtPatentNo" placeholder="輸入申請案編號 ..." size="40" />
+                <input type="text" class="form-control" id="txtApplicationNo" placeholder="輸入申請案號..." size="60" />
+                <button title="查詢" id="btnSearch" type="button" class="btn btn-success onclickbtn">
+                    <i class="fa fa-search onclickbtni"></i>
+                </button>
+                @*<button title="匯出(.csv)" id="btnExportCsv" type="button" class="btn btn-primary onclickbtn">
+                    <i class="icon-cloud-download onclickbtni"></i>
+                </button>*@
+            </div>
+            <table id="table" data-show-columns="true" data-click-to-select="true" data-id-field="PatentID"
+                   data-show-toggle="true" data-sort-name="PatentNo" data-sort-order="asc" data-toolbar="#toolbar" data-show-export="true">
+                <thead>
+                    <tr>
+                        <th data-field="SelectState" data-radio="true"></th>
+                        <th data-field="PatentID" data-visible="false" data-switchable="false"></th>
+                        <th data-field="PatentNo" data-sortable="true">申請案編號</th>
+                        <th data-field="Title" data-sortable="true" data-align="center">申請案名稱</th>
+                        @*<th data-field="TitleEn" data-sortable="true" data-align="center">申請案名稱(英)</th>*@
+                        <th data-field="Country" title="國別" data-align="center">國別</th>
+                        <th data-field="KindName" data-align="center" title="種類">種類</th>
+                        @*<th data-field="FeatureName" data-align="center">性質</th>*@
+                        <th data-field="StatusName" data-align="center">申請案狀態</th>
+                        @*  <th data-field="StatusExplain" data-align="center">申請案狀態描述</th>*@
+                        <th data-field="ApplicationDate" data-align="center" data-sortable="true" data-formatter="ApplicationDateFormatter">申請日期</th>
+                        <th data-field="ApplicationNo" data-align="center">申請案號</th>
+                        @*<th data-field="Pubdate" data-align="center" data-sortable="true" data-formatter="PubdateFormatter">公開日期</th>
+                            <th data-field="PubNo" data-align="center">公開號數</th>*@
+                        @*<th data-field="AllowDate" data-align="center" data-sortable="true" data-formatter="AllowDateFormatter">核准日期</th>*@
+                        <th data-field="AllowPubDate" data-align="center" data-sortable="true" data-formatter="AllowPubDateFormatter">公告日期</th>
+                        <th data-field="AllowPubNo" data-align="center">公告號數</th>
+                        @*<th data-field="GetDate" data-align="center" data-sortable="true" data-formatter="GetDateFormatter">收到證書日</th>*@
+                        <th data-field="CertifyNo" data-align="center">專利號數</th>
+                        <th data-field="RegisterDate" data-align="center" data-sortable="true" data-formatter="RegisterDateFormatter">授予專利權日</th>
+                        <th data-field="DueDate" data-align="center" data-sortable="true" data-formatter="DueDateDateFormatter">專利權終止日</th>
+                        <th data-field="RenewTo" data-align="center" data-sortable="true" data-formatter="RenewToDateFormatter">年費有效期限</th>
+                        <th data-field="CloseDate" data-sortable="true" data-formatter="CloseDateTimeFormatter">結案日期/結案原因</th>
+                        <th data-field="Creator" data-sortable="true" data-formatter="CreateDateTimeFormatter">建立者/建立時間</th>
+                        <th data-field="LastModifyWorker" data-visible="false" data-sortable="true" data-formatter="LastModifyDateTimeFormatter">修改者/修改時間</th>
+
+                    </tr>
+                </thead>
+            </table>
+
+            <!--table Area End-->
+            <!--Master End-->
+            <!-- ======================= -->
+            <!--Detail Start-->
+            @*<div class="row">
+                    <div class="col-md-12 placeholder">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="#">申請人附加資料</a></li>
+                            <li role="presentation"><a href="#">聯絡人</a></li>
+                            <li role="presentation"><a href="#">發明人</a></li>
+                            <li role="presentation"><a href="#">來往記錄</a></li>
+                        </ul>
+                    </div>
+                </div>*@
+            <!--Detail End-->
+            @*<div class="row">
+                    <div class="col-md-12 placeholder">
+                        <div class="box box-success direct-chat direct-chat-success">
+                        </div>
+                    </div>
+                </div>*@
+            <!-- ======================= -->
+        </div>
+    </div>
+</div>
+
+<!-- Success Header Modal -->
+<div id="MsgModal" class="modal fade" aria-labelledby="success-header-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-colored-header bg-success">
+                <h4 class="modal-title" id="success-header-modalLabel">
+                    提示訊息
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5 id="TextMsg" class="mt-0">簽核成功</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

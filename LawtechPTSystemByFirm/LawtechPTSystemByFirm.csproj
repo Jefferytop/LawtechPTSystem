@@ -1,0 +1,3181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAE76B5D-E691-4FB7-9DCE-F5A6A772D3A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LawtechPTSystemByFirm</RootNamespace>
+    <AssemblyName>LawtechPTSystemByFirm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="H3Operator.DBHelper">
+      <HintPath>..\Dll\H3Operator.DBHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="H3Operator.DBModels">
+      <HintPath>..\Dll\H3Operator.DBModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Dll\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Dll\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Dll\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dll\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddFrom\AddApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddApplicant.designer.cs">
+      <DependentUpon>AddApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddAttLiaisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddAttLiaisoner.Designer.cs">
+      <DependentUpon>AddAttLiaisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddAttorney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddAttorney.Designer.cs">
+      <DependentUpon>AddAttorney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddAttorneyRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddAttorneyRecord.Designer.cs">
+      <DependentUpon>AddAttorneyRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddComitContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddComitContent.designer.cs">
+      <DependentUpon>AddComitContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddCustomerRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddCustomerRecord.Designer.cs">
+      <DependentUpon>AddCustomerRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddCustQuotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddCustQuotation.designer.cs">
+      <DependentUpon>AddCustQuotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddCustQuotationNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddCustQuotationNew.designer.cs">
+      <DependentUpon>AddCustQuotationNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddFeePhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddFeePhase.designer.cs">
+      <DependentUpon>AddFeePhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddFeePhaseItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddFeePhaseItem.Designer.cs">
+      <DependentUpon>AddFeePhaseItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddHandleProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddHandleProcess.Designer.cs">
+      <DependentUpon>AddHandleProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddInventor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddInventor.designer.cs">
+      <DependentUpon>AddInventor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddKeyWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddKeyWords.designer.cs">
+      <DependentUpon>AddKeyWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddKeyWordsModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddKeyWordsModify.designer.cs">
+      <DependentUpon>AddKeyWordsModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalProcessKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalProcessKind.Designer.cs">
+      <DependentUpon>AddLegalProcessKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalStatus.Designer.cs">
+      <DependentUpon>AddLegalStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddLegalType.Designer.cs">
+      <DependentUpon>AddLegalType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddLiaisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddLiaisoner.Designer.cs">
+      <DependentUpon>AddLiaisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddLinks.Designer.cs">
+      <DependentUpon>AddLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddNews.Designer.cs">
+      <DependentUpon>AddNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddNotifyContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddNotifyContent.Designer.cs">
+      <DependentUpon>AddNotifyContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddNotifyDue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddNotifyDue.Designer.cs">
+      <DependentUpon>AddNotifyDue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddOfficeProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddOfficeProperty.Designer.cs">
+      <DependentUpon>AddOfficeProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddParagraphDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddParagraphDetail.Designer.cs">
+      <DependentUpon>AddParagraphDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatent.designer.cs">
+      <DependentUpon>AddPatent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentComitEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentComitEvent.Designer.cs">
+      <DependentUpon>AddPatentComitEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentEstimateCost.Designer.cs">
+      <DependentUpon>AddPatentEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentFee.designer.cs">
+      <DependentUpon>AddPatentFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentNotifyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentNotifyEvent.designer.cs">
+      <DependentUpon>AddPatentNotifyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentPayment.Designer.cs">
+      <DependentUpon>AddPatentPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentTriff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentTriff.Designer.cs">
+      <DependentUpon>AddPatentTriff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentWorkEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatentWorkEvent.designer.cs">
+      <DependentUpon>AddPatentWorkEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatFeature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatFeature.Designer.cs">
+      <DependentUpon>AddPatFeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPATStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPATStatus.designer.cs">
+      <DependentUpon>AddPATStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPatTriff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPatTriff.Designer.cs">
+      <DependentUpon>AddPatTriff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPetition.designer.cs">
+      <DependentUpon>AddPetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPhase.Designer.cs">
+      <DependentUpon>AddPhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddPraagraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddPraagraph.designer.cs">
+      <DependentUpon>AddPraagraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddProcessKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddProcessKind.Designer.cs">
+      <DependentUpon>AddProcessKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddSubject.designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddSubjectItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddSubjectItem.designer.cs">
+      <DependentUpon>AddSubjectItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddSubjectUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddSubjectUpload.Designer.cs">
+      <DependentUpon>AddSubjectUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTMComitContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTMComitContent.designer.cs">
+      <DependentUpon>AddTMComitContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTMNotifyDue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTMNotifyDue.designer.cs">
+      <DependentUpon>AddTMNotifyDue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTMStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTMStatus.Designer.cs">
+      <DependentUpon>AddTMStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTMStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTMStyle.Designer.cs">
+      <DependentUpon>AddTMStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademark.designer.cs">
+      <DependentUpon>AddTrademark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkClassification.designer.cs">
+      <DependentUpon>AddTrademarkClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyEstimateCost.Designer.cs">
+      <DependentUpon>AddTrademarkControversyEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyFee.Designer.cs">
+      <DependentUpon>AddTrademarkControversyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyManagement.Designer.cs">
+      <DependentUpon>AddTrademarkControversyManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyNotifyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyNotifyEvent.Designer.cs">
+      <DependentUpon>AddTrademarkControversyNotifyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkControversyPayment.Designer.cs">
+      <DependentUpon>AddTrademarkControversyPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkEstimateCost.designer.cs">
+      <DependentUpon>AddTrademarkEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkFee.designer.cs">
+      <DependentUpon>AddTrademarkFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkHandleProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkHandleProcess.Designer.cs">
+      <DependentUpon>AddTrademarkHandleProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkItems.designer.cs">
+      <DependentUpon>AddTrademarkItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkNotifyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkNotifyEvent.designer.cs">
+      <DependentUpon>AddTrademarkNotifyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkNotifyEventType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkNotifyEventType.Designer.cs">
+      <DependentUpon>AddTrademarkNotifyEventType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkPayment.designer.cs">
+      <DependentUpon>AddTrademarkPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkProcessKind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkProcessKind.Designer.cs">
+      <DependentUpon>AddTrademarkProcessKind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkTriff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkTriff.designer.cs">
+      <DependentUpon>AddTrademarkTriff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkType.Designer.cs">
+      <DependentUpon>AddTrademarkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkWorkEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddTrademarkWorkEvent.designer.cs">
+      <DependentUpon>AddTrademarkWorkEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddUploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddUploadFile.designer.cs">
+      <DependentUpon>AddUploadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddWorker.designer.cs">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\InputMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\InputMemo.designer.cs">
+      <DependentUpon>InputMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\QPForm_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\QPForm_New.designer.cs">
+      <DependentUpon>QPForm_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\UpFileParagraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\UpFileParagraph.Designer.cs">
+      <DependentUpon>UpFileParagraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyOfficeProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyOfficeProperty.Designer.cs">
+      <DependentUpon>CopyOfficeProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyPatentComitEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyPatentComitEvent.Designer.cs">
+      <DependentUpon>CopyPatentComitEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyPatentFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyPatentFee.Designer.cs">
+      <DependentUpon>CopyPatentFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversy.Designer.cs">
+      <DependentUpon>CopyTrademarkControversy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversyBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversyBy.Designer.cs">
+      <DependentUpon>CopyTrademarkControversyBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkControversyEvent.Designer.cs">
+      <DependentUpon>CopyTrademarkControversyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\CopyTrademarkEvent.Designer.cs">
+      <DependentUpon>CopyTrademarkEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\Patent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\Patent.designer.cs">
+      <DependentUpon>Patent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyForm\Trademark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyForm\Trademark.designer.cs">
+      <DependentUpon>Trademark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DB_NewsTModel.cs" />
+    <Compile Include="DAL\Links_Model.cs" />
+    <Compile Include="DAL\Program_Model.cs" />
+    <Compile Include="DAL\ViewModel_LockedWorker.cs" />
+    <Compile Include="DAL\ViewModel_PatentEventList.cs" />
+    <Compile Include="DAL\ViewModel_Worker.cs" />
+    <Compile Include="DAL\ViewModel_WorkerProgram.cs" />
+    <Compile Include="DAL\Worker_Model.cs" />
+    <Compile Include="DataSet_Accounting.cs">
+      <DependentUpon>DataSet_Accounting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Accounting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Accounting.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Applicant.cs">
+      <DependentUpon>DataSet_Applicant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Applicant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Applicant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Attorney.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Attorney.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_DelDataLog.cs">
+      <DependentUpon>DataSet_DelDataLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_DelDataLog.Designer.cs">
+      <DependentUpon>DataSet_DelDataLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_DelDataLog1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_DelDataLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Drop.cs">
+      <DependentUpon>DataSet_Drop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Drop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Drop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Email.cs">
+      <DependentUpon>DataSet_Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Email.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_KM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_KM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Legal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Legal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_News.cs">
+      <DependentUpon>DataSet_News.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_News.Designer.cs">
+      <DependentUpon>DataSet_News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_News1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_News.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_OfficeProperty.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_OfficeProperty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Pat.cs">
+      <DependentUpon>DataSet_Pat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Pat.Designer.cs">
+      <DependentUpon>DataSet_Pat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Pat1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Pat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TableColumn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_TableColumn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TM.cs">
+      <DependentUpon>DataSet_TM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TM.Designer.cs">
+      <DependentUpon>DataSet_TM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TM1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_TM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TMDrop.cs">
+      <DependentUpon>DataSet_TMDrop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TMDrop.Designer.cs">
+      <DependentUpon>DataSet_TMDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TMDrop1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_TMDrop.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_TrademarkControversy.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_TrademarkControversy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Triff.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Triff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_UpLoadFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_UpLoadFile.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Models\DB_GridColumnTModel.cs" />
+    <Compile Include="DB_Models\DB_StatueRecordTModel.cs" />
+    <Compile Include="DB_Models\DB_WorkerLoginTModel.cs" />
+    <Compile Include="EditForm\EditApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditApplicant.designer.cs">
+      <DependentUpon>EditApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditComitEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditComitEvent.designer.cs">
+      <DependentUpon>EditComitEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditCustomerRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditCustomerRecord.Designer.cs">
+      <DependentUpon>EditCustomerRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditInventor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditInventor.Designer.cs">
+      <DependentUpon>EditInventor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditLiaisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditLiaisoner.Designer.cs">
+      <DependentUpon>EditLiaisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditLinks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditLinks.Designer.cs">
+      <DependentUpon>EditLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditMailSampleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditMailSampleList.designer.cs">
+      <DependentUpon>EditMailSampleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditNews.Designer.cs">
+      <DependentUpon>EditNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditNotifyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditNotifyEvent.designer.cs">
+      <DependentUpon>EditNotifyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditOfficeProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditOfficeProperty.Designer.cs">
+      <DependentUpon>EditOfficeProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditPatent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditPatent.designer.cs">
+      <DependentUpon>EditPatent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditPatentEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditPatentEstimateCost.Designer.cs">
+      <DependentUpon>EditPatentEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditPatentFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditPatentFee.designer.cs">
+      <DependentUpon>EditPatentFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditPatentPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditPatentPayment.designer.cs">
+      <DependentUpon>EditPatentPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditPatentWorkEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditPatentWorkEvent.designer.cs">
+      <DependentUpon>EditPatentWorkEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademark.designer.cs">
+      <DependentUpon>EditTrademark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversy.Designer.cs">
+      <DependentUpon>EditTrademarkControversy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyEstimateCost.Designer.cs">
+      <DependentUpon>EditTrademarkControversyEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyFee.Designer.cs">
+      <DependentUpon>EditTrademarkControversyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyNotifyEvent..cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyNotifyEvent..Designer.cs">
+      <DependentUpon>EditTrademarkControversyNotifyEvent..cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkControversyPayment.Designer.cs">
+      <DependentUpon>EditTrademarkControversyPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkEstimateCost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkEstimateCost.designer.cs">
+      <DependentUpon>EditTrademarkEstimateCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkFee.designer.cs">
+      <DependentUpon>EditTrademarkFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkNotifyEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkNotifyEvent.designer.cs">
+      <DependentUpon>EditTrademarkNotifyEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkPayment.designer.cs">
+      <DependentUpon>EditTrademarkPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkWorkEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditTrademarkWorkEvent.designer.cs">
+      <DependentUpon>EditTrademarkWorkEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditUploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditUploadFile.Designer.cs">
+      <DependentUpon>EditUploadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditWorker.designer.cs">
+      <DependentUpon>EditWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTPClass\BaseClass.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrom.designer.cs">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\CAccountingPublicFunction.cs" />
+    <Compile Include="Public\CApplicant.cs" />
+    <Compile Include="Public\CApplicantPublicFunction.cs" />
+    <Compile Include="Public\CAttLiaisoner.cs" />
+    <Compile Include="Public\CAttorney.cs" />
+    <Compile Include="Public\CAttorneyTrackingRecord.cs" />
+    <Compile Include="Public\CClientFee.cs" />
+    <Compile Include="Public\CCombox.cs" />
+    <Compile Include="Public\CCommonPublicFunction.cs" />
+    <Compile Include="Public\CCountry.cs" />
+    <Compile Include="Public\CCountryPublicFunction.cs" />
+    <Compile Include="Public\CCustomerTrackingRecord.cs" />
+    <Compile Include="Public\CEmailLog.cs" />
+    <Compile Include="Public\CEmailSample.cs" />
+    <Compile Include="Public\CFeePhase.cs" />
+    <Compile Include="Public\CFeePhaseItems.cs" />
+    <Compile Include="Public\CGridColumn.cs" />
+    <Compile Include="Public\CInventor.cs" />
+    <Compile Include="Public\CKind.cs" />
+    <Compile Include="Public\CLegalProcessKind.cs" />
+    <Compile Include="Public\CLegalProcessStepE.cs" />
+    <Compile Include="Public\CLegalStatus.cs" />
+    <Compile Include="Public\CLegalType.cs" />
+    <Compile Include="Public\CLiaisoner.cs" />
+    <Compile Include="Public\CLinks.cs" />
+    <Compile Include="Public\CMoney.cs" />
+    <Compile Include="Public\CNews.cs" />
+    <Compile Include="Public\CNewsPublicFunction.cs" />
+    <Compile Include="Public\CnTriff.cs" />
+    <Compile Include="Public\CnTriffPublicFunction.cs" />
+    <Compile Include="Public\COfficeProperty.cs" />
+    <Compile Include="Public\CommonFunctions.cs" />
+    <Compile Include="Public\CountryKindClass.cs" />
+    <Compile Include="Public\CPatComitContent.cs" />
+    <Compile Include="Public\CPatComitEvent.cs" />
+    <Compile Include="Public\CPatComitEventToFee.cs" />
+    <Compile Include="Public\CPatComitEventToPayment.cs" />
+    <Compile Include="Public\CPatentApplicant.cs" />
+    <Compile Include="Public\CPatentEstimateCost.cs" />
+    <Compile Include="Public\CPatentFee.cs" />
+    <Compile Include="Public\CPatentManagement.cs" />
+    <Compile Include="Public\CPatentPayment.cs" />
+    <Compile Include="Public\CPatentPublicFunction.cs" />
+    <Compile Include="Public\CPATFeature.cs" />
+    <Compile Include="Public\CPatStatus.cs" />
+    <Compile Include="Public\CPatTriff.cs" />
+    <Compile Include="Public\CPatWorkReport.cs" />
+    <Compile Include="Public\CPetition.cs" />
+    <Compile Include="Public\CPetitionPublicFunction.cs" />
+    <Compile Include="Public\CPhase.cs" />
+    <Compile Include="Public\CProcessKind.cs" />
+    <Compile Include="Public\CProcessStep.cs" />
+    <Compile Include="Public\CQueryDropT.cs" />
+    <Compile Include="Public\CStatueRecordT.cs" />
+    <Compile Include="Public\CSystemLog.cs" />
+    <Compile Include="Public\CTMNotifyDue.cs" />
+    <Compile Include="Public\CTMStatus.cs" />
+    <Compile Include="Public\CTrademarkApplicant.cs" />
+    <Compile Include="Public\CTrademarkClassification.cs" />
+    <Compile Include="Public\CTrademarkClassSelect.cs" />
+    <Compile Include="Public\CTrademarkControversyApplicant.cs" />
+    <Compile Include="Public\CTrademarkControversyFee.cs" />
+    <Compile Include="Public\CTrademarkControversyManagement.cs" />
+    <Compile Include="Public\CTrademarkControversyNotifyEvent.cs" />
+    <Compile Include="Public\CTrademarkControversyNotifyEventToFee.cs" />
+    <Compile Include="Public\CTrademarkControversyNotifyEventToPayment.cs" />
+    <Compile Include="Public\CTrademarkControversyPayment.cs" />
+    <Compile Include="Public\CTrademarkControveryEstimateCost.cs" />
+    <Compile Include="Public\CTrademarkEstimateCost.cs" />
+    <Compile Include="Public\CTrademarkFee.cs" />
+    <Compile Include="Public\CTrademarkItems.cs" />
+    <Compile Include="Public\CTrademarkManagement.cs" />
+    <Compile Include="Public\CTrademarkNotifyEvent.cs" />
+    <Compile Include="Public\CTrademarkNotifyEventToFee.cs" />
+    <Compile Include="Public\CTrademarkNotifyEventToPayment.cs" />
+    <Compile Include="Public\CTrademarkNotifyEventType.cs" />
+    <Compile Include="Public\CTrademarkPayment.cs" />
+    <Compile Include="Public\CTrademarkProcessKind.cs" />
+    <Compile Include="Public\CTrademarkProcessStepE.cs" />
+    <Compile Include="Public\CTrademarkPublicFunction.cs" />
+    <Compile Include="Public\CTrademarkStyle.cs" />
+    <Compile Include="Public\CTrademarkType.cs" />
+    <Compile Include="Public\CTrademarkWorkReport.cs" />
+    <Compile Include="Public\CUpLoadFile.cs" />
+    <Compile Include="Public\CWorker.cs" />
+    <Compile Include="Public\CWorkerProgram.cs" />
+    <Compile Include="Public\DataClass.cs" />
+    <Compile Include="Public\DLL.cs" />
+    <Compile Include="Public\DynamicGridViewColumn.cs" />
+    <Compile Include="Public\EmailClass.cs" />
+    <Compile Include="Public\LoginForm.cs" />
+    <Compile Include="Public\PublicClass.cs" />
+    <Compile Include="Public\PublicCommonFunction.cs" />
+    <Compile Include="Public\PublicForm.cs" />
+    <Compile Include="Public\SecurityPermissions.cs" />
+    <Compile Include="Public\SkinType.cs" />
+    <Compile Include="Public\UserPermissionForm.cs" />
+    <Compile Include="Public\USkinSDK.cs" />
+    <Compile Include="Public\Utility.cs" />
+    <Compile Include="Public\V_OfficeRoleT.cs" />
+    <Compile Include="QS_DataSet_ControlEvent.cs">
+      <DependentUpon>QS_DataSet_ControlEvent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QS_DataSet_ControlEvent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QS_DataSet_ControlEvent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\FeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\FeeReport.designer.cs">
+      <DependentUpon>FeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\PatentAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\PatentAnalysis.Designer.cs">
+      <DependentUpon>PatentAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\PatentFeeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\PatentFeeAnalysis.designer.cs">
+      <DependentUpon>PatentFeeAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\PaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\PaymentReport.designer.cs">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\PrintLabelNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\PrintLabelNumber.designer.cs">
+      <DependentUpon>PrintLabelNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\PublicReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\PublicReport.Designer.cs">
+      <DependentUpon>PublicReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\Quotation1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\Quotation1.designer.cs">
+      <DependentUpon>Quotation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\Quotation2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\Quotation2.designer.cs">
+      <DependentUpon>Quotation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\Quotation3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\Quotation3.designer.cs">
+      <DependentUpon>Quotation3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\Quotation4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\Quotation4.designer.cs">
+      <DependentUpon>Quotation4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\TrademarkAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\TrademarkAnalysis.designer.cs">
+      <DependentUpon>TrademarkAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView\TrademarkFeeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportView\TrademarkFeeAnalysis.designer.cs">
+      <DependentUpon>TrademarkFeeAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BMtriffDataSet.cs">
+      <DependentUpon>BMtriffDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\BMtriffDataSet1.Designer.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SubFrom\AccountingCombin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingCombin.Designer.cs">
+      <DependentUpon>AccountingCombin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AccountingCombinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingCombinList.Designer.cs">
+      <DependentUpon>AccountingCombinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AccountingFeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingFeeList.designer.cs">
+      <DependentUpon>AccountingFeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AccountingFeeMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingFeeMF.designer.cs">
+      <DependentUpon>AccountingFeeMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AccountingPaymentMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingPaymentMF.Designer.cs">
+      <DependentUpon>AccountingPaymentMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantList.designer.cs">
+      <DependentUpon>ApplicantList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantMF.designer.cs">
+      <DependentUpon>ApplicantMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantSearchMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantSearchMF.designer.cs">
+      <DependentUpon>ApplicantSearchMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantViewDownFileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ApplicantViewDownFileList.Designer.cs">
+      <DependentUpon>ApplicantViewDownFileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AttorneyMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AttorneyMF.designer.cs">
+      <DependentUpon>AttorneyMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AttorneySearchMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AttorneySearchMF.designer.cs">
+      <DependentUpon>AttorneySearchMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AuthorityMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AuthorityMF.designer.cs">
+      <DependentUpon>AuthorityMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ClientFeeMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ClientFeeMF.designer.cs">
+      <DependentUpon>ClientFeeMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ComitContentTMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ComitContentTMF.designer.cs">
+      <DependentUpon>ComitContentTMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\CountrySetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\CountrySetting.Designer.cs">
+      <DependentUpon>CountrySetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\DelDataLogMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\DelDataLogMF.Designer.cs">
+      <DependentUpon>DelDataLogMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\EmailLogMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\EmailLogMF.Designer.cs">
+      <DependentUpon>EmailLogMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\KeyWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\KeyWords.designer.cs">
+      <DependentUpon>KeyWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LegalEventProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LegalEventProcess.Designer.cs">
+      <DependentUpon>LegalEventProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LegalEventSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LegalEventSet.Designer.cs">
+      <DependentUpon>LegalEventSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LegalFeePhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LegalFeePhase.Designer.cs">
+      <DependentUpon>LegalFeePhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LegalStatusSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LegalStatusSet.Designer.cs">
+      <DependentUpon>LegalStatusSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LegalTypeSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LegalTypeSet.Designer.cs">
+      <DependentUpon>LegalTypeSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LinksMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LinksMF.Designer.cs">
+      <DependentUpon>LinksMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\LoginLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\LoginLog.Designer.cs">
+      <DependentUpon>LoginLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\MailSampleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\MailSampleList.designer.cs">
+      <DependentUpon>MailSampleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\MoneyMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\MoneyMF.designer.cs">
+      <DependentUpon>MoneyMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\MyForm.Designer.cs">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\NewsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\NewsList.Designer.cs">
+      <DependentUpon>NewsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\OfficePropertyMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\OfficePropertyMF.Designer.cs">
+      <DependentUpon>OfficePropertyMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ParagraphDetailMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ParagraphDetailMF.designer.cs">
+      <DependentUpon>ParagraphDetailMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEvent.designer.cs">
+      <DependentUpon>PATControlEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEventList.designer.cs">
+      <DependentUpon>PATControlEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEventWorkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlEventWorkList.Designer.cs">
+      <DependentUpon>PATControlEventWorkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlFeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlFeeList.designer.cs">
+      <DependentUpon>PATControlFeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlPayment.designer.cs">
+      <DependentUpon>PATControlPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATControlYearFeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATControlYearFeeList.designer.cs">
+      <DependentUpon>PATControlYearFeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentAnalysis.designer.cs">
+      <DependentUpon>PatentAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentEventList.Designer.cs">
+      <DependentUpon>PatentEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentFeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentFeeSearch.Designer.cs">
+      <DependentUpon>PatentFeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentFeeStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentFeeStatistics.designer.cs">
+      <DependentUpon>PatentFeeStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentHistoryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentHistoryRecord.designer.cs">
+      <DependentUpon>PatentHistoryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentHistoryRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentHistoryRecord1.designer.cs">
+      <DependentUpon>PatentHistoryRecord1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentMF.designer.cs">
+      <DependentUpon>PatentMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentPaymentSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentPaymentSearch.Designer.cs">
+      <DependentUpon>PatentPaymentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentPerformanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentPerformanceList.Designer.cs">
+      <DependentUpon>PatentPerformanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatentStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatentStatistics.designer.cs">
+      <DependentUpon>PatentStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATEventProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATEventProcess.designer.cs">
+      <DependentUpon>PATEventProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATFeatureMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATFeatureMF.designer.cs">
+      <DependentUpon>PATFeatureMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatFeePhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatFeePhase.designer.cs">
+      <DependentUpon>PatFeePhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PatListMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PatListMF.designer.cs">
+      <DependentUpon>PatListMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATMF.designer.cs">
+      <DependentUpon>PATMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATNotifyContentMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATNotifyContentMF.designer.cs">
+      <DependentUpon>PATNotifyContentMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATNotifyDueMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATNotifyDueMF.designer.cs">
+      <DependentUpon>PATNotifyDueMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PATStatusMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PATStatusMF.designer.cs">
+      <DependentUpon>PATStatusMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PetitionMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PetitionMF.designer.cs">
+      <DependentUpon>PetitionMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PetitionSearchMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PetitionSearchMF.designer.cs">
+      <DependentUpon>PetitionSearchMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PhaseMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PhaseMF.Designer.cs">
+      <DependentUpon>PhaseMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\PrintLabelMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\PrintLabelMF.designer.cs">
+      <DependentUpon>PrintLabelMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\QPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\QPForm.designer.cs">
+      <DependentUpon>QPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\QPSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\QPSearchForm.designer.cs">
+      <DependentUpon>QPSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\SetGridColumnT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\SetGridColumnT.designer.cs">
+      <DependentUpon>SetGridColumnT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\SubjectMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\SubjectMF.designer.cs">
+      <DependentUpon>SubjectMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\SubjectUploadMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\SubjectUploadMF.designer.cs">
+      <DependentUpon>SubjectUploadMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\SystemCommonSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\SystemCommonSetting.Designer.cs">
+      <DependentUpon>SystemCommonSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMComitContentMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMComitContentMF.designer.cs">
+      <DependentUpon>TMComitContentMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMFeatureMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMFeatureMF.designer.cs">
+      <DependentUpon>TMFeatureMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMMF.designer.cs">
+      <DependentUpon>TMMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMNotifyContentMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMNotifyContentMF.designer.cs">
+      <DependentUpon>TMNotifyContentMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMNotifyDueMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMNotifyDueMF.designer.cs">
+      <DependentUpon>TMNotifyDueMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMStatusMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMStatusMF.designer.cs">
+      <DependentUpon>TMStatusMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TMTypeMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TMTypeMF.designer.cs">
+      <DependentUpon>TMTypeMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkAnalysis.designer.cs">
+      <DependentUpon>TrademarkAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkClassificationMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkClassificationMF.designer.cs">
+      <DependentUpon>TrademarkClassificationMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlEvent.designer.cs">
+      <DependentUpon>TrademarkControlEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlEventList.designer.cs">
+      <DependentUpon>TrademarkControlEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlExtendedFeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlExtendedFeeList.designer.cs">
+      <DependentUpon>TrademarkControlExtendedFeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlFeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlFeeList.designer.cs">
+      <DependentUpon>TrademarkControlFeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlPaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControlPaymentList.designer.cs">
+      <DependentUpon>TrademarkControlPaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControversyHistoryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControversyHistoryRecord.Designer.cs">
+      <DependentUpon>TrademarkControversyHistoryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControversyMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkControversyMF.Designer.cs">
+      <DependentUpon>TrademarkControversyMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkEventList.Designer.cs">
+      <DependentUpon>TrademarkEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkEventProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkEventProcess.designer.cs">
+      <DependentUpon>TrademarkEventProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeePhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeePhase.designer.cs">
+      <DependentUpon>TrademarkFeePhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeSearch.Designer.cs">
+      <DependentUpon>TrademarkFeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeSearchList.Designer.cs">
+      <DependentUpon>TrademarkFeeSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkFeeStatistics.designer.cs">
+      <DependentUpon>TrademarkFeeStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkHistoryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkHistoryRecord.designer.cs">
+      <DependentUpon>TrademarkHistoryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkMF.designer.cs">
+      <DependentUpon>TrademarkMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkNotifyEventType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkNotifyEventType.designer.cs">
+      <DependentUpon>TrademarkNotifyEventType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkPaymentSearchList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkPaymentSearchList.Designer.cs">
+      <DependentUpon>TrademarkPaymentSearchList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkPerformanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkPerformanceList.Designer.cs">
+      <DependentUpon>TrademarkPerformanceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkStatistics.designer.cs">
+      <DependentUpon>TrademarkStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\Triff_PAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\Triff_PAT.designer.cs">
+      <DependentUpon>Triff_PAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\Triff_TM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\Triff_TM.designer.cs">
+      <DependentUpon>Triff_TM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\UpFilePath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\UpFilePath.designer.cs">
+      <DependentUpon>UpFilePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\UploadFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\UploadFile.designer.cs">
+      <DependentUpon>UploadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\ViewUpdateFileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\ViewUpdateFileList.designer.cs">
+      <DependentUpon>ViewUpdateFileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\TrademarkStyle.designer.cs">
+      <DependentUpon>TrademarkStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\AbortControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\AbortControl.designer.cs">
+      <DependentUpon>AbortControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\AccountingPaymentFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\AccountingPaymentFinish.Designer.cs">
+      <DependentUpon>AccountingPaymentFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\CalculationDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\CalculationDate.designer.cs">
+      <DependentUpon>CalculationDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\CheckPPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\CheckPPP.Designer.cs">
+      <DependentUpon>CheckPPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\ComboSearchColumnBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\ComboSearchColumnBox.Designer.cs">
+      <DependentUpon>ComboSearchColumnBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\ComboSearchColumnBoxPro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\ComboSearchColumnBoxPro.Designer.cs">
+      <DependentUpon>ComboSearchColumnBoxPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\ComboSearchDetailColumnBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\ComboSearchDetailColumnBox.Designer.cs">
+      <DependentUpon>ComboSearchDetailColumnBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\ControlTabIndexSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\ControlTabIndexSet.Designer.cs">
+      <DependentUpon>ControlTabIndexSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\EditorHTML.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\EditorHTML.designer.cs">
+      <DependentUpon>EditorHTML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\EmailSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\EmailSet.designer.cs">
+      <DependentUpon>EmailSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\EmployeeChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\EmployeeChangePassword.designer.cs">
+      <DependentUpon>EmployeeChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\FeeFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\FeeFinish.designer.cs">
+      <DependentUpon>FeeFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\FeeFinishDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\FeeFinishDate.Designer.cs">
+      <DependentUpon>FeeFinishDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\HelpBoxOfQS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\HelpBoxOfQS.designer.cs">
+      <DependentUpon>HelpBoxOfQS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\InsertHTML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\InsertHTML.designer.cs">
+      <DependentUpon>InsertHTML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\LinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\LinkDialog.designer.cs">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\MailReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\MailReceive.designer.cs">
+      <DependentUpon>MailReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\NotificationLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\NotificationLetter.designer.cs">
+      <DependentUpon>NotificationLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\OvertrueName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\OvertrueName.designer.cs">
+      <DependentUpon>OvertrueName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PatentClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PatentClose.designer.cs">
+      <DependentUpon>PatentClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PatentComitEventFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PatentComitEventFinish.designer.cs">
+      <DependentUpon>PatentComitEventFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PatentControlPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PatentControlPeriod.designer.cs">
+      <DependentUpon>PatentControlPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PatentPaymentComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PatentPaymentComplete.designer.cs">
+      <DependentUpon>PatentPaymentComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PaymentFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PaymentFinish.designer.cs">
+      <DependentUpon>PaymentFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\PopMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\PopMemo.designer.cs">
+      <DependentUpon>PopMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SearchMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\SearchMain.designer.cs">
+      <DependentUpon>SearchMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SearchMainByTM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\SearchMainByTM.designer.cs">
+      <DependentUpon>SearchMainByTM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SelectApplicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SelectApplicant.Designer.cs">
+      <DependentUpon>SelectApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SelectTrademarkClassification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SelectTrademarkClassification.designer.cs">
+      <DependentUpon>SelectTrademarkClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SelectTrademarkClassification1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SelectTrademarkClassification1.designer.cs">
+      <DependentUpon>SelectTrademarkClassification1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SendMailSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SendMailSample.designer.cs">
+      <DependentUpon>SendMailSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SendMailTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SendMailTo.designer.cs">
+      <DependentUpon>SendMailTo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\SingCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\SingCode.designer.cs">
+      <DependentUpon>SingCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\TagTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\TagTitle.Designer.cs">
+      <DependentUpon>TagTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\TrademarkControlPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\TrademarkControlPeriod.Designer.cs">
+      <DependentUpon>TrademarkControlPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\TrademarkExtendFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\TrademarkExtendFinish.designer.cs">
+      <DependentUpon>TrademarkExtendFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\TrademarkNotifyFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\TrademarkNotifyFinish.designer.cs">
+      <DependentUpon>TrademarkNotifyFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\UpdataFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\UpdataFile.designer.cs">
+      <DependentUpon>UpdataFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\UpFileList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="US\UpFileList.designer.cs">
+      <DependentUpon>UpFileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\UserControlFilterDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\UserControlFilterDate.Designer.cs">
+      <DependentUpon>UserControlFilterDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="US\UserControlFilterInteger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="US\UserControlFilterInteger.Designer.cs">
+      <DependentUpon>UserControlFilterInteger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\PatentCompleteHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\PatentCompleteHistory.designer.cs">
+      <DependentUpon>PatentCompleteHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\PatentEventByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\PatentEventByUser.Designer.cs">
+      <DependentUpon>PatentEventByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\PatentFeeByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\PatentFeeByUser.Designer.cs">
+      <DependentUpon>PatentFeeByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\PatentPaymentByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\PatentPaymentByUser.Designer.cs">
+      <DependentUpon>PatentPaymentByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkCompleteHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkCompleteHistory.designer.cs">
+      <DependentUpon>TrademarkCompleteHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkControversyCompleteHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkControversyCompleteHistory.Designer.cs">
+      <DependentUpon>TrademarkControversyCompleteHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkEventByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkEventByUser.Designer.cs">
+      <DependentUpon>TrademarkEventByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkFeeByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkFeeByUser.Designer.cs">
+      <DependentUpon>TrademarkFeeByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkPaymentByUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\TrademarkPaymentByUser.Designer.cs">
+      <DependentUpon>TrademarkPaymentByUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrom\ViewPatent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrom\ViewPatent.designer.cs">
+      <DependentUpon>ViewPatent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddFrom\AddApplicant.resx">
+      <DependentUpon>AddApplicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddAttLiaisoner.resx">
+      <DependentUpon>AddAttLiaisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddAttorney.resx">
+      <DependentUpon>AddAttorney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddAttorneyRecord.resx">
+      <DependentUpon>AddAttorneyRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddComitContent.resx">
+      <DependentUpon>AddComitContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddCustomerRecord.resx">
+      <DependentUpon>AddCustomerRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddCustQuotation.resx">
+      <DependentUpon>AddCustQuotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddCustQuotationNew.resx">
+      <DependentUpon>AddCustQuotationNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddFeePhase.resx">
+      <DependentUpon>AddFeePhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddFeePhaseItem.resx">
+      <DependentUpon>AddFeePhaseItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddHandleProcess.resx">
+      <DependentUpon>AddHandleProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddInventor.resx">
+      <DependentUpon>AddInventor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddKeyWords.resx">
+      <DependentUpon>AddKeyWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddKeyWordsModify.resx">
+      <DependentUpon>AddKeyWordsModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddLegalProcessKind.resx">
+      <DependentUpon>AddLegalProcessKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddLegalStatus.resx">
+      <DependentUpon>AddLegalStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddLegalType.resx">
+      <DependentUpon>AddLegalType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddLiaisoner.resx">
+      <DependentUpon>AddLiaisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddLinks.resx">
+      <DependentUpon>AddLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddNews.resx">
+      <DependentUpon>AddNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddNotifyContent.resx">
+      <DependentUpon>AddNotifyContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddNotifyDue.resx">
+      <DependentUpon>AddNotifyDue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddOfficeProperty.resx">
+      <DependentUpon>AddOfficeProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddParagraphDetail.resx">
+      <DependentUpon>AddParagraphDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatent.resx">
+      <DependentUpon>AddPatent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentComitEvent.resx">
+      <DependentUpon>AddPatentComitEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentEstimateCost.resx">
+      <DependentUpon>AddPatentEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentFee.resx">
+      <DependentUpon>AddPatentFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentNotifyEvent.resx">
+      <DependentUpon>AddPatentNotifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentPayment.resx">
+      <DependentUpon>AddPatentPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentTriff.resx">
+      <DependentUpon>AddPatentTriff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatentWorkEvent.resx">
+      <DependentUpon>AddPatentWorkEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatFeature.resx">
+      <DependentUpon>AddPatFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPATStatus.resx">
+      <DependentUpon>AddPATStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPatTriff.resx">
+      <DependentUpon>AddPatTriff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPetition.resx">
+      <DependentUpon>AddPetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPhase.resx">
+      <DependentUpon>AddPhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddPraagraph.resx">
+      <DependentUpon>AddPraagraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddProcessKind.resx">
+      <DependentUpon>AddProcessKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddSubjectItem.resx">
+      <DependentUpon>AddSubjectItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddSubjectUpload.resx">
+      <DependentUpon>AddSubjectUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTMComitContent.resx">
+      <DependentUpon>AddTMComitContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTMNotifyDue.resx">
+      <DependentUpon>AddTMNotifyDue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTMStatus.resx">
+      <DependentUpon>AddTMStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTMStyle.resx">
+      <DependentUpon>AddTMStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademark.resx">
+      <DependentUpon>AddTrademark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkClassification.resx">
+      <DependentUpon>AddTrademarkClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkControversyEstimateCost.resx">
+      <DependentUpon>AddTrademarkControversyEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkControversyFee.resx">
+      <DependentUpon>AddTrademarkControversyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkControversyManagement.resx">
+      <DependentUpon>AddTrademarkControversyManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkControversyNotifyEvent.resx">
+      <DependentUpon>AddTrademarkControversyNotifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkControversyPayment.resx">
+      <DependentUpon>AddTrademarkControversyPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkEstimateCost.resx">
+      <DependentUpon>AddTrademarkEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkFee.resx">
+      <DependentUpon>AddTrademarkFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkHandleProcess.resx">
+      <DependentUpon>AddTrademarkHandleProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkItems.resx">
+      <DependentUpon>AddTrademarkItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkNotifyEvent.resx">
+      <DependentUpon>AddTrademarkNotifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkNotifyEventType.resx">
+      <DependentUpon>AddTrademarkNotifyEventType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkPayment.resx">
+      <DependentUpon>AddTrademarkPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkProcessKind.resx">
+      <DependentUpon>AddTrademarkProcessKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkTriff.resx">
+      <DependentUpon>AddTrademarkTriff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkType.resx">
+      <DependentUpon>AddTrademarkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddTrademarkWorkEvent.resx">
+      <DependentUpon>AddTrademarkWorkEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddUploadFile.resx">
+      <DependentUpon>AddUploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddWorker.resx">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\InputMemo.resx">
+      <DependentUpon>InputMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\QPForm_New.resx">
+      <DependentUpon>QPForm_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\UpFileParagraph.resx">
+      <DependentUpon>UpFileParagraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyOfficeProperty.resx">
+      <DependentUpon>CopyOfficeProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyPatentComitEvent.resx">
+      <DependentUpon>CopyPatentComitEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyPatentFee.resx">
+      <DependentUpon>CopyPatentFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyTrademarkControversy.resx">
+      <DependentUpon>CopyTrademarkControversy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyTrademarkControversyBy.resx">
+      <DependentUpon>CopyTrademarkControversyBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyTrademarkControversyEvent.resx">
+      <DependentUpon>CopyTrademarkControversyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\CopyTrademarkEvent.resx">
+      <DependentUpon>CopyTrademarkEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\Patent.resx">
+      <DependentUpon>Patent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyForm\Trademark.resx">
+      <DependentUpon>Trademark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditApplicant.resx">
+      <DependentUpon>EditApplicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditComitEvent.resx">
+      <DependentUpon>EditComitEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditCustomerRecord.resx">
+      <DependentUpon>EditCustomerRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditInventor.resx">
+      <DependentUpon>EditInventor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditLiaisoner.resx">
+      <DependentUpon>EditLiaisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditLinks.resx">
+      <DependentUpon>EditLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditMailSampleList.resx">
+      <DependentUpon>EditMailSampleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditNews.resx">
+      <DependentUpon>EditNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditNotifyEvent.resx">
+      <DependentUpon>EditNotifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditOfficeProperty.resx">
+      <DependentUpon>EditOfficeProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditPatent.resx">
+      <DependentUpon>EditPatent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditPatentEstimateCost.resx">
+      <DependentUpon>EditPatentEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditPatentFee.resx">
+      <DependentUpon>EditPatentFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditPatentPayment.resx">
+      <DependentUpon>EditPatentPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditPatentWorkEvent.resx">
+      <DependentUpon>EditPatentWorkEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademark.resx">
+      <DependentUpon>EditTrademark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkControversy.resx">
+      <DependentUpon>EditTrademarkControversy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkControversyEstimateCost.resx">
+      <DependentUpon>EditTrademarkControversyEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkControversyFee.resx">
+      <DependentUpon>EditTrademarkControversyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkControversyNotifyEvent..resx">
+      <DependentUpon>EditTrademarkControversyNotifyEvent..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkControversyPayment.resx">
+      <DependentUpon>EditTrademarkControversyPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkEstimateCost.resx">
+      <DependentUpon>EditTrademarkEstimateCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkFee.resx">
+      <DependentUpon>EditTrademarkFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkNotifyEvent.resx">
+      <DependentUpon>EditTrademarkNotifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkPayment.resx">
+      <DependentUpon>EditTrademarkPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditTrademarkWorkEvent.resx">
+      <DependentUpon>EditTrademarkWorkEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditUploadFile.resx">
+      <DependentUpon>EditUploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditWorker.resx">
+      <DependentUpon>EditWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrom.resx">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportView\FeeReport.resx">
+      <DependentUpon>FeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\PatentAnalysis.resx">
+      <DependentUpon>PatentAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\PatentFeeAnalysis.resx">
+      <DependentUpon>PatentFeeAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\PaymentReport.resx">
+      <DependentUpon>PaymentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\PrintLabelNumber.resx">
+      <DependentUpon>PrintLabelNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\PublicReport.resx">
+      <DependentUpon>PublicReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\Quotation1.resx">
+      <DependentUpon>Quotation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\Quotation2.resx">
+      <DependentUpon>Quotation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\Quotation3.resx">
+      <DependentUpon>Quotation3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\Quotation4.resx">
+      <DependentUpon>Quotation4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\TrademarkAnalysis.resx">
+      <DependentUpon>TrademarkAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView\TrademarkFeeAnalysis.resx">
+      <DependentUpon>TrademarkFeeAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingCombin.resx">
+      <DependentUpon>AccountingCombin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingCombinList.resx">
+      <DependentUpon>AccountingCombinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingFeeList.resx">
+      <DependentUpon>AccountingFeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingFeeMF.resx">
+      <DependentUpon>AccountingFeeMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingPaymentMF.resx">
+      <DependentUpon>AccountingPaymentMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ApplicantList.resx">
+      <DependentUpon>ApplicantList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ApplicantMF.resx">
+      <DependentUpon>ApplicantMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ApplicantSearchMF.resx">
+      <DependentUpon>ApplicantSearchMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ApplicantViewDownFileList.resx">
+      <DependentUpon>ApplicantViewDownFileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AttorneyMF.resx">
+      <DependentUpon>AttorneyMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AttorneySearchMF.resx">
+      <DependentUpon>AttorneySearchMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AuthorityMF.resx">
+      <DependentUpon>AuthorityMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ClientFeeMF.resx">
+      <DependentUpon>ClientFeeMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ComitContentTMF.resx">
+      <DependentUpon>ComitContentTMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\CountrySetting.resx">
+      <DependentUpon>CountrySetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\DelDataLogMF.resx">
+      <DependentUpon>DelDataLogMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\EmailLogMF.resx">
+      <DependentUpon>EmailLogMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\KeyWords.resx">
+      <DependentUpon>KeyWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LegalEventProcess.resx">
+      <DependentUpon>LegalEventProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LegalEventSet.resx">
+      <DependentUpon>LegalEventSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LegalFeePhase.resx">
+      <DependentUpon>LegalFeePhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LegalStatusSet.resx">
+      <DependentUpon>LegalStatusSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LegalTypeSet.resx">
+      <DependentUpon>LegalTypeSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LinksMF.resx">
+      <DependentUpon>LinksMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\LoginLog.resx">
+      <DependentUpon>LoginLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\MailSampleList.resx">
+      <DependentUpon>MailSampleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\MoneyMF.resx">
+      <DependentUpon>MoneyMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\MyForm.resx">
+      <DependentUpon>MyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\NewsList.resx">
+      <DependentUpon>NewsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\OfficePropertyMF.resx">
+      <DependentUpon>OfficePropertyMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ParagraphDetailMF.resx">
+      <DependentUpon>ParagraphDetailMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlEvent.resx">
+      <DependentUpon>PATControlEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlEventList.resx">
+      <DependentUpon>PATControlEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlEventWorkList.resx">
+      <DependentUpon>PATControlEventWorkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlFeeList.resx">
+      <DependentUpon>PATControlFeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlPayment.resx">
+      <DependentUpon>PATControlPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATControlYearFeeList.resx">
+      <DependentUpon>PATControlYearFeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentAnalysis.resx">
+      <DependentUpon>PatentAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentEventList.resx">
+      <DependentUpon>PatentEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentFeeSearch.resx">
+      <DependentUpon>PatentFeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentFeeStatistics.resx">
+      <DependentUpon>PatentFeeStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentHistoryRecord.resx">
+      <DependentUpon>PatentHistoryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentHistoryRecord1.resx">
+      <DependentUpon>PatentHistoryRecord1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentMF.resx">
+      <DependentUpon>PatentMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentPaymentSearch.resx">
+      <DependentUpon>PatentPaymentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentPerformanceList.resx">
+      <DependentUpon>PatentPerformanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatentStatistics.resx">
+      <DependentUpon>PatentStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATEventProcess.resx">
+      <DependentUpon>PATEventProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATFeatureMF.resx">
+      <DependentUpon>PATFeatureMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatFeePhase.resx">
+      <DependentUpon>PatFeePhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PatListMF.resx">
+      <DependentUpon>PatListMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATMF.resx">
+      <DependentUpon>PATMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATNotifyContentMF.resx">
+      <DependentUpon>PATNotifyContentMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATNotifyDueMF.resx">
+      <DependentUpon>PATNotifyDueMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PATStatusMF.resx">
+      <DependentUpon>PATStatusMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PetitionMF.resx">
+      <DependentUpon>PetitionMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PetitionSearchMF.resx">
+      <DependentUpon>PetitionSearchMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PhaseMF.resx">
+      <DependentUpon>PhaseMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\PrintLabelMF.resx">
+      <DependentUpon>PrintLabelMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\QPForm.resx">
+      <DependentUpon>QPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\QPSearchForm.resx">
+      <DependentUpon>QPSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\SetGridColumnT.resx">
+      <DependentUpon>SetGridColumnT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\SubjectMF.resx">
+      <DependentUpon>SubjectMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\SubjectUploadMF.resx">
+      <DependentUpon>SubjectUploadMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\SystemCommonSetting.resx">
+      <DependentUpon>SystemCommonSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMComitContentMF.resx">
+      <DependentUpon>TMComitContentMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMFeatureMF.resx">
+      <DependentUpon>TMFeatureMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMMF.resx">
+      <DependentUpon>TMMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMNotifyContentMF.resx">
+      <DependentUpon>TMNotifyContentMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMNotifyDueMF.resx">
+      <DependentUpon>TMNotifyDueMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMStatusMF.resx">
+      <DependentUpon>TMStatusMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TMTypeMF.resx">
+      <DependentUpon>TMTypeMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkAnalysis.resx">
+      <DependentUpon>TrademarkAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkClassificationMF.resx">
+      <DependentUpon>TrademarkClassificationMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControlEvent.resx">
+      <DependentUpon>TrademarkControlEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControlEventList.resx">
+      <DependentUpon>TrademarkControlEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControlExtendedFeeList.resx">
+      <DependentUpon>TrademarkControlExtendedFeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControlFeeList.resx">
+      <DependentUpon>TrademarkControlFeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControlPaymentList.resx">
+      <DependentUpon>TrademarkControlPaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControversyHistoryRecord.resx">
+      <DependentUpon>TrademarkControversyHistoryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkControversyMF.resx">
+      <DependentUpon>TrademarkControversyMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkEventList.resx">
+      <DependentUpon>TrademarkEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkEventProcess.resx">
+      <DependentUpon>TrademarkEventProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkFeePhase.resx">
+      <DependentUpon>TrademarkFeePhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkFeeSearch.resx">
+      <DependentUpon>TrademarkFeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkFeeSearchList.resx">
+      <DependentUpon>TrademarkFeeSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkFeeStatistics.resx">
+      <DependentUpon>TrademarkFeeStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkHistoryRecord.resx">
+      <DependentUpon>TrademarkHistoryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkMF.resx">
+      <DependentUpon>TrademarkMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkNotifyEventType.resx">
+      <DependentUpon>TrademarkNotifyEventType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkPaymentSearchList.resx">
+      <DependentUpon>TrademarkPaymentSearchList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkPerformanceList.resx">
+      <DependentUpon>TrademarkPerformanceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkStatistics.resx">
+      <DependentUpon>TrademarkStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\Triff_PAT.resx">
+      <DependentUpon>Triff_PAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\Triff_TM.resx">
+      <DependentUpon>Triff_TM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\UpFilePath.resx">
+      <DependentUpon>UpFilePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\UploadFile.resx">
+      <DependentUpon>UploadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\ViewUpdateFileList.resx">
+      <DependentUpon>ViewUpdateFileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\TrademarkStyle.resx">
+      <DependentUpon>TrademarkStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\AbortControl.resx">
+      <DependentUpon>AbortControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\AccountingPaymentFinish.resx">
+      <DependentUpon>AccountingPaymentFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\CalculationDate.resx">
+      <DependentUpon>CalculationDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\CheckPPP.resx">
+      <DependentUpon>CheckPPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\ComboSearchColumnBox.resx">
+      <DependentUpon>ComboSearchColumnBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\ComboSearchColumnBoxPro.resx">
+      <DependentUpon>ComboSearchColumnBoxPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\ComboSearchDetailColumnBox.resx">
+      <DependentUpon>ComboSearchDetailColumnBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\ControlTabIndexSet.resx">
+      <DependentUpon>ControlTabIndexSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\EditorHTML.resx">
+      <DependentUpon>EditorHTML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\EmailSet.resx">
+      <DependentUpon>EmailSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\EmployeeChangePassword.resx">
+      <DependentUpon>EmployeeChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\FeeFinish.resx">
+      <DependentUpon>FeeFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\FeeFinishDate.resx">
+      <DependentUpon>FeeFinishDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\HelpBoxOfQS.resx">
+      <DependentUpon>HelpBoxOfQS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\InsertHTML.resx">
+      <DependentUpon>InsertHTML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\LinkDialog.resx">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\MailReceive.resx">
+      <DependentUpon>MailReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\NotificationLetter.resx">
+      <DependentUpon>NotificationLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\OvertrueName.resx">
+      <DependentUpon>OvertrueName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PatentClose.resx">
+      <DependentUpon>PatentClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PatentComitEventFinish.resx">
+      <DependentUpon>PatentComitEventFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PatentControlPeriod.resx">
+      <DependentUpon>PatentControlPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PatentPaymentComplete.resx">
+      <DependentUpon>PatentPaymentComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PaymentFinish.resx">
+      <DependentUpon>PaymentFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\PopMemo.resx">
+      <DependentUpon>PopMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SearchMain.resx">
+      <DependentUpon>SearchMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SearchMainByTM.resx">
+      <DependentUpon>SearchMainByTM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SelectApplicant.resx">
+      <DependentUpon>SelectApplicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SelectTrademarkClassification.resx">
+      <DependentUpon>SelectTrademarkClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SelectTrademarkClassification1.resx">
+      <DependentUpon>SelectTrademarkClassification1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SendMailSample.resx">
+      <DependentUpon>SendMailSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SendMailTo.resx">
+      <DependentUpon>SendMailTo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\SingCode.resx">
+      <DependentUpon>SingCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\TagTitle.resx">
+      <DependentUpon>TagTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\TrademarkControlPeriod.resx">
+      <DependentUpon>TrademarkControlPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\TrademarkExtendFinish.resx">
+      <DependentUpon>TrademarkExtendFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\TrademarkNotifyFinish.resx">
+      <DependentUpon>TrademarkNotifyFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\UpdataFile.resx">
+      <DependentUpon>UpdataFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\UpFileList.resx">
+      <DependentUpon>UpFileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\UserControlFilterDate.resx">
+      <DependentUpon>UserControlFilterDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="US\UserControlFilterInteger.resx">
+      <DependentUpon>UserControlFilterInteger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\PatentCompleteHistory.resx">
+      <DependentUpon>PatentCompleteHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\PatentEventByUser.resx">
+      <DependentUpon>PatentEventByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\PatentFeeByUser.resx">
+      <DependentUpon>PatentFeeByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\PatentPaymentByUser.resx">
+      <DependentUpon>PatentPaymentByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\TrademarkCompleteHistory.resx">
+      <DependentUpon>TrademarkCompleteHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\TrademarkControversyCompleteHistory.resx">
+      <DependentUpon>TrademarkControversyCompleteHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\TrademarkEventByUser.resx">
+      <DependentUpon>TrademarkEventByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\TrademarkFeeByUser.resx">
+      <DependentUpon>TrademarkFeeByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\TrademarkPaymentByUser.resx">
+      <DependentUpon>TrademarkPaymentByUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrom\ViewPatent.resx">
+      <DependentUpon>ViewPatent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet_Accounting.xsc">
+      <DependentUpon>DataSet_Accounting.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Accounting.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Accounting.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Accounting.xss">
+      <DependentUpon>DataSet_Accounting.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Applicant.xsc">
+      <DependentUpon>DataSet_Applicant.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Applicant.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Applicant.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Applicant.xss">
+      <DependentUpon>DataSet_Applicant.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Attorney.xsc">
+      <DependentUpon>DataSet_Attorney.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Attorney.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Attorney.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Attorney.xss">
+      <DependentUpon>DataSet_Attorney.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_DelDataLog.xsc">
+      <DependentUpon>DataSet_DelDataLog.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_DelDataLog.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_DelDataLog1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_DelDataLog.xss">
+      <DependentUpon>DataSet_DelDataLog.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Drop.xsc">
+      <DependentUpon>DataSet_Drop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Drop.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Drop.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Drop.xss">
+      <DependentUpon>DataSet_Drop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Email.xsc">
+      <DependentUpon>DataSet_Email.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Email.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Email.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Email.xss">
+      <DependentUpon>DataSet_Email.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_KM.xsc">
+      <DependentUpon>DataSet_KM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_KM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_KM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_KM.xss">
+      <DependentUpon>DataSet_KM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Legal.xsc">
+      <DependentUpon>DataSet_Legal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Legal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Legal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Legal.xss">
+      <DependentUpon>DataSet_Legal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_News.xsc">
+      <DependentUpon>DataSet_News.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_News.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_News1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_News.xss">
+      <DependentUpon>DataSet_News.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_OfficeProperty.xsc">
+      <DependentUpon>DataSet_OfficeProperty.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_OfficeProperty.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_OfficeProperty.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_OfficeProperty.xss">
+      <DependentUpon>DataSet_OfficeProperty.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Pat.xsc">
+      <DependentUpon>DataSet_Pat.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Pat.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Pat1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Pat.xss">
+      <DependentUpon>DataSet_Pat.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TableColumn.xsc">
+      <DependentUpon>DataSet_TableColumn.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TableColumn.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_TableColumn.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_TableColumn.xss">
+      <DependentUpon>DataSet_TableColumn.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TM.xsc">
+      <DependentUpon>DataSet_TM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_TM1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_TM.xss">
+      <DependentUpon>DataSet_TM.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TMDrop.xsc">
+      <DependentUpon>DataSet_TMDrop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TMDrop.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_TMDrop1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_TMDrop.xss">
+      <DependentUpon>DataSet_TMDrop.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TrademarkControversy.xsc">
+      <DependentUpon>DataSet_TrademarkControversy.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_TrademarkControversy.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_TrademarkControversy.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_TrademarkControversy.xss">
+      <DependentUpon>DataSet_TrademarkControversy.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Triff.xsc">
+      <DependentUpon>DataSet_Triff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Triff.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Triff.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Triff.xss">
+      <DependentUpon>DataSet_Triff.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_UpLoadFile.xsc">
+      <DependentUpon>DataSet_UpLoadFile.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_UpLoadFile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_UpLoadFile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_UpLoadFile.xss">
+      <DependentUpon>DataSet_UpLoadFile.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QS_DataSet_ControlEvent.xsc">
+      <DependentUpon>QS_DataSet_ControlEvent.xsd</DependentUpon>
+    </None>
+    <None Include="QS_DataSet_ControlEvent.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QS_DataSet_ControlEvent.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QS_DataSet_ControlEvent.xss">
+      <DependentUpon>QS_DataSet_ControlEvent.xsd</DependentUpon>
+    </None>
+    <None Include="Report\AuthReport.rdlc" />
+    <None Include="Report\BMtriffDataSet.xsc">
+      <DependentUpon>BMtriffDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\BMtriffDataSet.xsd" />
+    <None Include="Report\BMtriffDataSet.xss">
+      <DependentUpon>BMtriffDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\FeeReport.rdlc" />
+    <None Include="Report\MainCustomer.rdlc" />
+    <None Include="Report\PatentAttorneyFee_Analysis.rdlc" />
+    <None Include="Report\PatentAttorney_Analysis.rdlc" />
+    <None Include="Report\PatentCount.rdlc" />
+    <None Include="Report\PatentCountryFee_Analysis.rdlc" />
+    <None Include="Report\PatentCountry_Analysis.rdlc" />
+    <None Include="Report\PatentCustomerFee.rdlc" />
+    <None Include="Report\PatentFee_Analysis.rdlc" />
+    <None Include="Report\PatentKindFee_Analysis.rdlc" />
+    <None Include="Report\PatentKind_Analysis.rdlc" />
+    <None Include="Report\PatentStatus_Analysis.rdlc" />
+    <None Include="Report\PaymentReport.rdlc" />
+    <None Include="Report\PetitionENRF.rdlc" />
+    <None Include="Report\PetitionRF.rdlc" />
+    <None Include="Report\PetitionRF_CHS.rdlc" />
+    <None Include="Report\PrintLabelNumber.rdlc" />
+    <None Include="Report\PrintLabelNumber1.rdlc" />
+    <None Include="Report\Quotation1RF.rdlc" />
+    <None Include="Report\Quotation1RF_CHS.rdlc" />
+    <None Include="Report\Quotation1RF_EN.rdlc" />
+    <None Include="Report\Quotation1RF_old.rdlc" />
+    <None Include="Report\Quotation2RF.rdlc" />
+    <None Include="Report\Quotation2RF_CHS.rdlc" />
+    <None Include="Report\Quotation2RF_EN.rdlc" />
+    <None Include="Report\Quotation3RF.rdlc" />
+    <None Include="Report\Quotation3RF_CHS.rdlc" />
+    <None Include="Report\Quotation3RF_EN.rdlc" />
+    <None Include="Report\Quotation4RF.rdlc" />
+    <None Include="Report\Quotation4RF_CHS.rdlc" />
+    <None Include="Report\Quotation4RF_EN.rdlc" />
+    <None Include="Report\TrademarkCount.rdlc" />
+    <None Include="Resources\00000002" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dll\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="lawtech.ico" />
+    <Content Include="Resources\00004 %282%29.jpg" />
+    <Content Include="Resources\1368693863_Price_list.png" />
+    <Content Include="Resources\2.0btn_28.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\AddForm_bg.jpg" />
+    <Content Include="Resources\Add_bg1.jpg" />
+    <Content Include="Resources\ajax-loader.gif" />
+    <Content Include="Resources\Analysis.png" />
+    <Content Include="Resources\another_case_for_the_files.png" />
+    <Content Include="Resources\backcolor.bmp" />
+    <Content Include="Resources\bg11.jpg" />
+    <Content Include="Resources\bg12.jpg" />
+    <Content Include="Resources\bg_01.jpg" />
+    <Content Include="Resources\bold.bmp" />
+    <Content Include="Resources\btnCancel.png" />
+    <Content Include="Resources\btnComfirm.png" />
+    <Content Include="Resources\btnGeen.gif" />
+    <Content Include="Resources\btnOut1.jpg" />
+    <Content Include="Resources\btnSearch.png" />
+    <Content Include="Resources\btnT1.png" />
+    <Content Include="Resources\btn_27.png" />
+    <Content Include="Resources\BulletinBoard.png" />
+    <Content Include="Resources\button_003.jpg" />
+    <Content Include="Resources\button_flickr.png" />
+    <Content Include="Resources\button_lastfm.png" />
+    <Content Include="Resources\button_linkedin.png" />
+    <Content Include="Resources\button_myspace.png" />
+    <Content Include="Resources\button_stumbleupon.png" />
+    <Content Include="Resources\button_technorati.png" />
+    <Content Include="Resources\button_vimeo.png" />
+    <Content Include="Resources\button_vtumblr.png" />
+    <Content Include="Resources\button_wordpress.png" />
+    <Content Include="Resources\button_youtube.png" />
+    <Content Include="Resources\calculator.jpg" />
+    <Content Include="Resources\candyhole.png" />
+    <Content Include="Resources\checklist.png" />
+    <Content Include="Resources\cj.bmp" />
+    <Content Include="Resources\color.bmp" />
+    <Content Include="Resources\Company.png" />
+    <Content Include="Resources\control_panel01.png" />
+    <Content Include="Resources\control_panel_3.png" />
+    <Content Include="Resources\Copy.png" />
+    <Content Include="Resources\CS3_Iconset_009.png" />
+    <Content Include="Resources\csv_text.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\deletelist.png" />
+    <Content Include="Resources\document_notes.png" />
+    <Content Include="Resources\Edit.png" />
+    <Content Include="Resources\EditForm_bg.jpg" />
+    <Content Include="Resources\EditMode.jpg" />
+    <Content Include="Resources\Email.png" />
+    <Content Include="Resources\email_open.png" />
+    <Content Include="Resources\fj.bmp" />
+    <Content Include="Resources\fzlogo.bmp" />
+    <Content Include="Resources\globe1.png" />
+    <Content Include="Resources\Group 1 copy 6 %282%29.png" />
+    <Content Include="Resources\horizontal.png" />
+    <Content Include="Resources\image.png" />
+    <Content Include="Resources\indent.bmp" />
+    <Content Include="Resources\italic.bmp" />
+    <Content Include="Resources\light-edit-bg.png" />
+    <Content Include="Resources\Line1.gif" />
+    <Content Include="Resources\link.bmp" />
+    <Content Include="Resources\link_blue.png" />
+    <Content Include="Resources\lj.bmp" />
+    <Content Include="Resources\lock.png" />
+    <Content Include="Resources\lock_yellow.png" />
+    <Content Include="Resources\login.jpg" />
+    <Content Include="Resources\login1.png" />
+    <Content Include="Resources\login11.png" />
+    <None Include="Resources\LoginIcon.png" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\mail_compose.jpg" />
+    <Content Include="Resources\mail_compose.png" />
+    <Content Include="Resources\MainForm_bg.png" />
+    <Content Include="Resources\main_36.gif" />
+    <Content Include="Resources\manage_close.gif" />
+    <Content Include="Resources\manage_show.gif" />
+    <Content Include="Resources\manage拷貝_r4_c2.gif" />
+    <Content Include="Resources\maps.png" />
+    <Content Include="Resources\MinIcons_008.png" />
+    <Content Include="Resources\MinIcons_013.png" />
+    <Content Include="Resources\money.png" />
+    <Content Include="Resources\money_bag_checkmark.png" />
+    <Content Include="Resources\ms_excel.png" />
+    <Content Include="Resources\mypc_lock.png" />
+    <Content Include="Resources\ol.bmp" />
+    <Content Include="Resources\on_login.jpg" />
+    <Content Include="Resources\outdent.bmp" />
+    <Content Include="Resources\out_Login.jpg" />
+    <Content Include="Resources\P.jpg" />
+    <Content Include="Resources\Paste.png" />
+    <Content Include="Resources\pat.png" />
+    <Content Include="Resources\pinggs58.jpg" />
+    <Content Include="Resources\pinggs581.jpg" />
+    <Content Include="Resources\pinggs66.jpg" />
+    <Content Include="Resources\png-0653.png" />
+    <Content Include="Resources\png-06531.png" />
+    <Content Include="Resources\png_06531.bmp" />
+    <Content Include="Resources\quit.png" />
+    <Content Include="Resources\quote.png" />
+    <Content Include="Resources\right_arrow.bmp" />
+    <Content Include="Resources\rj.bmp" />
+    <Content Include="Resources\SearchIcon.png" />
+    <Content Include="Resources\SearchList.png" />
+    <Content Include="Resources\Setting.png" />
+    <Content Include="Resources\T.jpg" />
+    <Content Include="Resources\Tag1_bg.png" />
+    <Content Include="Resources\Tag1_L.png" />
+    <Content Include="Resources\Tag1_R.png" />
+    <Content Include="Resources\Tag2_bg.png" />
+    <Content Include="Resources\Tag2_L.png" />
+    <Content Include="Resources\Tag2_R.png" />
+    <Content Include="Resources\Tag3_bg.png" />
+    <Content Include="Resources\Tag3_L.png" />
+    <Content Include="Resources\Tag3_R.png" />
+    <Content Include="Resources\Tag4_bg.png" />
+    <Content Include="Resources\Tag4_L.png" />
+    <Content Include="Resources\Tag4_R.png" />
+    <Content Include="Resources\Tag5_bg.png" />
+    <Content Include="Resources\Tag5_L.png" />
+    <Content Include="Resources\Tag5_R.png" />
+    <Content Include="Resources\title系統訊息_r1_c1.png" />
+    <Content Include="Resources\title系統訊息_r1_c2.png" />
+    <Content Include="Resources\title系統訊息_r1_c3.png" />
+    <Content Include="Resources\Triff_PAT.png" />
+    <Content Include="Resources\underscore.bmp" />
+    <Content Include="Resources\uol.bmp" />
+    <Content Include="Resources\UpdateData.png" />
+    <Content Include="Resources\UploadIcon.png" />
+    <Content Include="Resources\vaio_hard_edge.png" />
+    <Content Include="Resources\Vertical.png" />
+    <Content Include="Resources\WindowsTurnOff1.png" />
+    <Content Include="Resources\winProgram.png" />
+    <Content Include="Resources\xpic7439.jpg" />
+    <Content Include="Resources\xpic9562.jpg" />
+    <Content Include="Resources\xpic9844.jpg" />
+    <Content Include="Resources\z_pc.30.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

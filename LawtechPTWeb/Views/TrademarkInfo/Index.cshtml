@@ -1,0 +1,152 @@
+﻿@{
+    ViewBag.Title = "P.T.S-Admin|商標基本資料管理";
+    ViewBag.CurrentPage = "商標基本資料管理";
+    ViewBag.Catalog = "商標案件管理";
+}
+
+
+@section style {
+    @Styles.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table.min.css")
+
+    <!-- iCheck -->
+    @Styles.Render("~/Scripts/plugins/iCheck/all.css")
+
+    <style>
+        .table-demo {
+            width: 80%;
+            margin: 30px auto 0px auto;
+        }
+        .fixed-table-header {
+            border-right: solid 1px #ddd;
+            border-top: solid 1px #ddd;
+        }
+            .fixed-table-header table  {
+                border-top: solid 0px #ddd !important;
+                margin-top:-1px;
+            }
+    </style>
+}
+
+@section js {
+    @Scripts.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table.min.js")
+    @Scripts.Render("~/Scripts/plugins/BootstrapTable/bootstrap-table-locale-all.min.js")
+
+    <!-- iCheck -->
+    @Scripts.Render("~/Scripts/plugins/iCheck/icheck.min.js")
+
+    @Scripts.Render("~/Scripts/UserDefined/TrademarkInfo_Index.js")
+}
+
+
+<div class="container-fluid" id="BodyContent">
+    <div class="card">
+        <div class="card-body">
+            <!--Master Start-->
+            @* <div class="card mb-0">
+            <div class="card-body mb-0">
+
+                <!--Search Area Start-->
+                <div class="row">
+                    <div class="col-8">
+                        <div class="form-inline mt-1 mb-1">
+
+                            <select class="form-control" id="select1">
+                                <option>申請人名稱</option>
+                                <option>身份證/統編</option>
+                                <option>地址</option>
+                                <option>4</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 60%" placeholder="Value">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">And</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="form-inline mt-1 mb-1">
+                            <select class="form-control" id="select2">
+                                <option>申請人名稱</option>
+                                <option>身份證/統編</option>
+                                <option>地址</option>
+                                <option>4</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 60%" placeholder="Value">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optradio">Or</label>
+                            </div>
+                            <div class="ml-5">
+                             <button id="btnAddYearFees" type="button" class="btn btn-success">
+                            <i class="glyphicon glyphicon-plus"></i>Search
+                        </button>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+            <!--Search Area End-->
+            <!--table Area Start-->
+            @*<div class="input-group col-sm-8">
+            <input type="text" class="form-control" id="txtTrademarkNo" placeholder="輸入本所案號 ..." size="40" />
+            <input type="text" class="form-control" id="txtApplicationNo" placeholder="輸入申請案號..." size="60" />
+            <button title="查詢" id="btnSearch" type="button" class="btn btn-success onclickbtn">
+                <i class="fa fa-search onclickbtni"></i>
+            </button>
+        </div>*@
+            <div class="input-group col-sm-8">
+                <input type="text" class="form-control" id="txtTrademarkNo" placeholder="輸入事務所案號 ..." size="40" />
+                <input type="text" class="form-control" id="txtTrademarkName" placeholder="輸入商標名稱..." size="60" />
+                <button title="查詢" id="btnSearch" type="button" class="btn btn-success onclickbtn">
+                    <i class="fa fa-search onclickbtni"></i>
+                </button>
+            </div>
+
+            <table id="table" data-show-columns="true" data-click-to-select="true" data-single-select="true" data-id-field="TrademarkID"
+                   data-show-toggle="true" data-sort-name="TrademarkNo" data-sort-order="asc" @*data-search="true"*@
+                   data-toolbar="#toolbar">
+                <thead>
+                    <tr>
+                        <th data-field="SelectState" data-radio="true"></th>
+                        <th data-field="TrademarkID" data-visible="false" data-switchable="false"></th>
+                        <th data-field="TrademarkNo" data-sortable="true">事務所案號</th>
+                        <th data-field="TrademarkName" data-sortable="true" data-align="left">商標名稱</th>
+                        @*<th data-field="TitleEn" data-sortable="true" data-align="center">申請案名稱(英)</th>*@
+                        <th data-field="CountryName" title="國別" data-align="center">國別</th>
+                        <th data-field="StyleName" data-align="center" title="商標樣式">商標樣式</th>
+                        <th data-field="TMTypeName" data-align="center">案件類別</th>
+                        <th data-field="StatusName" data-align="center">申請案狀態</th>
+                        @* <th data-field="StatusExplain" data-align="center">申請案狀態描述</th>*@
+                        <th data-field="ApplicationDate" data-align="center" data-sortable="true" data-formatter="ApplicationDateFormatter">申請日期</th>
+                        <th data-field="ApplicationNo" data-align="center">申請案號</th>
+                        <th data-field="RegistrationDate" data-align="center" data-sortable="true" data-formatter="RegistrationDateFormatter">註冊日期</th>
+                        <th data-field="RegistrationNo" data-align="center">註冊證號</th>
+                        <th data-field="LawDate" data-align="center" data-sortable="true" data-formatter="LawDateFormatter">專用期限</th>
+                        <th data-field="ExtendedDate" data-align="center" data-sortable="true" data-formatter="ExtendedDateFormatter">可辦延展日期</th>
+                        @* <th data-field="NoticeNo1" data-align="center">第一次公告號數</th>
+         <th data-field="NoticeDate1" data-align="center" data-sortable="true" data-formatter="PubdateFormatter">第一次公告日期</th>
+        <th data-field="NoticeNo" data-align="center">第二次公告號數</th>
+         <th data-field="NoticeDate" data-align="center" data-sortable="true" data-formatter="PubdateFormatter">第二次公告日期</th>*@
+                        @*  <th data-field="GetDate" data-align="center" data-sortable="true" data-formatter="ApplicationDateFormatter">收到證書日</th>*@
+                        <th data-field="RegisterProduct" data-align="center">註冊類別</th>
+                        <th data-field="CloseDate" data-sortable="true" data-formatter="CloseDateTimeFormatter">結案日期/結案原因</th>
+                        <th data-field="Creator" data-visible="false" data-sortable="true" data-formatter="CreateDateTimeFormatter">建立者/建立時間</th>
+                        <th data-field="LastModifyWorker" data-visible="false" data-sortable="true" data-formatter="LastModifyDateTimeFormatter">修改者/修改時間</th>
+
+                    </tr>
+                </thead>
+            </table>
+
+            <!--table Area End-->
+            <!--Master End-->
+
+        </div>
+    </div>
+</div>

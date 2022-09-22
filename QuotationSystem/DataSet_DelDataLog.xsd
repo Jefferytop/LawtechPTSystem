@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_DelDataLog" targetNamespace="http://tempuri.org/DataSet_DelDataLog.xsd" xmlns:mstns="http://tempuri.org/DataSet_DelDataLog.xsd" xmlns="http://tempuri.org/DataSet_DelDataLog.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DataBaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataBaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LawtechPTSystem.Properties.Settings.GlobalReference.Default.DataBaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SystemLogTTableAdapter" GeneratorDataComponentClassName="SystemLogTTableAdapter" Name="SystemLogT" UserDataComponentName="SystemLogTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          SystemLogT.SysLogID, SystemLogT.DelWorkerKey, SystemLogT.DelTime, SystemLogT.DelTitle, 
+                            SystemLogT.DelContent, WorkerT.EmployeeName AS DelWorkerKey
+FROM              SystemLogT WITH (nolock) LEFT OUTER JOIN
+                            WorkerT ON SystemLogT.DelWorkerKey = WorkerT.WorkerKey
+ORDER BY   SystemLogT.DelTime DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SysLogID" DataSetColumn="SysLogID" />
+              <Mapping SourceColumn="DelWorkerKey" DataSetColumn="DelWorkerKey" />
+              <Mapping SourceColumn="DelTime" DataSetColumn="DelTime" />
+              <Mapping SourceColumn="DelTitle" DataSetColumn="DelTitle" />
+              <Mapping SourceColumn="DelContent" DataSetColumn="DelContent" />
+              <Mapping SourceColumn="DelWorkerKey1" DataSetColumn="DelWorkerKey1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LogSearchDataTableAdapter" GeneratorDataComponentClassName="LogSearchDataTableAdapter" Name="LogSearchData" UserDataComponentName="LogSearchDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          N'刪除時間' AS ShowString, 'DelTime' AS ValueString</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ShowString" DataSetColumn="ShowString" />
+              <Mapping SourceColumn="ValueString" DataSetColumn="ValueString" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LogSearchValueTableAdapter" GeneratorDataComponentClassName="LogSearchValueTableAdapter" Name="LogSearchValue" UserDataComponentName="LogSearchValueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataBaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT          N'刪除者' AS ShowString, 'DelWorkerKey' AS ValueString, 1 AS sort
+UNION
+SELECT          N'主旨' AS ShowString, 'DelTitle' AS ValueString, 2 AS sort
+UNION
+SELECT          N'內容' AS ShowString, 'DelContent' AS ValueString, 3 AS sort
+ORDER BY   sort</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ShowString" DataSetColumn="ShowString" />
+              <Mapping SourceColumn="ValueString" DataSetColumn="ValueString" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_DelDataLog" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_DelDataLog" msprop:Generator_UserDSName="DataSet_DelDataLog">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SystemLogT" msprop:Generator_TableClassName="SystemLogTDataTable" msprop:Generator_RowEvArgName="SystemLogTRowChangeEvent" msprop:Generator_TableVarName="tableSystemLogT" msprop:Generator_TablePropName="SystemLogT" msprop:Generator_RowDeletingName="SystemLogTRowDeleting" msprop:Generator_RowChangingName="SystemLogTRowChanging" msprop:Generator_RowEvHandlerName="SystemLogTRowChangeEventHandler" msprop:Generator_RowDeletedName="SystemLogTRowDeleted" msprop:Generator_RowChangedName="SystemLogTRowChanged" msprop:Generator_UserTableName="SystemLogT" msprop:Generator_RowClassName="SystemLogTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SysLogID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSysLogID" msprop:Generator_ColumnPropNameInRow="SysLogID" msprop:Generator_ColumnPropNameInTable="SysLogIDColumn" msprop:Generator_UserColumnName="SysLogID" type="xs:int" />
+              <xs:element name="DelWorkerKey" msprop:Generator_ColumnVarNameInTable="columnDelWorkerKey" msprop:Generator_ColumnPropNameInRow="DelWorkerKey" msprop:Generator_ColumnPropNameInTable="DelWorkerKeyColumn" msprop:Generator_UserColumnName="DelWorkerKey" type="xs:int" minOccurs="0" />
+              <xs:element name="DelTime" msprop:Generator_ColumnVarNameInTable="columnDelTime" msprop:Generator_ColumnPropNameInRow="DelTime" msprop:Generator_ColumnPropNameInTable="DelTimeColumn" msprop:Generator_UserColumnName="DelTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DelTitle" msprop:Generator_ColumnVarNameInTable="columnDelTitle" msprop:Generator_ColumnPropNameInRow="DelTitle" msprop:Generator_ColumnPropNameInTable="DelTitleColumn" msprop:Generator_UserColumnName="DelTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelContent" msprop:Generator_ColumnVarNameInTable="columnDelContent" msprop:Generator_ColumnPropNameInRow="DelContent" msprop:Generator_ColumnPropNameInTable="DelContentColumn" msprop:Generator_UserColumnName="DelContent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelWorkerKey1" msprop:Generator_ColumnVarNameInTable="columnDelWorkerKey1" msprop:Generator_ColumnPropNameInRow="DelWorkerKey1" msprop:Generator_ColumnPropNameInTable="DelWorkerKey1Column" msprop:Generator_UserColumnName="DelWorkerKey1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LogSearchData" msprop:Generator_TableClassName="LogSearchDataDataTable" msprop:Generator_RowEvArgName="LogSearchDataRowChangeEvent" msprop:Generator_TableVarName="tableLogSearchData" msprop:Generator_TablePropName="LogSearchData" msprop:Generator_RowDeletingName="LogSearchDataRowDeleting" msprop:Generator_RowChangingName="LogSearchDataRowChanging" msprop:Generator_RowEvHandlerName="LogSearchDataRowChangeEventHandler" msprop:Generator_RowDeletedName="LogSearchDataRowDeleted" msprop:Generator_RowChangedName="LogSearchDataRowChanged" msprop:Generator_UserTableName="LogSearchData" msprop:Generator_RowClassName="LogSearchDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShowString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShowString" msprop:Generator_ColumnPropNameInRow="ShowString" msprop:Generator_ColumnPropNameInTable="ShowStringColumn" msprop:Generator_UserColumnName="ShowString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValueString" msprop:Generator_ColumnPropNameInRow="ValueString" msprop:Generator_ColumnPropNameInTable="ValueStringColumn" msprop:Generator_UserColumnName="ValueString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LogSearchValue" msprop:Generator_TableClassName="LogSearchValueDataTable" msprop:Generator_RowEvArgName="LogSearchValueRowChangeEvent" msprop:Generator_TableVarName="tableLogSearchValue" msprop:Generator_TablePropName="LogSearchValue" msprop:Generator_RowDeletingName="LogSearchValueRowDeleting" msprop:Generator_RowChangingName="LogSearchValueRowChanging" msprop:Generator_RowEvHandlerName="LogSearchValueRowChangeEventHandler" msprop:Generator_RowDeletedName="LogSearchValueRowDeleted" msprop:Generator_RowChangedName="LogSearchValueRowChanged" msprop:Generator_UserTableName="LogSearchValue" msprop:Generator_RowClassName="LogSearchValueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShowString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShowString" msprop:Generator_ColumnPropNameInRow="ShowString" msprop:Generator_ColumnPropNameInTable="ShowStringColumn" msprop:Generator_UserColumnName="ShowString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueString" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValueString" msprop:Generator_ColumnPropNameInRow="ValueString" msprop:Generator_ColumnPropNameInTable="ValueStringColumn" msprop:Generator_UserColumnName="ValueString" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" msprop:Generator_UserColumnName="sort" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SystemLogT" />
+      <xs:field xpath="mstns:SysLogID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
