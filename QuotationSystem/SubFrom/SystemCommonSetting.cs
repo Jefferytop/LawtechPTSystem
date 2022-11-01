@@ -53,6 +53,17 @@ namespace LawtechPTSystem.SubFrom
                     break;
             }
 
+            #region 首頁是否啟用新增事件記錄
+            if (common.AddEnable == "1")
+            {
+                radioButton_AddEnable.Checked = true;
+            }
+            else
+            {
+                radioButton_AddNoEnable.Checked = true;
+            } 
+            #endregion
+
             txt_LoginLogo_Leave(null,null);
             txt_QuotationLogo_Leave(null,null);
         }
@@ -93,7 +104,7 @@ namespace LawtechPTSystem.SubFrom
 
             Public.CStatueRecordT.ReadOne("StatusName='QuotationLogo'", ref sr);
             sr.Value = txt_QuotationLogo.Text;
-            sr.Update();
+            sr.Update();          
 
             #region HomePageEvent 0:僅僅「處理結果」、「備註」 欄位可編輯 ; 9:完整編輯事件記錄
             string strHomePageEvent = "9";
@@ -130,6 +141,21 @@ namespace LawtechPTSystem.SubFrom
             sr.Update();
             #endregion
 
+            #region 首頁啟用新增事件記錄功能
+            string strAddEnable = "0";
+            if (radioButton_AddEnable.Checked)
+            {
+                strAddEnable = "1";
+            }
+            else
+            {
+                strAddEnable = "0";
+            }
+            Public.CStatueRecordT.ReadOne("StatusName='AddEnable' ", ref sr);
+            sr.Value = strAddEnable;
+            sr.Update(); 
+            #endregion
+
             Properties.Settings.Default.SystemName = txt_SystemName.Text;
             Properties.Settings.Default.EnableAddFee = chb_EnableAddFee.Checked;
             Properties.Settings.Default.EnableAddPayment = chb_EnableAddPayment.Checked;
@@ -146,6 +172,11 @@ namespace LawtechPTSystem.SubFrom
             this.Close();
         }
 
+        /// <summary>
+        /// 登入的logo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_LoginLogo_Leave(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txt_LoginLogo.Text.Trim()))
@@ -157,6 +188,11 @@ namespace LawtechPTSystem.SubFrom
             }
         }
 
+        /// <summary>
+        /// 請款單/報表的logo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_QuotationLogo_Leave(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txt_QuotationLogo.Text.Trim()))

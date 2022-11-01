@@ -78,6 +78,7 @@
             this.toolStripMenuItem_FrimMgr = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Accounting = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_CurrencyExchange = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ACompany = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_PaymentMF = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_AccountingFee = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Combin = new System.Windows.Forms.ToolStripMenuItem();
@@ -765,6 +766,7 @@
             this.toolStripMenuItem_Accounting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripMenuItem_Accounting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem_CurrencyExchange,
+            this.toolStripMenuItem_ACompany,
             this.toolStripMenuItem_PaymentMF,
             this.ToolStripMenuItem_AccountingFee,
             this.toolStripMenuItem_Combin,
@@ -784,6 +786,16 @@
             this.toolStripMenuItem_CurrencyExchange.Tag = "MoneyMF";
             this.toolStripMenuItem_CurrencyExchange.Text = "幣別匯率設定";
             this.toolStripMenuItem_CurrencyExchange.Click += new System.EventHandler(this.toolStripMenuItem_CurrencyExchange_Click);
+            // 
+            // toolStripMenuItem_ACompany
+            // 
+            this.toolStripMenuItem_ACompany.Image = global::LawtechPTSystem.Properties.Resources.DepositIcon;
+            this.toolStripMenuItem_ACompany.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.toolStripMenuItem_ACompany.Name = "toolStripMenuItem_ACompany";
+            this.toolStripMenuItem_ACompany.Size = new System.Drawing.Size(192, 26);
+            this.toolStripMenuItem_ACompany.Tag = "AccountingCompany";
+            this.toolStripMenuItem_ACompany.Text = "入帳公司";
+            this.toolStripMenuItem_ACompany.Click += new System.EventHandler(this.toolStripMenuItem_ACompany_Click);
             // 
             // toolStripMenuItem_PaymentMF
             // 
@@ -913,32 +925,36 @@
             // 
             // ToolStripMenuItem_SystemCommonSetting
             // 
+            this.ToolStripMenuItem_SystemCommonSetting.Image = global::LawtechPTSystem.Properties.Resources.settings;
             this.ToolStripMenuItem_SystemCommonSetting.Name = "ToolStripMenuItem_SystemCommonSetting";
-            this.ToolStripMenuItem_SystemCommonSetting.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem_SystemCommonSetting.Size = new System.Drawing.Size(169, 26);
             this.ToolStripMenuItem_SystemCommonSetting.Tag = "SystemCommonSetting";
             this.ToolStripMenuItem_SystemCommonSetting.Text = "系統通用設定";
             this.ToolStripMenuItem_SystemCommonSetting.Click += new System.EventHandler(this.ToolStripMenuItem_SystemCommonSetting_Click);
             // 
             // ToolStripMenuItem_Conutry
             // 
+            this.ToolStripMenuItem_Conutry.Image = global::LawtechPTSystem.Properties.Resources.Conutry;
             this.ToolStripMenuItem_Conutry.Name = "ToolStripMenuItem_Conutry";
-            this.ToolStripMenuItem_Conutry.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem_Conutry.Size = new System.Drawing.Size(169, 26);
             this.ToolStripMenuItem_Conutry.Tag = "CountrySetting";
             this.ToolStripMenuItem_Conutry.Text = "國別設定管理";
             this.ToolStripMenuItem_Conutry.Click += new System.EventHandler(this.ToolStripMenuItem_Conutry_Click);
             // 
             // ToolStripMenuItem_MACsetting
             // 
+            this.ToolStripMenuItem_MACsetting.Image = global::LawtechPTSystem.Properties.Resources.MacIcon;
             this.ToolStripMenuItem_MACsetting.Name = "ToolStripMenuItem_MACsetting";
-            this.ToolStripMenuItem_MACsetting.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem_MACsetting.Size = new System.Drawing.Size(169, 26);
             this.ToolStripMenuItem_MACsetting.Tag = "MACsetting";
             this.ToolStripMenuItem_MACsetting.Text = "綁定MAC位址";
             this.ToolStripMenuItem_MACsetting.Click += new System.EventHandler(this.ToolStripMenuItem_MACsetting_Click);
             // 
             // ToolStripMenuItem_ptsupdate
             // 
+            this.ToolStripMenuItem_ptsupdate.Image = global::LawtechPTSystem.Properties.Resources.SystemUpdateIcon;
             this.ToolStripMenuItem_ptsupdate.Name = "ToolStripMenuItem_ptsupdate";
-            this.ToolStripMenuItem_ptsupdate.Size = new System.Drawing.Size(165, 22);
+            this.ToolStripMenuItem_ptsupdate.Size = new System.Drawing.Size(169, 26);
             this.ToolStripMenuItem_ptsupdate.Tag = "PTSUpdate";
             this.ToolStripMenuItem_ptsupdate.Text = "PTS更新檢查";
             this.ToolStripMenuItem_ptsupdate.Click += new System.EventHandler(this.ToolStripMenuItem_ptsupdate_Click);
@@ -2679,6 +2695,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Calendar;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_smsLog;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ACompany;
     }
 }
 

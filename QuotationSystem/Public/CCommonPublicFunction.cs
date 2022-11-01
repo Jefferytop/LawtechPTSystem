@@ -217,6 +217,14 @@ namespace LawtechPTSystem.Public
         }
 
         /// <summary>
+        /// 首頁是否啟用新增事件記錄
+        /// </summary>
+        public string AddEnable
+        {
+            get;set;
+        }
+
+        /// <summary>
         /// 目前資料庫版本
         /// </summary>
         public string DataBaseVersion

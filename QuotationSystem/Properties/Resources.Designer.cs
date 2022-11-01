@@ -483,6 +483,16 @@ namespace LawtechPTSystem.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap Conutry {
+            get {
+                object obj = ResourceManager.GetObject("Conutry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap Copy {
             get {
                 object obj = ResourceManager.GetObject("Copy", resourceCulture);
@@ -526,6 +536,16 @@ namespace LawtechPTSystem.Properties {
         internal static System.Drawing.Bitmap deletelist {
             get {
                 object obj = ResourceManager.GetObject("deletelist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap DepositIcon {
+            get {
+                object obj = ResourceManager.GetObject("DepositIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -846,6 +866,16 @@ namespace LawtechPTSystem.Properties {
         internal static System.Drawing.Bitmap logs {
             get {
                 object obj = ResourceManager.GetObject("logs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap MacIcon {
+            get {
+                object obj = ResourceManager.GetObject("MacIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1213,6 +1243,16 @@ namespace LawtechPTSystem.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap settings {
+            get {
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap smartphone_SMS {
             get {
                 object obj = ResourceManager.GetObject("smartphone-SMS", resourceCulture);
@@ -1226,6 +1266,16 @@ namespace LawtechPTSystem.Properties {
         internal static System.Drawing.Bitmap statistics {
             get {
                 object obj = ResourceManager.GetObject("statistics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap SystemUpdateIcon {
+            get {
+                object obj = ResourceManager.GetObject("SystemUpdateIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

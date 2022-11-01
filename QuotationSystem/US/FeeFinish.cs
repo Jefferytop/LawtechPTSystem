@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace LawtechPTSystem.US
 {
+    /// <summary>
+    /// 已請款
+    /// </summary>
     public partial class FeeFinish : Form
     {
         public FeeFinish()
@@ -43,12 +47,43 @@ namespace LawtechPTSystem.US
             set { dgvr = value; }
         }
 
+        private DataTable dt_AcountingFirmT = new DataTable();
+        /// <summary>
+        /// 入帳公司資料
+        /// </summary>
+        public DataTable AcountingFirmT
+        {
+            get { return dt_AcountingFirmT; }
+            set {
+                dt_AcountingFirmT = value;
+            }
+        }
+
+        private DataTable dt_AcountingFirmDetailT = new DataTable();
+        /// <summary>
+        /// 銀行帳號資料
+        /// </summary>
+        public DataTable AcountingFirmDetailT
+        {
+            get { return dt_AcountingFirmDetailT; }
+            set
+            {
+                dt_AcountingFirmDetailT = value;
+            }
+        }
+
         #endregion
 
         private void FeeFinish_Load(object sender, EventArgs e)
-        {
-          
+        {          
             this.moneyTTableAdapter.Fill(this.dataSet_Drop.MoneyT);
+           
+            Public.CAccountingPublicFunction.GetAcountingFirmTDropDownList(ref dt_AcountingFirmT);
+            bindingSource_AcountingFirmT.DataSource = dt_AcountingFirmT;           
+            comboBox_AcountingFirmT.DisplayMember = "AcountingFirmName";
+            comboBox_AcountingFirmT.ValueMember = "AcountingFirmKey";
+            comboBox_AcountingFirmT.DataSource = bindingSource_AcountingFirmT;
+
             switch (iTypeKind)
             {             
                 case 1:
@@ -60,6 +95,16 @@ namespace LawtechPTSystem.US
                     txt_PayKind.Text = fee.PayKind;
                     txt_Remark.Text = fee.Remark;
                     txt_aBill.Text = fee.aBill;
+                    if(fee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = fee.AcountingFirmKey.Value;
+                    }
+
+                    if (fee.AcountingBankKey.HasValue)
+                    {
+                        comboBox_AcountingFirmDetailT.SelectedValue = fee.AcountingBankKey.Value;
+                    }
+
 
                     if (fee.ReceiptDate.HasValue)
                     {
@@ -83,9 +128,7 @@ namespace LawtechPTSystem.US
 
 
                     numericUpDown_PracicalityPay.Value = fee.PracticalityPay.HasValue ? fee.PracticalityPay.Value : fee.TotalNT.Value;
-                    checkBox_NT.Checked = fee.NT.HasValue ? fee.NT.Value : false;
-
-                  
+                    checkBox_NT.Checked = fee.NT.HasValue ? fee.NT.Value : false;                  
 
                     chkWithholding.Checked = fee.Withholding.HasValue ? fee.Withholding.Value :false;
                     checkBox_Pay.Checked = fee.Pay.HasValue ? fee.Pay.Value : false;
@@ -102,6 +145,15 @@ namespace LawtechPTSystem.US
                     txt_PayKind.Text = Tmfee.PayKind;
                     txt_Remark.Text = Tmfee.Remark;
                     txt_aBill.Text = Tmfee.aBill;
+                    if (Tmfee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = Tmfee.AcountingFirmKey.Value;
+                    }
+
+                    if (Tmfee.AcountingBankKey.HasValue)
+                    {
+                        comboBox_AcountingFirmDetailT.SelectedValue = Tmfee.AcountingBankKey.Value;
+                    }
 
                     if (Tmfee.ReceiptDate.HasValue)
                     {
@@ -297,6 +349,16 @@ namespace LawtechPTSystem.US
                     fee.Pay = checkBox_Pay.Checked != true ? false : true;//已請款
                     fee.PPP = txt_PPP.Text;
                     fee.aBill = txt_aBill.Text;
+                    if(comboBox_AcountingFirmT.SelectedValue!=null)
+                    {
+                        fee.AcountingFirmKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                    }
+
+                    if (comboBox_AcountingFirmDetailT.SelectedValue != null)
+                    {
+                        fee.AcountingBankKey = (int)comboBox_AcountingFirmDetailT.SelectedValue;
+                    }
+
 
                     //收據日期
                     DateTime dtReceiptDate;
@@ -406,6 +468,15 @@ namespace LawtechPTSystem.US
                     Tmfee.PPP = txt_PPP.Text;
                     Tmfee.aBill = txt_aBill.Text;
 
+                    if (comboBox_AcountingFirmT.SelectedValue != null)
+                    {
+                        Tmfee.AcountingFirmKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                    }
+
+                    if (comboBox_AcountingFirmDetailT.SelectedValue != null)
+                    {
+                        Tmfee.AcountingBankKey = (int)comboBox_AcountingFirmDetailT.SelectedValue;
+                    }
                     //收據日期
                     DateTime dtReceiptDateTM;
                     bool IsReceiptDateTM = DateTime.TryParse(maskedTextBox_ReceiptDate.Text, out dtReceiptDateTM);
@@ -575,11 +646,6 @@ namespace LawtechPTSystem.US
             }
         }
 
-        private void maskedTextBox_ReceiptDate_DoubleClick(object sender, EventArgs e)
-        {
-
-        }
-
         private void FeeFinish_KeyDown(object sender, KeyEventArgs e)
         {
             Public.Utility.ControlTab(e);
@@ -666,9 +732,32 @@ namespace LawtechPTSystem.US
             {
                 txtFeeTotal1.Text = "0";
             }
-        } 
+        }
+
         #endregion
 
+        #region private void comboBox_AcountingFirmT_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void comboBox_AcountingFirmT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_AcountingFirmT.SelectedValue != null)
+            {
+                int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                Public.CAccountingPublicFunction.GetAcountingFirmDetailDropDownTList(iKey.ToString(), ref dt_AcountingFirmDetailT);
+                bindingSource_AcountingFirmDetailT.DataSource = dt_AcountingFirmDetailT;
+                comboBox_AcountingFirmDetailT.DisplayMember = "BankInfo";
+                comboBox_AcountingFirmDetailT.ValueMember = "AcountingBankKey";
+            }
+            else
+            {
+                dt_AcountingFirmDetailT.Rows.Clear();
+            }
 
+        } 
+        #endregion
     }
 }

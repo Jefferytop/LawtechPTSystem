@@ -124,7 +124,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 16;
-            this.label2.Text = "V.2022.08.25";
+            this.label2.Text = "V.2022.09.28";
             // 
             // label_DBName
             // 
@@ -230,8 +230,9 @@
             this.pictureBox1.ImageLocation = "E:\\VisualStudioProject_ggamingproxy\\PatetnTrademarkByMiirProject\\PatetnTrademarkB" +
     "yMiirProject\\LawtechPTSystem\\QuotationSystem\\bin\\Release\\logo2018.png";
             this.pictureBox1.Location = new System.Drawing.Point(12, 44);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;

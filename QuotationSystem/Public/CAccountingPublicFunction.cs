@@ -33,6 +33,150 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
+        #region 取得入款公司 V_AcountingFirm 的資料  public static DataRow GetAcountingFirmTDataRow(string strAcountingFirmKey)
+        /// <summary>
+        /// 取得入款公司 V_AcountingFirm 的資料
+        /// </summary>
+        /// <param name="strAcountingFirmKey"></param>
+        /// <returns></returns>
+        public static DataRow GetAcountingFirmTDataRow(string strAcountingFirmKey)
+        {
+            string strSQL = string.Format(@"SELECT     *   FROM    V_AcountingFirm  where AcountingFirmKey={0}", strAcountingFirmKey);
+
+            DBAccess dbhelper = new DBAccess();
+            System.Data.DataTable dtAcountingFirm = new System.Data.DataTable();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtAcountingFirm, isFillSchema: false);
+            if (dtAcountingFirm.Rows.Count == 1)
+            {
+                return dtAcountingFirm.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region 取得公司帳戶 V_AcountingFirmDetailT 的資料  public static DataRow GetAcountingFirmDetailTDataRow(string strAcountingBankKey)
+        /// <summary>
+        /// 取得公司帳戶 V_AcountingFirmDetailT 的資料
+        /// </summary>
+        /// <param name="strAcountingBankKey"></param>
+        /// <returns></returns>
+        public static DataRow GetAcountingFirmDetailTDataRow(string strAcountingBankKey)
+        {
+            string strSQL = string.Format(@"SELECT     *   FROM    V_AcountingFirmDetailT  where AcountingBankKey={0}", strAcountingBankKey);
+
+            DBAccess dbhelper = new DBAccess();
+            System.Data.DataTable dtAcountingFirm = new System.Data.DataTable();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtAcountingFirm, isFillSchema: false);
+            if (dtAcountingFirm.Rows.Count == 1)
+            {
+                return dtAcountingFirm.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion
+
+
+        #region 取得入帳公司的資料  public static void GetAcountingFirmTList(string strWhere, ref DataTable dtSource)
+        /// <summary>
+        /// 取得入帳公司的資料
+        /// </summary>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public static void GetAcountingFirmTList(string strWhere, ref DataTable dtSource)
+        {
+
+            string strSQL = string.Format(@"SELECT *  from  V_AcountingFirm with(nolock)  {0} order by Sort", !string.IsNullOrEmpty(strWhere.Trim()) ? " where " + strWhere : "");
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["AcountingFirmKey"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
+        #region 取得入帳公司的資料  public static void GetAcountingFirmTDropDownList( ref DataTable dtSource)
+        /// <summary>
+        /// 取得入帳公司的資料 DropDown 下拉選單
+        /// </summary>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static void GetAcountingFirmTDropDownList( ref DataTable dtSource)
+        {
+            string strSQL = string.Format(@"SELECT AcountingFirmKey,AcountingFirmName  from  V_AcountingFirm with(nolock)  where IsEnable='True' order by Sort");
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["AcountingFirmKey"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
+
+        #region 取得公司帳戶的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        /// <summary>
+        /// 取得公司帳戶的資料
+        /// </summary>
+        /// <param name="strAcountingFirmKey"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        {
+
+            string strSQL = string.Format(@"SELECT *  from  V_AcountingFirmDetailT with(nolock)  where AcountingFirmKey={0} order by Sort", strAcountingFirmKey);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["AcountingBankKey"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
+        #region 取得公司帳戶的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        /// <summary>
+        /// 取得公司帳戶的資料
+        /// </summary>
+        /// <param name="strAcountingFirmKey"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static void GetAcountingFirmDetailDropDownTList(string strAcountingFirmKey, ref DataTable dtSource)
+        {
+
+            string strSQL = string.Format(@"SELECT AcountingBankKey, BankName+'-'+BankAccount as BankInfo  from  V_AcountingFirmDetailT with(nolock)  where IsEnable='True' and  AcountingFirmKey={0} order by Sort", strAcountingFirmKey);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["AcountingBankKey"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
+
 
         #region GetPATControlPayment 取得專利付款的資料  public System.Data.DataSet GetPATControlPayment(string strWhere)
         /// <summary>

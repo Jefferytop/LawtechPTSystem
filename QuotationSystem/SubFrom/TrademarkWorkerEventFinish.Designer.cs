@@ -31,8 +31,8 @@ namespace LawtechPTSystem.SubFrom
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrademarkWorkerEventFinish));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -58,6 +58,11 @@ namespace LawtechPTSystem.SubFrom
             this.rb_and = new System.Windows.Forms.RadioButton();
             this.butClose = new System.Windows.Forms.Button();
             this.butQuery = new System.Windows.Forms.Button();
+            this.toolStripMenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_Csv = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripButton_Add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_Edit = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewMF)).BeginInit();
@@ -80,6 +85,8 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
+            this.toolStripButton_Add,
+            this.toolStripButton_Edit,
             this.toolStripButton_Export});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 602);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -91,6 +98,7 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigator1.Size = new System.Drawing.Size(1074, 25);
             this.bindingNavigator1.TabIndex = 1068;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bindingNavigator1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // bindingNavigatorCountItem
             // 
@@ -169,27 +177,26 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_Export.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton_Export.Tag = "Export";
             this.toolStripButton_Export.Text = "匯出CSV";
-            this.toolStripButton_Export.Click += new System.EventHandler(this.toolStripButton_Export_Click);
             // 
             // dgViewMF
             // 
             this.dgViewMF.AllowUserToAddRows = false;
             this.dgViewMF.AllowUserToDeleteRows = false;
             this.dgViewMF.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dgViewMF.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dgViewMF.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgViewMF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgViewMF.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgViewMF.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgViewMF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewMF.ContextMenuStrip = this.contextMenuStrip1;
             this.dgViewMF.ImeMode = System.Windows.Forms.ImeMode.Close;
@@ -209,12 +216,15 @@ namespace LawtechPTSystem.SubFrom
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Add,
             this.EdittoolStripMenuItem,
             this.toolStripSeparator1,
             this.ToolStripMenuItem_SendMail,
-            this.toolStripMenuItem_SetGridColumn});
+            this.toolStripMenuItem_SetGridColumn,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem_Csv});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 126);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // EdittoolStripMenuItem
@@ -349,6 +359,47 @@ namespace LawtechPTSystem.SubFrom
             this.butQuery.UseVisualStyleBackColor = true;
             this.butQuery.Click += new System.EventHandler(this.butQuery_Click);
             // 
+            // toolStripMenuItem_Add
+            // 
+            this.toolStripMenuItem_Add.Image = global::LawtechPTSystem.Properties.Resources.Add;
+            this.toolStripMenuItem_Add.Name = "toolStripMenuItem_Add";
+            this.toolStripMenuItem_Add.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_Add.Tag = "Create";
+            this.toolStripMenuItem_Add.Text = "新增事件記錄";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripMenuItem_Csv
+            // 
+            this.toolStripMenuItem_Csv.Image = global::LawtechPTSystem.Properties.Resources.csv_text;
+            this.toolStripMenuItem_Csv.Name = "toolStripMenuItem_Csv";
+            this.toolStripMenuItem_Csv.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_Csv.Tag = "Export";
+            this.toolStripMenuItem_Csv.Text = "匯出成CSV";
+            // 
+            // toolStripButton_Add
+            // 
+            this.toolStripButton_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Add.Image = global::LawtechPTSystem.Properties.Resources.Add;
+            this.toolStripButton_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Add.Name = "toolStripButton_Add";
+            this.toolStripButton_Add.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_Add.Tag = "Create";
+            this.toolStripButton_Add.Text = "新增事件記錄";
+            // 
+            // toolStripButton_Edit
+            // 
+            this.toolStripButton_Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Edit.Image = global::LawtechPTSystem.Properties.Resources.Edit;
+            this.toolStripButton_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Edit.Name = "toolStripButton_Edit";
+            this.toolStripButton_Edit.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_Edit.Tag = "Modify";
+            this.toolStripButton_Edit.Text = "編輯事件記錄";
+            // 
             // TrademarkWorkerEventFinish
             // 
             this.AcceptButton = this.butQuery;
@@ -411,5 +462,10 @@ namespace LawtechPTSystem.SubFrom
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SendMail;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_SetGridColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Add;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Edit;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Add;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Csv;
     }
 }

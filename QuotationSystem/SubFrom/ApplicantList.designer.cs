@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicantList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,8 +43,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.userControlFilterDate1 = new LawtechPTSystem.US.UserControlFilterDate();
             this.bindingNavigator_App = new System.Windows.Forms.BindingNavigator(this.components);
             this.applicantTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -76,12 +77,15 @@
             this.toolStripMenuItem_Upload = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Download = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Orientation = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryFilter2 = new LawtechPTSystem.US.ComboSearchColumnBox();
+            this.QueryFilter1 = new LawtechPTSystem.US.ComboSearchColumnBox();
             this.button_Search = new System.Windows.Forms.Button();
             this.btnOpenDetail = new System.Windows.Forms.Button();
             this.but_Close = new System.Windows.Forms.Button();
             this.Radio_or = new System.Windows.Forms.RadioButton();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.Radio_and = new System.Windows.Forms.RadioButton();
+            this.tagTitle2 = new LawtechPTSystem.US.TagTitle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -196,6 +200,7 @@
             this.toolStripButton1_ExportLiaisoner = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SetGridColumnLiaisoner = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.QueryFilterInventor = new LawtechPTSystem.US.ComboSearchDetailColumnBox();
             this.btnInventorSearch = new System.Windows.Forms.Button();
             this.inventorTDataGridView = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip_Inventor = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -283,6 +288,7 @@
             this.bindingNavigatorSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dataGridView_Fee = new System.Windows.Forms.DataGridView();
+            this.bindingSource_Fee = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator_Fee = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem5 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem5 = new System.Windows.Forms.ToolStripButton();
@@ -295,14 +301,8 @@
             this.bindingNavigatorSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel_NoPaySum = new System.Windows.Forms.ToolStripLabel();
-            this.button_All = new System.Windows.Forms.Button();
-            this.bindingSource_Fee = new System.Windows.Forms.BindingSource(this.components);
-            this.userControlFilterDate1 = new LawtechPTSystem.US.UserControlFilterDate();
-            this.QueryFilter2 = new LawtechPTSystem.US.ComboSearchColumnBox();
-            this.QueryFilter1 = new LawtechPTSystem.US.ComboSearchColumnBox();
-            this.tagTitle2 = new LawtechPTSystem.US.TagTitle();
-            this.QueryFilterInventor = new LawtechPTSystem.US.ComboSearchDetailColumnBox();
             this.tagTitle1 = new LawtechPTSystem.US.TagTitle();
+            this.button_All = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -357,9 +357,9 @@
             this.bindingNavigator_Trademark.SuspendLayout();
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Fee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_Fee)).BeginInit();
             this.bindingNavigator_Fee.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Fee)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -393,9 +393,19 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1095, 707);
-            this.splitContainer1.SplitterDistance = 289;
+            this.splitContainer1.SplitterDistance = 287;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 5;
+            // 
+            // userControlFilterDate1
+            // 
+            this.userControlFilterDate1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.userControlFilterDate1.Location = new System.Drawing.Point(10, 8);
+            this.userControlFilterDate1.Margin = new System.Windows.Forms.Padding(0);
+            this.userControlFilterDate1.Name = "userControlFilterDate1";
+            this.userControlFilterDate1.SearchType = "ApplicantList";
+            this.userControlFilterDate1.Size = new System.Drawing.Size(382, 27);
+            this.userControlFilterDate1.TabIndex = 1023;
             // 
             // bindingNavigator_App
             // 
@@ -423,7 +433,7 @@
             this.toolStripButton_Upload,
             this.toolStripSeparator10,
             this.toolStripButton_Orientation});
-            this.bindingNavigator_App.Location = new System.Drawing.Point(0, 262);
+            this.bindingNavigator_App.Location = new System.Drawing.Point(0, 260);
             this.bindingNavigator_App.MoveFirstItem = this.toolStripButton7;
             this.bindingNavigator_App.MoveLastItem = this.toolStripButton10;
             this.bindingNavigator_App.MoveNextItem = this.toolStripButton9;
@@ -589,32 +599,32 @@
             this.GridView_Applicant.AllowUserToAddRows = false;
             this.GridView_Applicant.AllowUserToDeleteRows = false;
             this.GridView_Applicant.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
-            this.GridView_Applicant.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.GridView_Applicant.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GridView_Applicant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridView_Applicant.AutoGenerateColumns = false;
             this.GridView_Applicant.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView_Applicant.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView_Applicant.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.GridView_Applicant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView_Applicant.ContextMenuStrip = this.contextMenuStrip_App;
             this.GridView_Applicant.DataSource = this.applicantTBindingSource;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView_Applicant.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView_Applicant.DefaultCellStyle = dataGridViewCellStyle3;
             this.GridView_Applicant.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(180)))), ((int)(((byte)(193)))));
             this.GridView_Applicant.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GridView_Applicant.Location = new System.Drawing.Point(3, 125);
@@ -623,7 +633,7 @@
             this.GridView_Applicant.ReadOnly = true;
             this.GridView_Applicant.RowHeadersWidth = 25;
             this.GridView_Applicant.RowTemplate.Height = 24;
-            this.GridView_Applicant.Size = new System.Drawing.Size(1087, 137);
+            this.GridView_Applicant.Size = new System.Drawing.Size(1087, 135);
             this.GridView_Applicant.TabIndex = 5;
             this.GridView_Applicant.Tag = "ApplicantList";
             this.GridView_Applicant.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Applicant_CellClick);
@@ -721,6 +731,30 @@
             this.toolStripMenuItem_Orientation.Size = new System.Drawing.Size(184, 22);
             this.toolStripMenuItem_Orientation.Text = "垂直 / 水平 分隔畫面";
             // 
+            // QueryFilter2
+            // 
+            this.QueryFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.QueryFilter2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.QueryFilter2.Location = new System.Drawing.Point(11, 65);
+            this.QueryFilter2.Margin = new System.Windows.Forms.Padding(3, 21, 3, 21);
+            this.QueryFilter2.Name = "QueryFilter2";
+            this.QueryFilter2.SearchColumnValueString = "ApplicantSymbol";
+            this.QueryFilter2.SearchType = "ApplicantList";
+            this.QueryFilter2.Size = new System.Drawing.Size(374, 27);
+            this.QueryFilter2.TabIndex = 510;
+            // 
+            // QueryFilter1
+            // 
+            this.QueryFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.QueryFilter1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.QueryFilter1.Location = new System.Drawing.Point(11, 37);
+            this.QueryFilter1.Margin = new System.Windows.Forms.Padding(3, 21, 3, 21);
+            this.QueryFilter1.Name = "QueryFilter1";
+            this.QueryFilter1.SearchColumnValueString = "ApplicantSymbol";
+            this.QueryFilter1.SearchType = "ApplicantList";
+            this.QueryFilter1.Size = new System.Drawing.Size(374, 27);
+            this.QueryFilter1.TabIndex = 506;
+            // 
             // button_Search
             // 
             this.button_Search.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnSearch;
@@ -806,6 +840,21 @@
             this.Radio_and.Text = "並且(and)";
             this.Radio_and.UseVisualStyleBackColor = false;
             // 
+            // tagTitle2
+            // 
+            this.tagTitle2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagTitle2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tagTitle2.BackgroundImage")));
+            this.tagTitle2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tagTitle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tagTitle2.Location = new System.Drawing.Point(3, 94);
+            this.tagTitle2.Margin = new System.Windows.Forms.Padding(0);
+            this.tagTitle2.Name = "tagTitle2";
+            this.tagTitle2.Size = new System.Drawing.Size(1087, 32);
+            this.tagTitle2.TabIndex = 1058;
+            this.tagTitle2.TagTitleStyle = "Style1";
+            this.tagTitle2.TitleLableText = "客戶資料(申請人)列表";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -822,7 +871,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1093, 410);
+            this.tabControl1.Size = new System.Drawing.Size(1093, 412);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -834,7 +883,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage1.Size = new System.Drawing.Size(1085, 374);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "客戶基本資料";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -848,7 +897,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1077, 364);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1077, 366);
             this.flowLayoutPanel2.TabIndex = 331;
             // 
             // panel4
@@ -1458,7 +1507,7 @@
             this.tabPage3.Controls.Add(this.flowLayoutPanel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage3.Size = new System.Drawing.Size(1085, 374);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "客戶附加資料";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1471,7 +1520,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1083, 370);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1083, 372);
             this.flowLayoutPanel1.TabIndex = 227;
             // 
             // panel2
@@ -1902,7 +1951,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage2.Size = new System.Drawing.Size(1085, 374);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  連 絡 人   ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1929,7 +1978,7 @@
             this.toolStripButton1_DelLiaisoner,
             this.toolStripSeparator8,
             this.toolStripButton__ExportLiaisoner});
-            this.bindingNavigator_AttLiaisoner.Location = new System.Drawing.Point(3, 342);
+            this.bindingNavigator_AttLiaisoner.Location = new System.Drawing.Point(3, 344);
             this.bindingNavigator_AttLiaisoner.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_AttLiaisoner.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_AttLiaisoner.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -2060,32 +2109,32 @@
             this.GridView_AttLiaisoner.AllowUserToAddRows = false;
             this.GridView_AttLiaisoner.AllowUserToDeleteRows = false;
             this.GridView_AttLiaisoner.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue;
-            this.GridView_AttLiaisoner.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
+            this.GridView_AttLiaisoner.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.GridView_AttLiaisoner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridView_AttLiaisoner.AutoGenerateColumns = false;
             this.GridView_AttLiaisoner.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView_AttLiaisoner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView_AttLiaisoner.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.GridView_AttLiaisoner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView_AttLiaisoner.ContextMenuStrip = this.contextMenuStripContact;
             this.GridView_AttLiaisoner.DataSource = this.liaisonerTBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView_AttLiaisoner.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView_AttLiaisoner.DefaultCellStyle = dataGridViewCellStyle6;
             this.GridView_AttLiaisoner.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(180)))), ((int)(((byte)(193)))));
             this.GridView_AttLiaisoner.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.GridView_AttLiaisoner.Location = new System.Drawing.Point(4, 3);
@@ -2093,7 +2142,7 @@
             this.GridView_AttLiaisoner.Name = "GridView_AttLiaisoner";
             this.GridView_AttLiaisoner.RowHeadersWidth = 25;
             this.GridView_AttLiaisoner.RowTemplate.Height = 24;
-            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1074, 339);
+            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1074, 341);
             this.GridView_AttLiaisoner.TabIndex = 22;
             this.GridView_AttLiaisoner.Tag = "Applicant_Liaisoner";
             this.GridView_AttLiaisoner.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_AttLiaisoner_CellClick);
@@ -2191,10 +2240,23 @@
             this.tabPage5.Controls.Add(this.bindingNavigator_Inventor);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage5.Size = new System.Drawing.Size(1085, 374);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "  發明人資料  ";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // QueryFilterInventor
+            // 
+            this.QueryFilterInventor.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.QueryFilterInventor.Location = new System.Drawing.Point(5, 5);
+            this.QueryFilterInventor.Margin = new System.Windows.Forms.Padding(1);
+            this.QueryFilterInventor.Name = "QueryFilterInventor";
+            this.QueryFilterInventor.ParameterName = "ApplicantKey";
+            this.QueryFilterInventor.ParameterSqlDbType = System.Data.SqlDbType.Int;
+            this.QueryFilterInventor.ParameterValue = "-1";
+            this.QueryFilterInventor.SearchType = "EmployeesList";
+            this.QueryFilterInventor.Size = new System.Drawing.Size(387, 27);
+            this.QueryFilterInventor.TabIndex = 8;
             // 
             // btnInventorSearch
             // 
@@ -2215,32 +2277,32 @@
             this.inventorTDataGridView.AllowUserToAddRows = false;
             this.inventorTDataGridView.AllowUserToDeleteRows = false;
             this.inventorTDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.AliceBlue;
-            this.inventorTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.AliceBlue;
+            this.inventorTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.inventorTDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inventorTDataGridView.AutoGenerateColumns = false;
             this.inventorTDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventorTDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.inventorTDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.inventorTDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.inventorTDataGridView.ContextMenuStrip = this.contextMenuStrip_Inventor;
             this.inventorTDataGridView.DataSource = this.inventorTBindingSource;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inventorTDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.inventorTDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
             this.inventorTDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(180)))), ((int)(((byte)(193)))));
             this.inventorTDataGridView.Location = new System.Drawing.Point(3, 35);
             this.inventorTDataGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -2248,7 +2310,7 @@
             this.inventorTDataGridView.ReadOnly = true;
             this.inventorTDataGridView.RowHeadersWidth = 25;
             this.inventorTDataGridView.RowTemplate.Height = 24;
-            this.inventorTDataGridView.Size = new System.Drawing.Size(1077, 310);
+            this.inventorTDataGridView.Size = new System.Drawing.Size(1077, 312);
             this.inventorTDataGridView.TabIndex = 1;
             this.inventorTDataGridView.Tag = "Applicant_Inventor";
             this.inventorTDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventorTDataGridView_CellDoubleClick);
@@ -2343,7 +2405,7 @@
             this.toolStripButton_DelInventor,
             this.toolStripSeparator9,
             this.toolStripButton_inventorExport});
-            this.bindingNavigator_Inventor.Location = new System.Drawing.Point(0, 345);
+            this.bindingNavigator_Inventor.Location = new System.Drawing.Point(0, 347);
             this.bindingNavigator_Inventor.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator_Inventor.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator_Inventor.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -2477,7 +2539,7 @@
             this.tabPage4.Controls.Add(this.splitContainer2);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage4.Size = new System.Drawing.Size(1085, 374);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "  來往記錄  ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2503,7 +2565,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.label36);
             this.splitContainer2.Panel2.Controls.Add(this.txt_VitalRecord);
             this.splitContainer2.Panel2.Controls.Add(this.label35);
-            this.splitContainer2.Size = new System.Drawing.Size(1083, 370);
+            this.splitContainer2.Size = new System.Drawing.Size(1083, 372);
             this.splitContainer2.SplitterDistance = 547;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -2527,7 +2589,7 @@
             this.toolStripButton_AddRcord,
             this.toolStripButton_EditRecord,
             this.toolStripButton_DelRecord});
-            this.bindingNavigator_customerTracking.Location = new System.Drawing.Point(0, 343);
+            this.bindingNavigator_customerTracking.Location = new System.Drawing.Point(0, 345);
             this.bindingNavigator_customerTracking.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_customerTracking.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_customerTracking.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -2643,21 +2705,21 @@
             this.customerTrackingRecordTDataGridView.AllowUserToAddRows = false;
             this.customerTrackingRecordTDataGridView.AllowUserToDeleteRows = false;
             this.customerTrackingRecordTDataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.AliceBlue;
-            this.customerTrackingRecordTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AliceBlue;
+            this.customerTrackingRecordTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.customerTrackingRecordTDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.customerTrackingRecordTDataGridView.AutoGenerateColumns = false;
             this.customerTrackingRecordTDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customerTrackingRecordTDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customerTrackingRecordTDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.customerTrackingRecordTDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerTrackingRecordTDataGridView.ContextMenuStrip = this.contextMenuStrip_Record;
             this.customerTrackingRecordTDataGridView.DataSource = this.customerTrackingRecordTBindingSource;
@@ -2668,7 +2730,7 @@
             this.customerTrackingRecordTDataGridView.ReadOnly = true;
             this.customerTrackingRecordTDataGridView.RowHeadersWidth = 25;
             this.customerTrackingRecordTDataGridView.RowTemplate.Height = 24;
-            this.customerTrackingRecordTDataGridView.Size = new System.Drawing.Size(539, 337);
+            this.customerTrackingRecordTDataGridView.Size = new System.Drawing.Size(539, 339);
             this.customerTrackingRecordTDataGridView.TabIndex = 0;
             this.customerTrackingRecordTDataGridView.Tag = "Applicant_TrackingRecord";
             this.customerTrackingRecordTDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerTrackingRecordTDataGridView_CellDoubleClick);
@@ -2751,7 +2813,7 @@
             this.txt_ComplaintsComments.Name = "txt_ComplaintsComments";
             this.txt_ComplaintsComments.ReadOnly = true;
             this.txt_ComplaintsComments.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_ComplaintsComments.Size = new System.Drawing.Size(517, 129);
+            this.txt_ComplaintsComments.Size = new System.Drawing.Size(517, 131);
             this.txt_ComplaintsComments.TabIndex = 322;
             // 
             // label36
@@ -2800,7 +2862,7 @@
             this.tabPage6.Controls.Add(this.bindingNavigator_patent);
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage6.Size = new System.Drawing.Size(1085, 374);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "專利案件";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2810,8 +2872,8 @@
             this.dataGridView_Patent.AllowUserToAddRows = false;
             this.dataGridView_Patent.AllowUserToDeleteRows = false;
             this.dataGridView_Patent.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            this.dataGridView_Patent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            this.dataGridView_Patent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView_Patent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -2819,20 +2881,20 @@
             this.dataGridView_Patent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Patent.ContextMenuStrip = this.contextMenuStrip_Patent;
             this.dataGridView_Patent.DataSource = this.bindingSource_patent;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_Patent.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Patent.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView_Patent.Location = new System.Drawing.Point(4, 3);
             this.dataGridView_Patent.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView_Patent.Name = "dataGridView_Patent";
             this.dataGridView_Patent.ReadOnly = true;
             this.dataGridView_Patent.RowTemplate.Height = 24;
-            this.dataGridView_Patent.Size = new System.Drawing.Size(1074, 342);
+            this.dataGridView_Patent.Size = new System.Drawing.Size(1074, 344);
             this.dataGridView_Patent.TabIndex = 1;
             this.dataGridView_Patent.Tag = "PatListMF";
             // 
@@ -2876,7 +2938,7 @@
             this.bindingNavigatorMoveNextItem3,
             this.bindingNavigatorMoveLastItem3,
             this.bindingNavigatorSeparator11});
-            this.bindingNavigator_patent.Location = new System.Drawing.Point(0, 345);
+            this.bindingNavigator_patent.Location = new System.Drawing.Point(0, 347);
             this.bindingNavigator_patent.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
             this.bindingNavigator_patent.MoveLastItem = this.bindingNavigatorMoveLastItem3;
             this.bindingNavigator_patent.MoveNextItem = this.bindingNavigatorMoveNextItem3;
@@ -2962,7 +3024,7 @@
             this.tabPage7.Controls.Add(this.bindingNavigator_Trademark);
             this.tabPage7.Location = new System.Drawing.Point(4, 34);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage7.Size = new System.Drawing.Size(1085, 374);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "商標案件";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -2984,7 +3046,7 @@
             this.dataGridView_Trademark.Name = "dataGridView_Trademark";
             this.dataGridView_Trademark.ReadOnly = true;
             this.dataGridView_Trademark.RowTemplate.Height = 24;
-            this.dataGridView_Trademark.Size = new System.Drawing.Size(1076, 342);
+            this.dataGridView_Trademark.Size = new System.Drawing.Size(1076, 344);
             this.dataGridView_Trademark.TabIndex = 1;
             this.dataGridView_Trademark.Tag = "TrademarkMF";
             // 
@@ -3028,7 +3090,7 @@
             this.bindingNavigatorMoveNextItem4,
             this.bindingNavigatorMoveLastItem4,
             this.bindingNavigatorSeparator14});
-            this.bindingNavigator_Trademark.Location = new System.Drawing.Point(0, 345);
+            this.bindingNavigator_Trademark.Location = new System.Drawing.Point(0, 347);
             this.bindingNavigator_Trademark.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
             this.bindingNavigator_Trademark.MoveLastItem = this.bindingNavigatorMoveLastItem4;
             this.bindingNavigator_Trademark.MoveNextItem = this.bindingNavigatorMoveNextItem4;
@@ -3115,7 +3177,7 @@
             this.tabPage8.Controls.Add(this.tagTitle1);
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1085, 372);
+            this.tabPage8.Size = new System.Drawing.Size(1085, 374);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "未完成請款記錄";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -3137,7 +3199,7 @@
             this.dataGridView_Fee.ReadOnly = true;
             this.dataGridView_Fee.RowHeadersWidth = 30;
             this.dataGridView_Fee.RowTemplate.Height = 24;
-            this.dataGridView_Fee.Size = new System.Drawing.Size(1071, 311);
+            this.dataGridView_Fee.Size = new System.Drawing.Size(1071, 313);
             this.dataGridView_Fee.TabIndex = 1;
             this.dataGridView_Fee.Tag = "Applicant_Fee";
             this.dataGridView_Fee.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.GridView_Applicant_DataError);
@@ -3161,7 +3223,7 @@
             this.bindingNavigatorSeparator17,
             this.toolStripLabel2,
             this.toolStripLabel_NoPaySum});
-            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 345);
+            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 347);
             this.bindingNavigator_Fee.MoveFirstItem = this.bindingNavigatorMoveFirstItem5;
             this.bindingNavigator_Fee.MoveLastItem = this.bindingNavigatorMoveLastItem5;
             this.bindingNavigator_Fee.MoveNextItem = this.bindingNavigatorMoveNextItem5;
@@ -3253,80 +3315,6 @@
             this.toolStripLabel_NoPaySum.Size = new System.Drawing.Size(14, 22);
             this.toolStripLabel_NoPaySum.Text = "0";
             // 
-            // button_All
-            // 
-            this.button_All.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
-            this.button_All.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_All.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_All.Location = new System.Drawing.Point(196, -69);
-            this.button_All.Name = "button_All";
-            this.button_All.Size = new System.Drawing.Size(122, 29);
-            this.button_All.TabIndex = 3;
-            this.button_All.Text = "全部客戶";
-            this.button_All.UseVisualStyleBackColor = true;
-            // 
-            // userControlFilterDate1
-            // 
-            this.userControlFilterDate1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.userControlFilterDate1.Location = new System.Drawing.Point(10, 8);
-            this.userControlFilterDate1.Margin = new System.Windows.Forms.Padding(0);
-            this.userControlFilterDate1.Name = "userControlFilterDate1";
-            this.userControlFilterDate1.SearchType = "ApplicantList";
-            this.userControlFilterDate1.Size = new System.Drawing.Size(382, 27);
-            this.userControlFilterDate1.TabIndex = 1023;
-            // 
-            // QueryFilter2
-            // 
-            this.QueryFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.QueryFilter2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.QueryFilter2.Location = new System.Drawing.Point(11, 65);
-            this.QueryFilter2.Margin = new System.Windows.Forms.Padding(3, 21, 3, 21);
-            this.QueryFilter2.Name = "QueryFilter2";
-            this.QueryFilter2.SearchColumnValueString = "ApplicantSymbol";
-            this.QueryFilter2.SearchType = "ApplicantList";
-            this.QueryFilter2.Size = new System.Drawing.Size(374, 27);
-            this.QueryFilter2.TabIndex = 510;
-            // 
-            // QueryFilter1
-            // 
-            this.QueryFilter1.BackColor = System.Drawing.Color.Transparent;
-            this.QueryFilter1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.QueryFilter1.Location = new System.Drawing.Point(11, 37);
-            this.QueryFilter1.Margin = new System.Windows.Forms.Padding(3, 21, 3, 21);
-            this.QueryFilter1.Name = "QueryFilter1";
-            this.QueryFilter1.SearchColumnValueString = "ApplicantSymbol";
-            this.QueryFilter1.SearchType = "ApplicantList";
-            this.QueryFilter1.Size = new System.Drawing.Size(374, 27);
-            this.QueryFilter1.TabIndex = 506;
-            // 
-            // tagTitle2
-            // 
-            this.tagTitle2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagTitle2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tagTitle2.BackgroundImage")));
-            this.tagTitle2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tagTitle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tagTitle2.Location = new System.Drawing.Point(3, 94);
-            this.tagTitle2.Margin = new System.Windows.Forms.Padding(0);
-            this.tagTitle2.Name = "tagTitle2";
-            this.tagTitle2.Size = new System.Drawing.Size(1087, 32);
-            this.tagTitle2.TabIndex = 1058;
-            this.tagTitle2.TagTitleStyle = "Style1";
-            this.tagTitle2.TitleLableText = "客戶資料(申請人)列表";
-            // 
-            // QueryFilterInventor
-            // 
-            this.QueryFilterInventor.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.QueryFilterInventor.Location = new System.Drawing.Point(5, 5);
-            this.QueryFilterInventor.Margin = new System.Windows.Forms.Padding(1);
-            this.QueryFilterInventor.Name = "QueryFilterInventor";
-            this.QueryFilterInventor.ParameterName = "ApplicantKey";
-            this.QueryFilterInventor.ParameterSqlDbType = System.Data.SqlDbType.Int;
-            this.QueryFilterInventor.ParameterValue = "-1";
-            this.QueryFilterInventor.SearchType = "EmployeesList";
-            this.QueryFilterInventor.Size = new System.Drawing.Size(387, 27);
-            this.QueryFilterInventor.TabIndex = 8;
-            // 
             // tagTitle1
             // 
             this.tagTitle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -3341,6 +3329,18 @@
             this.tagTitle1.TabIndex = 1059;
             this.tagTitle1.TagTitleStyle = "Style4";
             this.tagTitle1.TitleLableText = "未完成請款記錄列表(未關帳且未勾選「已請款」)";
+            // 
+            // button_All
+            // 
+            this.button_All.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
+            this.button_All.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_All.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_All.Location = new System.Drawing.Point(196, -69);
+            this.button_All.Name = "button_All";
+            this.button_All.Size = new System.Drawing.Size(122, 29);
+            this.button_All.TabIndex = 3;
+            this.button_All.Text = "全部客戶";
+            this.button_All.UseVisualStyleBackColor = true;
             // 
             // ApplicantList
             // 
@@ -3429,10 +3429,10 @@
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Fee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Fee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_Fee)).EndInit();
             this.bindingNavigator_Fee.ResumeLayout(false);
             this.bindingNavigator_Fee.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_Fee)).EndInit();
             this.ResumeLayout(false);
 
         }

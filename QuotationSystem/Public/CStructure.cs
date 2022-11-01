@@ -7,6 +7,8 @@ namespace LawtechPTSystem.Public
 {
     /// <summary>
     ///  
+    ///  檢查更新的來源 DemoLawOfficeDB_Trial   ptsupdate 
+    ///
     /// </summary>
     class CStructure
     {
@@ -673,7 +675,7 @@ GridColumnT_Temp.FontSize=ISNULL((Select  top 1 GridColumnT.FontSize from GridCo
                      obj = DB.QueryToDataTableByDataAdapter(strOri, ref dtDestination);
                     if (dtDestination.Rows.Count == 1)
                     {
-                        string strOriUpdate = string.Format("update ProgramT set ProgramName=N'{0}' ,ProgramKind={1}, sort={2},Description=N'{3}' where  ProgramSymbol='{4}' ", dr["ProgramName"].ToString(), dr["ProgramKind"].ToString(), dr["sort"].ToString(),dr["Description"].ToString(),dr["ProgramSymbol"].ToString());
+                        string strOriUpdate = string.Format("update ProgramT set ProgramName=N'{0}' ,ProgramKind={1}, sort={2},Description=N'{3}' ,IsOpen='{4}' where  ProgramSymbol='{4}' ", dr["ProgramName"].ToString(), dr["ProgramKind"].ToString(), dr["sort"].ToString(),dr["Description"].ToString(),dr["ProgramSymbol"].ToString(), dr["IsOpen"].ToString());
                         obj = DB.ExecuteNonQuery(strOriUpdate);
                     }
                     else if (dtDestination.Rows.Count == 0)

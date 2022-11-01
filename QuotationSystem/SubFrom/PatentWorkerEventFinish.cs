@@ -158,26 +158,7 @@ namespace LawtechPTSystem.SubFrom
 
         #endregion
 
-        #region 匯出成csv private void toolStripButton_Export_Click(object sender, EventArgs e)
-        /// <summary>
-        /// 匯出成csv
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void toolStripButton_Export_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Public.DLL dll = new Public.DLL();
-                Task task = dll.WriteToCSV(dgViewMF);
-            }
-            catch
-            {
-
-                MessageBox.Show("匯出CSV失敗", "提示訊息", MessageBoxButtons.OK);
-            }
-        }
-        #endregion
+       
 
         #region private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         /// <summary>
@@ -191,6 +172,17 @@ namespace LawtechPTSystem.SubFrom
 
             switch (e.ClickedItem.Name)
             {
+                case "toolStripMenuItem_Add":
+                case "toolStripButton_Add":
+                    AddFrom.AddPatentComitEvent ComitEvent = new AddFrom.AddPatentComitEvent();
+                    ComitEvent.Text += "--" + dgViewMF.CurrentRow.Cells["PatentNo"].Value.ToString();
+                    ComitEvent.PatentID = (int)dgViewMF.CurrentRow.Cells["PatentID"].Value;
+                    if (dgViewMF.CurrentRow.Cells["CountrySymbol"].Value != null && !string.IsNullOrEmpty(dgViewMF.CurrentRow.Cells["CountrySymbol"].Value.ToString()))
+                    {
+                        ComitEvent.CountrySymbol = dgViewMF.CurrentRow.Cells["CountrySymbol"].Value.ToString();
+                    }
+                    ComitEvent.ShowDialog();
+                    break;
                 case "EdittoolStripMenuItem":
                 case "toolStripButtonEditItem":
                     if (dgViewMF.CurrentRow != null)
@@ -258,6 +250,20 @@ namespace LawtechPTSystem.SubFrom
                         MessageBox.Show("需最高權限者才能進行設定");
                     }
                     break;
+                case "toolStripMenuItem_Csv":
+                case "toolStripButton_Export":
+                    try
+                    {
+                        Public.DLL dll = new Public.DLL();
+                        Task task = dll.WriteToCSV(dgViewMF);
+                    }
+                    catch
+                    {
+
+                        MessageBox.Show("匯出CSV失敗", "提示訊息", MessageBoxButtons.OK);
+                    }
+                    break;
+
             }
         } 
         #endregion

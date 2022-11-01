@@ -619,6 +619,14 @@ namespace LawtechPTSystem.SubFrom
             maskedTextBox_PayDate.DataBindings.Clear();
             maskedTextBox_PayDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
 
+            //發票日期
+            maskedTextBox_aBillDate.DataBindings.Clear();
+            maskedTextBox_aBillDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "aBillDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+
+            //發票號碼
+            txt_aBill.DataBindings.Clear();
+            txt_aBill.DataBindings.Add("Text", trademarkFeeTBindingSource, "aBill", true, DataSourceUpdateMode.OnValidation, "", "");
+
             txt_OthFeeName.DataBindings.Clear();
             txt_OthFeeName.DataBindings.Add("Text", trademarkFeeTBindingSource, "OthFeeName", true, DataSourceUpdateMode.OnPropertyChanged, "", "");
 

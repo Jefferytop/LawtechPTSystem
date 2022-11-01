@@ -3403,6 +3403,33 @@ namespace LawtechPTSystem
         }
         #endregion
 
+        #region 入帳公司 private void toolStripMenuItem_ACompany_Click(object sender, EventArgs e)
+        /// <summary>
+        ///  入帳公司
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripMenuItem_ACompany_Click(object sender, EventArgs e)
+        {
+            sw.Reset();//碼表歸零
+            sw.Start();//碼表開始計時
+
+            Public.PublicForm Forms = new Public.PublicForm();
+            if (Forms.AccountingCompany != null)
+            {
+                Forms.AccountingCompany.Activate();
+                CheckWindowsStatus(Forms.AccountingCompany);
+            }
+            else
+            {
+                SubFrom.AccountingCompany od = new SubFrom.AccountingCompany();
+                ShowMDIChild(od);
+            }
+            sw.Stop();//碼錶停止
+            toolStripStatusLabel_stopwatch.Text = " | " + ((ToolStripMenuItem)sender).Text + " 啟動耗時:" + sw.Elapsed.TotalSeconds.ToString("#,##0.##") + " 秒";
+        }
+        #endregion
+
         /// <summary>
         /// 行事曆
         /// </summary>
@@ -3428,8 +3455,7 @@ namespace LawtechPTSystem
             toolStripStatusLabel_stopwatch.Text = " | " + ((ToolStripMenuItem)sender).Text + " 啟動耗時:" + sw.Elapsed.TotalSeconds.ToString("#,##0.##") + " 秒";
         }
 
+
        
-
-
     }
 }

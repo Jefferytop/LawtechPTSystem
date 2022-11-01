@@ -439,6 +439,10 @@
             this.trademarkPaymentTTableAdapter = new LawtechPTSystem.DataSet_TMTableAdapters.TrademarkPaymentTTableAdapter();
             this.trademarkManagementTTableAdapter = new LawtechPTSystem.DataSet_TMTableAdapters.TrademarkManagementTTableAdapter();
             this.trademarkFeeTTableAdapter = new LawtechPTSystem.DataSet_TMTableAdapters.TrademarkFeeTTableAdapter();
+            this.maskedTextBox_aBillDate = new System.Windows.Forms.MaskedTextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.txt_aBill = new System.Windows.Forms.TextBox();
             this.Tabcontrol1.SuspendLayout();
             this.TabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -3250,6 +3254,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_aBill);
+            this.groupBox1.Controls.Add(this.label116);
+            this.groupBox1.Controls.Add(this.maskedTextBox_aBillDate);
+            this.groupBox1.Controls.Add(this.label47);
             this.groupBox1.Controls.Add(this.label123);
             this.groupBox1.Controls.Add(this.maskedTextBox_ReceiptDate);
             this.groupBox1.Controls.Add(this.label15);
@@ -3272,7 +3280,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 379);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(617, 122);
+            this.groupBox1.Size = new System.Drawing.Size(617, 150);
             this.groupBox1.TabIndex = 1098;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "請．款．處．理  (帳務單位作業)";
@@ -3432,7 +3440,7 @@
             // txt_Remark
             // 
             this.txt_Remark.ImeMode = System.Windows.Forms.ImeMode.Close;
-            this.txt_Remark.Location = new System.Drawing.Point(61, 69);
+            this.txt_Remark.Location = new System.Drawing.Point(61, 95);
             this.txt_Remark.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Remark.Multiline = true;
             this.txt_Remark.Name = "txt_Remark";
@@ -3487,7 +3495,7 @@
             // linkLabel_Remark
             // 
             this.linkLabel_Remark.AutoSize = true;
-            this.linkLabel_Remark.Location = new System.Drawing.Point(18, 82);
+            this.linkLabel_Remark.Location = new System.Drawing.Point(18, 108);
             this.linkLabel_Remark.Name = "linkLabel_Remark";
             this.linkLabel_Remark.Size = new System.Drawing.Size(44, 16);
             this.linkLabel_Remark.TabIndex = 1047;
@@ -5162,6 +5170,50 @@
             // 
             this.trademarkFeeTTableAdapter.ClearBeforeFill = true;
             // 
+            // maskedTextBox_aBillDate
+            // 
+            this.maskedTextBox_aBillDate.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox_aBillDate.ForeColor = System.Drawing.Color.Green;
+            this.maskedTextBox_aBillDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.maskedTextBox_aBillDate.Location = new System.Drawing.Point(61, 69);
+            this.maskedTextBox_aBillDate.Margin = new System.Windows.Forms.Padding(1);
+            this.maskedTextBox_aBillDate.Mask = "0000/00/00";
+            this.maskedTextBox_aBillDate.Name = "maskedTextBox_aBillDate";
+            this.maskedTextBox_aBillDate.ReadOnly = true;
+            this.maskedTextBox_aBillDate.Size = new System.Drawing.Size(88, 23);
+            this.maskedTextBox_aBillDate.TabIndex = 1066;
+            this.maskedTextBox_aBillDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(6, 72);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(56, 16);
+            this.label47.TabIndex = 1067;
+            this.label47.Text = "發票日期";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(156, 72);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(56, 16);
+            this.label116.TabIndex = 1068;
+            this.label116.Text = "發票號碼";
+            // 
+            // txt_aBill
+            // 
+            this.txt_aBill.BackColor = System.Drawing.Color.White;
+            this.txt_aBill.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_aBill.ForeColor = System.Drawing.Color.Black;
+            this.txt_aBill.ImeMode = System.Windows.Forms.ImeMode.Close;
+            this.txt_aBill.Location = new System.Drawing.Point(212, 68);
+            this.txt_aBill.Name = "txt_aBill";
+            this.txt_aBill.ReadOnly = true;
+            this.txt_aBill.Size = new System.Drawing.Size(152, 23);
+            this.txt_aBill.TabIndex = 1069;
+            // 
             // TrademarkHistoryRecord
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5653,5 +5705,9 @@
         private System.Windows.Forms.Label label124;
         internal System.Windows.Forms.TextBox txt_FeeEventNumber;
         private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.TextBox txt_aBill;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_aBillDate;
+        private System.Windows.Forms.Label label47;
     }
 }

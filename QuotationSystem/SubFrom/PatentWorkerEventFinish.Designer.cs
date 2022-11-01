@@ -47,13 +47,18 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonEditItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Export = new System.Windows.Forms.ToolStripButton();
             this.dgViewMF = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.EdittoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripMenuItem_SendMail = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SetGridColumn = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_Csv = new System.Windows.Forms.ToolStripMenuItem();
             this.tagTitle2 = new LawtechPTSystem.US.TagTitle();
             this.QueryFilter2 = new LawtechPTSystem.US.ComboSearchColumnBox();
             this.QueryFilter1 = new LawtechPTSystem.US.ComboSearchColumnBox();
@@ -136,6 +141,8 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
+            this.toolStripButton_Add,
+            this.toolStripButtonEditItem,
             this.toolStripButton_Export});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 602);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -147,6 +154,7 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigator1.Size = new System.Drawing.Size(1074, 25);
             this.bindingNavigator1.TabIndex = 1058;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bindingNavigator1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // bindingNavigatorCountItem
             // 
@@ -216,6 +224,26 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton_Add
+            // 
+            this.toolStripButton_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_Add.Image = global::LawtechPTSystem.Properties.Resources.Add;
+            this.toolStripButton_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Add.Name = "toolStripButton_Add";
+            this.toolStripButton_Add.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_Add.Tag = "Create";
+            this.toolStripButton_Add.Text = "新增事件記錄";
+            // 
+            // toolStripButtonEditItem
+            // 
+            this.toolStripButtonEditItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonEditItem.Image = global::LawtechPTSystem.Properties.Resources.Edit;
+            this.toolStripButtonEditItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonEditItem.Name = "toolStripButtonEditItem";
+            this.toolStripButtonEditItem.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButtonEditItem.Tag = "Modify";
+            this.toolStripButtonEditItem.Text = "編輯事件記錄";
+            // 
             // toolStripButton_Export
             // 
             this.toolStripButton_Export.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -225,7 +253,6 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_Export.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton_Export.Tag = "Export";
             this.toolStripButton_Export.Text = "匯出CSV";
-            this.toolStripButton_Export.Click += new System.EventHandler(this.toolStripButton_Export_Click);
             // 
             // dgViewMF
             // 
@@ -265,41 +292,65 @@ namespace LawtechPTSystem.SubFrom
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_Add,
             this.EdittoolStripMenuItem,
             this.toolStripSeparator1,
             this.ToolStripMenuItem_SendMail,
-            this.toolStripMenuItem_SetGridColumn});
+            this.toolStripMenuItem_SetGridColumn,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem_Csv});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 148);
             this.contextMenuStrip1.Tag = "Modify";
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
+            // 
+            // toolStripMenuItem_Add
+            // 
+            this.toolStripMenuItem_Add.Image = global::LawtechPTSystem.Properties.Resources.Add;
+            this.toolStripMenuItem_Add.Name = "toolStripMenuItem_Add";
+            this.toolStripMenuItem_Add.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_Add.Tag = "Create";
+            this.toolStripMenuItem_Add.Text = "新增事件記錄";
             // 
             // EdittoolStripMenuItem
             // 
             this.EdittoolStripMenuItem.Image = global::LawtechPTSystem.Properties.Resources.Edit;
             this.EdittoolStripMenuItem.Name = "EdittoolStripMenuItem";
-            this.EdittoolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.EdittoolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.EdittoolStripMenuItem.Tag = "Modify";
             this.EdittoolStripMenuItem.Text = "編輯事件記綠";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // ToolStripMenuItem_SendMail
             // 
             this.ToolStripMenuItem_SendMail.Image = global::LawtechPTSystem.Properties.Resources.email_open;
             this.ToolStripMenuItem_SendMail.Name = "ToolStripMenuItem_SendMail";
-            this.ToolStripMenuItem_SendMail.Size = new System.Drawing.Size(146, 22);
+            this.ToolStripMenuItem_SendMail.Size = new System.Drawing.Size(180, 22);
             this.ToolStripMenuItem_SendMail.Text = "發通知郵件";
             // 
             // toolStripMenuItem_SetGridColumn
             // 
             this.toolStripMenuItem_SetGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
             this.toolStripMenuItem_SetGridColumn.Name = "toolStripMenuItem_SetGridColumn";
-            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(146, 22);
+            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem_SetGridColumn.Text = "設定列表欄位";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // toolStripMenuItem_Csv
+            // 
+            this.toolStripMenuItem_Csv.Image = global::LawtechPTSystem.Properties.Resources.csv_text;
+            this.toolStripMenuItem_Csv.Name = "toolStripMenuItem_Csv";
+            this.toolStripMenuItem_Csv.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_Csv.Tag = "Export";
+            this.toolStripMenuItem_Csv.Text = "匯出成CSV";
             // 
             // tagTitle2
             // 
@@ -411,5 +462,10 @@ namespace LawtechPTSystem.SubFrom
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_SetGridColumn;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SendMail;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Add;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_Csv;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Add;
+        private System.Windows.Forms.ToolStripButton toolStripButtonEditItem;
     }
 }

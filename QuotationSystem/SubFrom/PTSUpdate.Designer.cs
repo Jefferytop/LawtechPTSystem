@@ -29,6 +29,7 @@ namespace LawtechPTSystem.SubFrom
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PTSUpdate));
             this.label1 = new System.Windows.Forms.Label();
             this.btn_CHeckVersion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -207,8 +208,10 @@ namespace LawtechPTSystem.SubFrom
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PTSUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PTS更新檢查";

@@ -1257,6 +1257,40 @@ namespace LawtechPTSystem.Public
             }
         }
 
+        private int? m_AcountingFirmKey;
+        /// <summary>
+        /// 入帳公司
+        /// </summary>
+        [TableColumnSetting("AcountingFirmKey", DbType = SqlDataType.Int, DataLength = 4)]
+        public int? AcountingFirmKey
+        {
+            get
+            {
+                return m_AcountingFirmKey;
+            }
+            set
+            {
+                m_AcountingFirmKey = value;
+            }
+        }
+
+        private int? m_AcountingBankKey;
+        /// <summary>
+        /// 入帳銀行帳號
+        /// </summary>
+        [TableColumnSetting("AcountingBankKey", DbType = SqlDataType.Int, DataLength = 4)]
+        public int? AcountingBankKey
+        {
+            get
+            {
+                return m_AcountingBankKey;
+            }
+            set
+            {
+                m_AcountingBankKey = value;
+            }
+        }
+
         #endregion
 
         #region Method

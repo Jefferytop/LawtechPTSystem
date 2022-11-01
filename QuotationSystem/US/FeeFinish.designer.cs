@@ -130,12 +130,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_aBill = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox_AcountingFirmT = new System.Windows.Forms.ComboBox();
+            this.bindingSource_AcountingFirmT = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox_AcountingFirmDetailT = new System.Windows.Forms.ComboBox();
+            this.bindingSource_AcountingFirmDetailT = new System.Windows.Forms.BindingSource(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_PracicalityPay)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moneyTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Drop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetailT)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_FeeSubject
@@ -231,7 +240,7 @@
             this.maskedTextBox_PayDate.BackColor = System.Drawing.Color.White;
             this.maskedTextBox_PayDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PayDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_PayDate.Location = new System.Drawing.Point(337, 524);
+            this.maskedTextBox_PayDate.Location = new System.Drawing.Point(366, 525);
             this.maskedTextBox_PayDate.Mask = "0000/00/00";
             this.maskedTextBox_PayDate.Name = "maskedTextBox_PayDate";
             this.maskedTextBox_PayDate.Size = new System.Drawing.Size(110, 29);
@@ -245,7 +254,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(263, 528);
+            this.label2.Location = new System.Drawing.Point(292, 529);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 1077;
@@ -266,7 +275,7 @@
             this.label82.AutoSize = true;
             this.label82.BackColor = System.Drawing.Color.Transparent;
             this.label82.ForeColor = System.Drawing.Color.Blue;
-            this.label82.Location = new System.Drawing.Point(279, 501);
+            this.label82.Location = new System.Drawing.Point(287, 501);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(57, 20);
             this.label82.TabIndex = 1073;
@@ -279,7 +288,7 @@
             this.checkBox_Pay.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_Pay.ForeColor = System.Drawing.Color.Blue;
             this.checkBox_Pay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox_Pay.Location = new System.Drawing.Point(337, 504);
+            this.checkBox_Pay.Location = new System.Drawing.Point(345, 504);
             this.checkBox_Pay.Name = "checkBox_Pay";
             this.checkBox_Pay.Size = new System.Drawing.Size(15, 14);
             this.checkBox_Pay.TabIndex = 8;
@@ -289,11 +298,12 @@
             // txt_Remark
             // 
             this.txt_Remark.ImeMode = System.Windows.Forms.ImeMode.Close;
-            this.txt_Remark.Location = new System.Drawing.Point(96, 557);
+            this.txt_Remark.Location = new System.Drawing.Point(96, 584);
+            this.txt_Remark.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Remark.Multiline = true;
             this.txt_Remark.Name = "txt_Remark";
             this.txt_Remark.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Remark.Size = new System.Drawing.Size(519, 97);
+            this.txt_Remark.Size = new System.Drawing.Size(519, 70);
             this.txt_Remark.TabIndex = 10;
             // 
             // label47
@@ -333,7 +343,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(46, 566);
+            this.label3.Location = new System.Drawing.Point(46, 612);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 1083;
@@ -365,7 +375,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(355, 504);
+            this.label4.Location = new System.Drawing.Point(363, 504);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 15);
             this.label4.TabIndex = 1086;
@@ -407,6 +417,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(209, 501);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 20);
@@ -1312,6 +1323,8 @@
             this.maskedTextBox_aBillDate.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_aBillDate.TabIndex = 1166;
             this.maskedTextBox_aBillDate.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox_aBillDate.DoubleClick += new System.EventHandler(this.maskedTextBox_ReceiptDate_DoubleClick_1);
+            this.maskedTextBox_aBillDate.Leave += new System.EventHandler(this.maskedTextBox_ReceiptDate_Leave);
             // 
             // label7
             // 
@@ -1343,12 +1356,70 @@
             this.label14.TabIndex = 1169;
             this.label14.Text = "發票號碼";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(22, 558);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 1170;
+            this.label15.Text = "入帳公司";
+            // 
+            // comboBox_AcountingFirmT
+            // 
+            this.comboBox_AcountingFirmT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AcountingFirmT.FormattingEnabled = true;
+            this.comboBox_AcountingFirmT.Location = new System.Drawing.Point(96, 554);
+            this.comboBox_AcountingFirmT.Margin = new System.Windows.Forms.Padding(1);
+            this.comboBox_AcountingFirmT.Name = "comboBox_AcountingFirmT";
+            this.comboBox_AcountingFirmT.Size = new System.Drawing.Size(189, 28);
+            this.comboBox_AcountingFirmT.TabIndex = 1171;
+            this.comboBox_AcountingFirmT.SelectedIndexChanged += new System.EventHandler(this.comboBox_AcountingFirmT_SelectedIndexChanged);
+            // 
+            // comboBox_AcountingFirmDetailT
+            // 
+            this.comboBox_AcountingFirmDetailT.DataSource = this.bindingSource_AcountingFirmDetailT;
+            this.comboBox_AcountingFirmDetailT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AcountingFirmDetailT.FormattingEnabled = true;
+            this.comboBox_AcountingFirmDetailT.Location = new System.Drawing.Point(366, 554);
+            this.comboBox_AcountingFirmDetailT.Margin = new System.Windows.Forms.Padding(1);
+            this.comboBox_AcountingFirmDetailT.Name = "comboBox_AcountingFirmDetailT";
+            this.comboBox_AcountingFirmDetailT.Size = new System.Drawing.Size(249, 28);
+            this.comboBox_AcountingFirmDetailT.TabIndex = 1173;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(292, 558);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 20);
+            this.label16.TabIndex = 1172;
+            this.label16.Text = "銀行帳號";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微軟正黑體", 8F);
+            this.label17.ForeColor = System.Drawing.Color.Gray;
+            this.label17.Location = new System.Drawing.Point(479, 534);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(59, 15);
+            this.label17.TabIndex = 1174;
+            this.label17.Text = "(入帳日期)";
+            // 
             // FeeFinish
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LawtechPTSystem.Properties.Resources.bg_01;
             this.CancelButton = this.but_Cancel;
             this.ClientSize = new System.Drawing.Size(633, 708);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.comboBox_AcountingFirmDetailT);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.comboBox_AcountingFirmT);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.txt_aBill);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.maskedTextBox_aBillDate);
@@ -1404,6 +1475,8 @@
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moneyTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Drop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetailT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1511,5 +1584,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_aBill;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox_AcountingFirmT;
+        private System.Windows.Forms.ComboBox comboBox_AcountingFirmDetailT;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.BindingSource bindingSource_AcountingFirmT;
+        private System.Windows.Forms.BindingSource bindingSource_AcountingFirmDetailT;
     }
 }

@@ -62,22 +62,26 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txt_QuotationLogo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton_EventSimple = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton_AddNoEnable = new System.Windows.Forms.RadioButton();
+            this.radioButton_AddEnable = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.radioButton_HistoryRecordMode_99 = new System.Windows.Forms.RadioButton();
             this.radioButton_HistoryRecordMode_10 = new System.Windows.Forms.RadioButton();
             this.radioButton_HistoryRecordMode_0 = new System.Windows.Forms.RadioButton();
-            this.radioButton_HistoryRecordMode_99 = new System.Windows.Forms.RadioButton();
-            this.radioButton_EventComplete = new System.Windows.Forms.RadioButton();
-            this.label22 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.radioButton_EventComplete = new System.Windows.Forms.RadioButton();
+            this.radioButton_EventSimple = new System.Windows.Forms.RadioButton();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,8 +90,9 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QuotationLogo)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -473,6 +478,200 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "報價單/ 請款單 / 收據 Logo";
             // 
+            // tabPage5
+            // 
+            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage5.Controls.Add(this.label27);
+            this.tabPage5.Controls.Add(this.groupBox3);
+            this.tabPage5.Controls.Add(this.groupBox2);
+            this.tabPage5.Controls.Add(this.groupBox1);
+            this.tabPage5.Controls.Add(this.label21);
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(602, 363);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "首頁設定";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton_AddNoEnable);
+            this.groupBox3.Controls.Add(this.radioButton_AddEnable);
+            this.groupBox3.Location = new System.Drawing.Point(28, 43);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(538, 52);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "新增事件記錄";
+            // 
+            // radioButton_AddNoEnable
+            // 
+            this.radioButton_AddNoEnable.AutoSize = true;
+            this.radioButton_AddNoEnable.Location = new System.Drawing.Point(240, 24);
+            this.radioButton_AddNoEnable.Name = "radioButton_AddNoEnable";
+            this.radioButton_AddNoEnable.Size = new System.Drawing.Size(68, 22);
+            this.radioButton_AddNoEnable.TabIndex = 2;
+            this.radioButton_AddNoEnable.Text = "不啟用";
+            this.radioButton_AddNoEnable.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_AddEnable
+            // 
+            this.radioButton_AddEnable.AutoSize = true;
+            this.radioButton_AddEnable.Checked = true;
+            this.radioButton_AddEnable.Location = new System.Drawing.Point(21, 24);
+            this.radioButton_AddEnable.Name = "radioButton_AddEnable";
+            this.radioButton_AddEnable.Size = new System.Drawing.Size(54, 22);
+            this.radioButton_AddEnable.TabIndex = 1;
+            this.radioButton_AddEnable.TabStop = true;
+            this.radioButton_AddEnable.Text = "啟用";
+            this.radioButton_AddEnable.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_99);
+            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_10);
+            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_0);
+            this.groupBox2.Location = new System.Drawing.Point(28, 206);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(538, 141);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "檢視案件詳細資料";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label26.Location = new System.Drawing.Point(189, 98);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(287, 16);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "供檢視案件詳細資料+事件記錄+請款記錄+付款記錄";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label25.Location = new System.Drawing.Point(189, 67);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(173, 16);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "供檢視案件詳細資料+事件記錄";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label24.Location = new System.Drawing.Point(67, 37);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(140, 16);
+            this.label24.TabIndex = 5;
+            this.label24.Text = "不提供檢視案件詳細資料";
+            // 
+            // radioButton_HistoryRecordMode_99
+            // 
+            this.radioButton_HistoryRecordMode_99.AutoSize = true;
+            this.radioButton_HistoryRecordMode_99.Checked = true;
+            this.radioButton_HistoryRecordMode_99.Location = new System.Drawing.Point(21, 94);
+            this.radioButton_HistoryRecordMode_99.Name = "radioButton_HistoryRecordMode_99";
+            this.radioButton_HistoryRecordMode_99.Size = new System.Drawing.Size(166, 22);
+            this.radioButton_HistoryRecordMode_99.TabIndex = 2;
+            this.radioButton_HistoryRecordMode_99.TabStop = true;
+            this.radioButton_HistoryRecordMode_99.Text = "檢視完整案件詳細資料";
+            this.radioButton_HistoryRecordMode_99.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_HistoryRecordMode_10
+            // 
+            this.radioButton_HistoryRecordMode_10.AutoSize = true;
+            this.radioButton_HistoryRecordMode_10.Location = new System.Drawing.Point(21, 63);
+            this.radioButton_HistoryRecordMode_10.Name = "radioButton_HistoryRecordMode_10";
+            this.radioButton_HistoryRecordMode_10.Size = new System.Drawing.Size(162, 22);
+            this.radioButton_HistoryRecordMode_10.TabIndex = 1;
+            this.radioButton_HistoryRecordMode_10.Text = "僅檢視案件+事件記錄";
+            this.radioButton_HistoryRecordMode_10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_HistoryRecordMode_0
+            // 
+            this.radioButton_HistoryRecordMode_0.AutoSize = true;
+            this.radioButton_HistoryRecordMode_0.Location = new System.Drawing.Point(21, 33);
+            this.radioButton_HistoryRecordMode_0.Name = "radioButton_HistoryRecordMode_0";
+            this.radioButton_HistoryRecordMode_0.Size = new System.Drawing.Size(40, 22);
+            this.radioButton_HistoryRecordMode_0.TabIndex = 0;
+            this.radioButton_HistoryRecordMode_0.Text = "否";
+            this.radioButton_HistoryRecordMode_0.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label23);
+            this.groupBox1.Controls.Add(this.label22);
+            this.groupBox1.Controls.Add(this.radioButton_EventComplete);
+            this.groupBox1.Controls.Add(this.radioButton_EventSimple);
+            this.groupBox1.Location = new System.Drawing.Point(28, 102);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(538, 95);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "編輯事件記錄";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label23.Location = new System.Drawing.Point(160, 59);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(152, 16);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "可編輯事件記錄的所有欄位";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label22.Location = new System.Drawing.Point(165, 31);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(350, 16);
+            this.label22.TabIndex = 3;
+            this.label22.Text = "僅「開工日期」「送件日期」 「處理結果」「備註」 欄位可編輯";
+            // 
+            // radioButton_EventComplete
+            // 
+            this.radioButton_EventComplete.AutoSize = true;
+            this.radioButton_EventComplete.Checked = true;
+            this.radioButton_EventComplete.Location = new System.Drawing.Point(21, 55);
+            this.radioButton_EventComplete.Name = "radioButton_EventComplete";
+            this.radioButton_EventComplete.Size = new System.Drawing.Size(138, 22);
+            this.radioButton_EventComplete.TabIndex = 2;
+            this.radioButton_EventComplete.TabStop = true;
+            this.radioButton_EventComplete.Text = "完整編輯事件記錄";
+            this.radioButton_EventComplete.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_EventSimple
+            // 
+            this.radioButton_EventSimple.AutoSize = true;
+            this.radioButton_EventSimple.Location = new System.Drawing.Point(21, 27);
+            this.radioButton_EventSimple.Name = "radioButton_EventSimple";
+            this.radioButton_EventSimple.Size = new System.Drawing.Size(138, 22);
+            this.radioButton_EventSimple.TabIndex = 1;
+            this.radioButton_EventSimple.Text = "僅最少可編輯欄位";
+            this.radioButton_EventSimple.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(151, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(148, 18);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "的首頁權限設定如下：";
+            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -502,164 +701,15 @@
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
-            // tabPage5
+            // label27
             // 
-            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage5.Controls.Add(this.groupBox2);
-            this.tabPage5.Controls.Add(this.groupBox1);
-            this.tabPage5.Controls.Add(this.label21);
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(602, 363);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "首頁設定";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(13, 13);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(226, 18);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "指定授權(一般員工)的首頁權限設定";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.radioButton_EventComplete);
-            this.groupBox1.Controls.Add(this.radioButton_EventSimple);
-            this.groupBox1.Location = new System.Drawing.Point(28, 40);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(538, 134);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "編輯事件記錄";
-            // 
-            // radioButton_EventSimple
-            // 
-            this.radioButton_EventSimple.AutoSize = true;
-            this.radioButton_EventSimple.Location = new System.Drawing.Point(21, 36);
-            this.radioButton_EventSimple.Name = "radioButton_EventSimple";
-            this.radioButton_EventSimple.Size = new System.Drawing.Size(138, 22);
-            this.radioButton_EventSimple.TabIndex = 1;
-            this.radioButton_EventSimple.Text = "僅最少可編輯欄位";
-            this.radioButton_EventSimple.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_99);
-            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_10);
-            this.groupBox2.Controls.Add(this.radioButton_HistoryRecordMode_0);
-            this.groupBox2.Location = new System.Drawing.Point(28, 185);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(538, 149);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "檢視案件詳細資料";
-            // 
-            // radioButton_HistoryRecordMode_10
-            // 
-            this.radioButton_HistoryRecordMode_10.AutoSize = true;
-            this.radioButton_HistoryRecordMode_10.Location = new System.Drawing.Point(21, 74);
-            this.radioButton_HistoryRecordMode_10.Name = "radioButton_HistoryRecordMode_10";
-            this.radioButton_HistoryRecordMode_10.Size = new System.Drawing.Size(162, 22);
-            this.radioButton_HistoryRecordMode_10.TabIndex = 1;
-            this.radioButton_HistoryRecordMode_10.Text = "僅檢視案件+事件記錄";
-            this.radioButton_HistoryRecordMode_10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_HistoryRecordMode_0
-            // 
-            this.radioButton_HistoryRecordMode_0.AutoSize = true;
-            this.radioButton_HistoryRecordMode_0.Location = new System.Drawing.Point(21, 33);
-            this.radioButton_HistoryRecordMode_0.Name = "radioButton_HistoryRecordMode_0";
-            this.radioButton_HistoryRecordMode_0.Size = new System.Drawing.Size(40, 22);
-            this.radioButton_HistoryRecordMode_0.TabIndex = 0;
-            this.radioButton_HistoryRecordMode_0.Text = "否";
-            this.radioButton_HistoryRecordMode_0.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_HistoryRecordMode_99
-            // 
-            this.radioButton_HistoryRecordMode_99.AutoSize = true;
-            this.radioButton_HistoryRecordMode_99.Checked = true;
-            this.radioButton_HistoryRecordMode_99.Location = new System.Drawing.Point(21, 112);
-            this.radioButton_HistoryRecordMode_99.Name = "radioButton_HistoryRecordMode_99";
-            this.radioButton_HistoryRecordMode_99.Size = new System.Drawing.Size(166, 22);
-            this.radioButton_HistoryRecordMode_99.TabIndex = 2;
-            this.radioButton_HistoryRecordMode_99.TabStop = true;
-            this.radioButton_HistoryRecordMode_99.Text = "檢視完整案件詳細資料";
-            this.radioButton_HistoryRecordMode_99.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_EventComplete
-            // 
-            this.radioButton_EventComplete.AutoSize = true;
-            this.radioButton_EventComplete.Checked = true;
-            this.radioButton_EventComplete.Location = new System.Drawing.Point(21, 82);
-            this.radioButton_EventComplete.Name = "radioButton_EventComplete";
-            this.radioButton_EventComplete.Size = new System.Drawing.Size(138, 22);
-            this.radioButton_EventComplete.TabIndex = 2;
-            this.radioButton_EventComplete.TabStop = true;
-            this.radioButton_EventComplete.Text = "完整編輯事件記錄";
-            this.radioButton_EventComplete.UseVisualStyleBackColor = true;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(165, 40);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(215, 16);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "僅「處理結果」、「備註」 欄位可編輯";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label23.Location = new System.Drawing.Point(160, 86);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(152, 16);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "可編輯事件記錄的所有欄位";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label24.Location = new System.Drawing.Point(67, 37);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(140, 16);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "不提供檢視案件詳細資料";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label25.Location = new System.Drawing.Point(189, 78);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(173, 16);
-            this.label25.TabIndex = 6;
-            this.label25.Text = "供檢視案件詳細資料+事件記錄";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label26.Location = new System.Drawing.Point(189, 116);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(287, 16);
-            this.label26.TabIndex = 7;
-            this.label26.Text = "供檢視案件詳細資料+事件記錄+請款記錄+付款記錄";
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.Blue;
+            this.label27.Location = new System.Drawing.Point(25, 13);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(128, 18);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "指定授權(一般員工)";
             // 
             // SystemCommonSetting
             // 
@@ -691,10 +741,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_QuotationLogo)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -751,5 +803,9 @@
         private System.Windows.Forms.RadioButton radioButton_EventComplete;
         private System.Windows.Forms.RadioButton radioButton_EventSimple;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButton_AddNoEnable;
+        private System.Windows.Forms.RadioButton radioButton_AddEnable;
+        private System.Windows.Forms.Label label27;
     }
 }

@@ -26,7 +26,9 @@
         private static SubFrom.ParagraphDetailMF _ParagraphDetailMF = null;
         private static SubFrom.ApplicantSearchMF _ApplicantSearchMF = null;
         private static SubFrom.QPSearchForm _QPSearchForm = null;
-      
+        private static SubFrom.AccountingCompany _AccountingCompany = null;
+        
+
         private static SubFrom.UploadFile _UploadFile = null;
         private static SubFrom.AuthorityMF _AuthorityMF = null;
         private static SubFrom.KeyWords _KeyWords = null;
@@ -114,6 +116,15 @@
             get { return _SMSsend; }
             set { _SMSsend = value; }
         }
+
+        /// <summary>
+        /// 入帳公司
+        /// </summary>
+        public SubFrom.AccountingCompany AccountingCompany
+        {
+            get { return _AccountingCompany; }
+            set { _AccountingCompany = value; }
+        }        
 
         /// <summary>
         /// 簡訊記錄檔

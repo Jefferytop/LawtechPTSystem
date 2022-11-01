@@ -42,6 +42,7 @@ namespace LawtechPTSystem.SubFrom
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingSource_MACsetting = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem3 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem3 = new System.Windows.Forms.ToolStripButton();
@@ -54,24 +55,23 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_add = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_edit = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Del = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel_Msg = new System.Windows.Forms.ToolStripLabel();
             this.dataGridView_MACsetting = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToolStripMenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_Edit = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Del = new System.Windows.Forms.ToolStripMenuItem();
-            this.but_Close = new System.Windows.Forms.Button();
-            this.bindingSource_MACsetting = new System.Windows.Forms.BindingSource(this.components);
-            this.butOK = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel_Msg = new System.Windows.Forms.ToolStripLabel();
             this.tagTitle1 = new LawtechPTSystem.US.TagTitle();
+            this.but_Close = new System.Windows.Forms.Button();
+            this.butOK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_MACsetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MACsetting)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_MACsetting)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -313,6 +313,17 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_Del.Tag = "Delete";
             this.toolStripButton_Del.Text = "刪除";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel_Msg
+            // 
+            this.toolStripLabel_Msg.Name = "toolStripLabel_Msg";
+            this.toolStripLabel_Msg.Size = new System.Drawing.Size(10, 22);
+            this.toolStripLabel_Msg.Text = ".";
+            // 
             // dataGridView_MACsetting
             // 
             this.dataGridView_MACsetting.AllowUserToAddRows = false;
@@ -380,6 +391,21 @@ namespace LawtechPTSystem.SubFrom
             this.ToolStripMenuItem_Del.Tag = "Delete";
             this.ToolStripMenuItem_Del.Text = "刪除";
             // 
+            // tagTitle1
+            // 
+            this.tagTitle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagTitle1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tagTitle1.BackgroundImage")));
+            this.tagTitle1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tagTitle1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tagTitle1.Location = new System.Drawing.Point(7, 32);
+            this.tagTitle1.Margin = new System.Windows.Forms.Padding(0);
+            this.tagTitle1.Name = "tagTitle1";
+            this.tagTitle1.Size = new System.Drawing.Size(847, 32);
+            this.tagTitle1.TabIndex = 1059;
+            this.tagTitle1.TagTitleStyle = "Style1";
+            this.tagTitle1.TitleLableText = "MAC 列表";
+            // 
             // but_Close
             // 
             this.but_Close.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -410,32 +436,6 @@ namespace LawtechPTSystem.SubFrom
             this.butOK.UseVisualStyleBackColor = true;
             this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel_Msg
-            // 
-            this.toolStripLabel_Msg.Name = "toolStripLabel_Msg";
-            this.toolStripLabel_Msg.Size = new System.Drawing.Size(10, 22);
-            this.toolStripLabel_Msg.Text = ".";
-            // 
-            // tagTitle1
-            // 
-            this.tagTitle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagTitle1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tagTitle1.BackgroundImage")));
-            this.tagTitle1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tagTitle1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tagTitle1.Location = new System.Drawing.Point(7, 32);
-            this.tagTitle1.Margin = new System.Windows.Forms.Padding(0);
-            this.tagTitle1.Name = "tagTitle1";
-            this.tagTitle1.Size = new System.Drawing.Size(847, 32);
-            this.tagTitle1.TabIndex = 1059;
-            this.tagTitle1.TagTitleStyle = "Style1";
-            this.tagTitle1.TitleLableText = "MAC 列表";
-            // 
             // MACsetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -448,6 +448,7 @@ namespace LawtechPTSystem.SubFrom
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MACsetting";
             this.Text = "綁定MAC位址";
@@ -460,9 +461,9 @@ namespace LawtechPTSystem.SubFrom
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_MACsetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MACsetting)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_MACsetting)).EndInit();
             this.ResumeLayout(false);
 
         }

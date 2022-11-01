@@ -47,12 +47,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://yipo-ev.bfbip.net/</UpdateUrl>
+    <UpdateUrl>http://fz.bfbip.net/</UpdateUrl>
     <ProductName>智財雲專利商標事務所管理系統</ProductName>
     <PublisherName>柏豐商務智權股份有限公司</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>257</ApplicationRevision>
+    <ApplicationRevision>260</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -173,6 +173,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFrom\AddAccountingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddAccountingCompany.Designer.cs">
+      <DependentUpon>AddAccountingCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFrom\AddAcountingFirmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFrom\AddAcountingFirmDetail.Designer.cs">
+      <DependentUpon>AddAcountingFirmDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddFrom\AddApplicant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -736,6 +748,18 @@
     <Compile Include="DB_Models\DB_StatueRecordTModel.cs" />
     <Compile Include="DB_Models\DB_WorkerLoginTModel.cs" />
     <Compile Include="DB_Models\SMSRootobject.cs" />
+    <Compile Include="EditForm\EditAcountingFirmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditAcountingFirmDetail.Designer.cs">
+      <DependentUpon>EditAcountingFirmDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditForm\EditAccountingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditForm\EditAccountingCompany.Designer.cs">
+      <DependentUpon>EditAccountingCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditForm\EditApplicant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -901,6 +925,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddFrom\AddAccountingCompany.resx">
+      <DependentUpon>AddAccountingCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFrom\AddAcountingFirmDetail.resx">
+      <DependentUpon>AddAcountingFirmDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddFrom\AddApplicant.resx">
       <DependentUpon>AddApplicant.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1183,6 +1213,12 @@
       <DependentUpon>Patent.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditAcountingFirmDetail.resx">
+      <DependentUpon>EditAcountingFirmDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditForm\EditAccountingCompany.resx">
+      <DependentUpon>EditAccountingCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditForm\EditApplicant.resx">
       <DependentUpon>EditApplicant.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -1416,6 +1452,9 @@
     <EmbeddedResource Include="SubFrom\AccountingCombinList.resx">
       <DependentUpon>AccountingCombinList.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubFrom\AccountingCompany.resx">
+      <DependentUpon>AccountingCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubFrom\AccountingFeeMF.resx">
       <DependentUpon>AccountingFeeMF.cs</DependentUpon>
@@ -2169,6 +2208,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Public\CAcountingFirmDetailT.cs" />
+    <Compile Include="Public\CAcountingFirmT.cs" />
     <Compile Include="Public\CAttorneyPublicFunction.cs" />
     <Compile Include="Public\CMacSettingPublicFunction.cs" />
     <Compile Include="Public\CMACsettingT.cs" />
@@ -2395,6 +2436,12 @@
     </Compile>
     <Compile Include="SubFrom\AccountingCombinList.Designer.cs">
       <DependentUpon>AccountingCombinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubFrom\AccountingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubFrom\AccountingCompany.Designer.cs">
+      <DependentUpon>AccountingCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="SubFrom\AccountingFeeMF.cs">
       <SubType>Form</SubType>
@@ -3570,9 +3617,11 @@
     <None Include="Resources\control_panel_3.png" />
     <None Include="Resources\control_panel01.png" />
     <None Include="Resources\csv_text.png" />
+    <None Include="Resources\Conutry.png" />
     <Content Include="Resources\delete.png" />
     <None Include="Resources\deletelist.png" />
     <None Include="Resources\document_notes.png" />
+    <None Include="Resources\DepositIcon.png" />
     <Content Include="Resources\Edit.png" />
     <None Include="Resources\EditMode.jpg" />
     <None Include="Resources\EditForm_bg.jpg" />
@@ -3599,6 +3648,7 @@
     <None Include="Resources\logout.png" />
     <None Include="Resources\mail_compose.jpg" />
     <None Include="Resources\LoginIcon.png" />
+    <None Include="Resources\MacIcon.png" />
     <Content Include="Resources\main_36.gif" />
     <Content Include="Resources\manage_close.gif" />
     <Content Include="Resources\manage_show.gif" />
@@ -3651,6 +3701,8 @@
     <None Include="Resources\Triff_PAT.png" />
     <None Include="Resources\T.jpg" />
     <None Include="Resources\statistics1.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\SystemUpdateIcon.png" />
     <Content Include="Resources\underscore.bmp" />
     <Content Include="Resources\uol.bmp" />
     <None Include="Resources\Vertical.png" />
@@ -3698,132 +3750,132 @@
   <ItemGroup>
     <PublishFile Include="ADODB">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Dll\Microsoft.ReportViewer.WinForms.dll">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="EK.DBOperator.DAL">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="EK.DBOperator.Models">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Interop.Excel">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="it\Microsoft.ReportViewer.WinForms.resources">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ja\Microsoft.ReportViewer.WinForms.resources">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="ko\Microsoft.ReportViewer.WinForms.resources">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.mshtml">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Microsoft.Vbe.Interop">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="office">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
     <PublishFile Include="Resources\manage拷貝_r4_c2.gif">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="stdole">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

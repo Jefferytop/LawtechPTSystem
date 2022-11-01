@@ -443,6 +443,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_aBill = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
+            this.maskedTextBox_aBillDate = new System.Windows.Forms.MaskedTextBox();
+            this.label145 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
             this.maskedTextBox_ReceiptDate = new System.Windows.Forms.MaskedTextBox();
             this.label62 = new System.Windows.Forms.Label();
@@ -1248,7 +1252,7 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel2.Controls.Add(this.Tabcontrol1);
             this.splitContainer1.Size = new System.Drawing.Size(1179, 765);
-            this.splitContainer1.SplitterDistance = 254;
+            this.splitContainer1.SplitterDistance = 355;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 1013;
             // 
@@ -1326,7 +1330,7 @@
             this.GridView_File.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Blue;
             this.GridView_File.RowTemplate.Height = 24;
             this.GridView_File.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView_File.Size = new System.Drawing.Size(1171, 107);
+            this.GridView_File.Size = new System.Drawing.Size(1171, 208);
             this.GridView_File.TabIndex = 15;
             this.GridView_File.Tag = "PatListMF";
             this.GridView_File.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_File_CellDoubleClick);
@@ -1554,7 +1558,7 @@
             this.toolStripButton_OpenFile,
             this.toolStripSeparator21,
             this.toolStripButton_Orientation});
-            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 227);
+            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 328);
             this.bindingNavigator_Patent.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_Patent.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_Patent.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -1856,7 +1860,7 @@
             this.Tabcontrol1.Margin = new System.Windows.Forms.Padding(0);
             this.Tabcontrol1.Name = "Tabcontrol1";
             this.Tabcontrol1.SelectedIndex = 0;
-            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 503);
+            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 402);
             this.Tabcontrol1.TabIndex = 12;
             // 
             // TabPage2
@@ -1868,7 +1872,7 @@
             this.TabPage2.Location = new System.Drawing.Point(4, 34);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage2.Size = new System.Drawing.Size(1169, 465);
+            this.TabPage2.Size = new System.Drawing.Size(1169, 364);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = " 申請案基本資料 ";
             this.TabPage2.UseVisualStyleBackColor = true;
@@ -1881,7 +1885,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 457);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 356);
             this.flowLayoutPanel1.TabIndex = 370;
             // 
             // panel2
@@ -3234,7 +3238,7 @@
             this.TabPage3.Location = new System.Drawing.Point(4, 34);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(1169, 463);
+            this.TabPage3.Size = new System.Drawing.Size(1169, 362);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = " 事件記錄 ";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -3284,7 +3288,7 @@
             this.splitContainer4.Panel2.Controls.Add(this.txt_eRemark);
             this.splitContainer4.Panel2.Controls.Add(this.label74);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer4.Size = new System.Drawing.Size(1161, 455);
+            this.splitContainer4.Size = new System.Drawing.Size(1161, 354);
             this.splitContainer4.SplitterDistance = 780;
             this.splitContainer4.TabIndex = 1004;
             // 
@@ -3326,7 +3330,7 @@
             this.GridView_PatComit.ReadOnly = true;
             this.GridView_PatComit.RowHeadersWidth = 30;
             this.GridView_PatComit.RowTemplate.Height = 24;
-            this.GridView_PatComit.Size = new System.Drawing.Size(776, 426);
+            this.GridView_PatComit.Size = new System.Drawing.Size(776, 325);
             this.GridView_PatComit.TabIndex = 0;
             this.GridView_PatComit.Tag = "PatListMF_Event";
             this.GridView_PatComit.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_PatComit_CellDoubleClick);
@@ -3352,7 +3356,7 @@
             this.bindingNavigatorAddNewItem,
             this.toolStripButtonEditItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 428);
+            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 327);
             this.bindingNavigator_PatComit.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_PatComit.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_PatComit.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -3797,7 +3801,7 @@
             this.TabPage7.Location = new System.Drawing.Point(4, 34);
             this.TabPage7.Name = "TabPage7";
             this.TabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage7.Size = new System.Drawing.Size(1169, 465);
+            this.TabPage7.Size = new System.Drawing.Size(1169, 362);
             this.TabPage7.TabIndex = 6;
             this.TabPage7.Text = " 請款記錄 ";
             this.TabPage7.UseVisualStyleBackColor = true;
@@ -3820,7 +3824,7 @@
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer2.Size = new System.Drawing.Size(1161, 457);
+            this.splitContainer2.Size = new System.Drawing.Size(1161, 354);
             this.splitContainer2.SplitterDistance = 483;
             this.splitContainer2.TabIndex = 342;
             // 
@@ -3844,7 +3848,7 @@
             this.bindingNavigatorAddNewItem1,
             this.toolStripButton_FeeEdit,
             this.bindingNavigatorDeleteItem1});
-            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 430);
+            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 327);
             this.bindingNavigator_Fee.MoveFirstItem = this.toolStripButton4;
             this.bindingNavigator_Fee.MoveLastItem = this.toolStripButton7;
             this.bindingNavigator_Fee.MoveNextItem = this.toolStripButton6;
@@ -3992,7 +3996,7 @@
             this.GridView_Fee.ReadOnly = true;
             this.GridView_Fee.RowHeadersWidth = 30;
             this.GridView_Fee.RowTemplate.Height = 24;
-            this.GridView_Fee.Size = new System.Drawing.Size(476, 426);
+            this.GridView_Fee.Size = new System.Drawing.Size(476, 323);
             this.GridView_Fee.TabIndex = 0;
             this.GridView_Fee.Tag = "PatListMF_Fee";
             this.GridView_Fee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Fee_CellDoubleClick);
@@ -4006,7 +4010,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 455);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 352);
             this.flowLayoutPanel2.TabIndex = 1151;
             // 
             // groupBox8
@@ -5067,6 +5071,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_aBill);
+            this.groupBox1.Controls.Add(this.label146);
+            this.groupBox1.Controls.Add(this.maskedTextBox_aBillDate);
+            this.groupBox1.Controls.Add(this.label145);
             this.groupBox1.Controls.Add(this.label100);
             this.groupBox1.Controls.Add(this.maskedTextBox_ReceiptDate);
             this.groupBox1.Controls.Add(this.label62);
@@ -5083,10 +5091,57 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(3, 420);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(640, 116);
+            this.groupBox1.Size = new System.Drawing.Size(640, 150);
             this.groupBox1.TabIndex = 397;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "請．款．處．理 (帳務單位作業)";
+            // 
+            // txt_aBill
+            // 
+            this.txt_aBill.BackColor = System.Drawing.Color.White;
+            this.txt_aBill.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_aBill.ForeColor = System.Drawing.Color.Black;
+            this.txt_aBill.ImeMode = System.Windows.Forms.ImeMode.Close;
+            this.txt_aBill.Location = new System.Drawing.Point(220, 66);
+            this.txt_aBill.Margin = new System.Windows.Forms.Padding(1);
+            this.txt_aBill.Name = "txt_aBill";
+            this.txt_aBill.ReadOnly = true;
+            this.txt_aBill.Size = new System.Drawing.Size(159, 23);
+            this.txt_aBill.TabIndex = 1067;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.ForeColor = System.Drawing.Color.Black;
+            this.label146.Location = new System.Drawing.Point(165, 69);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(56, 16);
+            this.label146.TabIndex = 1066;
+            this.label146.Text = "發票號碼";
+            // 
+            // maskedTextBox_aBillDate
+            // 
+            this.maskedTextBox_aBillDate.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox_aBillDate.ForeColor = System.Drawing.Color.Green;
+            this.maskedTextBox_aBillDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.maskedTextBox_aBillDate.Location = new System.Drawing.Point(61, 66);
+            this.maskedTextBox_aBillDate.Margin = new System.Windows.Forms.Padding(1);
+            this.maskedTextBox_aBillDate.Mask = "0000/00/00";
+            this.maskedTextBox_aBillDate.Name = "maskedTextBox_aBillDate";
+            this.maskedTextBox_aBillDate.ReadOnly = true;
+            this.maskedTextBox_aBillDate.Size = new System.Drawing.Size(95, 23);
+            this.maskedTextBox_aBillDate.TabIndex = 1064;
+            this.maskedTextBox_aBillDate.ValidatingType = typeof(System.DateTime);
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.ForeColor = System.Drawing.Color.Black;
+            this.label145.Location = new System.Drawing.Point(6, 69);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(56, 16);
+            this.label145.TabIndex = 1065;
+            this.label145.Text = "發票日期";
             // 
             // label100
             // 
@@ -5195,7 +5250,7 @@
             // 
             this.txt_Remark.BackColor = System.Drawing.Color.White;
             this.txt_Remark.ImeMode = System.Windows.Forms.ImeMode.Close;
-            this.txt_Remark.Location = new System.Drawing.Point(61, 66);
+            this.txt_Remark.Location = new System.Drawing.Point(61, 93);
             this.txt_Remark.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Remark.Multiline = true;
             this.txt_Remark.Name = "txt_Remark";
@@ -5231,7 +5286,7 @@
             // linkLabel_Remark
             // 
             this.linkLabel_Remark.AutoSize = true;
-            this.linkLabel_Remark.Location = new System.Drawing.Point(18, 70);
+            this.linkLabel_Remark.Location = new System.Drawing.Point(18, 97);
             this.linkLabel_Remark.Name = "linkLabel_Remark";
             this.linkLabel_Remark.Size = new System.Drawing.Size(44, 16);
             this.linkLabel_Remark.TabIndex = 1047;
@@ -5247,7 +5302,7 @@
             this.tabPage5.Controls.Add(this.splitContainer3);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1169, 463);
+            this.tabPage5.Size = new System.Drawing.Size(1169, 362);
             this.tabPage5.TabIndex = 8;
             this.tabPage5.Text = " 付款記錄 ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -5271,7 +5326,7 @@
             this.splitContainer3.Panel2.AutoScroll = true;
             this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel3);
             this.splitContainer3.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer3.Size = new System.Drawing.Size(1167, 461);
+            this.splitContainer3.Size = new System.Drawing.Size(1167, 360);
             this.splitContainer3.SplitterDistance = 593;
             this.splitContainer3.TabIndex = 343;
             // 
@@ -5295,7 +5350,7 @@
             this.toolStripButton_PayRecordAdd,
             this.toolStripButton_PayRecordEdit,
             this.toolStripButton_PayRecordDel});
-            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 434);
+            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 333);
             this.bindingNavigator_Payment.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator_Payment.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator_Payment.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -5436,7 +5491,7 @@
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView_Billing.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Billing.RowTemplate.Height = 24;
-            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 428);
+            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 327);
             this.dataGridView_Billing.TabIndex = 0;
             this.dataGridView_Billing.Tag = "PatListMF_Payment";
             this.dataGridView_Billing.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Billing_CellDoubleClick);
@@ -5450,7 +5505,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 459);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 358);
             this.flowLayoutPanel3.TabIndex = 1080;
             // 
             // groupBox7
@@ -6105,7 +6160,7 @@
             this.tabPage1.Controls.Add(this.splitContainer5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1169, 463);
+            this.tabPage1.Size = new System.Drawing.Size(1169, 362);
             this.tabPage1.TabIndex = 9;
             this.tabPage1.Text = " 預估費用 ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -6175,7 +6230,7 @@
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_Remark);
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_PayMemo);
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer5.Size = new System.Drawing.Size(1169, 463);
+            this.splitContainer5.Size = new System.Drawing.Size(1169, 362);
             this.splitContainer5.SplitterDistance = 591;
             this.splitContainer5.TabIndex = 2;
             // 
@@ -6199,7 +6254,7 @@
             this.toolStripButton_ES_Add,
             this.toolStripButton_ES_Edit,
             this.toolStripButton_ES_Del});
-            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 436);
+            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 335);
             this.bindingNavigator_EstimateCost.MoveFirstItem = this.toolStripButton19;
             this.bindingNavigator_EstimateCost.MoveLastItem = this.toolStripButton22;
             this.bindingNavigator_EstimateCost.MoveNextItem = this.toolStripButton21;
@@ -6347,7 +6402,7 @@
             this.dataGridView_EstimateCost.ReadOnly = true;
             this.dataGridView_EstimateCost.RowHeadersWidth = 30;
             this.dataGridView_EstimateCost.RowTemplate.Height = 24;
-            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 430);
+            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 329);
             this.dataGridView_EstimateCost.TabIndex = 1;
             this.dataGridView_EstimateCost.Tag = "PatListMF_EstimateCost";
             this.dataGridView_EstimateCost.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_EstimateCost_CellDoubleClick);
@@ -6967,7 +7022,7 @@
             this.tabPage4.Controls.Add(this.splitContainer10);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1169, 463);
+            this.tabPage4.Size = new System.Drawing.Size(1169, 364);
             this.tabPage4.TabIndex = 10;
             this.tabPage4.Text = "智財局專利資料";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -6988,8 +7043,8 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer10.Size = new System.Drawing.Size(1167, 461);
-            this.splitContainer10.SplitterDistance = 173;
+            this.splitContainer10.Size = new System.Drawing.Size(1167, 362);
+            this.splitContainer10.SplitterDistance = 135;
             this.splitContainer10.SplitterWidth = 5;
             this.splitContainer10.TabIndex = 1059;
             // 
@@ -7010,7 +7065,7 @@
             this.dataGridView_PatentRight.Name = "dataGridView_PatentRight";
             this.dataGridView_PatentRight.ReadOnly = true;
             this.dataGridView_PatentRight.RowTemplate.Height = 24;
-            this.dataGridView_PatentRight.Size = new System.Drawing.Size(1154, 138);
+            this.dataGridView_PatentRight.Size = new System.Drawing.Size(1154, 100);
             this.dataGridView_PatentRight.TabIndex = 0;
             this.dataGridView_PatentRight.Tag = "PatListMF_PatentRight";
             this.dataGridView_PatentRight.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PatentRight_CellDoubleClick);
@@ -7060,7 +7115,7 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(1167, 283);
+            this.splitContainer6.Size = new System.Drawing.Size(1167, 222);
             this.splitContainer6.SplitterDistance = 571;
             this.splitContainer6.TabIndex = 1058;
             // 
@@ -7080,7 +7135,7 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.dataGridView_inventors);
             this.splitContainer7.Panel2.Controls.Add(this.tagTitle4);
-            this.splitContainer7.Size = new System.Drawing.Size(571, 283);
+            this.splitContainer7.Size = new System.Drawing.Size(571, 222);
             this.splitContainer7.SplitterDistance = 283;
             this.splitContainer7.TabIndex = 0;
             // 
@@ -7167,7 +7222,7 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer8.Size = new System.Drawing.Size(592, 283);
+            this.splitContainer8.Size = new System.Drawing.Size(592, 222);
             this.splitContainer8.SplitterDistance = 291;
             this.splitContainer8.TabIndex = 0;
             // 
@@ -7222,8 +7277,8 @@
             // 
             this.splitContainer9.Panel2.Controls.Add(this.dataGridView_PatentRightLoc);
             this.splitContainer9.Panel2.Controls.Add(this.tagTitle7);
-            this.splitContainer9.Size = new System.Drawing.Size(297, 283);
-            this.splitContainer9.SplitterDistance = 137;
+            this.splitContainer9.Size = new System.Drawing.Size(297, 222);
+            this.splitContainer9.SplitterDistance = 106;
             this.splitContainer9.TabIndex = 1064;
             // 
             // dataGridView_PatentRightIpc
@@ -7242,7 +7297,7 @@
             this.dataGridView_PatentRightIpc.Name = "dataGridView_PatentRightIpc";
             this.dataGridView_PatentRightIpc.ReadOnly = true;
             this.dataGridView_PatentRightIpc.RowTemplate.Height = 24;
-            this.dataGridView_PatentRightIpc.Size = new System.Drawing.Size(293, 100);
+            this.dataGridView_PatentRightIpc.Size = new System.Drawing.Size(293, 69);
             this.dataGridView_PatentRightIpc.TabIndex = 1063;
             this.dataGridView_PatentRightIpc.Tag = "PatListMF_PatentRightIpc";
             // 
@@ -7277,7 +7332,7 @@
             this.dataGridView_PatentRightLoc.Name = "dataGridView_PatentRightLoc";
             this.dataGridView_PatentRightLoc.ReadOnly = true;
             this.dataGridView_PatentRightLoc.RowTemplate.Height = 24;
-            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 103);
+            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 73);
             this.dataGridView_PatentRightLoc.TabIndex = 1065;
             this.dataGridView_PatentRightLoc.Tag = "PatListMF_PatentRightLoc";
             // 
@@ -8007,5 +8062,9 @@
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_PatentRight;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_PatRight_SetCulnme;
+        private System.Windows.Forms.TextBox txt_aBill;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_aBillDate;
+        private System.Windows.Forms.Label label145;
     }
 }

@@ -178,9 +178,6 @@
   <data name="UpdateData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UpdateData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pinggs58" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pinggs581.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="link" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\link.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,8 +208,11 @@
   <data name="deletelist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deletelist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SystemUpdateIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SystemUpdateIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MacIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MacIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uol.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +222,9 @@
   </data>
   <data name="Tag3_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tag3_R.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnSearch.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,14 +262,17 @@
   <data name="mainEvent_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainEvent_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tag1_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tag1_R.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calendarForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendarForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="smartphone-SMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smartphone-SMS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tag2_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tag2_L.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="columns" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\columns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -334,11 +340,14 @@
   <data name="logs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tag4_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tag4_L.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="payment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\payment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinIcons_008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -351,9 +360,6 @@
   </data>
   <data name="Tag3_L" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tag3_L.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indent.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,8 +376,8 @@
   <data name="button_vimeo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_vimeo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CalendarIconRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CalendarIconRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tag1_R" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tag1_R.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="control_panel01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control_panel01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -451,6 +457,9 @@
   <data name="computer_key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computer_key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Conutry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conutry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="png_06531" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-0653.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -462,6 +471,9 @@
   </data>
   <data name="Tag1_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tag1_bg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalendarIconRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalendarIconRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SearchIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SearchIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -483,6 +495,9 @@
   </data>
   <data name="email_open" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email_open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditMode" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditMode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_vtumblr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_vtumblr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -514,6 +529,9 @@
   <data name="control_panel_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control_panel_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImportData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImportData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pinggs66" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pinggs66.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -538,20 +556,17 @@
   <data name="paying" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paying.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendarForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendarForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="button_stumbleupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_stumbleupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bold.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="indent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indent.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImportData" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImportData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BulletinBoard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BulletinBoard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -565,13 +580,13 @@
   <data name="backcolor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backcolor.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EditMode" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EditMode.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pinggs58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pinggs581.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="underscore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\underscore.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="view_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\view_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DepositIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DepositIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
