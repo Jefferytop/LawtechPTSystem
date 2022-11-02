@@ -779,7 +779,7 @@ namespace LawtechPTSystem.Public
             DataSet DT = new DataSet();
             try
             {
-
+              
                 _DataAdapter.Fill(DT);
             }
             catch (SqlException ex)

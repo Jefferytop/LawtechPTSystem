@@ -42,6 +42,8 @@ namespace LawtechPTSystem.AddFrom
             this.label1 = new System.Windows.Forms.Label();
             this.txt_BankAccount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sort)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@ namespace LawtechPTSystem.AddFrom
             this.chb_IsEnable.AutoSize = true;
             this.chb_IsEnable.Checked = true;
             this.chb_IsEnable.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chb_IsEnable.Location = new System.Drawing.Point(133, 179);
+            this.chb_IsEnable.Location = new System.Drawing.Point(132, 222);
             this.chb_IsEnable.Name = "chb_IsEnable";
             this.chb_IsEnable.Size = new System.Drawing.Size(15, 14);
             this.chb_IsEnable.TabIndex = 44;
@@ -63,7 +65,7 @@ namespace LawtechPTSystem.AddFrom
             this.but_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.but_Cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_Cancel.Location = new System.Drawing.Point(231, 228);
+            this.but_Cancel.Location = new System.Drawing.Point(231, 262);
             this.but_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.but_Cancel.Name = "but_Cancel";
             this.but_Cancel.Size = new System.Drawing.Size(100, 32);
@@ -78,7 +80,7 @@ namespace LawtechPTSystem.AddFrom
             this.but_OK.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
             this.but_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_OK.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_OK.Location = new System.Drawing.Point(119, 228);
+            this.but_OK.Location = new System.Drawing.Point(119, 262);
             this.but_OK.Margin = new System.Windows.Forms.Padding(4);
             this.but_OK.Name = "but_OK";
             this.but_OK.Size = new System.Drawing.Size(100, 32);
@@ -131,7 +133,7 @@ namespace LawtechPTSystem.AddFrom
             // 
             this.txt_AccountName.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_AccountName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_AccountName.Location = new System.Drawing.Point(133, 97);
+            this.txt_AccountName.Location = new System.Drawing.Point(133, 114);
             this.txt_AccountName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_AccountName.Name = "txt_AccountName";
             this.txt_AccountName.Size = new System.Drawing.Size(286, 29);
@@ -142,7 +144,7 @@ namespace LawtechPTSystem.AddFrom
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label5.Location = new System.Drawing.Point(58, 176);
+            this.label5.Location = new System.Drawing.Point(57, 219);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
@@ -166,7 +168,7 @@ namespace LawtechPTSystem.AddFrom
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label1.Location = new System.Drawing.Point(58, 100);
+            this.label1.Location = new System.Drawing.Point(58, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
@@ -177,7 +179,7 @@ namespace LawtechPTSystem.AddFrom
             // 
             this.txt_BankAccount.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_BankAccount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_BankAccount.Location = new System.Drawing.Point(133, 134);
+            this.txt_BankAccount.Location = new System.Drawing.Point(132, 177);
             this.txt_BankAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txt_BankAccount.Name = "txt_BankAccount";
             this.txt_BankAccount.Size = new System.Drawing.Size(286, 29);
@@ -188,19 +190,47 @@ namespace LawtechPTSystem.AddFrom
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label2.Location = new System.Drawing.Point(58, 137);
+            this.label2.Location = new System.Drawing.Point(57, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 45;
-            this.label2.Text = "帳戶號碼";
+            this.label2.Text = "銀行帳號";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(129, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 16);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "(例：兆豐銀行 台北分行)";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(130, 146);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 16);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "(例：柏豐商務智權有限公司)";
             // 
             // AddAcountingFirmDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LawtechPTSystem.Properties.Resources.bg1;
-            this.ClientSize = new System.Drawing.Size(445, 275);
+            this.ClientSize = new System.Drawing.Size(445, 309);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_BankAccount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.chb_IsEnable);
@@ -240,5 +270,7 @@ namespace LawtechPTSystem.AddFrom
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_BankAccount;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }

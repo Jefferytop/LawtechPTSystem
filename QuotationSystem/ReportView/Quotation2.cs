@@ -1,6 +1,7 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
@@ -42,6 +43,20 @@ namespace LawtechPTSystem.ReportView
             set { iLanguage = value; }
         }
 
+        private DataTable dt_AcountingFirmT = new DataTable();
+        /// <summary>
+        /// 入帳公司資料
+        /// </summary>
+        public DataTable AcountingFirmT
+        {
+            get { return dt_AcountingFirmT; }
+            set
+            {
+                dt_AcountingFirmT = value;
+            }
+        }
+
+
         /// <summary>
         /// 1:精簡格式 2:標準格式 3:專業格式 4:列表格式
         /// </summary>
@@ -55,6 +70,17 @@ namespace LawtechPTSystem.ReportView
 
         private void Quotation2_Load(object sender, EventArgs e)
         {
+            #region 取得入帳公司資料
+            Public.CAccountingPublicFunction.GetAcountingFirmTDropDownList(ref dt_AcountingFirmT);
+            DataRow drN = dt_AcountingFirmT.NewRow();
+            drN["AcountingFirmKey"] = 0;
+            drN["AcountingFirmName"] = "預設值";
+            dt_AcountingFirmT.Rows.InsertAt(drN, 0);
+            comboBox_AcountingFirmT.DisplayMember = "AcountingFirmName";
+            comboBox_AcountingFirmT.ValueMember = "AcountingFirmKey";
+            comboBox_AcountingFirmT.DataSource = dt_AcountingFirmT;
+            #endregion
+            this.comboBox_AcountingFirmT.SelectedIndexChanged += new System.EventHandler(this.comboBox_AcountingFirmT_SelectedIndexChanged);
 
             try
             {
@@ -96,9 +122,27 @@ namespace LawtechPTSystem.ReportView
                 this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
 
                 string reportPath = "";
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                switch (comboBox_AcountingFirmT.SelectedValue)
                 {
-                    reportPath = Properties.Settings.Default.QuotationLogo;
+                    case 0:
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        if (!string.IsNullOrEmpty(firm.LogoUrl))
+                        {
+                            reportPath = firm.LogoUrl;
+                        }
+                        else
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
                 }
 
                 reportViewer1.LocalReport.EnableExternalImages = true;
@@ -137,14 +181,34 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
 
             string reportPath = "";
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+            switch (comboBox_AcountingFirmT.SelectedValue)
             {
-                reportPath = Properties.Settings.Default.QuotationLogo;
+                case 0:
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                    {
+                        reportPath = Properties.Settings.Default.QuotationLogo;
+                    }
+                    break;
+                default:
+                    int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                    Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                    Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                    if (!string.IsNullOrEmpty(firm.LogoUrl))
+                    {
+                        reportPath = firm.LogoUrl;
+                    }
+                    else
+                    {
+                        reportPath = Properties.Settings.Default.QuotationLogo;
+                    }
+                    break;
             }
 
             reportViewer1.LocalReport.EnableExternalImages = true;
             ReportParameter rp = new ReportParameter("Liaisoner", txt_Liaisoner.Text);
+
             ReportParameter rpLogoPath = new ReportParameter("ReportLogoPath", reportPath);
+
             ReportParameter psubject = new ReportParameter("Subject", txt_Subject.Text);
 
             ReportParameter pContent = new ReportParameter("Content", txt_Content.Text);
@@ -161,20 +225,85 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.RefreshReport();
         }
 
+        /// <summary>
+        /// 儲存綠字按鈕
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            cq.Subject = txt_Subject.Text;
-            cq.ContentText = txt_Content.Text;
-            cq.Description = txt_Description.Text;
-            object obj = cq.Update();
-            if (obj.ToString() == "0")
+            try
             {
-                MessageBox.Show("儲存成功", "提示訊息");
+                object obj = new object();
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
+
+                    case 0:
+                        cq.Subject = txt_Subject.Text;
+                        cq.ContentText = txt_Content.Text;
+                        cq.Description = txt_Description.Text;
+                        obj = cq.Update();
+                        if (obj.ToString() == "0")
+                        {
+                            MessageBox.Show("儲存成功", "提示訊息");
+                        }
+                        else
+                        {
+                            MessageBox.Show("儲存失敗" + obj.ToString(), "提示訊息");
+                        }
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        firm.Quotation_Subject = txt_Subject.Text;
+                        firm.Quotation_Content = txt_Content.Text;
+                        firm.Quotation_Explain = txt_Description.Text;
+                        obj = firm.Update();
+                        if (obj.ToString() == "0")
+                        {
+                            MessageBox.Show("儲存成功", "提示訊息");
+                        }
+                        else
+                        {
+                            MessageBox.Show("儲存失敗" + obj.ToString(), "提示訊息");
+                        }
+                        break;
+                }
             }
-            else
+            catch { }
+        }
+
+        private void comboBox_AcountingFirmT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_AcountingFirmT.SelectedValue != null)
             {
-                MessageBox.Show("儲存失敗" + obj.ToString(), "提示訊息");
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
+                    case 0:
+                        string strsql = string.Format("QuotationKind={0} and LanguagesID={1}", QuotationKind, iLanguage);
+
+                        Public.CQuotationTextT.ReadOne(strsql, ref cq);
+
+                        txt_Subject.Text = cq.Subject;
+                        txt_Content.Text = cq.ContentText;
+                        txt_Description.Text = cq.Description;
+
+                        txt_Liaisoner.Text = Liaisoner + " 先生 / 小姐";
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        txt_Subject.Text = firm.Quotation_Subject;
+                        txt_Content.Text = firm.Quotation_Content;
+                        txt_Description.Text = firm.Quotation_Explain;
+                        break;
+                }
+
             }
         }
+
+
     }
 }

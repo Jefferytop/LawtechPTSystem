@@ -40,13 +40,20 @@ namespace LawtechPTSystem.AddFrom
             this.but_Cancel = new System.Windows.Forms.Button();
             this.but_OK = new System.Windows.Forms.Button();
             this.chb_IsEnable = new System.Windows.Forms.CheckBox();
+            this.txt_LogoUrl = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel_OpenLogo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sort)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown_Sort
             // 
             this.numericUpDown_Sort.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.numericUpDown_Sort.Location = new System.Drawing.Point(130, 22);
+            this.numericUpDown_Sort.Location = new System.Drawing.Point(130, 41);
             this.numericUpDown_Sort.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -66,7 +73,7 @@ namespace LawtechPTSystem.AddFrom
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label10.Location = new System.Drawing.Point(87, 26);
+            this.label10.Location = new System.Drawing.Point(87, 45);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 20);
@@ -77,17 +84,17 @@ namespace LawtechPTSystem.AddFrom
             // 
             this.txt_AcountingFirmName.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_AcountingFirmName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_AcountingFirmName.Location = new System.Drawing.Point(130, 58);
+            this.txt_AcountingFirmName.Location = new System.Drawing.Point(130, 77);
             this.txt_AcountingFirmName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_AcountingFirmName.Name = "txt_AcountingFirmName";
-            this.txt_AcountingFirmName.Size = new System.Drawing.Size(286, 29);
+            this.txt_AcountingFirmName.Size = new System.Drawing.Size(389, 29);
             this.txt_AcountingFirmName.TabIndex = 11;
             // 
             // txt_AcountingFirm
             // 
             this.txt_AcountingFirm.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_AcountingFirm.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_AcountingFirm.Location = new System.Drawing.Point(355, 13);
+            this.txt_AcountingFirm.Location = new System.Drawing.Point(355, 32);
             this.txt_AcountingFirm.Margin = new System.Windows.Forms.Padding(4);
             this.txt_AcountingFirm.Name = "txt_AcountingFirm";
             this.txt_AcountingFirm.Size = new System.Drawing.Size(48, 29);
@@ -99,7 +106,7 @@ namespace LawtechPTSystem.AddFrom
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label5.Location = new System.Drawing.Point(55, 91);
+            this.label5.Location = new System.Drawing.Point(55, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 20);
@@ -111,19 +118,19 @@ namespace LawtechPTSystem.AddFrom
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label4.Location = new System.Drawing.Point(23, 63);
+            this.label4.Location = new System.Drawing.Point(55, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "入帳公司名稱";
+            this.label4.Text = "公司名稱";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label1.Location = new System.Drawing.Point(248, 18);
+            this.label1.Location = new System.Drawing.Point(248, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
@@ -138,7 +145,7 @@ namespace LawtechPTSystem.AddFrom
             this.but_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.but_Cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_Cancel.Location = new System.Drawing.Point(228, 134);
+            this.but_Cancel.Location = new System.Drawing.Point(272, 301);
             this.but_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.but_Cancel.Name = "but_Cancel";
             this.but_Cancel.Size = new System.Drawing.Size(100, 32);
@@ -153,7 +160,7 @@ namespace LawtechPTSystem.AddFrom
             this.but_OK.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
             this.but_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_OK.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_OK.Location = new System.Drawing.Point(116, 134);
+            this.but_OK.Location = new System.Drawing.Point(160, 301);
             this.but_OK.Margin = new System.Windows.Forms.Padding(4);
             this.but_OK.Name = "but_OK";
             this.but_OK.Size = new System.Drawing.Size(100, 32);
@@ -167,11 +174,90 @@ namespace LawtechPTSystem.AddFrom
             this.chb_IsEnable.AutoSize = true;
             this.chb_IsEnable.Checked = true;
             this.chb_IsEnable.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chb_IsEnable.Location = new System.Drawing.Point(130, 94);
+            this.chb_IsEnable.Location = new System.Drawing.Point(130, 21);
             this.chb_IsEnable.Name = "chb_IsEnable";
             this.chb_IsEnable.Size = new System.Drawing.Size(15, 14);
             this.chb_IsEnable.TabIndex = 34;
             this.chb_IsEnable.UseVisualStyleBackColor = true;
+            // 
+            // txt_LogoUrl
+            // 
+            this.txt_LogoUrl.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.txt_LogoUrl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_LogoUrl.Location = new System.Drawing.Point(130, 114);
+            this.txt_LogoUrl.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_LogoUrl.Multiline = true;
+            this.txt_LogoUrl.Name = "txt_LogoUrl";
+            this.txt_LogoUrl.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txt_LogoUrl.Size = new System.Drawing.Size(389, 57);
+            this.txt_LogoUrl.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label2.Location = new System.Drawing.Point(15, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "公司Logo URL";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.ForeColor = System.Drawing.Color.Blue;
+            this.label20.Location = new System.Drawing.Point(127, 251);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(124, 17);
+            this.label20.TabIndex = 39;
+            this.label20.Text = "3.)請使用 jpg 、png";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.ForeColor = System.Drawing.Color.Blue;
+            this.label15.Location = new System.Drawing.Point(127, 227);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 17);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "2.)圖檔Size 1728 x 230";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.ForeColor = System.Drawing.Color.Blue;
+            this.label16.Location = new System.Drawing.Point(127, 202);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(114, 17);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "1.)請輸入網路位置";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(127, 175);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(191, 17);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "§ 可用於請款單、報價單的Logo";
+            // 
+            // linkLabel_OpenLogo
+            // 
+            this.linkLabel_OpenLogo.AutoSize = true;
+            this.linkLabel_OpenLogo.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel_OpenLogo.Location = new System.Drawing.Point(55, 148);
+            this.linkLabel_OpenLogo.Name = "linkLabel_OpenLogo";
+            this.linkLabel_OpenLogo.Size = new System.Drawing.Size(65, 17);
+            this.linkLabel_OpenLogo.TabIndex = 41;
+            this.linkLabel_OpenLogo.TabStop = true;
+            this.linkLabel_OpenLogo.Text = "開啟Logo";
+            this.linkLabel_OpenLogo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_OpenLogo_LinkClicked);
             // 
             // AddAccountingCompany
             // 
@@ -180,7 +266,14 @@ namespace LawtechPTSystem.AddFrom
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(174)))), ((int)(((byte)(212)))));
             this.BackgroundImage = global::LawtechPTSystem.Properties.Resources.bg1;
             this.CancelButton = this.but_Cancel;
-            this.ClientSize = new System.Drawing.Size(445, 183);
+            this.ClientSize = new System.Drawing.Size(532, 350);
+            this.Controls.Add(this.linkLabel_OpenLogo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txt_LogoUrl);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chb_IsEnable);
             this.Controls.Add(this.but_Cancel);
             this.Controls.Add(this.but_OK);
@@ -217,5 +310,12 @@ namespace LawtechPTSystem.AddFrom
         private System.Windows.Forms.Button but_Cancel;
         private System.Windows.Forms.Button but_OK;
         private System.Windows.Forms.CheckBox chb_IsEnable;
+        private System.Windows.Forms.TextBox txt_LogoUrl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkLabel_OpenLogo;
     }
 }

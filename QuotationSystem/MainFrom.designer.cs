@@ -794,7 +794,7 @@
             this.toolStripMenuItem_ACompany.Name = "toolStripMenuItem_ACompany";
             this.toolStripMenuItem_ACompany.Size = new System.Drawing.Size(192, 26);
             this.toolStripMenuItem_ACompany.Tag = "AccountingCompany";
-            this.toolStripMenuItem_ACompany.Text = "入帳公司";
+            this.toolStripMenuItem_ACompany.Text = "入帳公司設定";
             this.toolStripMenuItem_ACompany.Click += new System.EventHandler(this.toolStripMenuItem_ACompany_Click);
             // 
             // toolStripMenuItem_PaymentMF

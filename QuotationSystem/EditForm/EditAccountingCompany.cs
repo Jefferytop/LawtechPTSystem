@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LawtechPTSystem.EditForm
@@ -29,6 +23,7 @@ namespace LawtechPTSystem.EditForm
             numericUpDown_Sort.Value = Edit.Sort.HasValue ? Edit.Sort.Value : 0;
             txt_AcountingFirmName.Text = Edit.AcountingFirmName;
             chb_IsEnable.Checked = Edit.IsEnable.HasValue ? Edit.IsEnable.Value : false;
+            txt_LogoUrl.Text = Edit.LogoUrl;
         }
 
         private void but_Cancel_Click(object sender, EventArgs e)
@@ -49,6 +44,8 @@ namespace LawtechPTSystem.EditForm
             Edit.AcountingFirmName = txt_AcountingFirmName.Text;
             Edit.Sort = int.Parse(numericUpDown_Sort.Value.ToString());
             Edit.IsEnable = chb_IsEnable.Checked;
+            Edit.LogoUrl = txt_LogoUrl.Text.Trim();
+
             Edit.LastModifyWorker = Properties.Settings.Default.WorkerName;
             Edit.Update();
 
@@ -66,6 +63,19 @@ namespace LawtechPTSystem.EditForm
             this.DialogResult = DialogResult.OK;
             this.Close();
 
+        }
+
+        private void linkLabel_OpenLogo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_LogoUrl.Text.Trim()))
+            {
+                System.Diagnostics.Process.Start(txt_LogoUrl.Text.Trim());
+            }
+            else
+            {
+                txt_LogoUrl.Focus();
+                MessageBox.Show("請輸入Logo 路徑");
+            }
         }
 
 

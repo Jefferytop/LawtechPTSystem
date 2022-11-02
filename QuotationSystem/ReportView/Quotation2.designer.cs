@@ -40,6 +40,8 @@ namespace LawtechPTSystem.ReportView
             this.dataTable_ENTableAdapter1 = new LawtechPTSystem.Report.BMtriffDataSetTableAdapters.DataTable_ENTableAdapter();
             this.quotation2TableAdapter1 = new LawtechPTSystem.Report.BMtriffDataSetTableAdapters.Quotation2TableAdapter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox_AcountingFirmT = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Liaisoner = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,6 +71,7 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LawtechPTSystem.ReportView.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.ServerReport.ReportServerUrl = new System.Uri("", System.UriKind.Relative);
             this.reportViewer1.Size = new System.Drawing.Size(521, 662);
             this.reportViewer1.TabIndex = 0;
@@ -119,6 +122,8 @@ namespace LawtechPTSystem.ReportView
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.comboBox_AcountingFirmT);
+            this.splitContainer1.Panel2.Controls.Add(this.label25);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.txt_Liaisoner);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -136,22 +141,45 @@ namespace LawtechPTSystem.ReportView
             this.splitContainer1.SplitterDistance = 523;
             this.splitContainer1.TabIndex = 1;
             // 
+            // comboBox_AcountingFirmT
+            // 
+            this.comboBox_AcountingFirmT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_AcountingFirmT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AcountingFirmT.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.comboBox_AcountingFirmT.FormattingEnabled = true;
+            this.comboBox_AcountingFirmT.Location = new System.Drawing.Point(17, 31);
+            this.comboBox_AcountingFirmT.Name = "comboBox_AcountingFirmT";
+            this.comboBox_AcountingFirmT.Size = new System.Drawing.Size(260, 28);
+            this.comboBox_AcountingFirmT.TabIndex = 1135;
+          
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label25.Location = new System.Drawing.Point(16, 8);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(89, 20);
+            this.label25.TabIndex = 1134;
+            this.label25.Text = "開立公司：";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F);
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(83, 18);
+            this.label5.Location = new System.Drawing.Point(83, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 16);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 20;
-            this.label5.Text = "(動態資料，無法儲存)";
+            this.label5.Text = "(動態資料)";
             // 
             // txt_Liaisoner
             // 
             this.txt_Liaisoner.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Liaisoner.Location = new System.Drawing.Point(17, 37);
+            this.txt_Liaisoner.Location = new System.Drawing.Point(17, 99);
             this.txt_Liaisoner.Multiline = true;
             this.txt_Liaisoner.Name = "txt_Liaisoner";
             this.txt_Liaisoner.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -161,7 +189,7 @@ namespace LawtechPTSystem.ReportView
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 14);
+            this.label4.Location = new System.Drawing.Point(13, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 18;
@@ -173,13 +201,12 @@ namespace LawtechPTSystem.ReportView
             this.btn_Save.BackColor = System.Drawing.Color.Transparent;
             this.btn_Save.BackgroundImage = global::LawtechPTSystem.Properties.Resources.button_vtumblr;
             this.btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Save.ForeColor = System.Drawing.Color.Navy;
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
             this.btn_Save.Location = new System.Drawing.Point(31, 621);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(120, 32);
             this.btn_Save.TabIndex = 17;
-            this.btn_Save.Text = "確定儲存";
+            this.btn_Save.Text = "儲存綠字";
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -188,7 +215,6 @@ namespace LawtechPTSystem.ReportView
             this.btn_Close.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Close.BackgroundImage = global::LawtechPTSystem.Properties.Resources.button_flickr;
             this.btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Close.Location = new System.Drawing.Point(157, 621);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(120, 32);
@@ -203,7 +229,7 @@ namespace LawtechPTSystem.ReportView
             this.btn_Refresh.BackColor = System.Drawing.Color.Transparent;
             this.btn_Refresh.BackgroundImage = global::LawtechPTSystem.Properties.Resources.button_linkedin;
             this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Refresh.ForeColor = System.Drawing.Color.White;
             this.btn_Refresh.Location = new System.Drawing.Point(31, 583);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(120, 32);
@@ -216,7 +242,8 @@ namespace LawtechPTSystem.ReportView
             // 
             this.txt_Content.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Content.Location = new System.Drawing.Point(17, 197);
+            this.txt_Content.ForeColor = System.Drawing.Color.ForestGreen;
+            this.txt_Content.Location = new System.Drawing.Point(17, 259);
             this.txt_Content.Multiline = true;
             this.txt_Content.Name = "txt_Content";
             this.txt_Content.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -227,7 +254,7 @@ namespace LawtechPTSystem.ReportView
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 174);
+            this.label3.Location = new System.Drawing.Point(13, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 13;
@@ -238,18 +265,19 @@ namespace LawtechPTSystem.ReportView
             this.txt_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Description.Location = new System.Drawing.Point(17, 335);
+            this.txt_Description.ForeColor = System.Drawing.Color.ForestGreen;
+            this.txt_Description.Location = new System.Drawing.Point(17, 382);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
             this.txt_Description.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Description.Size = new System.Drawing.Size(260, 239);
+            this.txt_Description.Size = new System.Drawing.Size(260, 192);
             this.txt_Description.TabIndex = 12;
             this.txt_Description.Text = resources.GetString("txt_Description.Text");
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 312);
+            this.label2.Location = new System.Drawing.Point(13, 359);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 11;
@@ -259,7 +287,8 @@ namespace LawtechPTSystem.ReportView
             // 
             this.txt_Subject.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Subject.Location = new System.Drawing.Point(17, 119);
+            this.txt_Subject.ForeColor = System.Drawing.Color.ForestGreen;
+            this.txt_Subject.Location = new System.Drawing.Point(17, 181);
             this.txt_Subject.Multiline = true;
             this.txt_Subject.Name = "txt_Subject";
             this.txt_Subject.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -270,7 +299,7 @@ namespace LawtechPTSystem.ReportView
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 96);
+            this.label1.Location = new System.Drawing.Point(13, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 9;
@@ -279,8 +308,10 @@ namespace LawtechPTSystem.ReportView
             // Quotation2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(236)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(826, 664);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Quotation2";
             this.Text = "客戶報價(標準格式)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -320,5 +351,7 @@ namespace LawtechPTSystem.ReportView
         private System.Windows.Forms.TextBox txt_Liaisoner;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox_AcountingFirmT;
+        private System.Windows.Forms.Label label25;
     }
 }

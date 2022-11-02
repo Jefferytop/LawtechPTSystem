@@ -48,6 +48,7 @@ namespace LawtechPTSystem.AddFrom
             Add.AcountingFirmName = txt_AcountingFirmName.Text;
             Add.Sort = int.Parse(numericUpDown_Sort.Value.ToString());
             Add.IsEnable = chb_IsEnable.Checked;
+            Add.LogoUrl = txt_LogoUrl.Text.Trim();
             Add.Creator = Properties.Settings.Default.WorkerName;
             Add.Create();
 
@@ -67,7 +68,17 @@ namespace LawtechPTSystem.AddFrom
             this.Close();
         }
 
-      
-
+        private void linkLabel_OpenLogo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_LogoUrl.Text.Trim()))
+            {
+                System.Diagnostics.Process.Start(txt_LogoUrl.Text.Trim());
+            }
+            else {
+                txt_LogoUrl.Focus();
+                MessageBox.Show("請輸入Logo 路徑");
+            }
+           
         }
+    }
 }

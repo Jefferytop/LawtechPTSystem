@@ -422,41 +422,48 @@ namespace LawtechPTSystem.US
 
                     if (Forms.AccountingFeeList != null && Forms.AccountingFeeList.GV_CurrentRow != null)
                     {
-                        DataGridViewRow gvr = Forms.AccountingFeeList.GV_CurrentRow;
-                        gvr.Cells["PPP"].Value = fee.PPP;
-                        //收據日期
-                        if (fee.ReceiptDate.HasValue)
-                        {
-                            gvr.Cells["ReceiptDate"].Value = fee.ReceiptDate;
-                        }
-                        else
-                        {
-                            gvr.Cells["ReceiptDate"].Value = DBNull.Value;
-                        }
+                        #region MyRegion
+                        //DataGridViewRow gvr = Forms.AccountingFeeList.GV_CurrentRow;
+                        //gvr.Cells["PPP"].Value = fee.PPP;
+                        ////收據日期
+                        //if (fee.ReceiptDate.HasValue)
+                        //{
+                        //    gvr.Cells["ReceiptDate"].Value = fee.ReceiptDate;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["ReceiptDate"].Value = DBNull.Value;
+                        //}
 
-                        //收款日期
-                        if (fee.PayDate.HasValue)
-                        {
-                            gvr.Cells["PayDate"].Value = fee.PayDate;
-                        }
-                        else
-                        {
-                            gvr.Cells["PayDate"].Value = DBNull.Value;
-                        }
+                        ////收款日期
+                        //if (fee.PayDate.HasValue)
+                        //{
+                        //    gvr.Cells["PayDate"].Value = fee.PayDate;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["PayDate"].Value = DBNull.Value;
+                        //}
 
-                        //收款日期
-                        if (fee.CollectionPeriod.HasValue)
-                        {
-                            gvr.Cells["CollectionPeriod"].Value = fee.CollectionPeriod;
-                        }
-                        else
-                        {
-                            gvr.Cells["CollectionPeriod"].Value = DBNull.Value;
-                        }
+                        ////收款日期
+                        //if (fee.CollectionPeriod.HasValue)
+                        //{
+                        //    gvr.Cells["CollectionPeriod"].Value = fee.CollectionPeriod;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["CollectionPeriod"].Value = DBNull.Value;
+                        //}
 
-                        gvr.Cells["PracticalityPay"].Value = fee.PracticalityPay;
-                        gvr.Cells["Remark"].Value = fee.Remark;
-                        gvr.Cells["Tax"].Value = fee.Tax;
+                        //gvr.Cells["PracticalityPay"].Value = fee.PracticalityPay;
+                        //gvr.Cells["Remark"].Value = fee.Remark;
+                        //gvr.Cells["Tax"].Value = fee.Tax;
+                        #endregion
+                        DataTable dtSource = Forms.AccountingFeeList.GetAccountingData;
+                        DataRow dr = dtSource.Rows.Find(fee.FeeKey);
+                        DataRow drV = Public.CAccountingPublicFunction.GetAccountingFeeListPatentDataRow(fee.FeeKey.ToString());
+                        dr.ItemArray = drV.ItemArray;
+                        dr.AcceptChanges();
                     }
                     break;
 
@@ -539,40 +546,48 @@ namespace LawtechPTSystem.US
 
                     if (Forms.AccountingFeeList != null && Forms.AccountingFeeList.GV_CurrentRow != null)
                     {
-                        DataGridViewRow gvr = Forms.AccountingFeeList.GV_CurrentRow;
-                        gvr.Cells["PPP"].Value = Tmfee.PPP;
-                        //收據日期
-                        if (Tmfee.ReceiptDate.HasValue)
-                        {
-                            gvr.Cells["ReceiptDate"].Value = Tmfee.ReceiptDate;
-                        }
-                        else
-                        {
-                            gvr.Cells["ReceiptDate"].Value = DBNull.Value;
-                        }
+                        #region MyRegion
+                        //DataGridViewRow gvr = Forms.AccountingFeeList.GV_CurrentRow;
+                        //gvr.Cells["PPP"].Value = Tmfee.PPP;
+                        ////收據日期
+                        //if (Tmfee.ReceiptDate.HasValue)
+                        //{
+                        //    gvr.Cells["ReceiptDate"].Value = Tmfee.ReceiptDate;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["ReceiptDate"].Value = DBNull.Value;
+                        //}
 
-                        //收款日期
-                        if (Tmfee.PayDate.HasValue)
-                        {
-                            gvr.Cells["PayDate"].Value = Tmfee.PayDate;
-                        }
-                        else
-                        {
-                            gvr.Cells["PayDate"].Value = DBNull.Value;
-                        }
+                        ////收款日期
+                        //if (Tmfee.PayDate.HasValue)
+                        //{
+                        //    gvr.Cells["PayDate"].Value = Tmfee.PayDate;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["PayDate"].Value = DBNull.Value;
+                        //}
 
-                        //收款期限
-                        if (Tmfee.CollectionPeriod.HasValue)
-                        {
-                            gvr.Cells["CollectionPeriod"].Value = Tmfee.CollectionPeriod;
-                        }
-                        else
-                        {
-                            gvr.Cells["CollectionPeriod"].Value = DBNull.Value;
-                        }
-                        gvr.Cells["PracticalityPay"].Value = Tmfee.PracticalityPay;
-                        gvr.Cells["Remark"].Value = Tmfee.Remark;
-                        gvr.Cells["Tax"].Value = Tmfee.Tax;
+                        ////收款期限
+                        //if (Tmfee.CollectionPeriod.HasValue)
+                        //{
+                        //    gvr.Cells["CollectionPeriod"].Value = Tmfee.CollectionPeriod;
+                        //}
+                        //else
+                        //{
+                        //    gvr.Cells["CollectionPeriod"].Value = DBNull.Value;
+                        //}
+                        //gvr.Cells["PracticalityPay"].Value = Tmfee.PracticalityPay;
+                        //gvr.Cells["Remark"].Value = Tmfee.Remark;
+                        //gvr.Cells["Tax"].Value = Tmfee.Tax; 
+                        #endregion
+                        DataTable dtSource = Forms.AccountingFeeList.GetAccountingData;
+                        DataRow dr = dtSource.Rows.Find(Tmfee.FeeKEY);
+                        DataRow drV = Public.CAccountingPublicFunction.GetAccountingFeeListTrademarkDataRow(Tmfee.FeeKEY.ToString());                        
+                        dr.ItemArray = drV.ItemArray;
+                        dr.AcceptChanges();
+                        
                     }
                     break;
 

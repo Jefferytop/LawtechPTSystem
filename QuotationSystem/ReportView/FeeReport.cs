@@ -32,14 +32,14 @@ namespace LawtechPTSystem.ReportView
             set { iPatentID = value; }
         }
 
-        private string iApplicantKey ="";
+        private string iApplicantKey = "";
         public string ApplicantKeys
         {
             get { return iApplicantKey; }
             set { iApplicantKey = value; }
         }
 
-        private string iApplicantName ="";
+        private string iApplicantName = "";
         public string ApplicantNames
         {
             get { return iApplicantName; }
@@ -55,6 +55,19 @@ namespace LawtechPTSystem.ReportView
         }
 
         DataTable FeeTable = new DataTable();
+
+        private DataTable dt_AcountingFirmT = new DataTable();
+        /// <summary>
+        /// 入帳公司資料
+        /// </summary>
+        public DataTable AcountingFirmT
+        {
+            get { return dt_AcountingFirmT; }
+            set
+            {
+                dt_AcountingFirmT = value;
+            }
+        }
 
         /// <summary>
         /// 初始化
@@ -176,7 +189,7 @@ namespace LawtechPTSystem.ReportView
 
                 dr["TaxAmount"] = 0;
 
-                FeeTable.Rows.Add(dr); 
+                FeeTable.Rows.Add(dr);
                 #endregion
 
             }
@@ -187,37 +200,50 @@ namespace LawtechPTSystem.ReportView
             #region 取得靜態文字預設值
             Public.CStatueRecordT cs = new Public.CStatueRecordT();
             Public.CStatueRecordT.ReadOne("StatusName='FeeReport' ", ref cs);
-            if (cs.Value!=null && cs.Value.Length > 0)
+            if (cs.Value != null && cs.Value.Length > 0)
             {
                 string[] str = cs.Value.Split('§');
-                if (str.Length ==3)
-                {                 
+                if (str.Length == 3)
+                {
                     txt_PaymentInstructions.Text = str[0];
-                    txt_Footer.Text = str[1];                  
+                    txt_Footer.Text = str[1];
                     txt_Footer1.Text = str[2];
                 }
             }
             #endregion
 
+            #region 取得入帳公司資料
+            Public.CAccountingPublicFunction.GetAcountingFirmTDropDownList(ref dt_AcountingFirmT);
+            DataRow drN = dt_AcountingFirmT.NewRow();
+            drN["AcountingFirmKey"] = 0;
+            drN["AcountingFirmName"] = "預設值";
+            dt_AcountingFirmT.Rows.InsertAt(drN, 0);
+            comboBox_AcountingFirmT.DataSource = dt_AcountingFirmT;
+            comboBox_AcountingFirmT.DisplayMember = "AcountingFirmName";
+            comboBox_AcountingFirmT.ValueMember = "AcountingFirmKey";
+
+            this.comboBox_AcountingFirmT.SelectedIndexChanged += new System.EventHandler(this.comboBox_AcountingFirmT_SelectedIndexChanged);
+            #endregion
+
             FeeTableInit();
 
-                //以列印模式顯示
+            //以列印模式顯示
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
 
             string[] AppNames = ApplicantNames.Split(';');
             AutoCompleteStringCollection ss = new AutoCompleteStringCollection();
-            ss.AddRange(AppNames); 
+            ss.AddRange(AppNames);
 
             switch (ModeType)
             {
                 case 1:
-
+                    #region 專利
                     Public.CPatentManagement patent = new Public.CPatentManagement();
-                    Public.CPatentManagement.ReadOne(iPatentID, ref patent);                    
+                    Public.CPatentManagement.ReadOne(iPatentID, ref patent);
 
                     if (patent.DelegateType == 1)//申請人直接委託
                     {
-                        List<Public.CApplicant >app = new List<Public.CApplicant>();
+                        List<Public.CApplicant> app = new List<Public.CApplicant>();
                         if (!string.IsNullOrEmpty(iApplicantKey.ToString()))
                         {
                             Public.CApplicant.ReadList(ref app, "ApplicantKey in(" + iApplicantKey.ToString() + ")");
@@ -233,19 +259,20 @@ namespace LawtechPTSystem.ReportView
                                 Public.CApplicant.ReadList(ref app, "ApplicantName ='' ");
                             }
                         }
-                       
+
                         txt_ApplicantName.AutoCompleteCustomSource = ss;
 
                         txt_ApplicantName.Text = AppNames[0];
                         if (app.Count > 0)
                         {
                             DataTable dtLiaisoner = new DataTable();
-                            Public.CApplicantPublicFunction.GetLiaisonerContractTypeT(app[0].ApplicantKey.ToString(),ref dtLiaisoner);
+                            Public.CApplicantPublicFunction.GetLiaisonerContractTypeT(app[0].ApplicantKey.ToString(), ref dtLiaisoner);
                             string strLiaisoner = "";
-                            if (dtLiaisoner.Rows.Count > 0) {
+                            if (dtLiaisoner.Rows.Count > 0)
+                            {
                                 strLiaisoner = dtLiaisoner.Rows[0]["LiaisonerName"].ToString() + " " + dtLiaisoner.Rows[0]["Gender"].ToString(); ;
                             }
-                         
+
                             txt_Address.Text = app[0].ContactAddr;
                             txt_LiaisonerName.Text = strLiaisoner;
                             txt_PostalCode.Text = app[0].PostalCode;
@@ -270,7 +297,7 @@ namespace LawtechPTSystem.ReportView
 
                     Public.CPatentFee fee = new Public.CPatentFee();
                     Public.CPatentFee.ReadOne(iFeeKEY, ref fee);
-                  
+
 
                     txt_PPP.Text = fee.PPP;
                     if (fee.RDate.HasValue)
@@ -304,17 +331,17 @@ namespace LawtechPTSystem.ReportView
 
                     //複代雜費
                     txt_OthFeeName.Text = fee.OthFeeName;
-                    numericUpDown_OthFee.Value = fee.OthFee.HasValue ? fee.OthFee.Value:0;
+                    numericUpDown_OthFee.Value = fee.OthFee.HasValue ? fee.OthFee.Value : 0;
 
                     //代收代付自定義
                     txt_CustomizeName.Text = fee.CustomizeName;
                     numericUpDown_CustomizeOthFee.Value = fee.CustomizeOthFee.HasValue ? fee.CustomizeOthFee.Value : 0;
 
                     //稅額%
-                    numericUpDown_TaxPercent.Value = fee.TaxPercent.HasValue? fee.TaxPercent.Value:0;
+                    numericUpDown_TaxPercent.Value = fee.TaxPercent.HasValue ? fee.TaxPercent.Value : 0;
 
                     //服務費
-                    numericUpDown_IAttorneyFee.Value =fee.OtherTotalFee.HasValue? fee.OtherTotalFee.Value:0;
+                    numericUpDown_IAttorneyFee.Value = fee.OtherTotalFee.HasValue ? fee.OtherTotalFee.Value : 0;
                     txt_OtherTotalFeeCustomize1Name.Text = fee.OtherTotalFeeCustomize1Name;
                     txt_OtherTotalFeeCustomize2Name.Text = fee.OtherTotalFeeCustomize2Name;
                     txt_OtherTotalFeeCustomize3Name.Text = fee.OtherTotalFeeCustomize3Name;
@@ -338,13 +365,21 @@ namespace LawtechPTSystem.ReportView
                     txt_TMoney.Text = fee.TMoney.ToString();
 
                     //總合計
-                    numericUpDown_Totall.Value=fee.TotalNT.HasValue? fee.TotalNT.Value : 0;
-                   
+                    numericUpDown_Totall.Value = fee.TotalNT.HasValue ? fee.TotalNT.Value : 0;
+
+                    //入帳公司
+                    if (fee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = fee.AcountingFirmKey;
+                    }
+
+                    #endregion
                     break;
                 case 2:
+                    #region 商標
                     Public.CTrademarkManagement Tm = new Public.CTrademarkManagement();
                     Public.CTrademarkManagement.ReadOne(iPatentID, ref Tm);
-                  
+
 
                     if (Tm.DelegateType == 1)//申請人直接委託
                     {
@@ -362,7 +397,7 @@ namespace LawtechPTSystem.ReportView
                             string strLiaisoner = "";
                             if (dtLiaisoner.Rows.Count > 0)
                             {
-                                strLiaisoner = dtLiaisoner.Rows[0]["LiaisonerName"].ToString() +" "+ dtLiaisoner.Rows[0]["Gender"].ToString(); 
+                                strLiaisoner = dtLiaisoner.Rows[0]["LiaisonerName"].ToString() + " " + dtLiaisoner.Rows[0]["Gender"].ToString();
                             }
 
                             txt_Address.Text = app[0].ContactAddr;
@@ -375,12 +410,12 @@ namespace LawtechPTSystem.ReportView
                         if (Tm.OutsourcingAttorney != -1)
                         {
                             Public.CAttorney attorney = new Public.CAttorney();
-                            if(Tm.OutsourcingAttorney.HasValue){
-                            Public.CAttorney.ReadOne(Tm.OutsourcingAttorney.Value, ref attorney);
-                          
-                            txt_ApplicantName.Text = attorney.AttorneyFirm;
-                            txt_Address.Text = attorney.Addr;
-                            
+                            if (Tm.OutsourcingAttorney.HasValue) {
+                                Public.CAttorney.ReadOne(Tm.OutsourcingAttorney.Value, ref attorney);
+
+                                txt_ApplicantName.Text = attorney.AttorneyFirm;
+                                txt_Address.Text = attorney.Addr;
+
                             }
                         }
                     }
@@ -453,19 +488,26 @@ namespace LawtechPTSystem.ReportView
                     //總合計
                     numericUpDown_Totall.Value = TMfee.TotalNT.HasValue ? TMfee.TotalNT.Value : 0;
 
+                    //入帳公司
+                    if (TMfee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = TMfee.AcountingFirmKey;
+                    }
+                    #endregion
+
                     break;
             }
 
             FeeTableAdd();
             RefashionData();
-            
+
         }
 
         public string GetCountryName(string Country)
         {
             string strSQL = string.Format("select Country from CountryT where CountrySymbol='{0}'", Country);
             Public.DLL dll = new Public.DLL();
-            object obj=dll.SQLexecuteScalar(strSQL);
+            object obj = dll.SQLexecuteScalar(strSQL);
             if (obj != null)
             {
                 return obj.ToString();
@@ -506,7 +548,7 @@ namespace LawtechPTSystem.ReportView
 
             ReportParameter Phone = new ReportParameter("Report_LiaisonerName", txt_LiaisonerName.Text);
             Params.Add(Phone);
-              
+
             ReportParameter PPP = new ReportParameter("Report_PPP", txt_PPP.Text);
             Params.Add(PPP);
 
@@ -552,7 +594,7 @@ namespace LawtechPTSystem.ReportView
             //超頁費
             ReportParameter Report_txtOthFee = new ReportParameter("Report_txtOthFee", txt_OtherTotalFeeCustomize1Name.Text);
             Params.Add(Report_txtOthFee);
-                      
+
 
             //規費
             ReportParameter GovFee = new ReportParameter("Report_GovFee", numericUpDown_GTotall.Value.ToString("#,##0.##"));
@@ -575,7 +617,7 @@ namespace LawtechPTSystem.ReportView
             ReportParameter tax = new ReportParameter("Report_Tax", numericUpDown_TaxPercent.Value.ToString("#,##0.##"));
             Params.Add(tax);
 
-           
+
             //付款說明
             ReportParameter PaymentInstructions = new ReportParameter("Report_PaymentInstructions", txt_PaymentInstructions.Text);
             Params.Add(PaymentInstructions);
@@ -590,14 +632,33 @@ namespace LawtechPTSystem.ReportView
 
             ReportParameter PracticalityPay1 = new ReportParameter("Report_PracticalityPay1", textBox1.Text);
             Params.Add(PracticalityPay1);
-          
+
             try
             {
                 string reportPath = "";
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                switch (comboBox_AcountingFirmT.SelectedValue)
                 {
-                    reportPath = Properties.Settings.Default.QuotationLogo;
+                    case 0:
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        if (!string.IsNullOrEmpty(firm.LogoUrl))
+                        {
+                            reportPath = firm.LogoUrl;
+                        }
+                        else
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
                 }
+
                 ReportParameter rpLogoPath = new ReportParameter("ReportLogoPath", reportPath);
                 Params.Add(rpLogoPath);
 
@@ -635,58 +696,89 @@ namespace LawtechPTSystem.ReportView
         private void numericUpDown_GTotall_ValueChanged(object sender, EventArgs e)
         {
 
-           //decimal total= numericUpDown_IAttorneyFee.Value + numericUpDown_OtherTotalFeeCustomize1.Value + numericUpDown_OtherTotalFeeCustomize2.Value + numericUpDown_OtherTotalFeeCustomize3.Value;
-           // txt_OtherTotalFeeInSide.Text = total.ToString("#,##0.##");
-            
-           // decimal IAttorneyFee = 0;
-           // decimal OthFee = 0;
-           // decimal OtherTotalFeeCustomize2 = 0;
-           // decimal OtherTotalFeeCustomize3 = 0;
+            //decimal total= numericUpDown_IAttorneyFee.Value + numericUpDown_OtherTotalFeeCustomize1.Value + numericUpDown_OtherTotalFeeCustomize2.Value + numericUpDown_OtherTotalFeeCustomize3.Value;
+            // txt_OtherTotalFeeInSide.Text = total.ToString("#,##0.##");
 
-           // if (numericUpDown_TaxPercent.Value != 0)
-           // {
-           //     IAttorneyFee = numericUpDown_IAttorneyFee.Value - numericUpDown_IAttorneyFee.Value * numericUpDown_TaxPercent.Value / 100;
-           //     OthFee = numericUpDown_OtherTotalFeeCustomize1.Value - numericUpDown_OtherTotalFeeCustomize1.Value * numericUpDown_TaxPercent.Value / 100;
-           //     OtherTotalFeeCustomize2 = numericUpDown_OtherTotalFeeCustomize2.Value - numericUpDown_OtherTotalFeeCustomize2.Value * numericUpDown_TaxPercent.Value / 100;
-           //     OtherTotalFeeCustomize3 = numericUpDown_OtherTotalFeeCustomize3.Value - numericUpDown_OtherTotalFeeCustomize3.Value * numericUpDown_TaxPercent.Value / 100;
-           // }
-           // else {
-           //     IAttorneyFee = numericUpDown_IAttorneyFee.Value;
-           //     OthFee = numericUpDown_OtherTotalFeeCustomize1.Value;
-           //     OtherTotalFeeCustomize2 = numericUpDown_OtherTotalFeeCustomize2.Value;
-           //     OtherTotalFeeCustomize3 = numericUpDown_OtherTotalFeeCustomize3.Value;
-           // }
-           // numericUpDown_Totall.Value = IAttorneyFee + OthFee + OtherTotalFeeCustomize2 + OtherTotalFeeCustomize3+ numericUpDown_GTotall.Value + numericUpDown_OAttorneyGovFee.Value+ numericUpDown_OthFee.Value+ numericUpDown_CustomizeOthFee.Value;
+            // decimal IAttorneyFee = 0;
+            // decimal OthFee = 0;
+            // decimal OtherTotalFeeCustomize2 = 0;
+            // decimal OtherTotalFeeCustomize3 = 0;
 
-           // Public.DLL dll = new Public.DLL();
-           // string strPracticalityPay1 = dll.convertMoneyString(numericUpDown_Totall.Text);
-           // textBox1.Text = strPracticalityPay1.Replace("零", " ");
+            // if (numericUpDown_TaxPercent.Value != 0)
+            // {
+            //     IAttorneyFee = numericUpDown_IAttorneyFee.Value - numericUpDown_IAttorneyFee.Value * numericUpDown_TaxPercent.Value / 100;
+            //     OthFee = numericUpDown_OtherTotalFeeCustomize1.Value - numericUpDown_OtherTotalFeeCustomize1.Value * numericUpDown_TaxPercent.Value / 100;
+            //     OtherTotalFeeCustomize2 = numericUpDown_OtherTotalFeeCustomize2.Value - numericUpDown_OtherTotalFeeCustomize2.Value * numericUpDown_TaxPercent.Value / 100;
+            //     OtherTotalFeeCustomize3 = numericUpDown_OtherTotalFeeCustomize3.Value - numericUpDown_OtherTotalFeeCustomize3.Value * numericUpDown_TaxPercent.Value / 100;
+            // }
+            // else {
+            //     IAttorneyFee = numericUpDown_IAttorneyFee.Value;
+            //     OthFee = numericUpDown_OtherTotalFeeCustomize1.Value;
+            //     OtherTotalFeeCustomize2 = numericUpDown_OtherTotalFeeCustomize2.Value;
+            //     OtherTotalFeeCustomize3 = numericUpDown_OtherTotalFeeCustomize3.Value;
+            // }
+            // numericUpDown_Totall.Value = IAttorneyFee + OthFee + OtherTotalFeeCustomize2 + OtherTotalFeeCustomize3+ numericUpDown_GTotall.Value + numericUpDown_OAttorneyGovFee.Value+ numericUpDown_OthFee.Value+ numericUpDown_CustomizeOthFee.Value;
+
+            // Public.DLL dll = new Public.DLL();
+            // string strPracticalityPay1 = dll.convertMoneyString(numericUpDown_Totall.Text);
+            // textBox1.Text = strPracticalityPay1.Replace("零", " ");
         }
 
+        /// <summary>
+        /// 儲存綠字按鈕
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_SaveText_Click(object sender, EventArgs e)
         {
             try
             {
-                string strTextFee = string.Format("{0}§{1}§{2}",
-                 
-                    txt_PaymentInstructions.Text,
-                    txt_Footer.Text,                    
-                    txt_Footer1.Text);
+                object obj = new object();
 
-                Public.CStatueRecordT cs = new Public.CStatueRecordT();
-                Public.CStatueRecordT.ReadOne("StatusName='FeeReport' ", ref cs);
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
 
-                cs.Value = strTextFee;
-                cs.Update();
+                    case 0:
+                        string strTextFee = string.Format("{0}§{1}§{2}",
 
-                MessageBox.Show(string.Format("儲存靜態文字成功 : {0} , {1} " ,                     
-                 "付款說明","頁尾"));
+                            txt_PaymentInstructions.Text,
+                            txt_Footer.Text,
+                            txt_Footer1.Text);
+
+                        Public.CStatueRecordT cs = new Public.CStatueRecordT();
+                        Public.CStatueRecordT.ReadOne("StatusName='FeeReport' ", ref cs);
+
+                        cs.Value = strTextFee;
+                        cs.Update();
+
+                        MessageBox.Show(string.Format("儲存靜態文字成功 : {0} , {1} ",
+                         "付款說明", "頁尾"));
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        firm.Fee_PaymentInstructions = txt_PaymentInstructions.Text;
+                        firm.Fee_Footer = txt_Footer.Text;
+                        firm.Fee_Footer1 = txt_Footer1.Text;
+                        obj = firm.Update();
+                        if (obj.ToString() == "0")
+                        {
+                            MessageBox.Show("儲存成功", "提示訊息");
+                        }
+                        else
+                        {
+                            MessageBox.Show("儲存失敗" + obj.ToString(), "提示訊息");
+                        }
+                        break;
+                }
             }
             catch (SystemException EX)
             {
-                MessageBox.Show("儲存失敗:"+EX.Message);
+                MessageBox.Show("儲存失敗:" + EX.Message);
             }
         }
+    
 
         private void numericUpDown_Totall_ValueChanged(object sender, EventArgs e)
         {
@@ -728,5 +820,42 @@ namespace LawtechPTSystem.ReportView
             //    numericUpDown_tax.Value = 0;
             //}
         }
+
+        private void comboBox_AcountingFirmT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_AcountingFirmT.SelectedValue != null)
+            {
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
+                    case 0:
+                        #region 取得靜態文字預設值
+                        Public.CStatueRecordT cs = new Public.CStatueRecordT();
+                        Public.CStatueRecordT.ReadOne("StatusName='FeeReport' ", ref cs);
+                        if (cs.Value != null && cs.Value.Length > 0)
+                        {
+                            string[] str = cs.Value.Split('§');
+                            if (str.Length == 3)
+                            {
+                                txt_PaymentInstructions.Text = str[0];
+                                txt_Footer.Text = str[1];
+                                txt_Footer1.Text = str[2];
+                            }
+                        }
+                        #endregion
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        txt_PaymentInstructions.Text = firm.Fee_PaymentInstructions;
+                        txt_Footer.Text = firm.Fee_Footer;
+                        txt_Footer1.Text = firm.Fee_Footer1;
+                        break;
+                }
+            }
+        }
+
+
+
     }
 }

@@ -29,8 +29,11 @@ namespace LawtechPTSystem.ReportView
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FeeReceiptReport));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.comboBox_AcountingFirmT = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Footer = new System.Windows.Forms.TextBox();
             this.txt_Footer1 = new System.Windows.Forms.TextBox();
@@ -91,6 +94,8 @@ namespace LawtechPTSystem.ReportView
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.comboBox_AcountingFirmT);
+            this.splitContainer1.Panel2.Controls.Add(this.label25);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.txt_ApplicantName);
             this.splitContainer1.Panel2.Controls.Add(this.lab_AttorneyName);
@@ -124,9 +129,32 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LawtechPTSystem.Report.FeeReceiptReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(492, 727);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
+            // 
+            // comboBox_AcountingFirmT
+            // 
+            this.comboBox_AcountingFirmT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_AcountingFirmT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_AcountingFirmT.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
+            this.comboBox_AcountingFirmT.FormattingEnabled = true;
+            this.comboBox_AcountingFirmT.Location = new System.Drawing.Point(103, 11);
+            this.comboBox_AcountingFirmT.Name = "comboBox_AcountingFirmT";
+            this.comboBox_AcountingFirmT.Size = new System.Drawing.Size(268, 25);
+            this.comboBox_AcountingFirmT.TabIndex = 1133;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
+            this.label25.Location = new System.Drawing.Point(34, 15);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(73, 17);
+            this.label25.TabIndex = 1132;
+            this.label25.Text = "開立公司：";
             // 
             // panel1
             // 
@@ -153,8 +181,8 @@ namespace LawtechPTSystem.ReportView
             this.txt_Footer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_Footer.Size = new System.Drawing.Size(266, 39);
             this.txt_Footer.TabIndex = 342;
-            this.txt_Footer.Text = "育晟國際專利商標事務所   地址：105臺北市松山區光復南路22巷38號1樓 統一編號：48861442\r\n                           " +
-    "                    TEL：(02)2578-2711         FAX：(02)2578-5432";
+            this.txt_Footer.Text = "柏豐國際專利商標事務所   地址：105臺北市松山區光復南路 統一編號：4xxx14123\r\n                                  " +
+    "             TEL：(02)2578-3311         FAX：(02)2578-1234";
             // 
             // txt_Footer1
             // 
@@ -177,7 +205,7 @@ namespace LawtechPTSystem.ReportView
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_ApplicantName.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.txt_ApplicantName.ForeColor = System.Drawing.Color.Black;
-            this.txt_ApplicantName.Location = new System.Drawing.Point(103, 363);
+            this.txt_ApplicantName.Location = new System.Drawing.Point(103, 394);
             this.txt_ApplicantName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_ApplicantName.Name = "txt_ApplicantName";
             this.txt_ApplicantName.Size = new System.Drawing.Size(268, 25);
@@ -187,7 +215,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.lab_AttorneyName.AutoSize = true;
             this.lab_AttorneyName.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.lab_AttorneyName.Location = new System.Drawing.Point(38, 367);
+            this.lab_AttorneyName.Location = new System.Drawing.Point(38, 398);
             this.lab_AttorneyName.Name = "lab_AttorneyName";
             this.lab_AttorneyName.Size = new System.Drawing.Size(64, 18);
             this.lab_AttorneyName.TabIndex = 348;
@@ -203,7 +231,7 @@ namespace LawtechPTSystem.ReportView
             0,
             0,
             0});
-            this.numericUpDown_OAttorneyGovFee.Location = new System.Drawing.Point(103, 336);
+            this.numericUpDown_OAttorneyGovFee.Location = new System.Drawing.Point(103, 367);
             this.numericUpDown_OAttorneyGovFee.Margin = new System.Windows.Forms.Padding(1);
             this.numericUpDown_OAttorneyGovFee.Maximum = new decimal(new int[] {
             9999999,
@@ -218,7 +246,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label1.Location = new System.Drawing.Point(-4, 338);
+            this.label1.Location = new System.Drawing.Point(-4, 369);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 18);
             this.label1.TabIndex = 346;
@@ -286,7 +314,7 @@ namespace LawtechPTSystem.ReportView
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
-            this.groupBox2.Location = new System.Drawing.Point(9, 11);
+            this.groupBox2.Location = new System.Drawing.Point(9, 42);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(370, 186);
             this.groupBox2.TabIndex = 312;
@@ -423,7 +451,7 @@ namespace LawtechPTSystem.ReportView
             this.txt_PPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_PPP.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
-            this.txt_PPP.Location = new System.Drawing.Point(103, 201);
+            this.txt_PPP.Location = new System.Drawing.Point(103, 232);
             this.txt_PPP.Margin = new System.Windows.Forms.Padding(1);
             this.txt_PPP.Name = "txt_PPP";
             this.txt_PPP.Size = new System.Drawing.Size(268, 25);
@@ -436,11 +464,11 @@ namespace LawtechPTSystem.ReportView
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_PaymentInstructions.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.txt_PaymentInstructions.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txt_PaymentInstructions.Location = new System.Drawing.Point(103, 390);
+            this.txt_PaymentInstructions.Location = new System.Drawing.Point(103, 422);
             this.txt_PaymentInstructions.Margin = new System.Windows.Forms.Padding(1);
             this.txt_PaymentInstructions.Multiline = true;
             this.txt_PaymentInstructions.Name = "txt_PaymentInstructions";
-            this.txt_PaymentInstructions.Size = new System.Drawing.Size(268, 197);
+            this.txt_PaymentInstructions.Size = new System.Drawing.Size(268, 165);
             this.txt_PaymentInstructions.TabIndex = 317;
             // 
             // txt_AttorneyRefNo
@@ -448,7 +476,7 @@ namespace LawtechPTSystem.ReportView
             this.txt_AttorneyRefNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_AttorneyRefNo.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
-            this.txt_AttorneyRefNo.Location = new System.Drawing.Point(103, 255);
+            this.txt_AttorneyRefNo.Location = new System.Drawing.Point(103, 286);
             this.txt_AttorneyRefNo.Margin = new System.Windows.Forms.Padding(1);
             this.txt_AttorneyRefNo.Name = "txt_AttorneyRefNo";
             this.txt_AttorneyRefNo.Size = new System.Drawing.Size(268, 25);
@@ -464,7 +492,7 @@ namespace LawtechPTSystem.ReportView
             0,
             0,
             0});
-            this.numericUpDown_OthTotal.Location = new System.Drawing.Point(103, 309);
+            this.numericUpDown_OthTotal.Location = new System.Drawing.Point(103, 340);
             this.numericUpDown_OthTotal.Margin = new System.Windows.Forms.Padding(1);
             this.numericUpDown_OthTotal.Maximum = new decimal(new int[] {
             9999999,
@@ -480,7 +508,7 @@ namespace LawtechPTSystem.ReportView
             this.txt_PatentNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_PatentNo.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
-            this.txt_PatentNo.Location = new System.Drawing.Point(103, 282);
+            this.txt_PatentNo.Location = new System.Drawing.Point(103, 313);
             this.txt_PatentNo.Margin = new System.Windows.Forms.Padding(1);
             this.txt_PatentNo.Name = "txt_PatentNo";
             this.txt_PatentNo.Size = new System.Drawing.Size(268, 25);
@@ -494,7 +522,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_RDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.maskedTextBox_RDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_RDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_RDate.Location = new System.Drawing.Point(103, 228);
+            this.maskedTextBox_RDate.Location = new System.Drawing.Point(103, 259);
             this.maskedTextBox_RDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_RDate.Mask = "0000/00/00";
             this.maskedTextBox_RDate.Name = "maskedTextBox_RDate";
@@ -517,7 +545,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label19.Location = new System.Drawing.Point(52, 422);
+            this.label19.Location = new System.Drawing.Point(49, 481);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(50, 18);
             this.label19.TabIndex = 336;
@@ -527,7 +555,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label3.Location = new System.Drawing.Point(24, 205);
+            this.label3.Location = new System.Drawing.Point(24, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 5;
@@ -537,7 +565,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label4.Location = new System.Drawing.Point(24, 233);
+            this.label4.Location = new System.Drawing.Point(24, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 18);
             this.label4.TabIndex = 7;
@@ -547,7 +575,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label5.Location = new System.Drawing.Point(24, 260);
+            this.label5.Location = new System.Drawing.Point(24, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 18);
             this.label5.TabIndex = 9;
@@ -557,7 +585,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label6.Location = new System.Drawing.Point(24, 284);
+            this.label6.Location = new System.Drawing.Point(24, 315);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 18);
             this.label6.TabIndex = 11;
@@ -567,7 +595,7 @@ namespace LawtechPTSystem.ReportView
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label17.Location = new System.Drawing.Point(38, 312);
+            this.label17.Location = new System.Drawing.Point(38, 343);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 18);
             this.label17.TabIndex = 315;
@@ -579,6 +607,7 @@ namespace LawtechPTSystem.ReportView
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(236)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(882, 729);
             this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FeeReceiptReport";
             this.Text = "印收據";
             this.Load += new System.EventHandler(this.FeeReceiptReport_Load);
@@ -637,5 +666,7 @@ namespace LawtechPTSystem.ReportView
         private System.Windows.Forms.Label lab_AttorneyName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_Footer1;
+        private System.Windows.Forms.ComboBox comboBox_AcountingFirmT;
+        private System.Windows.Forms.Label label25;
     }
 }

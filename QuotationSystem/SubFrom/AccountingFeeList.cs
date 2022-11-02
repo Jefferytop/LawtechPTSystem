@@ -48,6 +48,9 @@ namespace LawtechPTSystem.SubFrom
             {
                 return (DataTable)bSource_Control.DataSource;
             }
+            set {
+                bSource_Control.DataSource = value;
+            }
         }
 
         /// <summary>
@@ -221,7 +224,7 @@ namespace LawtechPTSystem.SubFrom
         {
             if (radioButton_All.Checked)//全部
             {
-                System.Data.DataTable dt_PatentFee = GetFeeEvent(strWhere);
+                DataTable dt_PatentFee = GetFeeEvent(strWhere);
 
                 if (dt_PatentFee.Rows.Count > 0)
                 {
@@ -266,7 +269,16 @@ namespace LawtechPTSystem.SubFrom
             System.Data.DataSet dsFeeEvent = new System.Data.DataSet();
            dsFeeEvent= dll.SqlDataAdapterDataSet(strPatentFeeSQL);
 
-           if (dsFeeEvent.Tables[1].Rows.Count > 0)
+
+            #region 設定 PrimaryKey --FeeKey
+            if (dsFeeEvent.Tables[0].PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dsFeeEvent.Tables[0].Columns["FeeKey"] };
+                dsFeeEvent.Tables[0].PrimaryKey = pk;
+            } 
+            #endregion
+
+            if (dsFeeEvent.Tables[1].Rows.Count > 0)
            {
                lab_PatSumTotal.Text = dsFeeEvent.Tables[1].Rows[0]["SumTotall"] != DBNull.Value ? ((decimal)dsFeeEvent.Tables[1].Rows[0]["SumTotall"]).ToString("#,##0.##") : "0";
                lab_PatSumTax.Text = dsFeeEvent.Tables[1].Rows[0]["SumTax"] != DBNull.Value ? ((decimal)dsFeeEvent.Tables[1].Rows[0]["SumTax"]).ToString("#,##0.##") : "0";
@@ -297,7 +309,15 @@ namespace LawtechPTSystem.SubFrom
             System.Data.DataSet dsFeeEvent = new System.Data.DataSet();
           dsFeeEvent=  dll.SqlDataAdapterDataSet(strPatentFeeSQL);
 
-          if (dsFeeEvent.Tables[1].Rows.Count > 0)
+            #region 設定 PrimaryKey --FeeKey
+            if (dsFeeEvent.Tables[0].PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dsFeeEvent.Tables[0].Columns["FeeKey"] };
+                dsFeeEvent.Tables[0].PrimaryKey = pk;
+            }
+            #endregion
+
+            if (dsFeeEvent.Tables[1].Rows.Count > 0)
           {
               lab_TMSumTotal.Text = dsFeeEvent.Tables[1].Rows[0]["SumTotall"] != DBNull.Value ? ((decimal)dsFeeEvent.Tables[1].Rows[0]["SumTotall"]).ToString("#,##0.##") : "0";
               lab_TMSumTax.Text = dsFeeEvent.Tables[1].Rows[0]["SumTax"] != DBNull.Value ? ((decimal)dsFeeEvent.Tables[1].Rows[0]["SumTax"]).ToString("#,##0.##") : "0";

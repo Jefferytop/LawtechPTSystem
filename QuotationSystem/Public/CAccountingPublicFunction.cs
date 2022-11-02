@@ -128,9 +128,9 @@ namespace LawtechPTSystem.Public
         #endregion
 
 
-        #region 取得公司帳戶的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        #region 取得公司銀行帳戶的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
         /// <summary>
-        /// 取得公司帳戶的資料
+        /// 取得公司銀行帳戶的資料
         /// </summary>
         /// <param name="strAcountingFirmKey"></param>
         /// <param name="dtSource"></param>
@@ -152,9 +152,9 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
-        #region 取得公司帳戶的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        #region 取得公司銀行帳戶的資料   public static void GetAcountingFirmDetailDropDownTList(string strAcountingFirmKey, ref DataTable dtSource)
         /// <summary>
-        /// 取得公司帳戶的資料
+        /// 取得公司銀行帳戶的資料
         /// </summary>
         /// <param name="strAcountingFirmKey"></param>
         /// <param name="dtSource"></param>
@@ -176,7 +176,55 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
+        #region 取得專利請款的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        /// <summary>
+        /// 帳務管理--應請款項清單表  專利請款
+        /// </summary>
+        /// <param name="strFeeKey"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static DataRow GetAccountingFeeListPatentDataRow(string strFeeKey)
+        {
+            string strSQL = string.Format(@"SELECT   PatentID AS MainKey,PatentNo as 'EventNo', * from V_PATControlFeeList with(nolock)  where FeeKey={0}", strFeeKey);
 
+            DBAccess dbhelper = new DBAccess();
+            DataTable dtSource = new DataTable();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+            if (dtSource.Rows.Count == 1)
+            {
+                return dtSource.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region 取得商標請款的資料   public static void GetAcountingFirmDetailTList(string strAcountingFirmKey, ref DataTable dtSource)
+        /// <summary>
+        /// 帳務管理--應請款項清單表  商標請款
+        /// </summary>
+        /// <param name="strFeeKey"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static DataRow GetAccountingFeeListTrademarkDataRow(string strFeeKey)
+        {
+            string strSQL = string.Format(@"SELECT      TrademarkID AS MainKey,TrademarkNo as 'EventNo',TrademarkName as Title, *   FROM    V_TrademarkControlFeeList  with(nolock)  where FeeKey={0}", strFeeKey);
+
+            DBAccess dbhelper = new DBAccess();
+            DataTable dtSource = new DataTable();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+            if (dtSource.Rows.Count == 1)
+            {
+                return dtSource.Rows[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        #endregion
 
         #region GetPATControlPayment 取得專利付款的資料  public System.Data.DataSet GetPATControlPayment(string strWhere)
         /// <summary>

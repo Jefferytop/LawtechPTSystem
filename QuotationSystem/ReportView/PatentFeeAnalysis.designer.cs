@@ -29,6 +29,7 @@ namespace LawtechPTSystem.ReportView
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatentFeeAnalysis));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.but_Close = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,6 +46,7 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.Location = new System.Drawing.Point(1, 1);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.PromptAreaCollapsed = true;
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.ShowContextMenu = false;
             this.reportViewer1.Size = new System.Drawing.Size(914, 742);
             this.reportViewer1.TabIndex = 1;
@@ -70,6 +72,7 @@ namespace LawtechPTSystem.ReportView
             this.Controls.Add(this.but_Close);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PatentFeeAnalysis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "專利費用統計";

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 
 namespace LawtechPTSystem.ReportView
@@ -53,6 +54,19 @@ namespace LawtechPTSystem.ReportView
             set { iApplicantName = value; }
         }
 
+        private DataTable dt_AcountingFirmT = new DataTable();
+        /// <summary>
+        /// 入帳公司資料
+        /// </summary>
+        public DataTable AcountingFirmT
+        {
+            get { return dt_AcountingFirmT; }
+            set
+            {
+                dt_AcountingFirmT = value;
+            }
+        }
+
         private void FeeReceiptReport_Load(object sender, EventArgs e)
         {
             #region 取得靜態文字預設值
@@ -68,6 +82,19 @@ namespace LawtechPTSystem.ReportView
                     txt_Footer1.Text = str[2];
                 }
             }
+            #endregion
+
+            #region 取得入帳公司資料
+            Public.CAccountingPublicFunction.GetAcountingFirmTDropDownList(ref dt_AcountingFirmT);
+            DataRow drN = dt_AcountingFirmT.NewRow();
+            drN["AcountingFirmKey"] = 0;
+            drN["AcountingFirmName"] = "預設值";
+            dt_AcountingFirmT.Rows.InsertAt(drN, 0);
+            comboBox_AcountingFirmT.DataSource = dt_AcountingFirmT;
+            comboBox_AcountingFirmT.DisplayMember = "AcountingFirmName";
+            comboBox_AcountingFirmT.ValueMember = "AcountingFirmKey";
+
+            this.comboBox_AcountingFirmT.SelectedIndexChanged += new System.EventHandler(this.comboBox_AcountingFirmT_SelectedIndexChanged);
             #endregion
 
             //以列印模式顯示
@@ -117,6 +144,13 @@ namespace LawtechPTSystem.ReportView
 
                     //代收代付合計NT
                     numericUpDown_OAttorneyGovFee.Value = fee.OAttorneyGovFee.HasValue?fee.OAttorneyGovFee.Value:0;
+
+                    //入帳公司
+                    if (fee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = fee.AcountingFirmKey;
+                    }
+
                     break;
                 case 2:  //商標
                     Public.CTrademarkManagement Tm = new Public.CTrademarkManagement();
@@ -156,6 +190,12 @@ namespace LawtechPTSystem.ReportView
 
                     //代收代付合計NT
                     numericUpDown_OAttorneyGovFee.Value = TMfee.OAttorneyGovFee.HasValue ? TMfee.OAttorneyGovFee.Value : 0;
+
+                    //入帳公司
+                    if (TMfee.AcountingFirmKey.HasValue)
+                    {
+                        comboBox_AcountingFirmT.SelectedValue = TMfee.AcountingFirmKey;
+                    }
 
                     break;
             }
@@ -256,10 +296,29 @@ namespace LawtechPTSystem.ReportView
             try
             {
                 string reportPath = "";
-                if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                switch (comboBox_AcountingFirmT.SelectedValue)
                 {
-                    reportPath = Properties.Settings.Default.QuotationLogo;
+                    case 0:
+                        if (!string.IsNullOrEmpty(Properties.Settings.Default.QuotationLogo))
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        if (!string.IsNullOrEmpty(firm.LogoUrl))
+                        {
+                            reportPath = firm.LogoUrl;
+                        }
+                        else
+                        {
+                            reportPath = Properties.Settings.Default.QuotationLogo;
+                        }
+                        break;
                 }
+
                 ReportParameter rpLogoPath = new ReportParameter("ReportLogoPath", reportPath);
                 Params.Add(rpLogoPath);
 
@@ -280,23 +339,53 @@ namespace LawtechPTSystem.ReportView
             this.Close();
         }
 
+        /// <summary>
+        /// 儲存綠字按鈕
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_SaveText_Click(object sender, EventArgs e)
         {
             try
             {
-                string strTextFee = string.Format("{0}§{1}§{2}",                     
+                object obj = new object();
+
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
+
+                    case 0:
+                        string strTextFee = string.Format("{0}§{1}§{2}",
                     txt_PaymentInstructions.Text,
-                    txt_Footer.Text ,
+                    txt_Footer.Text,
                       txt_Footer1.Text);
 
-                Public.CStatueRecordT cs = new Public.CStatueRecordT();
-                Public.CStatueRecordT.ReadOne("StatusName='FeeReceiptReport' ", ref cs);
+                        Public.CStatueRecordT cs = new Public.CStatueRecordT();
+                        Public.CStatueRecordT.ReadOne("StatusName='FeeReceiptReport' ", ref cs);
 
-                cs.Value = strTextFee;
-                cs.Update();
+                        cs.Value = strTextFee;
+                        cs.Update();
 
-                MessageBox.Show(string.Format("儲存靜態文字成功 : {0} , {1} ",
-                   "備註", "頁尾"));
+                        MessageBox.Show(string.Format("儲存靜態文字成功 : {0} , {1} ",
+                           "備註", "頁尾"));
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        firm.Receipt_PaymentInstructions = txt_PaymentInstructions.Text;
+                        firm.Receipt_Footer = txt_Footer.Text;
+                        firm.Receipt_Footer1 = txt_Footer1.Text;
+                        obj=firm.Update();
+                        if (obj.ToString() == "0")
+                        {
+                            MessageBox.Show("儲存成功", "提示訊息");
+                        }
+                        else
+                        {
+                            MessageBox.Show("儲存失敗" + obj.ToString(), "提示訊息");
+                        }
+                        break;
+                }
             }
             catch (SystemException EX)
             {
@@ -308,5 +397,42 @@ namespace LawtechPTSystem.ReportView
         {
             RefashionData();
         }
+
+        private void comboBox_AcountingFirmT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_AcountingFirmT.SelectedValue != null)
+            {
+                switch ((int)comboBox_AcountingFirmT.SelectedValue)
+                {
+                    case 0:
+                        #region 取得靜態文字預設值
+                        Public.CStatueRecordT cs = new Public.CStatueRecordT();
+                        Public.CStatueRecordT.ReadOne("StatusName='FeeReport' ", ref cs);
+                        if (cs.Value != null && cs.Value.Length > 0)
+                        {
+                            string[] str = cs.Value.Split('§');
+                            if (str.Length == 3)
+                            {
+                                txt_PaymentInstructions.Text = str[0];
+                                txt_Footer.Text = str[1];
+                                txt_Footer1.Text = str[2];
+                            }
+                        }
+                        #endregion
+                        break;
+                    default:
+                        int iKey = (int)comboBox_AcountingFirmT.SelectedValue;
+                        Public.CAcountingFirmT firm = new Public.CAcountingFirmT();
+                        Public.CAcountingFirmT.ReadOne(iKey, ref firm);
+                        txt_PaymentInstructions.Text = firm.Receipt_PaymentInstructions;
+                        txt_Footer.Text = firm.Receipt_Footer;
+                        txt_Footer1.Text = firm.Receipt_Footer1;
+                        break;
+                }
+            }
+        }
+
+
+
     }
 }

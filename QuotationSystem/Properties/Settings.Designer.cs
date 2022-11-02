@@ -577,9 +577,9 @@ namespace LawtechPTSystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("hH2gFIQbMmwvKqMDXx1OUZlfmAHoKyr1AyrNcvI9LsMXNRhdIfVqfZmQQOiPdwmXqBg/nxP5a/fHOPfc8" +
-            "bvefzlktY4G8TGEAA+tXIRS50EE6jN1vefcxMzK2CfhpR/Olzafz9AAAceFWcK6M8OO+wH00jnqIY/DN" +
-            "IrSD3mXNsKXlcKCAS+J8xqBjhesFIincz94d4yArulkjoASf8Ut9g==")]
+        [global::System.Configuration.DefaultSettingValueAttribute("hH2gFIQbMmyLzs1R8ThFfx61AtUk9FOWrxx8FGUtvauBZ7VogVlCrTm9YPTHbg5WwUtLtFLOT2rzQHThu" +
+            "K8cjGBin1Vr+FiJLe+HHnY5FqCBgXovnyR/q6WAR4+sEEUwAUx6i4M1ypGm8x1QFCrY1o8iG8quaoqIR" +
+            "1QJEWWJ3W/wzjWhn/ZG/b1ChNULnzrae3cNoLJ1scJIE8vKawPySQ==")]
         public string DataBaseConnectionString {
             get {
                 return ((string)(this["DataBaseConnectionString"]));

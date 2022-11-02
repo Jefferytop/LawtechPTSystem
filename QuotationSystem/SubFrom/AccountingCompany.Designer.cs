@@ -30,58 +30,58 @@ namespace LawtechPTSystem.SubFrom
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountingCompany));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountingCompany));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.bindingNavigator_AcountingFirm = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingSource_AcountingFirm = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView_AcountingFirm = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip_AcountingFirm = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView_AcountingFirmDetail = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip_AcountingFirmDetail = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigator_AcountingFirmDetail = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingSource_AcountingFirm = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton_AddApp = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_EditApp = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_DelApp = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton_Orientation = new System.Windows.Forms.ToolStripButton();
             this.but_Update = new System.Windows.Forms.Button();
             this.but_Close = new System.Windows.Forms.Button();
+            this.dataGridView_AcountingFirm = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip_AcountingFirm = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EdittoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem_SetGridColumn = new System.Windows.Forms.ToolStripMenuItem();
             this.tagTitle1 = new LawtechPTSystem.US.TagTitle();
+            this.dataGridView_AcountingFirmDetail = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip_AcountingFirmDetail = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem_AddDetail = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_EditDetail = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_DelDetail = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem_SetDetailGridColumn = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource_AcountingFirmDetail = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigator_AcountingFirmDetail = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton_AddDetail = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_EditDetail = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_DelDetail = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tagTitle2 = new LawtechPTSystem.US.TagTitle();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -89,14 +89,14 @@ namespace LawtechPTSystem.SubFrom
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_AcountingFirm)).BeginInit();
             this.bindingNavigator_AcountingFirm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AcountingFirm)).BeginInit();
             this.contextMenuStrip_AcountingFirm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AcountingFirmDetail)).BeginInit();
             this.contextMenuStrip_AcountingFirmDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_AcountingFirmDetail)).BeginInit();
             this.bindingNavigator_AcountingFirmDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -167,6 +167,24 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripLabel1.Text = "/{0}";
             this.toolStripLabel1.ToolTipText = "項目總數";
             // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "移到最前面";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "移到上一個";
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -187,188 +205,6 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
-            // 
-            // dataGridView_AcountingFirm
-            // 
-            this.dataGridView_AcountingFirm.AllowUserToAddRows = false;
-            this.dataGridView_AcountingFirm.AllowUserToDeleteRows = false;
-            this.dataGridView_AcountingFirm.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView_AcountingFirm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_AcountingFirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_AcountingFirm.AutoGenerateColumns = false;
-            this.dataGridView_AcountingFirm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AcountingFirm.ContextMenuStrip = this.contextMenuStrip_AcountingFirm;
-            this.dataGridView_AcountingFirm.DataSource = this.bindingSource_AcountingFirm;
-            this.dataGridView_AcountingFirm.Location = new System.Drawing.Point(9, 74);
-            this.dataGridView_AcountingFirm.Margin = new System.Windows.Forms.Padding(1);
-            this.dataGridView_AcountingFirm.Name = "dataGridView_AcountingFirm";
-            this.dataGridView_AcountingFirm.ReadOnly = true;
-            this.dataGridView_AcountingFirm.RowTemplate.Height = 24;
-            this.dataGridView_AcountingFirm.Size = new System.Drawing.Size(797, 179);
-            this.dataGridView_AcountingFirm.TabIndex = 1;
-            this.dataGridView_AcountingFirm.Tag = "AcountingFirm";
-            this.dataGridView_AcountingFirm.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AcountingFirm_CellDoubleClick);
-            this.dataGridView_AcountingFirm.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_AcountingFirm_DataError);
-            this.dataGridView_AcountingFirm.SelectionChanged += new System.EventHandler(this.dataGridView_AcountingFirm_SelectionChanged);
-            // 
-            // contextMenuStrip_AcountingFirm
-            // 
-            this.contextMenuStrip_AcountingFirm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddToolStripMenuItem,
-            this.EdittoolStripMenuItem,
-            this.DelToolStripMenuItem,
-            this.toolStripSeparator6,
-            this.toolStripMenuItem_SetGridColumn});
-            this.contextMenuStrip_AcountingFirm.Name = "contextMenuStrip1";
-            this.contextMenuStrip_AcountingFirm.Size = new System.Drawing.Size(147, 98);
-            this.contextMenuStrip_AcountingFirm.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_AcountingFirm_ItemClicked);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(143, 6);
-            // 
-            // dataGridView_AcountingFirmDetail
-            // 
-            this.dataGridView_AcountingFirmDetail.AllowUserToAddRows = false;
-            this.dataGridView_AcountingFirmDetail.AllowUserToDeleteRows = false;
-            this.dataGridView_AcountingFirmDetail.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite;
-            this.dataGridView_AcountingFirmDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_AcountingFirmDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_AcountingFirmDetail.AutoGenerateColumns = false;
-            this.dataGridView_AcountingFirmDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_AcountingFirmDetail.ContextMenuStrip = this.contextMenuStrip_AcountingFirmDetail;
-            this.dataGridView_AcountingFirmDetail.DataSource = this.bindingSource_AcountingFirmDetail;
-            this.dataGridView_AcountingFirmDetail.Location = new System.Drawing.Point(9, 38);
-            this.dataGridView_AcountingFirmDetail.Margin = new System.Windows.Forms.Padding(1);
-            this.dataGridView_AcountingFirmDetail.Name = "dataGridView_AcountingFirmDetail";
-            this.dataGridView_AcountingFirmDetail.ReadOnly = true;
-            this.dataGridView_AcountingFirmDetail.RowTemplate.Height = 24;
-            this.dataGridView_AcountingFirmDetail.Size = new System.Drawing.Size(797, 241);
-            this.dataGridView_AcountingFirmDetail.TabIndex = 2;
-            this.dataGridView_AcountingFirmDetail.Tag = "AcountingFirmDetail";
-            this.dataGridView_AcountingFirmDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AcountingFirmDetail_CellDoubleClick);
-            this.dataGridView_AcountingFirmDetail.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_AcountingFirm_DataError);
-            // 
-            // contextMenuStrip_AcountingFirmDetail
-            // 
-            this.contextMenuStrip_AcountingFirmDetail.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem_AddDetail,
-            this.toolStripMenuItem_EditDetail,
-            this.toolStripMenuItem_DelDetail,
-            this.toolStripSeparator2,
-            this.toolStripMenuItem_SetDetailGridColumn});
-            this.contextMenuStrip_AcountingFirmDetail.Name = "contextMenuStrip1";
-            this.contextMenuStrip_AcountingFirmDetail.Size = new System.Drawing.Size(147, 98);
-            this.contextMenuStrip_AcountingFirmDetail.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_AcountingFirmDetail_ItemClicked);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
-            // 
-            // bindingNavigator_AcountingFirmDetail
-            // 
-            this.bindingNavigator_AcountingFirmDetail.AddNewItem = null;
-            this.bindingNavigator_AcountingFirmDetail.BindingSource = this.bindingSource_AcountingFirmDetail;
-            this.bindingNavigator_AcountingFirmDetail.CountItem = this.bindingNavigatorCountItem1;
-            this.bindingNavigator_AcountingFirmDetail.DeleteItem = null;
-            this.bindingNavigator_AcountingFirmDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator_AcountingFirmDetail.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.toolStripButton_AddDetail,
-            this.toolStripButton_EditDetail,
-            this.toolStripButton_DelDetail,
-            this.toolStripSeparator1});
-            this.bindingNavigator_AcountingFirmDetail.Location = new System.Drawing.Point(0, 282);
-            this.bindingNavigator_AcountingFirmDetail.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-            this.bindingNavigator_AcountingFirmDetail.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-            this.bindingNavigator_AcountingFirmDetail.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-            this.bindingNavigator_AcountingFirmDetail.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.bindingNavigator_AcountingFirmDetail.Name = "bindingNavigator_AcountingFirmDetail";
-            this.bindingNavigator_AcountingFirmDetail.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator_AcountingFirmDetail.Size = new System.Drawing.Size(815, 25);
-            this.bindingNavigator_AcountingFirmDetail.TabIndex = 0;
-            this.bindingNavigator_AcountingFirmDetail.Text = "bindingNavigator2";
-            // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(27, 22);
-            this.bindingNavigatorCountItem1.Text = "/{0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "項目總數";
-            // 
-            // bindingNavigatorSeparator3
-            // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem1
-            // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "位置";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.ToolTipText = "目前的位置";
-            // 
-            // bindingNavigatorSeparator4
-            // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorSeparator5
-            // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "移到最前面";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "移到上一個";
-            // 
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -386,6 +222,11 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton10.Text = "移到最後面";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton_AddApp
             // 
@@ -416,6 +257,11 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_DelApp.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton_DelApp.Tag = "Delete";
             this.toolStripButton_DelApp.Text = "刪除客戶資料";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton_Orientation
             // 
@@ -459,6 +305,45 @@ namespace LawtechPTSystem.SubFrom
             this.but_Close.UseVisualStyleBackColor = true;
             this.but_Close.Click += new System.EventHandler(this.but_Close_Click);
             // 
+            // dataGridView_AcountingFirm
+            // 
+            this.dataGridView_AcountingFirm.AllowUserToAddRows = false;
+            this.dataGridView_AcountingFirm.AllowUserToDeleteRows = false;
+            this.dataGridView_AcountingFirm.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView_AcountingFirm.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_AcountingFirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_AcountingFirm.AutoGenerateColumns = false;
+            this.dataGridView_AcountingFirm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AcountingFirm.ContextMenuStrip = this.contextMenuStrip_AcountingFirm;
+            this.dataGridView_AcountingFirm.DataSource = this.bindingSource_AcountingFirm;
+            this.dataGridView_AcountingFirm.Location = new System.Drawing.Point(9, 74);
+            this.dataGridView_AcountingFirm.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridView_AcountingFirm.Name = "dataGridView_AcountingFirm";
+            this.dataGridView_AcountingFirm.ReadOnly = true;
+            this.dataGridView_AcountingFirm.RowTemplate.Height = 24;
+            this.dataGridView_AcountingFirm.Size = new System.Drawing.Size(797, 179);
+            this.dataGridView_AcountingFirm.TabIndex = 1;
+            this.dataGridView_AcountingFirm.Tag = "AcountingFirm";
+            this.dataGridView_AcountingFirm.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AcountingFirm_CellClick);
+            this.dataGridView_AcountingFirm.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AcountingFirm_CellDoubleClick);
+            this.dataGridView_AcountingFirm.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_AcountingFirm_DataError);
+            this.dataGridView_AcountingFirm.SelectionChanged += new System.EventHandler(this.dataGridView_AcountingFirm_SelectionChanged);
+            // 
+            // contextMenuStrip_AcountingFirm
+            // 
+            this.contextMenuStrip_AcountingFirm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddToolStripMenuItem,
+            this.EdittoolStripMenuItem,
+            this.DelToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.toolStripMenuItem_SetGridColumn});
+            this.contextMenuStrip_AcountingFirm.Name = "contextMenuStrip1";
+            this.contextMenuStrip_AcountingFirm.Size = new System.Drawing.Size(147, 98);
+            this.contextMenuStrip_AcountingFirm.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_AcountingFirm_ItemClicked);
+            // 
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Image = global::LawtechPTSystem.Properties.Resources.Add;
@@ -483,6 +368,11 @@ namespace LawtechPTSystem.SubFrom
             this.DelToolStripMenuItem.Tag = "Delete";
             this.DelToolStripMenuItem.Text = "刪除入帳公司";
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(143, 6);
+            // 
             // toolStripMenuItem_SetGridColumn
             // 
             this.toolStripMenuItem_SetGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
@@ -504,6 +394,43 @@ namespace LawtechPTSystem.SubFrom
             this.tagTitle1.TabIndex = 1056;
             this.tagTitle1.TagTitleStyle = "Style1";
             this.tagTitle1.TitleLableText = "入帳公司列表";
+            // 
+            // dataGridView_AcountingFirmDetail
+            // 
+            this.dataGridView_AcountingFirmDetail.AllowUserToAddRows = false;
+            this.dataGridView_AcountingFirmDetail.AllowUserToDeleteRows = false;
+            this.dataGridView_AcountingFirmDetail.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite;
+            this.dataGridView_AcountingFirmDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_AcountingFirmDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_AcountingFirmDetail.AutoGenerateColumns = false;
+            this.dataGridView_AcountingFirmDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_AcountingFirmDetail.ContextMenuStrip = this.contextMenuStrip_AcountingFirmDetail;
+            this.dataGridView_AcountingFirmDetail.DataSource = this.bindingSource_AcountingFirmDetail;
+            this.dataGridView_AcountingFirmDetail.Location = new System.Drawing.Point(9, 40);
+            this.dataGridView_AcountingFirmDetail.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridView_AcountingFirmDetail.Name = "dataGridView_AcountingFirmDetail";
+            this.dataGridView_AcountingFirmDetail.ReadOnly = true;
+            this.dataGridView_AcountingFirmDetail.RowTemplate.Height = 24;
+            this.dataGridView_AcountingFirmDetail.Size = new System.Drawing.Size(797, 240);
+            this.dataGridView_AcountingFirmDetail.TabIndex = 2;
+            this.dataGridView_AcountingFirmDetail.Tag = "AcountingFirmDetail";
+            this.dataGridView_AcountingFirmDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_AcountingFirmDetail_CellDoubleClick);
+            this.dataGridView_AcountingFirmDetail.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_AcountingFirm_DataError);
+            // 
+            // contextMenuStrip_AcountingFirmDetail
+            // 
+            this.contextMenuStrip_AcountingFirmDetail.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_AddDetail,
+            this.toolStripMenuItem_EditDetail,
+            this.toolStripMenuItem_DelDetail,
+            this.toolStripSeparator2,
+            this.toolStripMenuItem_SetDetailGridColumn});
+            this.contextMenuStrip_AcountingFirmDetail.Name = "contextMenuStrip1";
+            this.contextMenuStrip_AcountingFirmDetail.Size = new System.Drawing.Size(147, 98);
+            this.contextMenuStrip_AcountingFirmDetail.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_AcountingFirmDetail_ItemClicked);
             // 
             // toolStripMenuItem_AddDetail
             // 
@@ -529,12 +456,57 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripMenuItem_DelDetail.Tag = "Delete";
             this.toolStripMenuItem_DelDetail.Text = "刪除公司帳戶";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            // 
             // toolStripMenuItem_SetDetailGridColumn
             // 
             this.toolStripMenuItem_SetDetailGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
             this.toolStripMenuItem_SetDetailGridColumn.Name = "toolStripMenuItem_SetDetailGridColumn";
             this.toolStripMenuItem_SetDetailGridColumn.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem_SetDetailGridColumn.Text = "設定列表欄位";
+            // 
+            // bindingNavigator_AcountingFirmDetail
+            // 
+            this.bindingNavigator_AcountingFirmDetail.AddNewItem = null;
+            this.bindingNavigator_AcountingFirmDetail.BindingSource = this.bindingSource_AcountingFirmDetail;
+            this.bindingNavigator_AcountingFirmDetail.CountItem = this.bindingNavigatorCountItem1;
+            this.bindingNavigator_AcountingFirmDetail.DeleteItem = null;
+            this.bindingNavigator_AcountingFirmDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigator_AcountingFirmDetail.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem1,
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorMoveLastItem1,
+            this.bindingNavigatorSeparator5,
+            this.toolStripButton_AddDetail,
+            this.toolStripButton_EditDetail,
+            this.toolStripButton_DelDetail,
+            this.toolStripSeparator1});
+            this.bindingNavigator_AcountingFirmDetail.Location = new System.Drawing.Point(0, 282);
+            this.bindingNavigator_AcountingFirmDetail.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
+            this.bindingNavigator_AcountingFirmDetail.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.bindingNavigator_AcountingFirmDetail.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.bindingNavigator_AcountingFirmDetail.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.bindingNavigator_AcountingFirmDetail.Name = "bindingNavigator_AcountingFirmDetail";
+            this.bindingNavigator_AcountingFirmDetail.PositionItem = this.bindingNavigatorPositionItem1;
+            this.bindingNavigator_AcountingFirmDetail.Size = new System.Drawing.Size(815, 25);
+            this.bindingNavigator_AcountingFirmDetail.TabIndex = 0;
+            this.bindingNavigator_AcountingFirmDetail.Text = "bindingNavigator2";
+            this.bindingNavigator_AcountingFirmDetail.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_AcountingFirmDetail_ItemClicked);
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(27, 22);
+            this.bindingNavigatorCountItem1.Text = "/{0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "項目總數";
             // 
             // bindingNavigatorMoveFirstItem1
             // 
@@ -554,6 +526,26 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem1.Text = "移到上一個";
             // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "位置";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.ToolTipText = "目前的位置";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
             // bindingNavigatorMoveNextItem1
             // 
             this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -571,6 +563,11 @@ namespace LawtechPTSystem.SubFrom
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem1.Text = "移到最後面";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton_AddDetail
             // 
@@ -602,6 +599,11 @@ namespace LawtechPTSystem.SubFrom
             this.toolStripButton_DelDetail.Tag = "Delete";
             this.toolStripButton_DelDetail.Text = "刪除帳戶";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // tagTitle2
             // 
             this.tagTitle2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -609,7 +611,7 @@ namespace LawtechPTSystem.SubFrom
             this.tagTitle2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tagTitle2.BackgroundImage")));
             this.tagTitle2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tagTitle2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tagTitle2.Location = new System.Drawing.Point(9, 8);
+            this.tagTitle2.Location = new System.Drawing.Point(9, 9);
             this.tagTitle2.Margin = new System.Windows.Forms.Padding(0);
             this.tagTitle2.Name = "tagTitle2";
             this.tagTitle2.Size = new System.Drawing.Size(797, 32);
@@ -638,15 +640,15 @@ namespace LawtechPTSystem.SubFrom
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_AcountingFirm)).EndInit();
             this.bindingNavigator_AcountingFirm.ResumeLayout(false);
             this.bindingNavigator_AcountingFirm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AcountingFirm)).EndInit();
             this.contextMenuStrip_AcountingFirm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_AcountingFirmDetail)).EndInit();
             this.contextMenuStrip_AcountingFirmDetail.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator_AcountingFirmDetail)).EndInit();
             this.bindingNavigator_AcountingFirmDetail.ResumeLayout(false);
             this.bindingNavigator_AcountingFirmDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource_AcountingFirmDetail)).EndInit();
             this.ResumeLayout(false);
 
         }

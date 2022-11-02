@@ -175,7 +175,7 @@
             this.but_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.but_Cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_Cancel.Location = new System.Drawing.Point(321, 661);
+            this.but_Cancel.Location = new System.Drawing.Point(321, 675);
             this.but_Cancel.Margin = new System.Windows.Forms.Padding(1);
             this.but_Cancel.Name = "but_Cancel";
             this.but_Cancel.Size = new System.Drawing.Size(100, 32);
@@ -190,7 +190,7 @@
             this.but_OK.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
             this.but_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_OK.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.but_OK.Location = new System.Drawing.Point(217, 661);
+            this.but_OK.Location = new System.Drawing.Point(217, 675);
             this.but_OK.Margin = new System.Windows.Forms.Padding(1);
             this.but_OK.Name = "but_OK";
             this.but_OK.Size = new System.Drawing.Size(100, 32);
@@ -240,7 +240,7 @@
             this.maskedTextBox_PayDate.BackColor = System.Drawing.Color.White;
             this.maskedTextBox_PayDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PayDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_PayDate.Location = new System.Drawing.Point(366, 525);
+            this.maskedTextBox_PayDate.Location = new System.Drawing.Point(500, 528);
             this.maskedTextBox_PayDate.Mask = "0000/00/00";
             this.maskedTextBox_PayDate.Name = "maskedTextBox_PayDate";
             this.maskedTextBox_PayDate.Size = new System.Drawing.Size(110, 29);
@@ -254,7 +254,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(292, 529);
+            this.label2.Location = new System.Drawing.Point(426, 527);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 1077;
@@ -275,7 +275,7 @@
             this.label82.AutoSize = true;
             this.label82.BackColor = System.Drawing.Color.Transparent;
             this.label82.ForeColor = System.Drawing.Color.Blue;
-            this.label82.Location = new System.Drawing.Point(287, 501);
+            this.label82.Location = new System.Drawing.Point(393, 498);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(57, 20);
             this.label82.TabIndex = 1073;
@@ -288,7 +288,7 @@
             this.checkBox_Pay.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_Pay.ForeColor = System.Drawing.Color.Blue;
             this.checkBox_Pay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.checkBox_Pay.Location = new System.Drawing.Point(345, 504);
+            this.checkBox_Pay.Location = new System.Drawing.Point(451, 501);
             this.checkBox_Pay.Name = "checkBox_Pay";
             this.checkBox_Pay.Size = new System.Drawing.Size(15, 14);
             this.checkBox_Pay.TabIndex = 8;
@@ -298,7 +298,7 @@
             // txt_Remark
             // 
             this.txt_Remark.ImeMode = System.Windows.Forms.ImeMode.Close;
-            this.txt_Remark.Location = new System.Drawing.Point(96, 584);
+            this.txt_Remark.Location = new System.Drawing.Point(96, 588);
             this.txt_Remark.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Remark.Multiline = true;
             this.txt_Remark.Name = "txt_Remark";
@@ -343,7 +343,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(46, 612);
+            this.label3.Location = new System.Drawing.Point(46, 616);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 1083;
@@ -375,7 +375,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(363, 504);
+            this.label4.Location = new System.Drawing.Point(469, 501);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 15);
             this.label4.TabIndex = 1086;
@@ -386,7 +386,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Location = new System.Drawing.Point(474, 657);
+            this.label5.Location = new System.Drawing.Point(474, 661);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 17);
             this.label5.TabIndex = 1087;
@@ -429,7 +429,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 9F);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(93, 527);
+            this.label9.Location = new System.Drawing.Point(241, 506);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 16);
             this.label9.TabIndex = 1092;
@@ -1360,7 +1360,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(22, 558);
+            this.label15.Location = new System.Drawing.Point(22, 532);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 20);
             this.label15.TabIndex = 1170;
@@ -1370,10 +1370,10 @@
             // 
             this.comboBox_AcountingFirmT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_AcountingFirmT.FormattingEnabled = true;
-            this.comboBox_AcountingFirmT.Location = new System.Drawing.Point(96, 554);
+            this.comboBox_AcountingFirmT.Location = new System.Drawing.Point(96, 528);
             this.comboBox_AcountingFirmT.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_AcountingFirmT.Name = "comboBox_AcountingFirmT";
-            this.comboBox_AcountingFirmT.Size = new System.Drawing.Size(189, 28);
+            this.comboBox_AcountingFirmT.Size = new System.Drawing.Size(300, 28);
             this.comboBox_AcountingFirmT.TabIndex = 1171;
             this.comboBox_AcountingFirmT.SelectedIndexChanged += new System.EventHandler(this.comboBox_AcountingFirmT_SelectedIndexChanged);
             // 
@@ -1382,17 +1382,17 @@
             this.comboBox_AcountingFirmDetailT.DataSource = this.bindingSource_AcountingFirmDetailT;
             this.comboBox_AcountingFirmDetailT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_AcountingFirmDetailT.FormattingEnabled = true;
-            this.comboBox_AcountingFirmDetailT.Location = new System.Drawing.Point(366, 554);
+            this.comboBox_AcountingFirmDetailT.Location = new System.Drawing.Point(96, 558);
             this.comboBox_AcountingFirmDetailT.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_AcountingFirmDetailT.Name = "comboBox_AcountingFirmDetailT";
-            this.comboBox_AcountingFirmDetailT.Size = new System.Drawing.Size(249, 28);
+            this.comboBox_AcountingFirmDetailT.Size = new System.Drawing.Size(300, 28);
             this.comboBox_AcountingFirmDetailT.TabIndex = 1173;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(292, 558);
+            this.label16.Location = new System.Drawing.Point(22, 562);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 20);
             this.label16.TabIndex = 1172;
@@ -1403,7 +1403,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("微軟正黑體", 8F);
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(479, 534);
+            this.label17.Location = new System.Drawing.Point(440, 547);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(59, 15);
             this.label17.TabIndex = 1174;
@@ -1414,8 +1414,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LawtechPTSystem.Properties.Resources.bg_01;
             this.CancelButton = this.but_Cancel;
-            this.ClientSize = new System.Drawing.Size(633, 708);
-            this.Controls.Add(this.label17);
+            this.ClientSize = new System.Drawing.Size(633, 722);
             this.Controls.Add(this.comboBox_AcountingFirmDetailT);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.comboBox_AcountingFirmT);
@@ -1455,6 +1454,7 @@
             this.Controls.Add(this.txt_FeeSubject);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.label17);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;

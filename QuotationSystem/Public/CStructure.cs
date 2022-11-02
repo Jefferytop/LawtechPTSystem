@@ -468,6 +468,8 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
+       
+
         #region 建立檢視表 public void CreateView(string strViewScript)
         /// <summary>
         /// 建立檢視表

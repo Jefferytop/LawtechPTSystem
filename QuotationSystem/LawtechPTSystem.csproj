@@ -52,7 +52,7 @@
     <PublisherName>柏豐商務智權股份有限公司</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>260</ApplicationRevision>
+    <ApplicationRevision>261</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -3675,6 +3675,7 @@
     <Content Include="Resources\png_06531.bmp" />
     <None Include="Resources\quote.png" />
     <None Include="Resources\quit.png" />
+    <None Include="Resources\ReportIcon.png" />
     <Content Include="Resources\right_arrow.bmp" />
     <Content Include="Resources\rj.bmp" />
     <None Include="Resources\title系統訊息_r1_c1.png" />

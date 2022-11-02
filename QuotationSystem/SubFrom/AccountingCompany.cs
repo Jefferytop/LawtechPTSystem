@@ -257,8 +257,9 @@ namespace LawtechPTSystem.SubFrom
                     if (dataGridView_AcountingFirmDetail.CurrentRow != null)
                     {
                         Public.DLL dll = new Public.DLL();
-
-                        if (MessageBox.Show("是否確定刪除 " + dataGridView_AcountingFirmDetail.CurrentRow.Cells["AcountingFirmName"].Value.ToString(), "確認視窗", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        string delName = string.Format("{0}\r\n {1}", dataGridView_AcountingFirmDetail.CurrentRow.Cells["BankName"].Value.ToString(), dataGridView_AcountingFirmDetail.CurrentRow.Cells["BankAccount"].Value.ToString());
+                        string str = string.Format("是否確定刪除 ?\r\n{0} ", delName);
+                        if (MessageBox.Show(str , "確認視窗", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             int iKey = (int)dataGridView_AcountingFirmDetail.CurrentRow.Cells["AcountingBankKey"].Value;
 
@@ -278,7 +279,7 @@ namespace LawtechPTSystem.SubFrom
                             app.Delete(iKey);
                             dataGridView_AcountingFirmDetail.Rows.Remove(dataGridView_AcountingFirmDetail.CurrentRow);
 
-                            MessageBox.Show("刪除公司帳戶");
+                            MessageBox.Show("成功刪除公司帳戶 "+ delName);
                         }
 
                     }
@@ -303,6 +304,7 @@ namespace LawtechPTSystem.SubFrom
         {
             if (dataGridView_AcountingFirm.CurrentRow != null)
             {
+                tagTitle2.TitleLableText = string.Format("{0}--{1}", "公司帳戶列表", dataGridView_AcountingFirm.CurrentRow.Cells["AcountingFirmName"].Value.ToString());
                 Public.CAccountingPublicFunction.GetAcountingFirmDetailTList(ProAcountingFirmKey.ToString(), ref dt_AcountingFirmDetailT);
             }
             else
@@ -351,5 +353,21 @@ namespace LawtechPTSystem.SubFrom
                 }
             }
         }
+
+        private void dataGridView_AcountingFirm_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && dataGridView_AcountingFirm.Columns[e.ColumnIndex].Name == "LogoUrl")
+            {
+                if(dataGridView_AcountingFirm.CurrentRow.Cells["LogoUrl"].Value!=null && !string.IsNullOrEmpty(dataGridView_AcountingFirm.CurrentRow.Cells["LogoUrl"].Value.ToString()) )
+                {
+                    string sPath = dataGridView_AcountingFirm.CurrentRow.Cells["LogoUrl"].Value.ToString();
+                    System.Diagnostics.Process.Start(sPath);
+                }
+               
+            }
+
+        }
+
+
     }
 }

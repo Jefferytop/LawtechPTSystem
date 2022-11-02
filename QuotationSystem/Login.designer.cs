@@ -124,7 +124,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 16;
-            this.label2.Text = "V.2022.09.28";
+            this.label2.Text = "V.2022.11.01";
             // 
             // label_DBName
             // 

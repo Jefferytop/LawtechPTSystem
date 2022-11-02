@@ -29,6 +29,7 @@ namespace LawtechPTSystem.ReportView
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentReport));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@ namespace LawtechPTSystem.ReportView
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LawtechPTSystem.Report.PaymentReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(537, 496);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
@@ -430,6 +432,7 @@ namespace LawtechPTSystem.ReportView
             this.ClientSize = new System.Drawing.Size(839, 505);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PaymentReport";
             this.Text = "付款單";
             this.Load += new System.EventHandler(this.PaymentReport_Load);

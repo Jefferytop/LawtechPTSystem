@@ -35,32 +35,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountingFeeList));
             this.contextMenuStrip_ForDate = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToolStripMenuItem_Calculation = new System.Windows.Forms.ToolStripMenuItem();
-            this.but_Search = new System.Windows.Forms.Button();
-            this.but_Close = new System.Windows.Forms.Button();
             this.dgViewMF = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip_Accounting = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ToolStripMenuItem_FinishFee = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_PayDateFinish = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_SingOff = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_SendMail = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_PrintFeeReport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_PrintedReceipt = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_CloseAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem_OpenAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem_App = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_SetGridColumn = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem_CaseDetail = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_PatentCompleteHistory = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -85,7 +75,6 @@
             this.radioButton_Trademark = new System.Windows.Forms.RadioButton();
             this.radioButton_NotFinish = new System.Windows.Forms.RadioButton();
             this.radioButton_Finish = new System.Windows.Forms.RadioButton();
-            this.but_Excel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton_Closing = new System.Windows.Forms.RadioButton();
             this.radioButton_ppp = new System.Windows.Forms.RadioButton();
@@ -106,6 +95,17 @@
             this.QueryFilter2 = new LawtechPTSystem.US.ComboSearchColumnBox();
             this.QueryFilter1 = new LawtechPTSystem.US.ComboSearchColumnBox();
             this.userControlFilterDate1 = new LawtechPTSystem.US.UserControlFilterDate();
+            this.but_Search = new System.Windows.Forms.Button();
+            this.but_Close = new System.Windows.Forms.Button();
+            this.but_Excel = new System.Windows.Forms.Button();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripMenuItem_PrintFeeReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_App = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_SetGridColumn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_CaseDetail = new System.Windows.Forms.ToolStripMenuItem();
             this.tagTitle1 = new LawtechPTSystem.US.TagTitle();
             this.contextMenuStrip_ForDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewMF)).BeginInit();
@@ -134,35 +134,6 @@
             this.ToolStripMenuItem_Calculation.Name = "ToolStripMenuItem_Calculation";
             this.ToolStripMenuItem_Calculation.Size = new System.Drawing.Size(122, 22);
             this.ToolStripMenuItem_Calculation.Text = "計算日期";
-            // 
-            // but_Search
-            // 
-            this.but_Search.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnSearch;
-            this.but_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.but_Search.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.but_Search.Image = global::LawtechPTSystem.Properties.Resources.SearchIcon;
-            this.but_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.but_Search.Location = new System.Drawing.Point(498, 109);
-            this.but_Search.Name = "but_Search";
-            this.but_Search.Size = new System.Drawing.Size(150, 32);
-            this.but_Search.TabIndex = 1013;
-            this.but_Search.Text = "查詢";
-            this.but_Search.UseVisualStyleBackColor = true;
-            this.but_Search.Click += new System.EventHandler(this.but_Search_Click);
-            // 
-            // but_Close
-            // 
-            this.but_Close.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnCancel;
-            this.but_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.but_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.but_Close.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.but_Close.Location = new System.Drawing.Point(780, 109);
-            this.but_Close.Name = "but_Close";
-            this.but_Close.Size = new System.Drawing.Size(120, 32);
-            this.but_Close.TabIndex = 1014;
-            this.but_Close.Text = "關閉";
-            this.but_Close.UseVisualStyleBackColor = true;
-            this.but_Close.Click += new System.EventHandler(this.but_Close_Click);
             // 
             // dgViewMF
             // 
@@ -222,88 +193,62 @@
             this.ToolStripMenuItem_CaseDetail,
             this.ToolStripMenuItem_PatentCompleteHistory});
             this.contextMenuStrip_Accounting.Name = "contextMenuStrip_Accounting";
-            this.contextMenuStrip_Accounting.Size = new System.Drawing.Size(181, 296);
+            this.contextMenuStrip_Accounting.Size = new System.Drawing.Size(167, 274);
             this.contextMenuStrip_Accounting.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Accounting_Opening);
             this.contextMenuStrip_Accounting.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_Accounting_ItemClicked);
             // 
             // ToolStripMenuItem_FinishFee
             // 
             this.ToolStripMenuItem_FinishFee.Name = "ToolStripMenuItem_FinishFee";
-            this.ToolStripMenuItem_FinishFee.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_FinishFee.Size = new System.Drawing.Size(166, 22);
             this.ToolStripMenuItem_FinishFee.Text = "已請款";
             // 
             // toolStripMenuItem_PayDateFinish
             // 
             this.toolStripMenuItem_PayDateFinish.Name = "toolStripMenuItem_PayDateFinish";
-            this.toolStripMenuItem_PayDateFinish.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_PayDateFinish.Size = new System.Drawing.Size(166, 22);
             this.toolStripMenuItem_PayDateFinish.Text = "已收款(多筆作業)";
             // 
             // ToolStripMenuItem_SingOff
             // 
             this.ToolStripMenuItem_SingOff.Name = "ToolStripMenuItem_SingOff";
-            this.ToolStripMenuItem_SingOff.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_SingOff.Size = new System.Drawing.Size(166, 22);
             this.ToolStripMenuItem_SingOff.Text = "主管簽核";
             // 
             // toolStripMenuItem_SendMail
             // 
             this.toolStripMenuItem_SendMail.Name = "toolStripMenuItem_SendMail";
-            this.toolStripMenuItem_SendMail.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_SendMail.Size = new System.Drawing.Size(166, 22);
             this.toolStripMenuItem_SendMail.Text = "寄送通知函";
-            // 
-            // toolStripMenuItem_PrintFeeReport
-            // 
-            this.toolStripMenuItem_PrintFeeReport.Name = "toolStripMenuItem_PrintFeeReport";
-            this.toolStripMenuItem_PrintFeeReport.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_PrintFeeReport.Text = "印請款單";
             // 
             // toolStripMenuItem_PrintedReceipt
             // 
+            this.toolStripMenuItem_PrintedReceipt.Image = global::LawtechPTSystem.Properties.Resources.ReportIcon;
             this.toolStripMenuItem_PrintedReceipt.Name = "toolStripMenuItem_PrintedReceipt";
-            this.toolStripMenuItem_PrintedReceipt.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_PrintedReceipt.Size = new System.Drawing.Size(166, 22);
             this.toolStripMenuItem_PrintedReceipt.Text = "印收據";
             // 
             // toolStripMenuItem_CloseAccount
             // 
             this.toolStripMenuItem_CloseAccount.Name = "toolStripMenuItem_CloseAccount";
-            this.toolStripMenuItem_CloseAccount.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_CloseAccount.Size = new System.Drawing.Size(166, 22);
             this.toolStripMenuItem_CloseAccount.Text = "關  帳";
             // 
             // toolStripMenuItem_OpenAccount
             // 
             this.toolStripMenuItem_OpenAccount.Name = "toolStripMenuItem_OpenAccount";
-            this.toolStripMenuItem_OpenAccount.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_OpenAccount.Size = new System.Drawing.Size(166, 22);
             this.toolStripMenuItem_OpenAccount.Text = "取消關帳";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // toolStripMenuItem_App
-            // 
-            this.toolStripMenuItem_App.Image = global::LawtechPTSystem.Properties.Resources.Company;
-            this.toolStripMenuItem_App.Name = "toolStripMenuItem_App";
-            this.toolStripMenuItem_App.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_App.Text = "查看申請人";
-            // 
-            // toolStripMenuItem_SetGridColumn
-            // 
-            this.toolStripMenuItem_SetGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
-            this.toolStripMenuItem_SetGridColumn.Name = "toolStripMenuItem_SetGridColumn";
-            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_SetGridColumn.Text = "設定列表欄位";
-            // 
-            // ToolStripMenuItem_CaseDetail
-            // 
-            this.ToolStripMenuItem_CaseDetail.Image = global::LawtechPTSystem.Properties.Resources.InfoDetails;
-            this.ToolStripMenuItem_CaseDetail.Name = "ToolStripMenuItem_CaseDetail";
-            this.ToolStripMenuItem_CaseDetail.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuItem_CaseDetail.Text = "案件詳細資料";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
             // 
             // ToolStripMenuItem_PatentCompleteHistory
             // 
             this.ToolStripMenuItem_PatentCompleteHistory.Name = "ToolStripMenuItem_PatentCompleteHistory";
-            this.ToolStripMenuItem_PatentCompleteHistory.Size = new System.Drawing.Size(180, 22);
+            this.ToolStripMenuItem_PatentCompleteHistory.Size = new System.Drawing.Size(166, 22);
             this.ToolStripMenuItem_PatentCompleteHistory.Text = "案件完整歷程";
             // 
             // bindingNavigator1
@@ -358,24 +303,6 @@
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "移到最前面";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "移到上一個";
-            // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
@@ -395,24 +322,6 @@
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "移到下一個";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "移到最後面";
             // 
             // bindingNavigatorSeparator2
             // 
@@ -612,19 +521,6 @@
             this.radioButton_Finish.UseVisualStyleBackColor = true;
             this.radioButton_Finish.CheckedChanged += new System.EventHandler(this.radioButton_NotFinish_CheckedChanged);
             // 
-            // but_Excel
-            // 
-            this.but_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but_Excel.BackgroundImage")));
-            this.but_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.but_Excel.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.but_Excel.Location = new System.Drawing.Point(654, 109);
-            this.but_Excel.Name = "but_Excel";
-            this.but_Excel.Size = new System.Drawing.Size(120, 32);
-            this.but_Excel.TabIndex = 1027;
-            this.but_Excel.Text = "匯出CSV";
-            this.but_Excel.UseVisualStyleBackColor = true;
-            this.but_Excel.Click += new System.EventHandler(this.but_Excel_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radioButton_Closing);
@@ -817,6 +713,112 @@
             this.userControlFilterDate1.SearchType = "AccountingFeeList";
             this.userControlFilterDate1.Size = new System.Drawing.Size(381, 27);
             this.userControlFilterDate1.TabIndex = 1057;
+            // 
+            // but_Search
+            // 
+            this.but_Search.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnSearch;
+            this.but_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.but_Search.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.but_Search.Image = global::LawtechPTSystem.Properties.Resources.SearchIcon;
+            this.but_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.but_Search.Location = new System.Drawing.Point(498, 109);
+            this.but_Search.Name = "but_Search";
+            this.but_Search.Size = new System.Drawing.Size(150, 32);
+            this.but_Search.TabIndex = 1013;
+            this.but_Search.Text = "查詢";
+            this.but_Search.UseVisualStyleBackColor = true;
+            this.but_Search.Click += new System.EventHandler(this.but_Search_Click);
+            // 
+            // but_Close
+            // 
+            this.but_Close.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnCancel;
+            this.but_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.but_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.but_Close.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.but_Close.Location = new System.Drawing.Point(780, 109);
+            this.but_Close.Name = "but_Close";
+            this.but_Close.Size = new System.Drawing.Size(120, 32);
+            this.but_Close.TabIndex = 1014;
+            this.but_Close.Text = "關閉";
+            this.but_Close.UseVisualStyleBackColor = true;
+            this.but_Close.Click += new System.EventHandler(this.but_Close_Click);
+            // 
+            // but_Excel
+            // 
+            this.but_Excel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but_Excel.BackgroundImage")));
+            this.but_Excel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.but_Excel.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.but_Excel.Location = new System.Drawing.Point(654, 109);
+            this.but_Excel.Name = "but_Excel";
+            this.but_Excel.Size = new System.Drawing.Size(120, 32);
+            this.but_Excel.TabIndex = 1027;
+            this.but_Excel.Text = "匯出CSV";
+            this.but_Excel.UseVisualStyleBackColor = true;
+            this.but_Excel.Click += new System.EventHandler(this.but_Excel_Click);
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "移到最前面";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "移到上一個";
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "移到下一個";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "移到最後面";
+            // 
+            // toolStripMenuItem_PrintFeeReport
+            // 
+            this.toolStripMenuItem_PrintFeeReport.Image = global::LawtechPTSystem.Properties.Resources.ReportIcon;
+            this.toolStripMenuItem_PrintFeeReport.Name = "toolStripMenuItem_PrintFeeReport";
+            this.toolStripMenuItem_PrintFeeReport.Size = new System.Drawing.Size(166, 22);
+            this.toolStripMenuItem_PrintFeeReport.Text = "印請款單";
+            // 
+            // toolStripMenuItem_App
+            // 
+            this.toolStripMenuItem_App.Image = global::LawtechPTSystem.Properties.Resources.Company;
+            this.toolStripMenuItem_App.Name = "toolStripMenuItem_App";
+            this.toolStripMenuItem_App.Size = new System.Drawing.Size(166, 22);
+            this.toolStripMenuItem_App.Text = "查看申請人";
+            // 
+            // toolStripMenuItem_SetGridColumn
+            // 
+            this.toolStripMenuItem_SetGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
+            this.toolStripMenuItem_SetGridColumn.Name = "toolStripMenuItem_SetGridColumn";
+            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(166, 22);
+            this.toolStripMenuItem_SetGridColumn.Text = "設定列表欄位";
+            // 
+            // ToolStripMenuItem_CaseDetail
+            // 
+            this.ToolStripMenuItem_CaseDetail.Image = global::LawtechPTSystem.Properties.Resources.InfoDetails;
+            this.ToolStripMenuItem_CaseDetail.Name = "ToolStripMenuItem_CaseDetail";
+            this.ToolStripMenuItem_CaseDetail.Size = new System.Drawing.Size(166, 22);
+            this.ToolStripMenuItem_CaseDetail.Text = "案件詳細資料";
             // 
             // tagTitle1
             // 

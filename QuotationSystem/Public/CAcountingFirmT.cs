@@ -50,7 +50,7 @@ namespace LawtechPTSystem.Public
 
         private string m_AcountingFirmName;
         /// <summary>
-        /// 
+        /// 入帳公司名稱
         /// </summary>
         [TableColumnSetting("AcountingFirmName", DataLength = 1000)]
         public string AcountingFirmName
@@ -65,9 +65,26 @@ namespace LawtechPTSystem.Public
             }
         }
 
-        private int? m_Sort;
+        private string m_LogoUrl;
         /// <summary>
         /// 
+        /// </summary>
+        [TableColumnSetting("LogoUrl", DataLength = 1000)]
+        public string LogoUrl
+        {
+            get
+            {
+                return m_LogoUrl;
+            }
+            set
+            {
+                m_LogoUrl = value;
+            }
+        }
+
+        private int? m_Sort;
+        /// <summary>
+        /// 排序
         /// </summary>
         [TableColumnSetting("Sort", DbType = SqlDataType.Int, DataLength = 4)]
         public int? Sort
@@ -130,6 +147,176 @@ namespace LawtechPTSystem.Public
             set
             {
                 m_LastModifyWorker = value;
+            }
+        }
+
+        private int? m_LockedWorker;
+        /// <summary>
+        /// 
+        /// </summary>
+        [TableColumnSetting("LockedWorker", DbType = SqlDataType.Int, DataLength = 4)]
+        public int? LockedWorker
+        {
+            get
+            {
+                return m_LockedWorker;
+            }
+            set
+            {
+                m_LockedWorker = value;
+            }
+        }
+
+        private string m_Quotation_Subject;
+        /// <summary>
+        /// 報價單-主旨
+        /// </summary>
+        [TableColumnSetting("Quotation_Subject", DataLength = 1000)]
+        public string Quotation_Subject
+        {
+            get
+            {
+                return m_Quotation_Subject;
+            }
+            set
+            {
+                m_Quotation_Subject = value;
+            }
+        }
+
+        private string m_Quotation_Content;
+        /// <summary>
+        /// 報價單-內文
+        /// </summary>
+        [TableColumnSetting("Quotation_Content", DataLength = 6000)]
+        public string Quotation_Content
+        {
+            get
+            {
+                return m_Quotation_Content;
+            }
+            set
+            {
+                m_Quotation_Content = value;
+            }
+        }
+
+        private string m_Quotation_Explain;
+        /// <summary>
+        /// 報價單-說明
+        /// </summary>
+        [TableColumnSetting("Quotation_Explain")]
+        public string Quotation_Explain
+        {
+            get
+            {
+                return m_Quotation_Explain;
+            }
+            set
+            {
+                m_Quotation_Explain = value;
+            }
+        }
+
+        private string m_Fee_PaymentInstructions;
+        /// <summary>
+        /// 請款單-付款說明
+        /// </summary>
+        [TableColumnSetting("Fee_PaymentInstructions")]
+        public string Fee_PaymentInstructions
+        {
+            get
+            {
+                return m_Fee_PaymentInstructions;
+            }
+            set
+            {
+                m_Fee_PaymentInstructions = value;
+            }
+        }
+
+        private string m_Fee_Footer;
+        /// <summary>
+        /// 請款單-頁尾
+        /// </summary>
+        [TableColumnSetting("Fee_Footer", DataLength = 1000)]
+        public string Fee_Footer
+        {
+            get
+            {
+                return m_Fee_Footer;
+            }
+            set
+            {
+                m_Fee_Footer = value;
+            }
+        }
+
+        private string m_Fee_Footer1;
+        /// <summary>
+        /// 請款單-頁尾1
+        /// </summary>
+        [TableColumnSetting("Fee_Footer1", DataLength = 1000)]
+        public string Fee_Footer1
+        {
+            get
+            {
+                return m_Fee_Footer1;
+            }
+            set
+            {
+                m_Fee_Footer1 = value;
+            }
+        }
+
+        private string m_Receipt_PaymentInstructions;
+        /// <summary>
+        /// 收據-備住
+        /// </summary>
+        [TableColumnSetting("Receipt_PaymentInstructions")]
+        public string Receipt_PaymentInstructions
+        {
+            get
+            {
+                return m_Receipt_PaymentInstructions;
+            }
+            set
+            {
+                m_Receipt_PaymentInstructions = value;
+            }
+        }
+
+        private string m_Receipt_Footer;
+        /// <summary>
+        /// 收據-頁尾
+        /// </summary>
+        [TableColumnSetting("Receipt_Footer", DataLength = 1000)]
+        public string Receipt_Footer
+        {
+            get
+            {
+                return m_Receipt_Footer;
+            }
+            set
+            {
+                m_Receipt_Footer = value;
+            }
+        }
+
+        private string m_Receipt_Footer1;
+        /// <summary>
+        /// 收據-頁尾1
+        /// </summary>
+        [TableColumnSetting("Receipt_Footer1", DataLength = 1000)]
+        public string Receipt_Footer1
+        {
+            get
+            {
+                return m_Receipt_Footer1;
+            }
+            set
+            {
+                m_Receipt_Footer1 = value;
             }
         }
 
