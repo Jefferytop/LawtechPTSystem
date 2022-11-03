@@ -59,8 +59,8 @@ namespace LawtechPTSystem.US
                     if (strApplicantKeys[iCount] != "")
                     {
                         DataRow dr = dtApplicant.NewRow();
-                        dr["ApplicantName"] = strApplicantNames[iCount];
-                        dr["ApplicantKey"] =int.Parse( strApplicantKeys[iCount]) ;
+                        dr["ApplicantName"] = strApplicantNames[iCount].Trim();
+                        dr["ApplicantKey"] =int.Parse( strApplicantKeys[iCount].Trim()) ;
                         dtApplicant.Rows.Add(dr);
                     }
                 }
@@ -134,7 +134,7 @@ namespace LawtechPTSystem.US
                 {
                     DataRow dr = dtApplicant.NewRow();
                     dr["ApplicantKey"] = (int)applicantT_DropDataGridView.CurrentRow.Cells["ApplicantKey"].Value;
-                    dr["ApplicantName"] = applicantT_DropDataGridView.CurrentRow.Cells["ApplicantName"].Value.ToString();
+                    dr["ApplicantName"] = applicantT_DropDataGridView.CurrentRow.Cells["ApplicantName"].Value.ToString().Trim();
                     dtApplicant.Rows.Add(dr);
                 }
                 catch

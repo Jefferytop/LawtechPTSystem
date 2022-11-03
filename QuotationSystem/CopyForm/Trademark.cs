@@ -29,8 +29,8 @@ namespace LawtechPTSystem.CopyForm
             
              this.delegateTypeTableAdapter.Fill(this.dataSet_Drop.DelegateType);
              this.countryT_DropTableAdapter.Fill(this.qS_DataSet.CountryT_Drop);
-             //this.attorneyTTableAdapter.FillByCountry(this.dataSet_Drop.AttorneyT, cb_Country.SelectedValue.ToString());
-             this.attorneyTTableAdapter1.Fill(this.dataSet_Attorney.AttorneyT);   
+            this.trademarkStyleModelTTableAdapter.Fill(this.dataSet_Drop.TrademarkStyleModelT);
+            this.attorneyTTableAdapter1.Fill(this.dataSet_Attorney.AttorneyT);   
              this.workerTAllTableAdapter.Fill(this.qS_DataSet.WorkerTAll);
              this.tMStatusTTableAdapter.Fill(this.dataSet_Drop.TMStatusT);
              
@@ -191,7 +191,9 @@ namespace LawtechPTSystem.CopyForm
             if (AddCTrademarkManagement.CountrySymbol != "")
            
 
-            AddCTrademarkManagement.StyleName = cb_StyleName.Text;         
+            AddCTrademarkManagement.StyleName = cb_StyleName.Text;
+
+            AddCTrademarkManagement.TMStyleModelID = (int)comboBox_TMStyleModelID.SelectedValue;
 
             AddCTrademarkManagement.TMTypeName = cb_TMTypeName.Text;         
 
@@ -342,6 +344,23 @@ namespace LawtechPTSystem.CopyForm
 
             AddCTrademarkManagement.Creator = Properties.Settings.Default.WorkerName;
             AddCTrademarkManagement.Create();
+
+            #region 申請人 TrademarkApplicant
+            //申請人               
+            Public.CTrademarkApplicant TMApp = new Public.CTrademarkApplicant();
+            TMApp.Delete("TrademarkID=" + AddCTrademarkManagement.TrademarkID.ToString());
+
+            string[] apps = txt_ApplicantKeys.Text.Split(',');
+            for (int iApp = 0; iApp < apps.Length; iApp++)
+            {
+                if (apps[iApp] != "")
+                {
+                    TMApp.TrademarkID = AddCTrademarkManagement.TrademarkID;
+                    TMApp.ApplicantKey = int.Parse(apps[iApp]);
+                    TMApp.Create();
+                }
+            }
+            #endregion
 
 
             Public.PublicForm Forms = new Public.PublicForm();

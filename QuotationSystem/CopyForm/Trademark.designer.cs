@@ -146,6 +146,10 @@
             this.trademarkTypeTTableAdapter = new LawtechPTSystem.DataSet_DropTableAdapters.TrademarkTypeTTableAdapter();
             this.attLiaisonerTTableAdapter = new LawtechPTSystem.DataSet_DropTableAdapters.AttLiaisonerTTableAdapter();
             this.attLiaisonerTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox_TMStyleModelID = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.trademarkStyleModelTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trademarkStyleModelTTableAdapter = new LawtechPTSystem.DataSet_DropTableAdapters.TrademarkStyleModelTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -173,6 +177,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_TM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liaisonerTOnlineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.attLiaisonerTBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trademarkStyleModelTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer2
@@ -189,6 +194,8 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.splitContainer2.Panel1.Controls.Add(this.comboBox_TMStyleModelID);
+            this.splitContainer2.Panel1.Controls.Add(this.label18);
             this.splitContainer2.Panel1.Controls.Add(this.txt_ApplicantKeys);
             this.splitContainer2.Panel1.Controls.Add(this.txt_ApplicantNames);
             this.splitContainer2.Panel1.Controls.Add(this.txt_NoticeNo2);
@@ -251,13 +258,13 @@
             this.splitContainer2.Panel2.Controls.Add(this.txt_RegisterProduct);
             this.splitContainer2.Panel2.Controls.Add(this.label96);
             this.splitContainer2.Panel2.Controls.Add(this.label12);
-            this.splitContainer2.Size = new System.Drawing.Size(982, 554);
-            this.splitContainer2.SplitterDistance = 697;
+            this.splitContainer2.Size = new System.Drawing.Size(982, 583);
+            this.splitContainer2.SplitterDistance = 733;
             this.splitContainer2.TabIndex = 0;
             // 
             // txt_ApplicantKeys
             // 
-            this.txt_ApplicantKeys.Location = new System.Drawing.Point(418, 200);
+            this.txt_ApplicantKeys.Location = new System.Drawing.Point(428, 200);
             this.txt_ApplicantKeys.Name = "txt_ApplicantKeys";
             this.txt_ApplicantKeys.Size = new System.Drawing.Size(31, 29);
             this.txt_ApplicantKeys.TabIndex = 445;
@@ -267,7 +274,7 @@
             // 
             this.txt_ApplicantNames.BackColor = System.Drawing.Color.White;
             this.txt_ApplicantNames.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.txt_ApplicantNames.Location = new System.Drawing.Point(314, 157);
+            this.txt_ApplicantNames.Location = new System.Drawing.Point(324, 157);
             this.txt_ApplicantNames.Margin = new System.Windows.Forms.Padding(1);
             this.txt_ApplicantNames.Multiline = true;
             this.txt_ApplicantNames.Name = "txt_ApplicantNames";
@@ -280,7 +287,7 @@
             // 
             this.txt_NoticeNo2.BackColor = System.Drawing.Color.White;
             this.txt_NoticeNo2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_NoticeNo2.Location = new System.Drawing.Point(86, 292);
+            this.txt_NoticeNo2.Location = new System.Drawing.Point(96, 309);
             this.txt_NoticeNo2.Margin = new System.Windows.Forms.Padding(1);
             this.txt_NoticeNo2.Name = "txt_NoticeNo2";
             this.txt_NoticeNo2.Size = new System.Drawing.Size(142, 29);
@@ -292,7 +299,7 @@
             this.maskedTextBox_NoticeDate2.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_NoticeDate2.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_NoticeDate2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_NoticeDate2.Location = new System.Drawing.Point(86, 262);
+            this.maskedTextBox_NoticeDate2.Location = new System.Drawing.Point(96, 279);
             this.maskedTextBox_NoticeDate2.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_NoticeDate2.Mask = "0000/00/00";
             this.maskedTextBox_NoticeDate2.Name = "maskedTextBox_NoticeDate2";
@@ -320,7 +327,7 @@
             // 
             this.txt_TrademarkOvertureName.ForeColor = System.Drawing.Color.Blue;
             this.txt_TrademarkOvertureName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_TrademarkOvertureName.Location = new System.Drawing.Point(314, 127);
+            this.txt_TrademarkOvertureName.Location = new System.Drawing.Point(324, 127);
             this.txt_TrademarkOvertureName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_TrademarkOvertureName.Name = "txt_TrademarkOvertureName";
             this.txt_TrademarkOvertureName.Size = new System.Drawing.Size(162, 29);
@@ -331,7 +338,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("微軟正黑體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(41, 531);
+            this.label27.Location = new System.Drawing.Point(46, 549);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(237, 15);
             this.label27.TabIndex = 420;
@@ -344,7 +351,7 @@
             this.comboBox_DelegateType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_DelegateType.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.comboBox_DelegateType.FormattingEnabled = true;
-            this.comboBox_DelegateType.Location = new System.Drawing.Point(314, 201);
+            this.comboBox_DelegateType.Location = new System.Drawing.Point(324, 201);
             this.comboBox_DelegateType.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_DelegateType.Name = "comboBox_DelegateType";
             this.comboBox_DelegateType.Size = new System.Drawing.Size(162, 28);
@@ -371,7 +378,7 @@
             this.cb_WorkerKey.DisplayMember = "Name";
             this.cb_WorkerKey.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.cb_WorkerKey.FormattingEnabled = true;
-            this.cb_WorkerKey.Location = new System.Drawing.Point(313, 7);
+            this.cb_WorkerKey.Location = new System.Drawing.Point(323, 7);
             this.cb_WorkerKey.Margin = new System.Windows.Forms.Padding(1);
             this.cb_WorkerKey.MaxDropDownItems = 10;
             this.cb_WorkerKey.Name = "cb_WorkerKey";
@@ -395,7 +402,7 @@
             this.maskedTextBox_EntrustDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_EntrustDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_EntrustDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_EntrustDate.Location = new System.Drawing.Point(314, 96);
+            this.maskedTextBox_EntrustDate.Location = new System.Drawing.Point(324, 96);
             this.maskedTextBox_EntrustDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_EntrustDate.Mask = "0000/00/00";
             this.maskedTextBox_EntrustDate.Name = "maskedTextBox_EntrustDate";
@@ -409,7 +416,7 @@
             // 
             this.txt_StatusExplain.BackColor = System.Drawing.Color.White;
             this.txt_StatusExplain.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_StatusExplain.Location = new System.Drawing.Point(86, 471);
+            this.txt_StatusExplain.Location = new System.Drawing.Point(96, 488);
             this.txt_StatusExplain.Margin = new System.Windows.Forms.Padding(1);
             this.txt_StatusExplain.Name = "txt_StatusExplain";
             this.txt_StatusExplain.Size = new System.Drawing.Size(142, 29);
@@ -419,7 +426,7 @@
             // 
             this.txt_TrademarkNo.BackColor = System.Drawing.Color.White;
             this.txt_TrademarkNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_TrademarkNo.Location = new System.Drawing.Point(86, 7);
+            this.txt_TrademarkNo.Location = new System.Drawing.Point(96, 7);
             this.txt_TrademarkNo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TrademarkNo.Name = "txt_TrademarkNo";
             this.txt_TrademarkNo.Size = new System.Drawing.Size(142, 29);
@@ -432,7 +439,7 @@
             this.cb_Status.DisplayMember = "Status";
             this.cb_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Status.FormattingEnabled = true;
-            this.cb_Status.Location = new System.Drawing.Point(86, 442);
+            this.cb_Status.Location = new System.Drawing.Point(96, 459);
             this.cb_Status.Margin = new System.Windows.Forms.Padding(1);
             this.cb_Status.MaxDropDownItems = 10;
             this.cb_Status.Name = "cb_Status";
@@ -453,7 +460,7 @@
             this.cb_TMTypeName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_TMTypeName.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.cb_TMTypeName.FormattingEnabled = true;
-            this.cb_TMTypeName.Location = new System.Drawing.Point(314, 67);
+            this.cb_TMTypeName.Location = new System.Drawing.Point(324, 67);
             this.cb_TMTypeName.Margin = new System.Windows.Forms.Padding(1);
             this.cb_TMTypeName.MaxDropDownItems = 10;
             this.cb_TMTypeName.Name = "cb_TMTypeName";
@@ -474,7 +481,7 @@
             this.cb_StyleName.DataSource = this.trademarkStyleTBindingSource;
             this.cb_StyleName.DisplayMember = "StyleName";
             this.cb_StyleName.FormattingEnabled = true;
-            this.cb_StyleName.Location = new System.Drawing.Point(86, 96);
+            this.cb_StyleName.Location = new System.Drawing.Point(96, 96);
             this.cb_StyleName.Margin = new System.Windows.Forms.Padding(1);
             this.cb_StyleName.MaxDropDownItems = 10;
             this.cb_StyleName.Name = "cb_StyleName";
@@ -495,7 +502,7 @@
             this.cb_Country.DataSource = this.countryTDropBindingSource;
             this.cb_Country.DisplayMember = "Country";
             this.cb_Country.FormattingEnabled = true;
-            this.cb_Country.Location = new System.Drawing.Point(86, 67);
+            this.cb_Country.Location = new System.Drawing.Point(96, 67);
             this.cb_Country.Margin = new System.Windows.Forms.Padding(1);
             this.cb_Country.MaxDropDownItems = 10;
             this.cb_Country.Name = "cb_Country";
@@ -513,9 +520,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(488, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(223, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 331;
             this.pictureBox1.TabStop = false;
@@ -524,7 +531,7 @@
             // 
             this.txt_NoticeNo.BackColor = System.Drawing.Color.White;
             this.txt_NoticeNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_NoticeNo.Location = new System.Drawing.Point(86, 232);
+            this.txt_NoticeNo.Location = new System.Drawing.Point(96, 249);
             this.txt_NoticeNo.Margin = new System.Windows.Forms.Padding(1);
             this.txt_NoticeNo.Name = "txt_NoticeNo";
             this.txt_NoticeNo.Size = new System.Drawing.Size(142, 29);
@@ -542,7 +549,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.chb_IsBySelf);
             this.groupBox1.Controls.Add(this.checkBox_All);
-            this.groupBox1.Location = new System.Drawing.Point(238, 357);
+            this.groupBox1.Location = new System.Drawing.Point(248, 357);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(246, 173);
             this.groupBox1.TabIndex = 24;
@@ -646,40 +653,40 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label60.Location = new System.Drawing.Point(21, 137);
+            this.label60.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label60.Location = new System.Drawing.Point(10, 137);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(56, 16);
+            this.label60.Size = new System.Drawing.Size(64, 18);
             this.label60.TabIndex = 323;
             this.label60.Text = "委辦日期";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label58.Location = new System.Drawing.Point(33, 50);
+            this.label58.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label58.Location = new System.Drawing.Point(24, 50);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(44, 16);
+            this.label58.Size = new System.Drawing.Size(50, 18);
             this.label58.TabIndex = 273;
             this.label58.Text = "事務所";
             // 
             // Label13
             // 
             this.Label13.AutoSize = true;
-            this.Label13.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.Label13.Location = new System.Drawing.Point(21, 79);
+            this.Label13.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.Label13.Location = new System.Drawing.Point(10, 79);
             this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(56, 16);
+            this.Label13.Size = new System.Drawing.Size(64, 18);
             this.Label13.TabIndex = 8;
             this.Label13.Text = "聯絡窗口";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label4.Location = new System.Drawing.Point(21, 106);
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label4.Location = new System.Drawing.Point(10, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 320;
             this.label4.Text = "對方案號";
             // 
@@ -715,7 +722,7 @@
             this.groupBox2.Controls.Add(this.label69);
             this.groupBox2.Controls.Add(this.label88);
             this.groupBox2.Controls.Add(this.label110);
-            this.groupBox2.Location = new System.Drawing.Point(238, 231);
+            this.groupBox2.Location = new System.Drawing.Point(248, 231);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(246, 122);
             this.groupBox2.TabIndex = 23;
@@ -804,30 +811,30 @@
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label69.Location = new System.Drawing.Point(20, 60);
+            this.label69.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label69.Location = new System.Drawing.Point(10, 58);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(56, 16);
+            this.label69.Size = new System.Drawing.Size(64, 18);
             this.label69.TabIndex = 333;
             this.label69.Text = "貴方案號";
             // 
             // label88
             // 
             this.label88.AutoSize = true;
-            this.label88.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label88.Location = new System.Drawing.Point(20, 30);
+            this.label88.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label88.Location = new System.Drawing.Point(10, 30);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(56, 16);
+            this.label88.Size = new System.Drawing.Size(64, 18);
             this.label88.TabIndex = 336;
             this.label88.Text = "主委託人";
             // 
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label110.Location = new System.Drawing.Point(20, 88);
+            this.label110.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label110.Location = new System.Drawing.Point(10, 88);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(56, 16);
+            this.label110.Size = new System.Drawing.Size(64, 18);
             this.label110.TabIndex = 335;
             this.label110.Text = "案件窗口";
             // 
@@ -837,7 +844,7 @@
             this.maskedTextBox_ApplicationDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_ApplicationDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ApplicationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(86, 125);
+            this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(96, 157);
             this.maskedTextBox_ApplicationDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_ApplicationDate.Mask = "0000/00/00";
             this.maskedTextBox_ApplicationDate.Name = "maskedTextBox_ApplicationDate";
@@ -850,7 +857,7 @@
             // txt_TrademarkName
             // 
             this.txt_TrademarkName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_TrademarkName.Location = new System.Drawing.Point(86, 37);
+            this.txt_TrademarkName.Location = new System.Drawing.Point(96, 37);
             this.txt_TrademarkName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TrademarkName.Name = "txt_TrademarkName";
             this.txt_TrademarkName.Size = new System.Drawing.Size(390, 29);
@@ -862,7 +869,7 @@
             this.maskedTextBox_LawDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_LawDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_LawDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_LawDate.Location = new System.Drawing.Point(86, 382);
+            this.maskedTextBox_LawDate.Location = new System.Drawing.Point(96, 399);
             this.maskedTextBox_LawDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_LawDate.Mask = "0000/00/00";
             this.maskedTextBox_LawDate.Name = "maskedTextBox_LawDate";
@@ -878,7 +885,7 @@
             this.maskedTextBox_CloseDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_CloseDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_CloseDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(86, 501);
+            this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(96, 518);
             this.maskedTextBox_CloseDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_CloseDate.Mask = "0000/00/00";
             this.maskedTextBox_CloseDate.Name = "maskedTextBox_CloseDate";
@@ -894,7 +901,7 @@
             this.maskedTextBox_ExtendedDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_ExtendedDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ExtendedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_ExtendedDate.Location = new System.Drawing.Point(86, 412);
+            this.maskedTextBox_ExtendedDate.Location = new System.Drawing.Point(96, 429);
             this.maskedTextBox_ExtendedDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_ExtendedDate.Mask = "0000/00/00";
             this.maskedTextBox_ExtendedDate.Name = "maskedTextBox_ExtendedDate";
@@ -908,19 +915,18 @@
             // 
             this.txt_ApplicationNo.BackColor = System.Drawing.Color.White;
             this.txt_ApplicationNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_ApplicationNo.Location = new System.Drawing.Point(86, 154);
+            this.txt_ApplicationNo.Location = new System.Drawing.Point(96, 188);
             this.txt_ApplicationNo.Margin = new System.Windows.Forms.Padding(1);
-            this.txt_ApplicationNo.Multiline = true;
             this.txt_ApplicationNo.Name = "txt_ApplicationNo";
             this.txt_ApplicationNo.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_ApplicationNo.Size = new System.Drawing.Size(142, 46);
+            this.txt_ApplicationNo.Size = new System.Drawing.Size(142, 29);
             this.txt_ApplicationNo.TabIndex = 6;
             // 
             // txt_RegistrationNo
             // 
             this.txt_RegistrationNo.BackColor = System.Drawing.Color.White;
             this.txt_RegistrationNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_RegistrationNo.Location = new System.Drawing.Point(86, 352);
+            this.txt_RegistrationNo.Location = new System.Drawing.Point(96, 369);
             this.txt_RegistrationNo.Margin = new System.Windows.Forms.Padding(1);
             this.txt_RegistrationNo.Name = "txt_RegistrationNo";
             this.txt_RegistrationNo.Size = new System.Drawing.Size(142, 29);
@@ -932,7 +938,7 @@
             this.maskedTextBox_NoticeDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_NoticeDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_NoticeDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_NoticeDate.Location = new System.Drawing.Point(86, 202);
+            this.maskedTextBox_NoticeDate.Location = new System.Drawing.Point(96, 219);
             this.maskedTextBox_NoticeDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_NoticeDate.Mask = "0000/00/00";
             this.maskedTextBox_NoticeDate.Name = "maskedTextBox_NoticeDate";
@@ -948,7 +954,7 @@
             this.maskedTextBox_RegistrationDate.ContextMenuStrip = this.contextMenuStrip_ForDate;
             this.maskedTextBox_RegistrationDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_RegistrationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.maskedTextBox_RegistrationDate.Location = new System.Drawing.Point(86, 322);
+            this.maskedTextBox_RegistrationDate.Location = new System.Drawing.Point(96, 339);
             this.maskedTextBox_RegistrationDate.Margin = new System.Windows.Forms.Padding(1);
             this.maskedTextBox_RegistrationDate.Mask = "0000/00/00";
             this.maskedTextBox_RegistrationDate.Name = "maskedTextBox_RegistrationDate";
@@ -962,190 +968,190 @@
             // 
             this.txt_Remarks.BackColor = System.Drawing.Color.White;
             this.txt_Remarks.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_Remarks.Location = new System.Drawing.Point(488, 327);
+            this.txt_Remarks.Location = new System.Drawing.Point(505, 332);
             this.txt_Remarks.Multiline = true;
             this.txt_Remarks.Name = "txt_Remarks";
             this.txt_Remarks.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Remarks.Size = new System.Drawing.Size(194, 194);
+            this.txt_Remarks.Size = new System.Drawing.Size(223, 232);
             this.txt_Remarks.TabIndex = 26;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label15.Location = new System.Drawing.Point(7, 299);
+            this.label15.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label15.Location = new System.Drawing.Point(2, 316);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 16);
+            this.label15.Size = new System.Drawing.Size(92, 18);
             this.label15.TabIndex = 425;
             this.label15.Text = "第二次公告號";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label16.Location = new System.Drawing.Point(7, 268);
+            this.label16.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label16.Location = new System.Drawing.Point(2, 285);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.Size = new System.Drawing.Size(92, 18);
             this.label16.TabIndex = 423;
             this.label16.Text = "第二次公告日";
             // 
             // Label14
             // 
             this.Label14.AutoSize = true;
-            this.Label14.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.Label14.Location = new System.Drawing.Point(31, 14);
+            this.Label14.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.Label14.Location = new System.Drawing.Point(30, 14);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(56, 16);
+            this.Label14.Size = new System.Drawing.Size(64, 18);
             this.Label14.TabIndex = 10;
-            this.Label14.Text = "本所案號";
+            this.Label14.Text = "商標案號";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label8.Location = new System.Drawing.Point(31, 448);
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label8.Location = new System.Drawing.Point(30, 465);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 342;
             this.label8.Text = "案件階段";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label5.Location = new System.Drawing.Point(30, 479);
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label5.Location = new System.Drawing.Point(30, 496);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.Size = new System.Drawing.Size(64, 18);
             this.label5.TabIndex = 338;
             this.label5.Text = "階段描述";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label2.Location = new System.Drawing.Point(45, 73);
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label2.Location = new System.Drawing.Point(46, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(48, 18);
             this.label2.TabIndex = 335;
             this.label2.Text = "國   別";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10F);
             this.label1.Location = new System.Drawing.Point(30, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 333;
             this.label1.Text = "商標樣式";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label61.Location = new System.Drawing.Point(6, 239);
+            this.label61.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label61.Location = new System.Drawing.Point(2, 256);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(80, 16);
+            this.label61.Size = new System.Drawing.Size(92, 18);
             this.label61.TabIndex = 327;
             this.label61.Text = "第一次公告號";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label59.Location = new System.Drawing.Point(31, 131);
+            this.label59.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label59.Location = new System.Drawing.Point(30, 163);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(56, 16);
+            this.label59.Size = new System.Drawing.Size(64, 18);
             this.label59.TabIndex = 321;
             this.label59.Text = "申請日期";
             // 
             // Label9
             // 
             this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.Label9.Location = new System.Drawing.Point(31, 44);
+            this.Label9.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.Label9.Location = new System.Drawing.Point(30, 43);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(56, 16);
+            this.Label9.Size = new System.Drawing.Size(64, 18);
             this.Label9.TabIndex = 0;
             this.Label9.Text = "商標名稱";
             // 
             // Label22
             // 
             this.Label22.AutoSize = true;
-            this.Label22.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.Label22.Location = new System.Drawing.Point(30, 358);
+            this.Label22.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.Label22.Location = new System.Drawing.Point(30, 375);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(56, 16);
+            this.Label22.Size = new System.Drawing.Size(64, 18);
             this.Label22.TabIndex = 26;
             this.Label22.Text = "註冊證號";
             // 
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label95.Location = new System.Drawing.Point(44, 505);
+            this.label95.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label95.Location = new System.Drawing.Point(44, 522);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(44, 16);
+            this.label95.Size = new System.Drawing.Size(50, 18);
             this.label95.TabIndex = 296;
             this.label95.Text = "結案日";
             // 
             // label94
             // 
             this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label94.Location = new System.Drawing.Point(7, 418);
+            this.label94.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label94.Location = new System.Drawing.Point(2, 435);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(80, 16);
+            this.label94.Size = new System.Drawing.Size(92, 18);
             this.label94.TabIndex = 295;
             this.label94.Text = "可辦延展日期";
             // 
             // label90
             // 
             this.label90.AutoSize = true;
-            this.label90.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label90.Location = new System.Drawing.Point(6, 209);
+            this.label90.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label90.Location = new System.Drawing.Point(2, 226);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(80, 16);
+            this.label90.Size = new System.Drawing.Size(92, 18);
             this.label90.TabIndex = 291;
             this.label90.Text = "第一次公告日";
             // 
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label87.Location = new System.Drawing.Point(31, 389);
+            this.label87.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label87.Location = new System.Drawing.Point(30, 406);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(56, 16);
+            this.label87.Size = new System.Drawing.Size(64, 18);
             this.label87.TabIndex = 288;
             this.label87.Text = "專用期限";
             // 
             // label85
             // 
             this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label85.Location = new System.Drawing.Point(31, 328);
+            this.label85.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label85.Location = new System.Drawing.Point(30, 345);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(56, 16);
+            this.label85.Size = new System.Drawing.Size(64, 18);
             this.label85.TabIndex = 286;
             this.label85.Text = "註冊日期";
             // 
             // Label20
             // 
             this.Label20.AutoSize = true;
-            this.Label20.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.Label20.Location = new System.Drawing.Point(30, 159);
+            this.Label20.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.Label20.Location = new System.Drawing.Point(30, 193);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(56, 16);
+            this.Label20.Size = new System.Drawing.Size(64, 18);
             this.Label20.TabIndex = 22;
             this.Label20.Text = "申請案號";
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
-            this.linkLabel2.Location = new System.Drawing.Point(265, 166);
+            this.linkLabel2.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.linkLabel2.Location = new System.Drawing.Point(273, 165);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(47, 17);
+            this.linkLabel2.Size = new System.Drawing.Size(50, 18);
             this.linkLabel2.TabIndex = 444;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "申請人";
@@ -1154,57 +1160,57 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label11.Location = new System.Drawing.Point(259, 135);
+            this.label11.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label11.Location = new System.Drawing.Point(259, 134);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 16);
+            this.label11.Size = new System.Drawing.Size(64, 18);
             this.label11.TabIndex = 421;
             this.label11.Text = "提案家族";
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label82.Location = new System.Drawing.Point(258, 207);
+            this.label82.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label82.Location = new System.Drawing.Point(259, 206);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(56, 16);
+            this.label82.Size = new System.Drawing.Size(64, 18);
             this.label82.TabIndex = 418;
             this.label82.Text = "委託類型";
             // 
             // label86
             // 
             this.label86.AutoSize = true;
-            this.label86.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label86.Location = new System.Drawing.Point(235, 104);
+            this.label86.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label86.Location = new System.Drawing.Point(259, 102);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(80, 16);
+            this.label86.Size = new System.Drawing.Size(64, 18);
             this.label86.TabIndex = 287;
-            this.label86.Text = "本所承辦日期";
+            this.label86.Text = "承辦日期";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label6.Location = new System.Drawing.Point(258, 73);
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label6.Location = new System.Drawing.Point(259, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(64, 18);
             this.label6.TabIndex = 340;
             this.label6.Text = "案件類別";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label3.Location = new System.Drawing.Point(246, 14);
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label3.Location = new System.Drawing.Point(245, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
+            this.label3.Size = new System.Drawing.Size(78, 18);
             this.label3.TabIndex = 317;
             this.label3.Text = "本所承辦人";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(485, 14);
+            this.linkLabel1.Location = new System.Drawing.Point(503, 14);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(89, 20);
             this.linkLabel1.TabIndex = 25;
@@ -1215,52 +1221,57 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label7.Location = new System.Drawing.Point(492, 311);
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label7.Location = new System.Drawing.Point(502, 311);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 16);
+            this.label7.Size = new System.Drawing.Size(44, 18);
             this.label7.TabIndex = 319;
             this.label7.Text = "備  註";
             // 
             // txt_RegisterProductName
             // 
+            this.txt_RegisterProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_RegisterProductName.BackColor = System.Drawing.Color.White;
             this.txt_RegisterProductName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_RegisterProductName.Location = new System.Drawing.Point(14, 96);
+            this.txt_RegisterProductName.Location = new System.Drawing.Point(9, 96);
             this.txt_RegisterProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_RegisterProductName.Multiline = true;
             this.txt_RegisterProductName.Name = "txt_RegisterProductName";
             this.txt_RegisterProductName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_RegisterProductName.Size = new System.Drawing.Size(257, 425);
+            this.txt_RegisterProductName.Size = new System.Drawing.Size(223, 468);
             this.txt_RegisterProductName.TabIndex = 1;
             // 
             // txt_RegisterProduct
             // 
+            this.txt_RegisterProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_RegisterProduct.BackColor = System.Drawing.Color.White;
             this.txt_RegisterProduct.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_RegisterProduct.Location = new System.Drawing.Point(14, 36);
+            this.txt_RegisterProduct.Location = new System.Drawing.Point(9, 36);
             this.txt_RegisterProduct.Margin = new System.Windows.Forms.Padding(2);
             this.txt_RegisterProduct.Name = "txt_RegisterProduct";
-            this.txt_RegisterProduct.Size = new System.Drawing.Size(257, 29);
+            this.txt_RegisterProduct.Size = new System.Drawing.Size(223, 29);
             this.txt_RegisterProduct.TabIndex = 0;
             // 
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label96.Location = new System.Drawing.Point(15, 78);
+            this.label96.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label96.Location = new System.Drawing.Point(10, 75);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(56, 16);
+            this.label96.Size = new System.Drawing.Size(64, 18);
             this.label96.TabIndex = 356;
             this.label96.Text = "註冊產品";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微軟正黑體", 9F);
-            this.label12.Location = new System.Drawing.Point(16, 18);
+            this.label12.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label12.Location = new System.Drawing.Point(11, 15);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.Size = new System.Drawing.Size(64, 18);
             this.label12.TabIndex = 354;
             this.label12.Text = "註冊類別";
             // 
@@ -1284,7 +1295,7 @@
             this.but_Cancel.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnCancel;
             this.but_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.but_Cancel.Location = new System.Drawing.Point(500, 564);
+            this.but_Cancel.Location = new System.Drawing.Point(500, 593);
             this.but_Cancel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.but_Cancel.Name = "but_Cancel";
             this.but_Cancel.Size = new System.Drawing.Size(100, 32);
@@ -1298,7 +1309,7 @@
             this.but_OK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.but_OK.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
             this.but_OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.but_OK.Location = new System.Drawing.Point(388, 564);
+            this.but_OK.Location = new System.Drawing.Point(388, 593);
             this.but_OK.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.but_OK.Name = "but_OK";
             this.but_OK.Size = new System.Drawing.Size(100, 32);
@@ -1318,7 +1329,7 @@
             // txt_PicPath
             // 
             this.txt_PicPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_PicPath.Location = new System.Drawing.Point(34, 562);
+            this.txt_PicPath.Location = new System.Drawing.Point(34, 591);
             this.txt_PicPath.Name = "txt_PicPath";
             this.txt_PicPath.Size = new System.Drawing.Size(35, 29);
             this.txt_PicPath.TabIndex = 389;
@@ -1335,7 +1346,7 @@
             // txt_NewPicture
             // 
             this.txt_NewPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_NewPicture.Location = new System.Drawing.Point(74, 562);
+            this.txt_NewPicture.Location = new System.Drawing.Point(74, 591);
             this.txt_NewPicture.Name = "txt_NewPicture";
             this.txt_NewPicture.Size = new System.Drawing.Size(35, 29);
             this.txt_NewPicture.TabIndex = 390;
@@ -1383,12 +1394,45 @@
             this.attLiaisonerTBindingSource1.DataMember = "AttLiaisonerT";
             this.attLiaisonerTBindingSource1.DataSource = this.dataSet_Drop;
             // 
+            // comboBox_TMStyleModelID
+            // 
+            this.comboBox_TMStyleModelID.BackColor = System.Drawing.Color.White;
+            this.comboBox_TMStyleModelID.DataSource = this.trademarkStyleModelTBindingSource;
+            this.comboBox_TMStyleModelID.DisplayMember = "TMStyleModelName";
+            this.comboBox_TMStyleModelID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_TMStyleModelID.FormattingEnabled = true;
+            this.comboBox_TMStyleModelID.Location = new System.Drawing.Point(96, 127);
+            this.comboBox_TMStyleModelID.Name = "comboBox_TMStyleModelID";
+            this.comboBox_TMStyleModelID.Size = new System.Drawing.Size(142, 28);
+            this.comboBox_TMStyleModelID.TabIndex = 1094;
+            this.comboBox_TMStyleModelID.ValueMember = "TMStyleModelID";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.label18.Location = new System.Drawing.Point(34, 131);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 18);
+            this.label18.TabIndex = 1093;
+            this.label18.Text = "彩/墨 色";
+            // 
+            // trademarkStyleModelTBindingSource
+            // 
+            this.trademarkStyleModelTBindingSource.DataMember = "TrademarkStyleModelT";
+            this.trademarkStyleModelTBindingSource.DataSource = this.dataSet_Drop;
+            // 
+            // trademarkStyleModelTTableAdapter
+            // 
+            this.trademarkStyleModelTTableAdapter.ClearBeforeFill = true;
+            // 
             // Trademark
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::LawtechPTSystem.Properties.Resources.bg_01;
             this.CancelButton = this.but_Cancel;
-            this.ClientSize = new System.Drawing.Size(989, 601);
+            this.ClientSize = new System.Drawing.Size(989, 630);
             this.Controls.Add(this.txt_NewPicture);
             this.Controls.Add(this.but_Cancel);
             this.Controls.Add(this.txt_PicPath);
@@ -1433,6 +1477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_TM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liaisonerTOnlineBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.attLiaisonerTBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trademarkStyleModelTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1557,5 +1602,9 @@
         private LawtechPTSystem.DataSet_DropTableAdapters.TrademarkTypeTTableAdapter trademarkTypeTTableAdapter;
         private LawtechPTSystem.DataSet_DropTableAdapters.AttLiaisonerTTableAdapter attLiaisonerTTableAdapter;
         private System.Windows.Forms.BindingSource attLiaisonerTBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox_TMStyleModelID;
+        internal System.Windows.Forms.Label label18;
+        private System.Windows.Forms.BindingSource trademarkStyleModelTBindingSource;
+        private DataSet_DropTableAdapters.TrademarkStyleModelTTableAdapter trademarkStyleModelTTableAdapter;
     }
 }
