@@ -1601,6 +1601,9 @@ namespace LawtechPTSystem.SubFrom
                         worklist.Show();
                     }
                     break;
+                case "toolStripButton_OrientationEvent":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer4);
+                    break;
             }
 
         }
@@ -1858,7 +1861,7 @@ namespace LawtechPTSystem.SubFrom
                         US.NotificationLetter letter = new LawtechPTSystem.US.NotificationLetter();
                         letter.ApplicantKeys = trademarkManagementTDataGridView.CurrentRow.Cells["ApplicantKeys"].Value.ToString();
                         letter.MainKey = (int)trademarkManagementTDataGridView.CurrentRow.Cells["TrademarkID"].Value;
-                        letter.CaseKey = TMNotifyEventTDataGridView.CurrentRow.Cells["TMNotifyEventID"].Value != null ? (int)TMNotifyEventTDataGridView.CurrentRow.Cells["TMNotifyEventID"].Value : -1;
+                        letter.CaseKey = GridView_Fee.CurrentRow.Cells["FeeKEY"].Value != null ? (int)GridView_Fee.CurrentRow.Cells["FeeKEY"].Value : -1;
                         letter.DelegateType = trademarkManagementTDataGridView.CurrentRow.Cells["DelegateType"].Value.ToString() != "" ? (int)trademarkManagementTDataGridView.CurrentRow.Cells["DelegateType"].Value : -1;
                         letter.Attorney = trademarkManagementTDataGridView.CurrentRow.Cells["OutsourcingAttorney"].Value.ToString() != "" ? (int)trademarkManagementTDataGridView.CurrentRow.Cells["OutsourcingAttorney"].Value : -1;
                         letter.EmailSampleType = "TrademarkFee";
@@ -1872,6 +1875,9 @@ namespace LawtechPTSystem.SubFrom
                     gc.CurrentGridSymboID = GridView_Fee.Tag.ToString();
                     gc.TitleName = "請款記錄";
                     gc.Show();
+                    break;
+                case "toolStripButton__OrientationFee":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer5);
                     break;
             }
 
@@ -2124,7 +2130,7 @@ namespace LawtechPTSystem.SubFrom
                         US.NotificationLetter letter = new LawtechPTSystem.US.NotificationLetter();
                         letter.ApplicantKeys = trademarkManagementTDataGridView.CurrentRow.Cells["ApplicantKeys"].Value.ToString();
                         letter.MainKey = (int)trademarkManagementTDataGridView.CurrentRow.Cells["TrademarkID"].Value;
-                        //letter.CaseKey = TMNotifyEventTDataGridView.CurrentRow.Cells["TMNotifyEventID"].Value != null ? (int)TMNotifyEventTDataGridView.CurrentRow.Cells["TMNotifyEventID"].Value : -1;
+                        letter.CaseKey = dataGridView_Billing.CurrentRow.Cells["PaymentID"].Value != null ? (int)dataGridView_Billing.CurrentRow.Cells["PaymentID"].Value : -1;
                         letter.DelegateType = trademarkManagementTDataGridView.CurrentRow.Cells["DelegateType"].Value.ToString() != "" ? (int)trademarkManagementTDataGridView.CurrentRow.Cells["DelegateType"].Value : -1;
                         letter.Attorney = dataGridView_Billing.CurrentRow.Cells["AttorneyPayment"].Value.ToString() != "" ? (int)dataGridView_Billing.CurrentRow.Cells["AttorneyPayment"].Value : -1;
                         letter.EmailSampleType = "TrademarkPayment";
@@ -2138,6 +2144,9 @@ namespace LawtechPTSystem.SubFrom
                     gc.CurrentGridSymboID = dataGridView_Billing.Tag.ToString();
                     gc.TitleName = "付款記錄";
                     gc.Show();
+                    break;
+                case "toolStripButton__OrientationPayment":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer6);
                     break;
             }
         }

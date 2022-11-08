@@ -70,7 +70,7 @@
             // 
             // txt_FamilyName
             // 
-            this.txt_FamilyName.Location = new System.Drawing.Point(111, 59);
+            this.txt_FamilyName.Location = new System.Drawing.Point(111, 90);
             this.txt_FamilyName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_FamilyName.Name = "txt_FamilyName";
             this.txt_FamilyName.Size = new System.Drawing.Size(219, 29);
@@ -81,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(6, 62);
+            this.label2.Location = new System.Drawing.Point(6, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);
@@ -90,7 +90,7 @@
             // 
             // txt_GivenName
             // 
-            this.txt_GivenName.Location = new System.Drawing.Point(111, 90);
+            this.txt_GivenName.Location = new System.Drawing.Point(111, 59);
             this.txt_GivenName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_GivenName.Name = "txt_GivenName";
             this.txt_GivenName.Size = new System.Drawing.Size(219, 29);
@@ -101,7 +101,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(11, 94);
+            this.label3.Location = new System.Drawing.Point(11, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);

@@ -115,5 +115,10 @@ namespace LawtechPTSystem.EditForm
             MessageBox.Show("編輯發明人成功  " + edit.InventorName, "提示訊息");
             this.Close();
         }
+
+        private void txt_FamilyName_TextChanged(object sender, EventArgs e)
+        {
+            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_FamilyName.Text;
+        }
     }
 }

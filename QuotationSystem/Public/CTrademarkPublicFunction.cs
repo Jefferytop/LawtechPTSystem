@@ -17,7 +17,7 @@ namespace LawtechPTSystem.Public
         public static DataRow GetTrademarkList(string strTrademarkID)
         {
 
-            string strSQL = string.Format(@"SELECT *  from  V_TrademarkList where TrademarkID= {0}", strTrademarkID);
+            string strSQL = string.Format(@"SELECT *  from  V_TrademarkList with(nolock) where TrademarkID= {0}", strTrademarkID);
 
             DBAccess dbhelper = new DBAccess();
             System.Data.DataTable dtTrademark = new System.Data.DataTable();
@@ -184,7 +184,7 @@ namespace LawtechPTSystem.Public
 
         #region GetTrademarkList 取得商標的資料 public static void GetTrademarkList(string strWhere, ref DataTable dtSource)
         /// <summary>
-        /// 取得商標的資料
+        /// 取得商標的資料 V_TrademarkList
         /// </summary>
         /// <param name="strWhere"></param>
         /// <returns></returns>
@@ -205,15 +205,35 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
-        #region GetComitEvent 取得事件的資料 public static void GetTrademarkEvent(string strTrademarkID, ref DataTable dtSource)
+        #region GetTrademarkEvent 取得事件的資料 public static void GetTrademarkEvent(string strTrademarkID, ref DataTable dtSource)
         /// <summary>
-        /// 取得商標事件的資料
+        /// 取得商標事件的資料 V_TrademarkNotifyEventT
         /// </summary>
         /// <param name="strWhere"></param>
         /// <returns></returns>
         public static void GetTrademarkEvent(string strTrademarkID, ref DataTable dtSource)
         {
             string strSQL = string.Format(@"SELECT * from  V_TrademarkNotifyEventT with(nolock) where TrademarkID={0} order by NotifyComitDate ", strTrademarkID);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["TMNotifyEventID"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+
+        /// <summary>
+        /// 取得商標事件的資料 V_TrademarkEventList
+        /// </summary>
+        /// <param name="strTrademarkID"></param>
+        /// <param name="dtSource"></param>
+        public static void GetTrademarkEventList(int TMNotifyEventID, ref DataTable dtSource)
+        {
+            string strSQL = string.Format(@"SELECT * from  V_TrademarkEventList with(nolock) where TMNotifyEventID={0}  ", TMNotifyEventID);
 
             DBAccess dbhelper = new DBAccess();
             dtSource.Rows.Clear();
@@ -273,6 +293,29 @@ namespace LawtechPTSystem.Public
         }
         #endregion
 
+        #region GetTrademarkFee 取得商標請款的資料  public static void GetTrademarkFee(string strTrademarkID, ref DataTable dtSource)
+        /// <summary>
+        /// 取得商標請款的資料 V_TrademarkControlFeeList
+        /// </summary>
+        /// <param name="FeeKEY"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        public static void GetTrademarkControlFeeList(int FeeKEY, ref DataTable dtSource)
+        {
+
+            string strSQL = string.Format(@"SELECT * from  V_TrademarkControlFeeList with(nolock) where FeeKEY={0}", FeeKEY);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["FeeKEY"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
         #region GetTrademarkPayment 取得商標付款的資料 public static void GetTrademarkPayment(string strTrademarkID, ref DataTable dtSource)
         /// <summary>
         /// 取得商標付款的資料
@@ -283,6 +326,29 @@ namespace LawtechPTSystem.Public
         {
 
             string strSQL = string.Format(@"SELECT * from  V_TrademarkPaymentT with(nolock) where TrademarkID={0}", strTrademarkID);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["PaymentID"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+        #endregion
+
+        #region 取得商標付款的資料 public static void GetTrademarkPaymentList(int PaymentID, ref DataTable dtSource)
+        /// <summary>
+        /// 取得商標付款的資料 V_TrademarkControlPaymentList
+        /// </summary>
+        /// <param name="strTrademarkID"></param>
+        /// <param name="dtSource"></param>
+        public static void GetTrademarkPaymentList(int PaymentID, ref DataTable dtSource)
+        {
+
+            string strSQL = string.Format(@"SELECT * from  V_TrademarkControlPaymentList with(nolock) where PaymentID={0}", PaymentID);
 
             DBAccess dbhelper = new DBAccess();
             dtSource.Rows.Clear();

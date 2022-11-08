@@ -99,17 +99,18 @@
             // 
             // txt_GivenName
             // 
-            this.txt_GivenName.Location = new System.Drawing.Point(121, 83);
+            this.txt_GivenName.Location = new System.Drawing.Point(121, 52);
             this.txt_GivenName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_GivenName.Name = "txt_GivenName";
             this.txt_GivenName.Size = new System.Drawing.Size(219, 29);
             this.txt_GivenName.TabIndex = 23;
+            this.txt_GivenName.TextChanged += new System.EventHandler(this.txt_FamilyName_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(23, 87);
+            this.label3.Location = new System.Drawing.Point(23, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);
@@ -118,17 +119,18 @@
             // 
             // txt_FamilyName
             // 
-            this.txt_FamilyName.Location = new System.Drawing.Point(121, 52);
+            this.txt_FamilyName.Location = new System.Drawing.Point(121, 83);
             this.txt_FamilyName.Margin = new System.Windows.Forms.Padding(1);
             this.txt_FamilyName.Name = "txt_FamilyName";
             this.txt_FamilyName.Size = new System.Drawing.Size(219, 29);
             this.txt_FamilyName.TabIndex = 21;
+            this.txt_FamilyName.TextChanged += new System.EventHandler(this.txt_FamilyName_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(18, 55);
+            this.label2.Location = new System.Drawing.Point(18, 86);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);

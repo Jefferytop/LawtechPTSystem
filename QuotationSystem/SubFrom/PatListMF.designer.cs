@@ -165,7 +165,6 @@
             this.toolStripButtonEditItem_Patent = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Del = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripButton_Export = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_Upload = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_OpenFile = new System.Windows.Forms.ToolStripButton();
@@ -629,6 +628,14 @@
             this.dataGridView_PatentRightLoc = new System.Windows.Forms.DataGridView();
             this.tagTitle7 = new LawtechPTSystem.US.TagTitle();
             this.bSource_File = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationEvent = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationFee = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_OrientationPayment = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationCost = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip_Pat.SuspendLayout();
             this.contextMenuStrip_Billing.SuspendLayout();
             this.contextMenuStrip_Fee.SuspendLayout();
@@ -1252,7 +1259,7 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel2.Controls.Add(this.Tabcontrol1);
             this.splitContainer1.Size = new System.Drawing.Size(1179, 765);
-            this.splitContainer1.SplitterDistance = 355;
+            this.splitContainer1.SplitterDistance = 353;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 1013;
             // 
@@ -1330,7 +1337,7 @@
             this.GridView_File.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Blue;
             this.GridView_File.RowTemplate.Height = 24;
             this.GridView_File.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView_File.Size = new System.Drawing.Size(1171, 208);
+            this.GridView_File.Size = new System.Drawing.Size(1171, 206);
             this.GridView_File.TabIndex = 15;
             this.GridView_File.Tag = "PatListMF";
             this.GridView_File.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_File_CellDoubleClick);
@@ -1552,13 +1559,12 @@
             this.toolStripButtonEditItem_Patent,
             this.toolStripButton_Del,
             this.toolStripSeparator1,
-            this.toolStripProgressBar1,
             this.toolStripButton_Export,
             this.toolStripButton_Upload,
             this.toolStripButton_OpenFile,
             this.toolStripSeparator21,
             this.toolStripButton_Orientation});
-            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 328);
+            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 326);
             this.bindingNavigator_Patent.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_Patent.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_Patent.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -1676,12 +1682,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripProgressBar1.Visible = false;
-            // 
             // toolStripButton_Export
             // 
             this.toolStripButton_Export.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1724,7 +1724,7 @@
             this.toolStripButton_Orientation.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Orientation.Name = "toolStripButton_Orientation";
             this.toolStripButton_Orientation.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_Orientation.Text = "toolStripButton1";
+            this.toolStripButton_Orientation.Text = "水平/垂直";
             this.toolStripButton_Orientation.ToolTipText = "水平/垂直 畫面";
             // 
             // userControlFilterDate1
@@ -1860,7 +1860,7 @@
             this.Tabcontrol1.Margin = new System.Windows.Forms.Padding(0);
             this.Tabcontrol1.Name = "Tabcontrol1";
             this.Tabcontrol1.SelectedIndex = 0;
-            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 402);
+            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 404);
             this.Tabcontrol1.TabIndex = 12;
             // 
             // TabPage2
@@ -1872,7 +1872,7 @@
             this.TabPage2.Location = new System.Drawing.Point(4, 34);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage2.Size = new System.Drawing.Size(1169, 364);
+            this.TabPage2.Size = new System.Drawing.Size(1169, 366);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = " 申請案基本資料 ";
             this.TabPage2.UseVisualStyleBackColor = true;
@@ -1885,7 +1885,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 356);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 358);
             this.flowLayoutPanel1.TabIndex = 370;
             // 
             // panel2
@@ -3238,7 +3238,7 @@
             this.TabPage3.Location = new System.Drawing.Point(4, 34);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(1169, 362);
+            this.TabPage3.Size = new System.Drawing.Size(1169, 366);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = " 事件記錄 ";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -3288,7 +3288,7 @@
             this.splitContainer4.Panel2.Controls.Add(this.txt_eRemark);
             this.splitContainer4.Panel2.Controls.Add(this.label74);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer4.Size = new System.Drawing.Size(1161, 354);
+            this.splitContainer4.Size = new System.Drawing.Size(1161, 358);
             this.splitContainer4.SplitterDistance = 780;
             this.splitContainer4.TabIndex = 1004;
             // 
@@ -3330,7 +3330,7 @@
             this.GridView_PatComit.ReadOnly = true;
             this.GridView_PatComit.RowHeadersWidth = 30;
             this.GridView_PatComit.RowTemplate.Height = 24;
-            this.GridView_PatComit.Size = new System.Drawing.Size(776, 325);
+            this.GridView_PatComit.Size = new System.Drawing.Size(776, 329);
             this.GridView_PatComit.TabIndex = 0;
             this.GridView_PatComit.Tag = "PatListMF_Event";
             this.GridView_PatComit.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_PatComit_CellDoubleClick);
@@ -3355,8 +3355,10 @@
             this.bindingNavigatorSeparator5,
             this.bindingNavigatorAddNewItem,
             this.toolStripButtonEditItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 327);
+            this.bindingNavigatorDeleteItem,
+            this.toolStripSeparator22,
+            this.toolStripButton_OrientationEvent});
+            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 331);
             this.bindingNavigator_PatComit.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_PatComit.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_PatComit.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -3801,7 +3803,7 @@
             this.TabPage7.Location = new System.Drawing.Point(4, 34);
             this.TabPage7.Name = "TabPage7";
             this.TabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage7.Size = new System.Drawing.Size(1169, 362);
+            this.TabPage7.Size = new System.Drawing.Size(1169, 366);
             this.TabPage7.TabIndex = 6;
             this.TabPage7.Text = " 請款記錄 ";
             this.TabPage7.UseVisualStyleBackColor = true;
@@ -3824,7 +3826,7 @@
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer2.Size = new System.Drawing.Size(1161, 354);
+            this.splitContainer2.Size = new System.Drawing.Size(1161, 358);
             this.splitContainer2.SplitterDistance = 483;
             this.splitContainer2.TabIndex = 342;
             // 
@@ -3847,8 +3849,10 @@
             this.toolStripSeparator4,
             this.bindingNavigatorAddNewItem1,
             this.toolStripButton_FeeEdit,
-            this.bindingNavigatorDeleteItem1});
-            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 327);
+            this.bindingNavigatorDeleteItem1,
+            this.toolStripSeparator23,
+            this.toolStripButton_OrientationFee});
+            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 331);
             this.bindingNavigator_Fee.MoveFirstItem = this.toolStripButton4;
             this.bindingNavigator_Fee.MoveLastItem = this.toolStripButton7;
             this.bindingNavigator_Fee.MoveNextItem = this.toolStripButton6;
@@ -3996,7 +4000,7 @@
             this.GridView_Fee.ReadOnly = true;
             this.GridView_Fee.RowHeadersWidth = 30;
             this.GridView_Fee.RowTemplate.Height = 24;
-            this.GridView_Fee.Size = new System.Drawing.Size(476, 323);
+            this.GridView_Fee.Size = new System.Drawing.Size(476, 327);
             this.GridView_Fee.TabIndex = 0;
             this.GridView_Fee.Tag = "PatListMF_Fee";
             this.GridView_Fee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Fee_CellDoubleClick);
@@ -4010,7 +4014,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 352);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 356);
             this.flowLayoutPanel2.TabIndex = 1151;
             // 
             // groupBox8
@@ -5302,7 +5306,7 @@
             this.tabPage5.Controls.Add(this.splitContainer3);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1169, 362);
+            this.tabPage5.Size = new System.Drawing.Size(1169, 366);
             this.tabPage5.TabIndex = 8;
             this.tabPage5.Text = " 付款記錄 ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -5326,7 +5330,7 @@
             this.splitContainer3.Panel2.AutoScroll = true;
             this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel3);
             this.splitContainer3.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer3.Size = new System.Drawing.Size(1167, 360);
+            this.splitContainer3.Size = new System.Drawing.Size(1167, 364);
             this.splitContainer3.SplitterDistance = 593;
             this.splitContainer3.TabIndex = 343;
             // 
@@ -5349,8 +5353,10 @@
             this.bindingNavigatorSeparator8,
             this.toolStripButton_PayRecordAdd,
             this.toolStripButton_PayRecordEdit,
-            this.toolStripButton_PayRecordDel});
-            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 333);
+            this.toolStripButton_PayRecordDel,
+            this.toolStripSeparator24,
+            this.toolStripButton_OrientationPayment});
+            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 337);
             this.bindingNavigator_Payment.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator_Payment.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator_Payment.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -5491,7 +5497,7 @@
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView_Billing.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Billing.RowTemplate.Height = 24;
-            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 327);
+            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 331);
             this.dataGridView_Billing.TabIndex = 0;
             this.dataGridView_Billing.Tag = "PatListMF_Payment";
             this.dataGridView_Billing.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Billing_CellDoubleClick);
@@ -5505,7 +5511,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 358);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 362);
             this.flowLayoutPanel3.TabIndex = 1080;
             // 
             // groupBox7
@@ -6160,7 +6166,7 @@
             this.tabPage1.Controls.Add(this.splitContainer5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1169, 362);
+            this.tabPage1.Size = new System.Drawing.Size(1169, 366);
             this.tabPage1.TabIndex = 9;
             this.tabPage1.Text = " 預估費用 ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -6230,7 +6236,7 @@
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_Remark);
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_PayMemo);
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer5.Size = new System.Drawing.Size(1169, 362);
+            this.splitContainer5.Size = new System.Drawing.Size(1169, 366);
             this.splitContainer5.SplitterDistance = 591;
             this.splitContainer5.TabIndex = 2;
             // 
@@ -6253,8 +6259,10 @@
             this.toolStripSeparator19,
             this.toolStripButton_ES_Add,
             this.toolStripButton_ES_Edit,
-            this.toolStripButton_ES_Del});
-            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 335);
+            this.toolStripButton_ES_Del,
+            this.toolStripSeparator25,
+            this.toolStripButton_OrientationCost});
+            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 339);
             this.bindingNavigator_EstimateCost.MoveFirstItem = this.toolStripButton19;
             this.bindingNavigator_EstimateCost.MoveLastItem = this.toolStripButton22;
             this.bindingNavigator_EstimateCost.MoveNextItem = this.toolStripButton21;
@@ -6264,6 +6272,7 @@
             this.bindingNavigator_EstimateCost.Size = new System.Drawing.Size(589, 25);
             this.bindingNavigator_EstimateCost.TabIndex = 289;
             this.bindingNavigator_EstimateCost.Text = "bindingNavigator1";
+            this.bindingNavigator_EstimateCost.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_EstimateCost_ItemClicked);
             // 
             // toolStripLabel4
             // 
@@ -6402,7 +6411,7 @@
             this.dataGridView_EstimateCost.ReadOnly = true;
             this.dataGridView_EstimateCost.RowHeadersWidth = 30;
             this.dataGridView_EstimateCost.RowTemplate.Height = 24;
-            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 329);
+            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 333);
             this.dataGridView_EstimateCost.TabIndex = 1;
             this.dataGridView_EstimateCost.Tag = "PatListMF_EstimateCost";
             this.dataGridView_EstimateCost.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_EstimateCost_CellDoubleClick);
@@ -7022,7 +7031,7 @@
             this.tabPage4.Controls.Add(this.splitContainer10);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1169, 364);
+            this.tabPage4.Size = new System.Drawing.Size(1169, 366);
             this.tabPage4.TabIndex = 10;
             this.tabPage4.Text = "智財局專利資料";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -7043,7 +7052,7 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer10.Size = new System.Drawing.Size(1167, 362);
+            this.splitContainer10.Size = new System.Drawing.Size(1167, 364);
             this.splitContainer10.SplitterDistance = 135;
             this.splitContainer10.SplitterWidth = 5;
             this.splitContainer10.TabIndex = 1059;
@@ -7115,7 +7124,7 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(1167, 222);
+            this.splitContainer6.Size = new System.Drawing.Size(1167, 224);
             this.splitContainer6.SplitterDistance = 571;
             this.splitContainer6.TabIndex = 1058;
             // 
@@ -7135,7 +7144,7 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.dataGridView_inventors);
             this.splitContainer7.Panel2.Controls.Add(this.tagTitle4);
-            this.splitContainer7.Size = new System.Drawing.Size(571, 222);
+            this.splitContainer7.Size = new System.Drawing.Size(571, 224);
             this.splitContainer7.SplitterDistance = 283;
             this.splitContainer7.TabIndex = 0;
             // 
@@ -7146,7 +7155,8 @@
             this.dataGridView_applicants.AllowUserToOrderColumns = true;
             dataGridViewCellStyle27.BackColor = System.Drawing.Color.LightYellow;
             this.dataGridView_applicants.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView_applicants.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_applicants.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_applicants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_applicants.Location = new System.Drawing.Point(2, 34);
@@ -7154,7 +7164,7 @@
             this.dataGridView_applicants.Name = "dataGridView_applicants";
             this.dataGridView_applicants.ReadOnly = true;
             this.dataGridView_applicants.RowTemplate.Height = 24;
-            this.dataGridView_applicants.Size = new System.Drawing.Size(277, 236);
+            this.dataGridView_applicants.Size = new System.Drawing.Size(277, 185);
             this.dataGridView_applicants.TabIndex = 1059;
             this.dataGridView_applicants.Tag = "PatListMF_applicants";
             // 
@@ -7180,7 +7190,8 @@
             this.dataGridView_inventors.AllowUserToOrderColumns = true;
             dataGridViewCellStyle28.BackColor = System.Drawing.Color.LightYellow;
             this.dataGridView_inventors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView_inventors.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_inventors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_inventors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_inventors.Location = new System.Drawing.Point(3, 34);
@@ -7188,7 +7199,7 @@
             this.dataGridView_inventors.Name = "dataGridView_inventors";
             this.dataGridView_inventors.ReadOnly = true;
             this.dataGridView_inventors.RowTemplate.Height = 24;
-            this.dataGridView_inventors.Size = new System.Drawing.Size(276, 236);
+            this.dataGridView_inventors.Size = new System.Drawing.Size(276, 185);
             this.dataGridView_inventors.TabIndex = 1061;
             this.dataGridView_inventors.Tag = "PatListMF_inventors";
             // 
@@ -7222,7 +7233,7 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer8.Size = new System.Drawing.Size(592, 222);
+            this.splitContainer8.Size = new System.Drawing.Size(592, 224);
             this.splitContainer8.SplitterDistance = 291;
             this.splitContainer8.TabIndex = 0;
             // 
@@ -7233,7 +7244,8 @@
             this.dataGridView_PatentAnnuity.AllowUserToOrderColumns = true;
             dataGridViewCellStyle29.BackColor = System.Drawing.Color.LightYellow;
             this.dataGridView_PatentAnnuity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridView_PatentAnnuity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView_PatentAnnuity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_PatentAnnuity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_PatentAnnuity.Location = new System.Drawing.Point(3, 34);
@@ -7241,7 +7253,7 @@
             this.dataGridView_PatentAnnuity.Name = "dataGridView_PatentAnnuity";
             this.dataGridView_PatentAnnuity.ReadOnly = true;
             this.dataGridView_PatentAnnuity.RowTemplate.Height = 24;
-            this.dataGridView_PatentAnnuity.Size = new System.Drawing.Size(283, 236);
+            this.dataGridView_PatentAnnuity.Size = new System.Drawing.Size(283, 185);
             this.dataGridView_PatentAnnuity.TabIndex = 1061;
             this.dataGridView_PatentAnnuity.Tag = "PatListMF_PatentAnnuity";
             // 
@@ -7277,7 +7289,7 @@
             // 
             this.splitContainer9.Panel2.Controls.Add(this.dataGridView_PatentRightLoc);
             this.splitContainer9.Panel2.Controls.Add(this.tagTitle7);
-            this.splitContainer9.Size = new System.Drawing.Size(297, 222);
+            this.splitContainer9.Size = new System.Drawing.Size(297, 224);
             this.splitContainer9.SplitterDistance = 106;
             this.splitContainer9.TabIndex = 1064;
             // 
@@ -7332,7 +7344,7 @@
             this.dataGridView_PatentRightLoc.Name = "dataGridView_PatentRightLoc";
             this.dataGridView_PatentRightLoc.ReadOnly = true;
             this.dataGridView_PatentRightLoc.RowTemplate.Height = 24;
-            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 73);
+            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 75);
             this.dataGridView_PatentRightLoc.TabIndex = 1065;
             this.dataGridView_PatentRightLoc.Tag = "PatListMF_PatentRightLoc";
             // 
@@ -7350,6 +7362,62 @@
             this.tagTitle7.TabIndex = 1064;
             this.tagTitle7.TagTitleStyle = "Style2";
             this.tagTitle7.TitleLableText = "智財局專利 LOC分類資訊";
+            // 
+            // toolStripSeparator22
+            // 
+            this.toolStripSeparator22.Name = "toolStripSeparator22";
+            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationEvent
+            // 
+            this.toolStripButton_OrientationEvent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationEvent.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationEvent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationEvent.Name = "toolStripButton_OrientationEvent";
+            this.toolStripButton_OrientationEvent.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationEvent.Text = "水平/垂直";
+            // 
+            // toolStripSeparator23
+            // 
+            this.toolStripSeparator23.Name = "toolStripSeparator23";
+            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationFee
+            // 
+            this.toolStripButton_OrientationFee.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationFee.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationFee.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationFee.Name = "toolStripButton_OrientationFee";
+            this.toolStripButton_OrientationFee.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationFee.Text = "水平/垂直";
+            // 
+            // toolStripButton_OrientationPayment
+            // 
+            this.toolStripButton_OrientationPayment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationPayment.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationPayment.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationPayment.Name = "toolStripButton_OrientationPayment";
+            this.toolStripButton_OrientationPayment.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationPayment.Text = "水平/垂直";
+            // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator25
+            // 
+            this.toolStripSeparator25.Name = "toolStripSeparator25";
+            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationCost
+            // 
+            this.toolStripButton_OrientationCost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationCost.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationCost.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationCost.Name = "toolStripButton_OrientationCost";
+            this.toolStripButton_OrientationCost.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationCost.Text = "水平/垂直";
             // 
             // PatListMF
             // 
@@ -7560,7 +7628,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonEditItem_Patent;
         private System.Windows.Forms.ToolStripButton toolStripButton_Del;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         internal System.Windows.Forms.TabControl Tabcontrol1;
         internal System.Windows.Forms.TabPage TabPage2;
         private System.Windows.Forms.LinkLabel linkLabel_mome;
@@ -8066,5 +8133,13 @@
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_aBillDate;
         private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
+        private System.Windows.Forms.ToolStripButton toolStripButton_OrientationEvent;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
+        private System.Windows.Forms.ToolStripButton toolStripButton_OrientationFee;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
+        private System.Windows.Forms.ToolStripButton toolStripButton_OrientationPayment;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
+        private System.Windows.Forms.ToolStripButton toolStripButton_OrientationCost;
     }
 }

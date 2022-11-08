@@ -20,7 +20,7 @@ namespace LawtechPTSystem.US
         public NotificationLetter()
         {
             InitializeComponent();
-
+            dataGridView1.AutoGenerateColumns = false;
             bw.WorkerReportsProgress = true;
             bw.WorkerSupportsCancellation = true;
             bw.DoWork += new DoWorkEventHandler(bw_DoWork);
@@ -157,6 +157,9 @@ namespace LawtechPTSystem.US
             ControlBinding();
 
             InitListViewColumns();
+
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            dataGridView1_SelectionChanged(null, null);
         }
         #endregion
 
@@ -194,19 +197,19 @@ namespace LawtechPTSystem.US
             
             if (dataGridView1.CurrentRow != null)
             {
-                txt_Subject.Text =ReplaceLabel( dataGridView1.CurrentRow.Cells["MailSubject"].Value.ToString());
-                comboBox_Priority.SelectedValue =dataGridView1.CurrentRow.Cells["MailPriority"].Value.ToString();
-                comboBox_MailFormat.SelectedValue=dataGridView1.CurrentRow.Cells["Format"].Value.ToString();
+                txt_Subject.Text =ReplaceLabel(dataGridView1.CurrentRow.Cells["MailSubject"].Value.ToString());
+                comboBox_Priority.SelectedValue = dataGridView1.CurrentRow.Cells["MailPriority"].Value.ToString();
+                comboBox_MailFormat.SelectedValue= dataGridView1.CurrentRow.Cells["Format"].Value.ToString();
 
                 if (comboBox_MailFormat.SelectedValue.ToString() == "HTML")
                 {
-                    editorHTML1.BodyHtml =ReplaceLabel( dataGridView1.CurrentRow.Cells["MailBody"].Value.ToString());
+                    editorHTML1.BodyHtml =ReplaceLabel(dataGridView1.CurrentRow.Cells["MailBody"].Value.ToString());
                     textBox_Body.Visible = false;
                     editorHTML1.Visible = true;
                 }
                 else
                 {
-                    textBox_Body.Text =ReplaceLabel( dataGridView1.CurrentRow.Cells["MailBody"].Value.ToString());
+                    textBox_Body.Text =ReplaceLabel(dataGridView1.CurrentRow.Cells["MailBody"].Value.ToString());
                     textBox_Body.Visible = true;
                     editorHTML1.Visible = false;
                 }
@@ -236,7 +239,7 @@ namespace LawtechPTSystem.US
         private DataTable GetLabelNameCombin(string LabelCode)
         {
             string strSQL = @"SELECT         TableColumn, LabelName, CCID
-                                FROM             LabelNameCombainT
+                                FROM             LabelNameCombainT with(nolock)
                                 WHERE         (LabelCode = '" + LabelCode + "')";
 
             Public.DLL dll = new Public.DLL();
@@ -246,85 +249,100 @@ namespace LawtechPTSystem.US
         #endregion
 
         #region ==============取得專利資料==============
-        private DataTable GetPatent(int PatentID)
+        /// <summary>
+        /// 取得專利資料
+        /// </summary>
+        /// <param name="PatentID"></param>
+        /// <param name="dtSource"></param>
+        private void GetPatent(int PatentID, ref DataTable dtSource)
         {
-            QS_DataSetTableAdapters.PatentManagementTTableAdapter patent = new LawtechPTSystem.QS_DataSetTableAdapters.PatentManagementTTableAdapter();
-            QS_DataSet.PatentManagementTDataTable tablePatetn=new QS_DataSet.PatentManagementTDataTable();
-            patent.FillByPatentID(tablePatetn, PatentID);           
-            return tablePatetn;
+            Public.CPatentPublicFunction.GetPatentList("PatentID=" + PatentID.ToString(), ref dtSource);           
         }
-        #endregion 
+        #endregion
 
-        #region ==============取得專利案件記錄資料==============
-        private DataTable GetPatentComit(int PatComitEventID)
+        #region ==============取得專利事件記錄資料==============
+        /// <summary>
+        /// 取得專利事件記錄資料 V_PATControlEventList
+        /// </summary>
+        /// <param name="PatentID"></param>
+        /// <param name="dtSource"></param>
+        private void GetPatentComit(int PatComitEventID, ref DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.PatentComitEventTableAdapter patentComit = new DataSet_EverySearchTableAdapters.PatentComitEventTableAdapter();
-            DataSet_EverySearch.PatentComitEventDataTable table_PatentComitEvent = new DataSet_EverySearch.PatentComitEventDataTable();
-            patentComit.Fill(table_PatentComitEvent, PatComitEventID);
-
-            return table_PatentComitEvent;
+            dtSource =Public.CPatentPublicFunction.GetComitEvent("PatComitEventID=" + PatComitEventID.ToString());
         }
-        #endregion 
+        #endregion     
 
         #region ==============取得專利請款記錄資料==============
-        private DataTable GetPatentFee(int FeeKey)
+        /// <summary>
+        /// 取得專利請款記錄資料 V_PatentFeeT
+        /// </summary>
+        /// <param name="FeeKey"></param>
+        /// <param name="dtSource"></param>
+        private void GetPatentFee(int FeeKey, ref  DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.PatentFeeSearchTableAdapter patentComit = new DataSet_EverySearchTableAdapters.PatentFeeSearchTableAdapter();
-            DataSet_EverySearch.PatentFeeSearchDataTable table_PatentFee = new DataSet_EverySearch.PatentFeeSearchDataTable();
-            patentComit.Fill(table_PatentFee, FeeKey);
-
-            return table_PatentFee;
+            Public.CPatentPublicFunction.GetPatentkControlFeeList(FeeKey,ref dtSource);
+           
         }
         #endregion 
 
         #region ==============取得專利付款記錄資料==============
-        private DataTable GetPatentPayment(int PaymentID)
+        /// <summary>
+        /// 取得專利付款記錄資料 V_PATControlPayment
+        /// </summary>
+        /// <param name="PaymentID"></param>
+        /// <param name="dtSource"></param>
+        private void GetPatentPayment(int PaymentID,ref DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.PatentPaymentSearchTableAdapter patentComit = new DataSet_EverySearchTableAdapters.PatentPaymentSearchTableAdapter();
-            DataSet_EverySearch.PatentPaymentSearchDataTable table_PatentPayment = new DataSet_EverySearch.PatentPaymentSearchDataTable();
-            patentComit.Fill(table_PatentPayment, PaymentID);
-
-            return table_PatentPayment;
+            Public.CPatentPublicFunction.GetPATControlPaymentList("PaymentID="+ PaymentID.ToString(), ref dtSource);          
         }
         #endregion 
 
         #region  =============取得商標資料=============
-        private DataTable GetTrademark(int TrademarkID)
+        /// <summary>
+        /// 取得商標資料 V_TrademarkList
+        /// </summary>
+        /// <param name="TrademarkID"></param>
+        /// <param name="dtSource"></param>
+        private void GetTrademark(int TrademarkID,ref DataTable dtSource)
         {
-            DataSet_TMTableAdapters.TrademarkManagementTTableAdapter Trademark = new LawtechPTSystem.DataSet_TMTableAdapters.TrademarkManagementTTableAdapter();
-            DataSet_TM.TrademarkManagementTDataTable tm = new DataSet_TM.TrademarkManagementTDataTable();
-            Trademark.FillByTrademarkID(tm,TrademarkID);
-            return tm;
+            Public.CTrademarkPublicFunction.GetTrademarkList("TrademarkID="+TrademarkID.ToString(), ref dtSource);           
         }
         #endregion
 
         #region  =============取得商標案件記錄資料=============
-        private DataTable GetTrademarkNotifyEventT(int TMNotifyEventID)
+        /// <summary>
+        /// 取得商標案件記錄資料 V_TrademarkEventList
+        /// </summary>
+        /// <param name="TMNotifyEventID"></param>
+        /// <param name="dtSource"></param>
+        /// <returns></returns>
+        private void GetTrademarkNotifyEventT(int TMNotifyEventID,ref DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.TrademarkEventSearchTableAdapter Trademark = new DataSet_EverySearchTableAdapters.TrademarkEventSearchTableAdapter();
-            DataSet_EverySearch.TrademarkEventSearchDataTable tm = new DataSet_EverySearch.TrademarkEventSearchDataTable();
-            Trademark.Fill(tm, TMNotifyEventID);
-            return tm;
+            Public.CTrademarkPublicFunction.GetTrademarkEventList(TMNotifyEventID, ref dtSource);          
         }
         #endregion
 
         #region  =============取得商標請款資料=============
-        private DataTable GetTrademarkFeeT(int FeeKEY)
+        /// <summary>
+        /// 取得商標請款資料 V_TrademarkControlFeeList
+        /// </summary>
+        /// <param name="FeeKEY"></param>
+        /// <param name="dtSource"></param>
+        private void GetTrademarkFeeT(int FeeKEY, ref DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.TrademarkFeeSearchTableAdapter Trademark = new DataSet_EverySearchTableAdapters.TrademarkFeeSearchTableAdapter();
-            DataSet_EverySearch.TrademarkFeeSearchDataTable tm = new DataSet_EverySearch.TrademarkFeeSearchDataTable();
-            Trademark.Fill(tm, FeeKEY);
-            return tm;
+            Public.CTrademarkPublicFunction.GetTrademarkControlFeeList(FeeKEY,ref dtSource);            
         }
         #endregion
 
         #region  =============取得商標付款資料=============
-        private DataTable GetTrademarkPaymentT(int PaymentID)
+        /// <summary>
+        /// 取得商標付款資料 V_TrademarkControlPaymentList
+        /// </summary>
+        /// <param name="PaymentID"></param>
+        /// <param name="dtSource"></param>
+        private void GetTrademarkPaymentT(int PaymentID, ref DataTable dtSource)
         {
-            DataSet_EverySearchTableAdapters.TrademarkPaymentSearchTableAdapter Trademark = new DataSet_EverySearchTableAdapters.TrademarkPaymentSearchTableAdapter();
-            DataSet_EverySearch.TrademarkPaymentSearchDataTable tm = new DataSet_EverySearch.TrademarkPaymentSearchDataTable();
-            Trademark.Fill(tm, PaymentID);
-            return tm;
+            Public.CTrademarkPublicFunction.GetTrademarkPaymentList(PaymentID,ref dtSource);            
         }
         #endregion
 
@@ -377,48 +395,36 @@ namespace LawtechPTSystem.US
         private string ReplaceLabel(string txt)
         {
             if (txt.Contains("{-") && txt.Contains("-}"))
-            {
-              
+            {              
                 DataTable dtCase = new DataTable();
 
                 switch (EmailSampleType)
                 {
                     case "Patent":                                         
-                        dtCase = GetPatent(CaseKey);
+                      GetPatent(CaseKey,ref dtCase);
                         break;
                     case "Trademark":                                    
-                        dtCase = GetTrademark(CaseKey);
+                         GetTrademark(CaseKey,ref dtCase);
                         break;
                     case "PatentEvent":
-                        dtCase = GetPatentComit(CaseKey);
+                       GetPatentComit(CaseKey,ref dtCase);
                         break;
                     case "PatentFee":
-                        dtCase = GetPatentFee(CaseKey);
+                     GetPatentFee(CaseKey, ref dtCase);
                         break;
                     case "PatentPayment":
-                        dtCase = GetPatentPayment(CaseKey);
+                       GetPatentPayment(CaseKey, ref dtCase);
                         break;
                     case "TrademarkEvent":
-                        dtCase = GetTrademarkNotifyEventT(CaseKey);
+                         GetTrademarkNotifyEventT(CaseKey,ref dtCase);
                         break;
                     case "TrademarkFee":
-                        dtCase = GetTrademarkFeeT(CaseKey);
+                        GetTrademarkFeeT(CaseKey, ref dtCase);
                         break;
                     case "TrademarkPayment":
-                        dtCase = GetTrademarkPaymentT(CaseKey);
+                        GetTrademarkPaymentT(CaseKey, ref dtCase);
                         break;
-                    case "TrademarkControversy":
-                        dtCase = GetTrademarkControversy(CaseKey);
-                        break;
-                    case "TrademarkControversyEvent":
-                        dtCase = GetTrademarkControversyNotifyEventT(CaseKey);
-                        break;
-                    case "TrademarkControversyFee":
-                        dtCase = GetTrademarkControversyFeeT(CaseKey);
-                        break;
-                    case "TrademarkControversyPayment":
-                        dtCase = GetTrademarkControversyPaymentT(CaseKey);
-                        break;
+                 
                 }
 
                 if (dtCase.Rows.Count > 0)
@@ -765,6 +771,16 @@ namespace LawtechPTSystem.US
                     listView1_DoubleClick(null, null);
                     break;
             }
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.Cancel = false;
+        }
+
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
+        {
+
         }
         #endregion
 

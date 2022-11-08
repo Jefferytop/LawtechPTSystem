@@ -296,7 +296,7 @@
             // 
             this.emailSampleTDataGridView.AllowUserToAddRows = false;
             this.emailSampleTDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
             this.emailSampleTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;

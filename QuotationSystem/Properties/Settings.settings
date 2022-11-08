@@ -143,10 +143,10 @@
     <Setting Name="DataBaseConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;hH2gFIQbMmyLzs1R8ThFfx61AtUk9FOWrxx8FGUtvauBZ7VogVlCrTm9YPTHbg5WwUtLtFLOT2rzQHThuK8cjGBin1Vr+FiJLe+HHnY5FqCBgXovnyR/q6WAR4+sEEUwAUx6i4M1ypGm8x1QFCrY1o8iG8quaoqIR1QJEWWJ3W/wzjWhn/ZG/b1ChNULnzrae3cNoLJ1scJIE8vKawPySQ==&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;hH2gFIQbMmwvKqMDXx1OUZlfmAHoKyr1AyrNcvI9LsMXNRhdIfVqfZmQQOiPdwmXqBg/nxP5a/f73H5S/e00OEHX8eLfhwgJaewNoNr6DWc+oLAHr8HgAkokNxv8Ftu2MCvKX+6HNnu8idL55KLXqkrEJNq61VJPMjgz3sBCp8Et+OgEUDuTpM+KkGIsVp75xpvZ45p5+xYbGClq9sOKjVbt1+pWyXM8&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">hH2gFIQbMmyLzs1R8ThFfx61AtUk9FOWrxx8FGUtvauBZ7VogVlCrTm9YPTHbg5WwUtLtFLOT2rzQHThuK8cjGBin1Vr+FiJLe+HHnY5FqCBgXovnyR/q6WAR4+sEEUwAUx6i4M1ypGm8x1QFCrY1o8iG8quaoqIR1QJEWWJ3W/wzjWhn/ZG/b1ChNULnzrae3cNoLJ1scJIE8vKawPySQ==</Value>
+      <Value Profile="(Default)">hH2gFIQbMmwvKqMDXx1OUZlfmAHoKyr1AyrNcvI9LsMXNRhdIfVqfZmQQOiPdwmXqBg/nxP5a/f73H5S/e00OEHX8eLfhwgJaewNoNr6DWc+oLAHr8HgAkokNxv8Ftu2MCvKX+6HNnu8idL55KLXqkrEJNq61VJPMjgz3sBCp8Et+OgEUDuTpM+KkGIsVp75xpvZ45p5+xYbGClq9sOKjVbt1+pWyXM8</Value>
     </Setting>
   </Settings>
 </SettingsFile>

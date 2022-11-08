@@ -95,7 +95,7 @@ namespace LawtechPTSystem.AddFrom
 
         private void txt_FamilyName_TextChanged(object sender, EventArgs e)
         {
-            txt_FullEnName.Text = txt_FamilyName.Text + " " + txt_GivenName.Text;
+            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_FamilyName.Text ;
         }
 
         private void AddInventor_Load(object sender, EventArgs e)

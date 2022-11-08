@@ -1631,6 +1631,9 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                         worklist.Show();
                     }
                     break;
+                case "toolStripButton_OrientationEvent":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer4);
+                    break;
             }
 
 
@@ -1733,6 +1736,9 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                             }
                         }
                     }
+                    break;
+                case "toolStripButton_OrientationCost":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer5);
                     break;
             }
         }
@@ -1974,6 +1980,9 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                     gc.CurrentGridSymboID = GridView_Fee.Tag.ToString();
                     gc.TitleName = "請款記錄";
                     gc.Show();
+                    break;
+                case "toolStripButton_OrientationFee":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer2);
                     break;
             }
 
@@ -2252,6 +2261,9 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                     gc.CurrentGridSymboID = dataGridView_Billing.Tag.ToString();
                     gc.TitleName = "付款記錄";
                     gc.Show();
+                    break;
+                case "toolStripButton_OrientationPayment":
+                    Public.Utility.SsplitContainerHorizontal(ref splitContainer3);
                     break;
             }
         }

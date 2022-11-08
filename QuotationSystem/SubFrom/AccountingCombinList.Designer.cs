@@ -33,14 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,10 +48,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -61,6 +61,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton_Patent = new System.Windows.Forms.RadioButton();
             this.radioButton_Trademark = new System.Windows.Forms.RadioButton();
@@ -489,10 +490,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgViewMF.AutoGenerateColumns = false;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgViewMF.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -524,11 +525,14 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgViewMF.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgViewMF.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(180)))), ((int)(((byte)(193)))));
             this.dgViewMF.Location = new System.Drawing.Point(6, 165);
             this.dgViewMF.Margin = new System.Windows.Forms.Padding(1);
             this.dgViewMF.Name = "dgViewMF";
             this.dgViewMF.ReadOnly = true;
             this.dgViewMF.RowHeadersWidth = 25;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgViewMF.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgViewMF.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgViewMF.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgViewMF.RowTemplate.Height = 24;
@@ -678,27 +682,27 @@
             this.toolStripMenuItem_CompleteHistory,
             this.toolStripMenuItem_SetGridColumn});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 70);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // toolStripMenuItem_CaseDetail
             // 
             this.toolStripMenuItem_CaseDetail.Image = global::LawtechPTSystem.Properties.Resources.InfoDetails;
             this.toolStripMenuItem_CaseDetail.Name = "toolStripMenuItem_CaseDetail";
-            this.toolStripMenuItem_CaseDetail.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_CaseDetail.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem_CaseDetail.Text = "案件詳細資料";
             // 
             // toolStripMenuItem_CompleteHistory
             // 
             this.toolStripMenuItem_CompleteHistory.Name = "toolStripMenuItem_CompleteHistory";
-            this.toolStripMenuItem_CompleteHistory.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_CompleteHistory.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem_CompleteHistory.Text = "案件完整歷程";
             // 
             // toolStripMenuItem_SetGridColumn
             // 
             this.toolStripMenuItem_SetGridColumn.Image = global::LawtechPTSystem.Properties.Resources.columns;
             this.toolStripMenuItem_SetGridColumn.Name = "toolStripMenuItem_SetGridColumn";
-            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_SetGridColumn.Size = new System.Drawing.Size(146, 22);
             this.toolStripMenuItem_SetGridColumn.Text = "設定列表欄位";
             // 
             // tagTitle3
@@ -952,20 +956,20 @@
             this.GridView_Fee.AllowUserToAddRows = false;
             this.GridView_Fee.AllowUserToDeleteRows = false;
             this.GridView_Fee.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Lavender;
-            this.GridView_Fee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
+            this.GridView_Fee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.GridView_Fee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridView_Fee.AutoGenerateColumns = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView_Fee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView_Fee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.GridView_Fee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView_Fee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pay,
@@ -989,14 +993,14 @@
             this.IsClosing,
             this.CloseDate});
             this.GridView_Fee.DataSource = this.patentFeeTBindingSource;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView_Fee.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView_Fee.DefaultCellStyle = dataGridViewCellStyle19;
             this.GridView_Fee.Location = new System.Drawing.Point(2, 32);
             this.GridView_Fee.Margin = new System.Windows.Forms.Padding(0);
             this.GridView_Fee.Name = "GridView_Fee";
@@ -1019,8 +1023,8 @@
             // RDate
             // 
             this.RDate.DataPropertyName = "RDate";
-            dataGridViewCellStyle10.Format = "yyyy/MM/dd";
-            this.RDate.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Format = "yyyy/MM/dd";
+            this.RDate.DefaultCellStyle = dataGridViewCellStyle11;
             this.RDate.HeaderText = "請款日期";
             this.RDate.Name = "RDate";
             this.RDate.ReadOnly = true;
@@ -1028,8 +1032,8 @@
             // PayDate
             // 
             this.PayDate.DataPropertyName = "PayDate";
-            dataGridViewCellStyle11.Format = "yyyy/MM/dd";
-            this.PayDate.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Format = "yyyy/MM/dd";
+            this.PayDate.DefaultCellStyle = dataGridViewCellStyle12;
             this.PayDate.HeaderText = "收款日期";
             this.PayDate.Name = "PayDate";
             this.PayDate.ReadOnly = true;
@@ -1085,8 +1089,8 @@
             // OAttorneyGovFee
             // 
             this.OAttorneyGovFee.DataPropertyName = "OAttorneyGovFee";
-            dataGridViewCellStyle12.Format = "#,##0.###";
-            this.OAttorneyGovFee.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Format = "#,##0.###";
+            this.OAttorneyGovFee.DefaultCellStyle = dataGridViewCellStyle13;
             this.OAttorneyGovFee.HeaderText = "代收代付合計NT";
             this.OAttorneyGovFee.Name = "OAttorneyGovFee";
             this.OAttorneyGovFee.ReadOnly = true;
@@ -1095,8 +1099,8 @@
             // Totall
             // 
             this.Totall.DataPropertyName = "Totall";
-            dataGridViewCellStyle13.Format = "#,##0.###";
-            this.Totall.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Format = "#,##0.###";
+            this.Totall.DefaultCellStyle = dataGridViewCellStyle14;
             this.Totall.HeaderText = "全部總計NT";
             this.Totall.Name = "Totall";
             this.Totall.ReadOnly = true;
@@ -1111,8 +1115,8 @@
             // ReceiptDate
             // 
             this.ReceiptDate.DataPropertyName = "ReceiptDate";
-            dataGridViewCellStyle14.Format = "yyyy/MM/dd";
-            this.ReceiptDate.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Format = "yyyy/MM/dd";
+            this.ReceiptDate.DefaultCellStyle = dataGridViewCellStyle15;
             this.ReceiptDate.HeaderText = "收據日期";
             this.ReceiptDate.Name = "ReceiptDate";
             this.ReceiptDate.ReadOnly = true;
@@ -1120,8 +1124,8 @@
             // Tax
             // 
             this.Tax.DataPropertyName = "Tax";
-            dataGridViewCellStyle15.Format = "#,##0.###";
-            this.Tax.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Format = "#,##0.###";
+            this.Tax.DefaultCellStyle = dataGridViewCellStyle16;
             this.Tax.HeaderText = "預扣稅額";
             this.Tax.Name = "Tax";
             this.Tax.ReadOnly = true;
@@ -1131,8 +1135,8 @@
             // PracticalityPay
             // 
             this.PracticalityPay.DataPropertyName = "PracticalityPay";
-            dataGridViewCellStyle16.Format = "#,##0.###";
-            this.PracticalityPay.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Format = "#,##0.###";
+            this.PracticalityPay.DefaultCellStyle = dataGridViewCellStyle17;
             this.PracticalityPay.HeaderText = "收據金額";
             this.PracticalityPay.Name = "PracticalityPay";
             this.PracticalityPay.ReadOnly = true;
@@ -1175,8 +1179,8 @@
             // CloseDate
             // 
             this.CloseDate.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle17.Format = "yyyy/MM/dd";
-            this.CloseDate.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.Format = "yyyy/MM/dd";
+            this.CloseDate.DefaultCellStyle = dataGridViewCellStyle18;
             this.CloseDate.HeaderText = "關帳日期";
             this.CloseDate.Name = "CloseDate";
             this.CloseDate.ReadOnly = true;
@@ -1307,20 +1311,20 @@
             this.GridView_Payment.AllowUserToAddRows = false;
             this.GridView_Payment.AllowUserToDeleteRows = false;
             this.GridView_Payment.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.Lavender;
-            this.GridView_Payment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Lavender;
+            this.GridView_Payment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
             this.GridView_Payment.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridView_Payment.AutoGenerateColumns = false;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridView_Payment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridView_Payment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.GridView_Payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView_Payment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PaymentID,
@@ -1349,14 +1353,14 @@
             this.IsClosingPayment,
             this.CloseDatePayment});
             this.GridView_Payment.DataSource = this.patentPaymentTBindingSource;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridView_Payment.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridView_Payment.DefaultCellStyle = dataGridViewCellStyle32;
             this.GridView_Payment.Location = new System.Drawing.Point(3, 32);
             this.GridView_Payment.Name = "GridView_Payment";
             this.GridView_Payment.ReadOnly = true;
@@ -1429,8 +1433,8 @@
             // IReceiptDate
             // 
             this.IReceiptDate.DataPropertyName = "IReceiptDate";
-            dataGridViewCellStyle21.Format = "yyyy/MM/dd";
-            this.IReceiptDate.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Format = "yyyy/MM/dd";
+            this.IReceiptDate.DefaultCellStyle = dataGridViewCellStyle22;
             this.IReceiptDate.HeaderText = "收據日期";
             this.IReceiptDate.Name = "IReceiptDate";
             this.IReceiptDate.ReadOnly = true;
@@ -1452,8 +1456,8 @@
             // IServiceFee
             // 
             this.IServiceFee.DataPropertyName = "IServiceFee";
-            dataGridViewCellStyle22.Format = "#,##0.####";
-            this.IServiceFee.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Format = "#,##0.####";
+            this.IServiceFee.DefaultCellStyle = dataGridViewCellStyle23;
             this.IServiceFee.HeaderText = "服務費";
             this.IServiceFee.Name = "IServiceFee";
             this.IServiceFee.ReadOnly = true;
@@ -1461,8 +1465,8 @@
             // GovFee
             // 
             this.GovFee.DataPropertyName = "GovFee";
-            dataGridViewCellStyle23.Format = "#,##0.####";
-            this.GovFee.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle24.Format = "#,##0.####";
+            this.GovFee.DefaultCellStyle = dataGridViewCellStyle24;
             this.GovFee.HeaderText = "官費";
             this.GovFee.Name = "GovFee";
             this.GovFee.ReadOnly = true;
@@ -1470,8 +1474,8 @@
             // OtherFee
             // 
             this.OtherFee.DataPropertyName = "OtherFee";
-            dataGridViewCellStyle24.Format = "#,##0.####";
-            this.OtherFee.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle25.Format = "#,##0.####";
+            this.OtherFee.DefaultCellStyle = dataGridViewCellStyle25;
             this.OtherFee.HeaderText = "雜支";
             this.OtherFee.Name = "OtherFee";
             this.OtherFee.ReadOnly = true;
@@ -1479,8 +1483,8 @@
             // ExchangeRate
             // 
             this.ExchangeRate.DataPropertyName = "ExchangeRate";
-            dataGridViewCellStyle25.Format = "#,##0.####";
-            this.ExchangeRate.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Format = "#,##0.####";
+            this.ExchangeRate.DefaultCellStyle = dataGridViewCellStyle26;
             this.ExchangeRate.HeaderText = "當時匯率";
             this.ExchangeRate.Name = "ExchangeRate";
             this.ExchangeRate.ReadOnly = true;
@@ -1488,8 +1492,8 @@
             // TotallPayment
             // 
             this.TotallPayment.DataPropertyName = "Totall";
-            dataGridViewCellStyle26.Format = "#,##0.####";
-            this.TotallPayment.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle27.Format = "#,##0.####";
+            this.TotallPayment.DefaultCellStyle = dataGridViewCellStyle27;
             this.TotallPayment.HeaderText = "金額合計";
             this.TotallPayment.Name = "TotallPayment";
             this.TotallPayment.ReadOnly = true;
@@ -1518,8 +1522,8 @@
             // ReciveDate
             // 
             this.ReciveDate.DataPropertyName = "ReciveDate";
-            dataGridViewCellStyle27.Format = "yyyy/MM/dd";
-            this.ReciveDate.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle28.Format = "yyyy/MM/dd";
+            this.ReciveDate.DefaultCellStyle = dataGridViewCellStyle28;
             this.ReciveDate.HeaderText = "收件日期";
             this.ReciveDate.Name = "ReciveDate";
             this.ReciveDate.ReadOnly = true;
@@ -1527,8 +1531,8 @@
             // PaymentDate
             // 
             this.PaymentDate.DataPropertyName = "PaymentDate";
-            dataGridViewCellStyle28.Format = "yyyy/MM/dd";
-            this.PaymentDate.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle29.Format = "yyyy/MM/dd";
+            this.PaymentDate.DefaultCellStyle = dataGridViewCellStyle29;
             this.PaymentDate.HeaderText = "付款日期";
             this.PaymentDate.Name = "PaymentDate";
             this.PaymentDate.ReadOnly = true;
@@ -1536,8 +1540,8 @@
             // EstimatedPaymentDate
             // 
             this.EstimatedPaymentDate.DataPropertyName = "EstimatedPaymentDate";
-            dataGridViewCellStyle29.Format = "yyyy/MM/dd";
-            this.EstimatedPaymentDate.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle30.Format = "yyyy/MM/dd";
+            this.EstimatedPaymentDate.DefaultCellStyle = dataGridViewCellStyle30;
             this.EstimatedPaymentDate.HeaderText = "預估付款日";
             this.EstimatedPaymentDate.Name = "EstimatedPaymentDate";
             this.EstimatedPaymentDate.ReadOnly = true;
@@ -1562,8 +1566,8 @@
             // CloseDatePayment
             // 
             this.CloseDatePayment.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle30.Format = "yyyy/MM/dd";
-            this.CloseDatePayment.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle31.Format = "yyyy/MM/dd";
+            this.CloseDatePayment.DefaultCellStyle = dataGridViewCellStyle31;
             this.CloseDatePayment.HeaderText = "關帳日期";
             this.CloseDatePayment.Name = "CloseDatePayment";
             this.CloseDatePayment.ReadOnly = true;

@@ -268,7 +268,7 @@ namespace LawtechPTSystem.Public
 
         #region 取得事件的資料 public static void GetPatentEvent(string strPatentID, ref DataTable dtSource)
         /// <summary>
-        /// 取得專利事件的資料
+        /// 取得專利事件的資料 V_PatComitEventT
         /// </summary>
         /// <param name="strPatentID"></param>
         /// <returns></returns>
@@ -342,8 +342,27 @@ namespace LawtechPTSystem.Public
         /// <returns></returns>
         public static void GetPatentkFee(string strPatentID, ref DataTable dtSource)
         {
-
             string strSQL = string.Format(@"SELECT * from  V_PatentFeeT with(nolock) where PatentID={0} ", strPatentID);
+
+            DBAccess dbhelper = new DBAccess();
+            dtSource.Rows.Clear();
+            dbhelper.QueryToDataTableByDataAdapter(strSQL, ref dtSource, isFillSchema: false);
+
+            if (dtSource.PrimaryKey.Length == 0)
+            {
+                DataColumn[] pk = { dtSource.Columns["FeeKey"] };
+                dtSource.PrimaryKey = pk;
+            }
+        }
+
+        /// <summary>
+        /// 取得專利請款的資料 V_PATControlFeeList
+        /// </summary>
+        /// <param name="FeeKey"></param>
+        /// <param name="dtSource"></param>
+        public static void GetPatentkControlFeeList(int FeeKey, ref DataTable dtSource)
+        {
+            string strSQL = string.Format(@"SELECT * from  V_PATControlFeeList with(nolock) where FeeKey={0} ", FeeKey);
 
             DBAccess dbhelper = new DBAccess();
             dtSource.Rows.Clear();
@@ -568,7 +587,7 @@ namespace LawtechPTSystem.Public
 
         #region GetComitEvent 取得待處理事件的資料
         /// <summary>
-        /// 取得事件的資料
+        /// 取得事件的資料 V_PATControlEventList
         /// </summary>
         /// <param name="strWhere"></param>
         /// <returns></returns>

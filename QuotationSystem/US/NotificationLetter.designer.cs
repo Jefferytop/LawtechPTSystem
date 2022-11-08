@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Bcc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,19 +65,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_SampleDescription = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sampleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailSampleDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailBody = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mailFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Format = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailSampleListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.but_Cancel = new System.Windows.Forms.Button();
             this.mailFormatTableAdapter = new LawtechPTSystem.DataSet_EmailTableAdapters.MailFormatTableAdapter();
@@ -85,6 +72,18 @@
             this.emailSampleListTableAdapter = new LawtechPTSystem.DataSet_EmailTableAdapters.EmailSampleListTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lab_ms = new System.Windows.Forms.Label();
+            this.workerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Format = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailBody = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailSampleDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sampleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -99,8 +98,8 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -127,7 +126,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(658, 556);
+            this.groupBox2.Size = new System.Drawing.Size(655, 574);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "通．知．函";
@@ -137,22 +136,22 @@
             this.txt_Bcc.AllowDrop = true;
             this.txt_Bcc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Bcc.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_Bcc.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_Bcc.Location = new System.Drawing.Point(96, 140);
             this.txt_Bcc.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Bcc.Multiline = true;
             this.txt_Bcc.Name = "txt_Bcc";
             this.txt_Bcc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Bcc.Size = new System.Drawing.Size(553, 35);
+            this.txt_Bcc.Size = new System.Drawing.Size(550, 35);
             this.txt_Bcc.TabIndex = 62;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(37, 145);
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label7.Location = new System.Drawing.Point(20, 145);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.Size = new System.Drawing.Size(73, 20);
             this.label7.TabIndex = 61;
             this.label7.Text = "密件副本";
             // 
@@ -162,7 +161,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer2.Location = new System.Drawing.Point(5, 231);
+            this.splitContainer2.Location = new System.Drawing.Point(5, 246);
             this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -177,7 +176,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listView1);
             this.splitContainer2.Panel2.Controls.Add(this.linkLabel1);
-            this.splitContainer2.Size = new System.Drawing.Size(647, 325);
+            this.splitContainer2.Size = new System.Drawing.Size(644, 328);
             this.splitContainer2.SplitterDistance = 229;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 60;
@@ -197,7 +196,7 @@
             this.editorHTML1.Location = new System.Drawing.Point(91, 5);
             this.editorHTML1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.editorHTML1.Name = "editorHTML1";
-            this.editorHTML1.Size = new System.Drawing.Size(552, 218);
+            this.editorHTML1.Size = new System.Drawing.Size(549, 218);
             this.editorHTML1.TabIndex = 52;
             // 
             // label4
@@ -222,7 +221,7 @@
             this.textBox_Body.Multiline = true;
             this.textBox_Body.Name = "textBox_Body";
             this.textBox_Body.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_Body.Size = new System.Drawing.Size(550, 217);
+            this.textBox_Body.Size = new System.Drawing.Size(547, 217);
             this.textBox_Body.TabIndex = 50;
             // 
             // listView1
@@ -237,7 +236,7 @@
             this.listView1.Location = new System.Drawing.Point(91, 4);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(552, 79);
+            this.listView1.Size = new System.Drawing.Size(549, 79);
             this.listView1.TabIndex = 59;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -290,22 +289,22 @@
             this.txt_cc.AllowDrop = true;
             this.txt_cc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_cc.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_cc.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_cc.Location = new System.Drawing.Point(96, 103);
             this.txt_cc.Margin = new System.Windows.Forms.Padding(1);
             this.txt_cc.Multiline = true;
             this.txt_cc.Name = "txt_cc";
             this.txt_cc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_cc.Size = new System.Drawing.Size(553, 35);
+            this.txt_cc.Size = new System.Drawing.Size(550, 35);
             this.txt_cc.TabIndex = 58;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(61, 108);
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label6.Location = new System.Drawing.Point(52, 108);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 16);
+            this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 57;
             this.label6.Text = "副本";
             // 
@@ -315,32 +314,32 @@
             this.txt_Sender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Sender.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_Sender.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.txt_Sender.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_Sender.ForeColor = System.Drawing.Color.Black;
             this.txt_Sender.Location = new System.Drawing.Point(96, 21);
             this.txt_Sender.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Sender.Name = "txt_Sender";
             this.txt_Sender.ReadOnly = true;
-            this.txt_Sender.Size = new System.Drawing.Size(553, 25);
+            this.txt_Sender.Size = new System.Drawing.Size(550, 29);
             this.txt_Sender.TabIndex = 55;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(49, 24);
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label2.Location = new System.Drawing.Point(36, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 54;
             this.label2.Text = "寄件人";
             // 
             // link_Receiver
             // 
             this.link_Receiver.AutoSize = true;
-            this.link_Receiver.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.link_Receiver.Location = new System.Drawing.Point(49, 58);
+            this.link_Receiver.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.link_Receiver.Location = new System.Drawing.Point(36, 62);
             this.link_Receiver.Name = "link_Receiver";
-            this.link_Receiver.Size = new System.Drawing.Size(44, 16);
+            this.link_Receiver.Size = new System.Drawing.Size(57, 20);
             this.link_Receiver.TabIndex = 53;
             this.link_Receiver.TabStop = true;
             this.link_Receiver.Text = "收件人";
@@ -351,12 +350,12 @@
             this.comboBox_MailFormat.DataSource = this.mailFormatBindingSource;
             this.comboBox_MailFormat.DisplayMember = "String";
             this.comboBox_MailFormat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_MailFormat.Font = new System.Drawing.Font("微軟正黑體", 9F);
+            this.comboBox_MailFormat.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.comboBox_MailFormat.FormattingEnabled = true;
-            this.comboBox_MailFormat.Location = new System.Drawing.Point(481, 202);
+            this.comboBox_MailFormat.Location = new System.Drawing.Point(475, 208);
             this.comboBox_MailFormat.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_MailFormat.Name = "comboBox_MailFormat";
-            this.comboBox_MailFormat.Size = new System.Drawing.Size(171, 24);
+            this.comboBox_MailFormat.Size = new System.Drawing.Size(171, 28);
             this.comboBox_MailFormat.TabIndex = 49;
             this.comboBox_MailFormat.ValueMember = "Value";
             this.comboBox_MailFormat.SelectedIndexChanged += new System.EventHandler(this.comboBox_MailFormat_SelectedIndexChanged);
@@ -375,7 +374,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(397, 204);
+            this.label1.Location = new System.Drawing.Point(391, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 48;
@@ -385,13 +384,13 @@
             // 
             this.txt_Reciver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Reciver.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_Reciver.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_Reciver.Location = new System.Drawing.Point(96, 52);
             this.txt_Reciver.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Reciver.Multiline = true;
             this.txt_Reciver.Name = "txt_Reciver";
             this.txt_Reciver.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Reciver.Size = new System.Drawing.Size(553, 49);
+            this.txt_Reciver.Size = new System.Drawing.Size(550, 49);
             this.txt_Reciver.TabIndex = 1;
             // 
             // txt_Subject
@@ -399,11 +398,11 @@
             this.txt_Subject.AllowDrop = true;
             this.txt_Subject.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Subject.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_Subject.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.txt_Subject.Location = new System.Drawing.Point(96, 177);
             this.txt_Subject.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Subject.Name = "txt_Subject";
-            this.txt_Subject.Size = new System.Drawing.Size(553, 23);
+            this.txt_Subject.Size = new System.Drawing.Size(550, 29);
             this.txt_Subject.TabIndex = 42;
             // 
             // comboBox_Priority
@@ -411,12 +410,12 @@
             this.comboBox_Priority.DataSource = this.mailPriorityBindingSource;
             this.comboBox_Priority.DisplayMember = "String";
             this.comboBox_Priority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Priority.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBox_Priority.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.comboBox_Priority.FormattingEnabled = true;
-            this.comboBox_Priority.Location = new System.Drawing.Point(96, 202);
+            this.comboBox_Priority.Location = new System.Drawing.Point(96, 208);
             this.comboBox_Priority.Margin = new System.Windows.Forms.Padding(1);
             this.comboBox_Priority.Name = "comboBox_Priority";
-            this.comboBox_Priority.Size = new System.Drawing.Size(133, 24);
+            this.comboBox_Priority.Size = new System.Drawing.Size(133, 28);
             this.comboBox_Priority.TabIndex = 46;
             this.comboBox_Priority.ValueMember = "String";
             // 
@@ -428,20 +427,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(49, 206);
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label5.Location = new System.Drawing.Point(36, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 45;
             this.label5.Text = "重要性";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(37, 183);
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label3.Location = new System.Drawing.Point(20, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 41;
             this.label3.Text = "郵件主旨";
             // 
@@ -450,8 +449,8 @@
             this.but_SendMail.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.but_SendMail.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnComfirm;
             this.but_SendMail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.but_SendMail.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.but_SendMail.Location = new System.Drawing.Point(337, 598);
+            this.but_SendMail.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.but_SendMail.Location = new System.Drawing.Point(320, 598);
             this.but_SendMail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.but_SendMail.Name = "but_SendMail";
             this.but_SendMail.Size = new System.Drawing.Size(141, 32);
@@ -479,8 +478,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(925, 566);
-            this.splitContainer1.SplitterDistance = 667;
+            this.splitContainer1.Size = new System.Drawing.Size(925, 584);
+            this.splitContainer1.SplitterDistance = 664;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 12;
             // 
@@ -496,7 +495,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(241, 556);
+            this.groupBox1.Size = new System.Drawing.Size(241, 574);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "選取郵件範本";
@@ -506,7 +505,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(3, 287);
+            this.label8.Location = new System.Drawing.Point(3, 305);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 55;
@@ -518,7 +517,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_SampleDescription.BackColor = System.Drawing.Color.White;
             this.txt_SampleDescription.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.txt_SampleDescription.Location = new System.Drawing.Point(7, 311);
+            this.txt_SampleDescription.Location = new System.Drawing.Point(7, 329);
             this.txt_SampleDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_SampleDescription.Multiline = true;
             this.txt_SampleDescription.Name = "txt_SampleDescription";
@@ -526,146 +525,6 @@
             this.txt_SampleDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_SampleDescription.Size = new System.Drawing.Size(224, 236);
             this.txt_SampleDescription.TabIndex = 56;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sortDataGridViewTextBoxColumn,
-            this.typeNameDataGridViewTextBoxColumn,
-            this.eSIDDataGridViewTextBoxColumn,
-            this.sampleNameDataGridViewTextBoxColumn,
-            this.emailSampleDescriptionDataGridViewTextBoxColumn,
-            this.MailSubject,
-            this.MailPriority,
-            this.MailBody,
-            this.mailFormatDataGridViewTextBoxColumn,
-            this.createDateDataGridViewTextBoxColumn,
-            this.Format,
-            this.workerNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.emailSampleListBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(226, 248);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // sortDataGridViewTextBoxColumn
-            // 
-            this.sortDataGridViewTextBoxColumn.DataPropertyName = "Sort";
-            this.sortDataGridViewTextBoxColumn.HeaderText = "排序";
-            this.sortDataGridViewTextBoxColumn.Name = "sortDataGridViewTextBoxColumn";
-            this.sortDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sortDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // typeNameDataGridViewTextBoxColumn
-            // 
-            this.typeNameDataGridViewTextBoxColumn.DataPropertyName = "TypeName";
-            this.typeNameDataGridViewTextBoxColumn.HeaderText = "TypeName";
-            this.typeNameDataGridViewTextBoxColumn.Name = "typeNameDataGridViewTextBoxColumn";
-            this.typeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeNameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // eSIDDataGridViewTextBoxColumn
-            // 
-            this.eSIDDataGridViewTextBoxColumn.DataPropertyName = "ESID";
-            this.eSIDDataGridViewTextBoxColumn.HeaderText = "ESID";
-            this.eSIDDataGridViewTextBoxColumn.Name = "eSIDDataGridViewTextBoxColumn";
-            this.eSIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eSIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sampleNameDataGridViewTextBoxColumn
-            // 
-            this.sampleNameDataGridViewTextBoxColumn.DataPropertyName = "SampleName";
-            this.sampleNameDataGridViewTextBoxColumn.HeaderText = "範本名稱";
-            this.sampleNameDataGridViewTextBoxColumn.Name = "sampleNameDataGridViewTextBoxColumn";
-            this.sampleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailSampleDescriptionDataGridViewTextBoxColumn
-            // 
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.DataPropertyName = "EmailSampleDescription";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.HeaderText = "EmailSampleDescription";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.Name = "emailSampleDescriptionDataGridViewTextBoxColumn";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // MailSubject
-            // 
-            this.MailSubject.DataPropertyName = "MailSubject";
-            this.MailSubject.HeaderText = "MailSubject";
-            this.MailSubject.Name = "MailSubject";
-            this.MailSubject.ReadOnly = true;
-            this.MailSubject.Visible = false;
-            // 
-            // MailPriority
-            // 
-            this.MailPriority.DataPropertyName = "MailPriority";
-            this.MailPriority.HeaderText = "MailPriority";
-            this.MailPriority.Name = "MailPriority";
-            this.MailPriority.ReadOnly = true;
-            this.MailPriority.Visible = false;
-            // 
-            // MailBody
-            // 
-            this.MailBody.DataPropertyName = "MailBody";
-            this.MailBody.HeaderText = "MailBody";
-            this.MailBody.Name = "MailBody";
-            this.MailBody.ReadOnly = true;
-            this.MailBody.Visible = false;
-            // 
-            // mailFormatDataGridViewTextBoxColumn
-            // 
-            this.mailFormatDataGridViewTextBoxColumn.DataPropertyName = "MailFormat";
-            this.mailFormatDataGridViewTextBoxColumn.HeaderText = "MailFormat";
-            this.mailFormatDataGridViewTextBoxColumn.Name = "mailFormatDataGridViewTextBoxColumn";
-            this.mailFormatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mailFormatDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // createDateDataGridViewTextBoxColumn
-            // 
-            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle2.Format = "yyyy/MM/dd HH:mm";
-            this.createDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.createDateDataGridViewTextBoxColumn.HeaderText = "建立時間";
-            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
-            this.createDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Format
-            // 
-            this.Format.DataPropertyName = "Format";
-            this.Format.HeaderText = "Format";
-            this.Format.Name = "Format";
-            this.Format.ReadOnly = true;
-            this.Format.Visible = false;
-            // 
-            // workerNameDataGridViewTextBoxColumn
-            // 
-            this.workerNameDataGridViewTextBoxColumn.DataPropertyName = "WorkerName";
-            this.workerNameDataGridViewTextBoxColumn.HeaderText = "建立者";
-            this.workerNameDataGridViewTextBoxColumn.Name = "workerNameDataGridViewTextBoxColumn";
-            this.workerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailSampleListBindingSource
             // 
@@ -678,8 +537,8 @@
             this.but_Cancel.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnCancel;
             this.but_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.but_Cancel.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.but_Cancel.Location = new System.Drawing.Point(486, 598);
+            this.but_Cancel.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.but_Cancel.Location = new System.Drawing.Point(469, 598);
             this.but_Cancel.Margin = new System.Windows.Forms.Padding(5);
             this.but_Cancel.Name = "but_Cancel";
             this.but_Cancel.Size = new System.Drawing.Size(110, 32);
@@ -710,12 +569,146 @@
             this.lab_ms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lab_ms.AutoSize = true;
             this.lab_ms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lab_ms.Location = new System.Drawing.Point(14, 575);
+            this.lab_ms.Location = new System.Drawing.Point(10, 593);
             this.lab_ms.Name = "lab_ms";
             this.lab_ms.Size = new System.Drawing.Size(125, 16);
             this.lab_ms.TabIndex = 371;
             this.lab_ms.Text = "上傳附件中，請等候...";
             this.lab_ms.Visible = false;
+            // 
+            // workerNameDataGridViewTextBoxColumn
+            // 
+            this.workerNameDataGridViewTextBoxColumn.DataPropertyName = "WorkerName";
+            this.workerNameDataGridViewTextBoxColumn.HeaderText = "建立者";
+            this.workerNameDataGridViewTextBoxColumn.Name = "workerNameDataGridViewTextBoxColumn";
+            this.workerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Format
+            // 
+            this.Format.DataPropertyName = "Format";
+            this.Format.HeaderText = "Format";
+            this.Format.Name = "Format";
+            this.Format.ReadOnly = true;
+            this.Format.Visible = false;
+            // 
+            // createDateDataGridViewTextBoxColumn
+            // 
+            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
+            dataGridViewCellStyle2.Format = "yyyy/MM/dd HH:mm";
+            this.createDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.createDateDataGridViewTextBoxColumn.HeaderText = "建立時間";
+            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
+            this.createDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mailFormatDataGridViewTextBoxColumn
+            // 
+            this.mailFormatDataGridViewTextBoxColumn.DataPropertyName = "MailFormat";
+            this.mailFormatDataGridViewTextBoxColumn.HeaderText = "MailFormat";
+            this.mailFormatDataGridViewTextBoxColumn.Name = "mailFormatDataGridViewTextBoxColumn";
+            this.mailFormatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mailFormatDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // MailBody
+            // 
+            this.MailBody.DataPropertyName = "MailBody";
+            this.MailBody.HeaderText = "MailBody";
+            this.MailBody.Name = "MailBody";
+            this.MailBody.ReadOnly = true;
+            this.MailBody.Visible = false;
+            // 
+            // MailPriority
+            // 
+            this.MailPriority.DataPropertyName = "MailPriority";
+            this.MailPriority.HeaderText = "MailPriority";
+            this.MailPriority.Name = "MailPriority";
+            this.MailPriority.ReadOnly = true;
+            this.MailPriority.Visible = false;
+            // 
+            // MailSubject
+            // 
+            this.MailSubject.DataPropertyName = "MailSubject";
+            this.MailSubject.HeaderText = "MailSubject";
+            this.MailSubject.Name = "MailSubject";
+            this.MailSubject.ReadOnly = true;
+            this.MailSubject.Visible = false;
+            // 
+            // emailSampleDescriptionDataGridViewTextBoxColumn
+            // 
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.DataPropertyName = "EmailSampleDescription";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.HeaderText = "EmailSampleDescription";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.Name = "emailSampleDescriptionDataGridViewTextBoxColumn";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sampleNameDataGridViewTextBoxColumn
+            // 
+            this.sampleNameDataGridViewTextBoxColumn.DataPropertyName = "SampleName";
+            this.sampleNameDataGridViewTextBoxColumn.HeaderText = "範本名稱";
+            this.sampleNameDataGridViewTextBoxColumn.Name = "sampleNameDataGridViewTextBoxColumn";
+            this.sampleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eSIDDataGridViewTextBoxColumn
+            // 
+            this.eSIDDataGridViewTextBoxColumn.DataPropertyName = "ESID";
+            this.eSIDDataGridViewTextBoxColumn.HeaderText = "ESID";
+            this.eSIDDataGridViewTextBoxColumn.Name = "eSIDDataGridViewTextBoxColumn";
+            this.eSIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eSIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sortDataGridViewTextBoxColumn
+            // 
+            this.sortDataGridViewTextBoxColumn.DataPropertyName = "Sort";
+            this.sortDataGridViewTextBoxColumn.HeaderText = "排序";
+            this.sortDataGridViewTextBoxColumn.Name = "sortDataGridViewTextBoxColumn";
+            this.sortDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sortDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sortDataGridViewTextBoxColumn,
+            this.eSIDDataGridViewTextBoxColumn,
+            this.sampleNameDataGridViewTextBoxColumn,
+            this.emailSampleDescriptionDataGridViewTextBoxColumn,
+            this.MailSubject,
+            this.MailPriority,
+            this.MailBody,
+            this.mailFormatDataGridViewTextBoxColumn,
+            this.createDateDataGridViewTextBoxColumn,
+            this.Format,
+            this.workerNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.emailSampleListBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 30;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(226, 266);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+          
             // 
             // NotificationLetter
             // 
@@ -751,8 +744,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -775,7 +768,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txt_Sender;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
@@ -801,8 +793,8 @@
         private EditorHTML editorHTML1;
         private System.Windows.Forms.TextBox txt_Bcc;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sortDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eSIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sampleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailSampleDescriptionDataGridViewTextBoxColumn;
