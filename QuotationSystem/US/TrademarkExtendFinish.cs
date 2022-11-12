@@ -45,12 +45,12 @@ namespace LawtechPTSystem.US
             
 
             txt_TrademarkNo.Text = tm.TrademarkNo;
-            maskedTextBox_EntrustDate.Text=tm.EntrustDate.HasValue?tm.EntrustDate.Value.ToString("yyyy/MM/dd"):"";
+            maskedTextBox_EntrustDate.Text=tm.EntrustDate.HasValue?tm.EntrustDate.Value.ToString("yyyy-MM-dd"):"";
             txt_TrademarkName.Text = tm.TrademarkName;
-            maskedTextBox_ApplicationDate.Text = tm.ApplicationDate.HasValue ? tm.ApplicationDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_ApplicationDate.Text = tm.ApplicationDate.HasValue ? tm.ApplicationDate.Value.ToString("yyyy-MM-dd") : "";
             txt_ApplicationNo.Text = tm.ApplicationNo;
-            maskedTextBox_LawDate.Text = tm.LawDate.HasValue ? tm.LawDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_ExtendedDate.Text = tm.ExtendedDate.HasValue ? tm.ExtendedDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_LawDate.Text = tm.LawDate.HasValue ? tm.LawDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_ExtendedDate.Text = tm.ExtendedDate.HasValue ? tm.ExtendedDate.Value.ToString("yyyy-MM-dd") : "";
 
         }
 
@@ -61,7 +61,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

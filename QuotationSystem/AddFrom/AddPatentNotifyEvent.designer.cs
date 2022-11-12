@@ -103,7 +103,7 @@
             this.maskedTextBox_NotifyAttorneyDueDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_NotifyAttorneyDueDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_NotifyAttorneyDueDate.Location = new System.Drawing.Point(431, 37);
-            this.maskedTextBox_NotifyAttorneyDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_NotifyAttorneyDueDate.Mask = "0000-00-00";
             this.maskedTextBox_NotifyAttorneyDueDate.Name = "maskedTextBox_NotifyAttorneyDueDate";
             this.maskedTextBox_NotifyAttorneyDueDate.Size = new System.Drawing.Size(173, 29);
             this.maskedTextBox_NotifyAttorneyDueDate.TabIndex = 380;
@@ -124,7 +124,7 @@
             this.maskedTextBox_DueDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_DueDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_DueDate.Location = new System.Drawing.Point(102, 37);
-            this.maskedTextBox_DueDate.Mask = "0000/00/00";
+            this.maskedTextBox_DueDate.Mask = "0000-00-00";
             this.maskedTextBox_DueDate.Name = "maskedTextBox_DueDate";
             this.maskedTextBox_DueDate.Size = new System.Drawing.Size(173, 29);
             this.maskedTextBox_DueDate.TabIndex = 19;
@@ -348,7 +348,7 @@
             this.maskedTextBox_OccurDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_OccurDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_OccurDate.Location = new System.Drawing.Point(102, 100);
-            this.maskedTextBox_OccurDate.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDate.Mask = "0000-00-00";
             this.maskedTextBox_OccurDate.Name = "maskedTextBox_OccurDate";
             this.maskedTextBox_OccurDate.Size = new System.Drawing.Size(173, 29);
             this.maskedTextBox_OccurDate.TabIndex = 6;
@@ -360,7 +360,7 @@
             this.maskedTextBox_OfficerDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_OfficerDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_OfficerDate.Location = new System.Drawing.Point(102, 69);
-            this.maskedTextBox_OfficerDate.Mask = "0000/00/00";
+            this.maskedTextBox_OfficerDate.Mask = "0000-00-00";
             this.maskedTextBox_OfficerDate.Name = "maskedTextBox_OfficerDate";
             this.maskedTextBox_OfficerDate.Size = new System.Drawing.Size(173, 29);
             this.maskedTextBox_OfficerDate.TabIndex = 4;
@@ -372,7 +372,7 @@
             this.maskedTextBox_ComitDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ComitDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ComitDate.Location = new System.Drawing.Point(102, 39);
-            this.maskedTextBox_ComitDate.Mask = "0000/00/00";
+            this.maskedTextBox_ComitDate.Mask = "0000-00-00";
             this.maskedTextBox_ComitDate.Name = "maskedTextBox_ComitDate";
             this.maskedTextBox_ComitDate.Size = new System.Drawing.Size(173, 29);
             this.maskedTextBox_ComitDate.TabIndex = 2;

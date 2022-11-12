@@ -61,7 +61,7 @@
             // 
             this.SearchDateSplitContainer1.Panel2.Controls.Add(this.splitContainer1);
             this.SearchDateSplitContainer1.Size = new System.Drawing.Size(367, 29);
-            this.SearchDateSplitContainer1.SplitterDistance = 147;
+            this.SearchDateSplitContainer1.SplitterDistance = 149;
             this.SearchDateSplitContainer1.SplitterWidth = 2;
             this.SearchDateSplitContainer1.TabIndex = 55;
             // 
@@ -76,7 +76,7 @@
             this.cb_Mode.Location = new System.Drawing.Point(1, 1);
             this.cb_Mode.Margin = new System.Windows.Forms.Padding(0);
             this.cb_Mode.Name = "cb_Mode";
-            this.cb_Mode.Size = new System.Drawing.Size(145, 25);
+            this.cb_Mode.Size = new System.Drawing.Size(147, 25);
             this.cb_Mode.TabIndex = 53;
             this.cb_Mode.ValueMember = "ValueString";
             this.cb_Mode.SelectedIndexChanged += new System.EventHandler(this.cb_Mode_SelectedIndexChanged);
@@ -96,7 +96,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.numericUpDown_Value);
-            this.splitContainer1.Size = new System.Drawing.Size(218, 29);
+            this.splitContainer1.Size = new System.Drawing.Size(216, 29);
             this.splitContainer1.SplitterDistance = 106;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 0;
@@ -121,7 +121,7 @@
             this.numericUpDown_Value.Location = new System.Drawing.Point(0, 0);
             this.numericUpDown_Value.Margin = new System.Windows.Forms.Padding(1);
             this.numericUpDown_Value.Name = "numericUpDown_Value";
-            this.numericUpDown_Value.Size = new System.Drawing.Size(110, 25);
+            this.numericUpDown_Value.Size = new System.Drawing.Size(108, 25);
             this.numericUpDown_Value.TabIndex = 0;
             this.numericUpDown_Value.ThousandsSeparator = true;
             // 

@@ -352,7 +352,7 @@ namespace LawtechPTSystem.SubFrom
             this.dataGridView_MACsetting.Name = "dataGridView_MACsetting";
             this.dataGridView_MACsetting.ReadOnly = true;
             this.dataGridView_MACsetting.RowTemplate.Height = 24;
-            this.dataGridView_MACsetting.Size = new System.Drawing.Size(847, 328);
+            this.dataGridView_MACsetting.Size = new System.Drawing.Size(847, 330);
             this.dataGridView_MACsetting.TabIndex = 1060;
             this.dataGridView_MACsetting.Tag = "MACsetting";
             this.dataGridView_MACsetting.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MACsetting_CellDoubleClick);

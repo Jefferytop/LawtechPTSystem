@@ -32,7 +32,7 @@ namespace LawtechPTSystem.AddFrom
 
             this.moneyTTableAdapter.Fill(this.dataSet_Drop.MoneyT);
 
-            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         private void numericUpDown_IAttorneyFee_ValueChanged(object sender, EventArgs e)
@@ -330,7 +330,7 @@ namespace LawtechPTSystem.AddFrom
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

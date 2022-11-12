@@ -187,7 +187,7 @@ namespace LawtechPTSystem.SubFrom
 
             //開始來往時間
             maskedTextBox_StartedDate.DataBindings.Clear();
-            maskedTextBox_StartedDate.DataBindings.Add("Text", applicantTBindingSource, "StartedDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_StartedDate.DataBindings.Add("Text", applicantTBindingSource, "StartedDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             txt_ID.DataBindings.Clear();
             txt_ID.DataBindings.Add("Text", applicantTBindingSource, "ID", true, DataSourceUpdateMode.OnValidation, "", "");

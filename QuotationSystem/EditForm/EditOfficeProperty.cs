@@ -45,10 +45,10 @@ namespace LawtechPTSystem.EditForm
             comboBox_Unit.Text= EditCOfficeProperty.Unit ;
 
             //建檔時間
-            mask_CreateDate.Text = EditCOfficeProperty.CreateDate.HasValue ? EditCOfficeProperty.CreateDate.Value.ToString("yyyy/MM/dd") : "";
+            mask_CreateDate.Text = EditCOfficeProperty.CreateDate.HasValue ? EditCOfficeProperty.CreateDate.Value.ToString("yyyy-MM-dd") : "";
 
             //購買時間
-            mask_CreateDate.Text = EditCOfficeProperty.BuyDate.HasValue ? EditCOfficeProperty.BuyDate.Value.ToString("yyyy/MM/dd") : "";
+            mask_CreateDate.Text = EditCOfficeProperty.BuyDate.HasValue ? EditCOfficeProperty.BuyDate.Value.ToString("yyyy-MM-dd") : "";
            
             //保固時間
             txt_WarrantyTime.Text = EditCOfficeProperty.WarrantyTime;
@@ -290,7 +290,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }       
         }
 

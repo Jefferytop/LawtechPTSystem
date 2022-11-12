@@ -64,7 +64,7 @@ namespace LawtechPTSystem.US
 
             txtFileNo.Text = patent.PatentNo;  //申請案卷號
 
-            mskFinishDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            mskFinishDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             txtEventContent.Text = patentEvent.EventContent; //事件內容               
 

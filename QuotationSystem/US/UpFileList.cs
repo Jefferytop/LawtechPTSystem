@@ -440,7 +440,7 @@ namespace LawtechPTSystem.US
 
             //    String sCriteria;
 
-            //    sCriteria = string.Format("[ReceivedTime] >= '{0} 03:00 AM' and [ReceivedTime] <= '{1} 11:59 PM'", maskedTextBox_Start.Text == "    /  /" ? "1990/01/01" : maskedTextBox_Start.Text, maskedTextBox_EndDate.Text == "    /  /" ? "1990/01/01" : maskedTextBox_EndDate.Text);
+            //    sCriteria = string.Format("[ReceivedTime] >= '{0} 03:00 AM' and [ReceivedTime] <= '{1} 11:59 PM'", maskedTextBox_Start.Text == "    -  -" ? "1990/01/01" : maskedTextBox_Start.Text, maskedTextBox_EndDate.Text == "    -  -" ? "1990/01/01" : maskedTextBox_EndDate.Text);
             //    Outlook.Items oRestrictedItems = oItems.Restrict(sCriteria);
 
             //    oRestrictedItems.Sort("[ReceivedTime]", true);
@@ -528,7 +528,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

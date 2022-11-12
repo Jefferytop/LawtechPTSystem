@@ -2493,7 +2493,7 @@ ORDER BY  CountrySN, k.KindSN</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>="報價日期：" &amp; Format(Globals!ExecutionTime,"yyyy/MM/dd")</Value>
+                      <Value>="報價日期：" &amp; Format(Globals!ExecutionTime,"yyyy-MM-dd")</Value>
                       <Style>
                         <FontFamily>微軟正黑體</FontFamily>
                         <FontWeight>Bold</FontWeight>

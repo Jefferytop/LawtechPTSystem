@@ -202,13 +202,13 @@ namespace LawtechPTSystem.SubFrom
             txt_WorkScope.DataBindings.Add("Text", bs_Workers, "WorkScope", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_Birthday.DataBindings.Clear();
-            maskedTextBox_Birthday.DataBindings.Add("Text", bs_Workers, "Birthday", true, DataSourceUpdateMode.OnPropertyChanged, "", "yyyy/MM/dd");
+            maskedTextBox_Birthday.DataBindings.Add("Text", bs_Workers, "Birthday", true, DataSourceUpdateMode.OnPropertyChanged, "", "yyyy-MM-dd");
 
             maskedTextBox_ReachDay.DataBindings.Clear();
-            maskedTextBox_ReachDay.DataBindings.Add("Text", bs_Workers, "ReachDay", true, DataSourceUpdateMode.OnPropertyChanged, "", "yyyy/MM/dd");
+            maskedTextBox_ReachDay.DataBindings.Add("Text", bs_Workers, "ReachDay", true, DataSourceUpdateMode.OnPropertyChanged, "", "yyyy-MM-dd");
 
             maskedTextBox_DepartDay.DataBindings.Clear();
-            maskedTextBox_DepartDay.DataBindings.Add("Text", bs_Workers, "DepartDay", true, DataSourceUpdateMode.OnValidation, "", "yyyy/MM/dd");
+            maskedTextBox_DepartDay.DataBindings.Add("Text", bs_Workers, "DepartDay", true, DataSourceUpdateMode.OnValidation, "", "yyyy-MM-dd");
 
             checkBox_Quit.DataBindings.Clear();
             checkBox_Quit.DataBindings.Add("Checked", bs_Workers, "IsQuit");

@@ -497,7 +497,7 @@ namespace LawtechPTSystem.SubFrom
 
            // //開始來往時間
            // maskedTextBox_StartedDate.DataBindings.Clear();
-           // maskedTextBox_StartedDate.DataBindings.Add("Text", bs_Applicant, "StartedDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+           // maskedTextBox_StartedDate.DataBindings.Add("Text", bs_Applicant, "StartedDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
            // txt_ID.DataBindings.Clear();
            // txt_ID.DataBindings.Add("Text", bs_Applicant, "ID", true, DataSourceUpdateMode.OnValidation, "", "");

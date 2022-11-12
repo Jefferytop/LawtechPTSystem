@@ -139,7 +139,7 @@ namespace LawtechPTSystem.EditForm
 
             if (app.StartedDate.HasValue)
             {
-                maskedTextBox_StartedDate.Text = app.StartedDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_StartedDate.Text = app.StartedDate.Value.ToString("yyyy-MM-dd");
             }
            
 

@@ -50,6 +50,7 @@ namespace LawtechPTSystem.EditForm
             txt_InventorName.Text = edit.InventorName;
             txt_FamilyName.Text = edit.FamilyName;
             txt_GivenName.Text = edit.GivenName;
+            txt_MiddleName.Text = edit.MiddleName;
             txt_ID.Text = edit.InventorID;
             txt_Address.Text = edit.Address;
             txt_FullEnName.Text = edit.FullEnName;
@@ -90,6 +91,7 @@ namespace LawtechPTSystem.EditForm
             edit.InventorName = txt_InventorName.Text;
             edit.FamilyName = txt_FamilyName.Text;
             edit.GivenName = txt_GivenName.Text;
+            edit.MiddleName = txt_MiddleName.Text;
             edit.FullEnName = txt_FullEnName.Text;
             edit.InventorID = txt_ID.Text;
             edit.Address = txt_Address.Text;
@@ -118,7 +120,7 @@ namespace LawtechPTSystem.EditForm
 
         private void txt_FamilyName_TextChanged(object sender, EventArgs e)
         {
-            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_FamilyName.Text;
+            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_MiddleName.Text + " " + txt_FamilyName.Text;
         }
     }
 }

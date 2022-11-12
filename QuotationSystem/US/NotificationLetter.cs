@@ -274,7 +274,7 @@ namespace LawtechPTSystem.US
 
         #region ==============取得專利請款記錄資料==============
         /// <summary>
-        /// 取得專利請款記錄資料 V_PatentFeeT
+        /// 取得專利請款記錄資料 V_PATControlFeeList
         /// </summary>
         /// <param name="FeeKey"></param>
         /// <param name="dtSource"></param>

@@ -32,7 +32,7 @@ namespace LawtechPTSystem.US
             {
                 if (value.Year > 1900)
                 {
-                    maskedTextBox_Result.Text = value.ToString("yyyy/MM/dd");
+                    maskedTextBox_Result.Text = value.ToString("yyyy-MM-dd");
                 }
                 else
                 {
@@ -83,7 +83,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 
@@ -99,7 +99,7 @@ namespace LawtechPTSystem.US
 
         private void FeeFinishDate_Load(object sender, EventArgs e)
         {
-            maskedTextBox_Result.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_Result.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         private void FeeFinishDate_KeyDown(object sender, KeyEventArgs e)
@@ -112,7 +112,7 @@ namespace LawtechPTSystem.US
             if (checkBox1.Checked)
             {
                 maskedTextBox_Result.Enabled = true;
-                maskedTextBox_Result.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                maskedTextBox_Result.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             else
             {

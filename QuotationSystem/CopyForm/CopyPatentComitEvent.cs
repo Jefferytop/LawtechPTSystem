@@ -71,14 +71,14 @@ namespace LawtechPTSystem.CopyForm
             Combo_EAttorneyTransactor.SelectedValue = edit.ALiaisonerKey.HasValue ? edit.ALiaisonerKey.Value : -1;
 
 
-            maskedTextBox_EventContent.Text = edit.OccurDate.HasValue? edit.OccurDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_OfficerDate.Text = edit.OfficerDate.HasValue ? edit.OfficerDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_DueDate.Text = edit.DueDate.HasValue ? edit.DueDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_StartDate.Text = edit.StartDate.HasValue ? edit.StartDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_ComitDate.Text = edit.ComitDate.HasValue ? edit.ComitDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_FinishDate.Text = edit.FinishDate.HasValue ? edit.FinishDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_OfficeDueDate.Text = edit.OfficeDueDate.HasValue ? edit.OfficeDueDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_CreateDate.Text = edit.CreateDate.HasValue ? edit.CreateDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_EventContent.Text = edit.OccurDate.HasValue? edit.OccurDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_OfficerDate.Text = edit.OfficerDate.HasValue ? edit.OfficerDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_DueDate.Text = edit.DueDate.HasValue ? edit.DueDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_StartDate.Text = edit.StartDate.HasValue ? edit.StartDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_ComitDate.Text = edit.ComitDate.HasValue ? edit.ComitDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_FinishDate.Text = edit.FinishDate.HasValue ? edit.FinishDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_OfficeDueDate.Text = edit.OfficeDueDate.HasValue ? edit.OfficeDueDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_CreateDate.Text = edit.CreateDate.HasValue ? edit.CreateDate.Value.ToString("yyyy-MM-dd") : "";
             txtRemark.Text = edit.Remark;
             txt_Result.Text = edit.Result;
         }       
@@ -239,7 +239,7 @@ namespace LawtechPTSystem.CopyForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

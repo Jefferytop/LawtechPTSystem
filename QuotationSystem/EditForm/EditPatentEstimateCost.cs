@@ -240,7 +240,7 @@ namespace LawtechPTSystem.EditForm
             txt_Remark.Text = CCTrademarkEstimateCost.Remark;
 
             //預估日期
-            maskedTextBox_CreateDate.Text = CCTrademarkEstimateCost.CreateDate.HasValue ? CCTrademarkEstimateCost.CreateDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_CreateDate.Text = CCTrademarkEstimateCost.CreateDate.HasValue ? CCTrademarkEstimateCost.CreateDate.Value.ToString("yyyy-MM-dd") : "";
         }
 
 
@@ -402,7 +402,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

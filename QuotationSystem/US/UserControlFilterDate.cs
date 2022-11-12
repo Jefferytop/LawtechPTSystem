@@ -118,26 +118,26 @@ namespace LawtechPTSystem.US
             } 
             #endregion
 
-            if (maskedStartDate.Text != "    /  /" && maskedEndDate.Text != "    /  /")
+            if (maskedStartDate.Text != "    -  -" && maskedEndDate.Text != "    -  -")
             {
                 if (dtS > dtE)
                 {
-                    maskedStartDate.Text = dtE.ToString("yyyy/MM/dd");
-                    maskedEndDate.Text = dtS.ToString("yyyy/MM/dd");
+                    maskedStartDate.Text = dtE.ToString("yyyy-MM-dd");
+                    maskedEndDate.Text = dtS.ToString("yyyy-MM-dd");
                 }
             }
 
             string strDateMode = cb_DateMode.SelectedValue != null ? cb_DateMode.SelectedValue.ToString() : "";
 
-            if (maskedStartDate.Text != "    /  /" && maskedEndDate.Text == "    /  /")
+            if (maskedStartDate.Text != "    -  -" && maskedEndDate.Text == "    -  -")
             {
                 strfilterDate = " " + strDateMode + ">='" + maskedStartDate.Text + "'";
             }
-            else if (maskedStartDate.Text == "    /  /" && maskedEndDate.Text != "    /  /")
+            else if (maskedStartDate.Text == "    -  -" && maskedEndDate.Text != "    -  -")
             {
                 strfilterDate = " " + strDateMode + "<='" + maskedEndDate.Text + " 23:59:59'";
             }
-            else if (maskedStartDate.Text != "    /  /" && maskedEndDate.Text != "    /  /")
+            else if (maskedStartDate.Text != "    -  -" && maskedEndDate.Text != "    -  -")
             {
                 strfilterDate = " (" + strDateMode + " >= '" + maskedStartDate.Text + "' and " + strDateMode + "<= '" + maskedEndDate.Text + " 23:59:59')";
             }
@@ -168,7 +168,7 @@ namespace LawtechPTSystem.US
             
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

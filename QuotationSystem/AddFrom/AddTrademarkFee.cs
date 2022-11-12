@@ -335,8 +335,8 @@ namespace LawtechPTSystem.AddFrom
 
 
             cboFClientTransactor.SelectedValue = Properties.Settings.Default.WorkerKEY;
-            mskRDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
-            mskCollectionPeriod.Text = DateTime.Now.AddDays(14).ToString("yyyy/MM/dd");
+            mskRDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            mskCollectionPeriod.Text = DateTime.Now.AddDays(14).ToString("yyyy-MM-dd");
 
             //取得登入者身份
             iWorkerID = Properties.Settings.Default.WorkerKEY;

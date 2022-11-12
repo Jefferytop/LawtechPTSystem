@@ -86,7 +86,7 @@
             this.maskedTextBox_ApplicationDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ApplicationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(112, 90);
-            this.maskedTextBox_ApplicationDate.Mask = "0000/00/00";
+            this.maskedTextBox_ApplicationDate.Mask = "0000-00-00";
             this.maskedTextBox_ApplicationDate.Name = "maskedTextBox_ApplicationDate";
             this.maskedTextBox_ApplicationDate.ReadOnly = true;
             this.maskedTextBox_ApplicationDate.Size = new System.Drawing.Size(115, 29);
@@ -162,7 +162,7 @@
             this.maskedTextBox_EntrustDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_EntrustDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_EntrustDate.Location = new System.Drawing.Point(361, 24);
-            this.maskedTextBox_EntrustDate.Mask = "0000/00/00";
+            this.maskedTextBox_EntrustDate.Mask = "0000-00-00";
             this.maskedTextBox_EntrustDate.Name = "maskedTextBox_EntrustDate";
             this.maskedTextBox_EntrustDate.ReadOnly = true;
             this.maskedTextBox_EntrustDate.Size = new System.Drawing.Size(122, 29);
@@ -176,7 +176,7 @@
             this.maskedTextBox_LawDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_LawDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_LawDate.Location = new System.Drawing.Point(112, 123);
-            this.maskedTextBox_LawDate.Mask = "0000/00/00";
+            this.maskedTextBox_LawDate.Mask = "0000-00-00";
             this.maskedTextBox_LawDate.Name = "maskedTextBox_LawDate";
             this.maskedTextBox_LawDate.ReadOnly = true;
             this.maskedTextBox_LawDate.Size = new System.Drawing.Size(115, 29);
@@ -200,7 +200,7 @@
             this.maskedTextBox_ExtendedDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ExtendedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ExtendedDate.Location = new System.Drawing.Point(361, 126);
-            this.maskedTextBox_ExtendedDate.Mask = "0000/00/00";
+            this.maskedTextBox_ExtendedDate.Mask = "0000-00-00";
             this.maskedTextBox_ExtendedDate.Name = "maskedTextBox_ExtendedDate";
             this.maskedTextBox_ExtendedDate.ReadOnly = true;
             this.maskedTextBox_ExtendedDate.Size = new System.Drawing.Size(122, 29);
@@ -281,7 +281,7 @@
             this.maskedTextBox_ExtendedDateNew.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ExtendedDateNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ExtendedDateNew.Location = new System.Drawing.Point(334, 24);
-            this.maskedTextBox_ExtendedDateNew.Mask = "0000/00/00";
+            this.maskedTextBox_ExtendedDateNew.Mask = "0000-00-00";
             this.maskedTextBox_ExtendedDateNew.Name = "maskedTextBox_ExtendedDateNew";
             this.maskedTextBox_ExtendedDateNew.Size = new System.Drawing.Size(122, 29);
             this.maskedTextBox_ExtendedDateNew.TabIndex = 340;
@@ -322,7 +322,7 @@
             this.maskedTextBox_LawDateNew.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_LawDateNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_LawDateNew.Location = new System.Drawing.Point(85, 24);
-            this.maskedTextBox_LawDateNew.Mask = "0000/00/00";
+            this.maskedTextBox_LawDateNew.Mask = "0000-00-00";
             this.maskedTextBox_LawDateNew.Name = "maskedTextBox_LawDateNew";
             this.maskedTextBox_LawDateNew.Size = new System.Drawing.Size(115, 29);
             this.maskedTextBox_LawDateNew.TabIndex = 338;

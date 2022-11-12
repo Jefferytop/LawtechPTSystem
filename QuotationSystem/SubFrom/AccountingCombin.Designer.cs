@@ -405,7 +405,7 @@
             this.maskedTextBox_D.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_D.Location = new System.Drawing.Point(337, 45);
             this.maskedTextBox_D.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_D.Mask = "0000/00/00";
+            this.maskedTextBox_D.Mask = "0000-00-00";
             this.maskedTextBox_D.Name = "maskedTextBox_D";
             this.maskedTextBox_D.Size = new System.Drawing.Size(114, 29);
             this.maskedTextBox_D.TabIndex = 1037;
@@ -434,7 +434,7 @@
             this.maskedTextBox_S.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_S.Location = new System.Drawing.Point(200, 45);
             this.maskedTextBox_S.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_S.Mask = "0000/00/00";
+            this.maskedTextBox_S.Mask = "0000-00-00";
             this.maskedTextBox_S.Name = "maskedTextBox_S";
             this.maskedTextBox_S.Size = new System.Drawing.Size(112, 29);
             this.maskedTextBox_S.TabIndex = 1036;
@@ -1104,7 +1104,7 @@
             // RDate
             // 
             this.RDate.DataPropertyName = "RDate";
-            dataGridViewCellStyle10.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle10.Format = "yyyy-MM-dd";
             this.RDate.DefaultCellStyle = dataGridViewCellStyle10;
             this.RDate.HeaderText = "請款日期";
             this.RDate.Name = "RDate";
@@ -1113,7 +1113,7 @@
             // PayDate
             // 
             this.PayDate.DataPropertyName = "PayDate";
-            dataGridViewCellStyle11.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle11.Format = "yyyy-MM-dd";
             this.PayDate.DefaultCellStyle = dataGridViewCellStyle11;
             this.PayDate.HeaderText = "收款日期";
             this.PayDate.Name = "PayDate";
@@ -1196,7 +1196,7 @@
             // ReceiptDate
             // 
             this.ReceiptDate.DataPropertyName = "ReceiptDate";
-            dataGridViewCellStyle14.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle14.Format = "yyyy-MM-dd";
             this.ReceiptDate.DefaultCellStyle = dataGridViewCellStyle14;
             this.ReceiptDate.HeaderText = "收據日期";
             this.ReceiptDate.Name = "ReceiptDate";
@@ -1260,7 +1260,7 @@
             // CloseDate
             // 
             this.CloseDate.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle17.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle17.Format = "yyyy-MM-dd";
             this.CloseDate.DefaultCellStyle = dataGridViewCellStyle17;
             this.CloseDate.HeaderText = "關帳日期";
             this.CloseDate.Name = "CloseDate";
@@ -1510,7 +1510,7 @@
             // IReceiptDate
             // 
             this.IReceiptDate.DataPropertyName = "IReceiptDate";
-            dataGridViewCellStyle21.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle21.Format = "yyyy-MM-dd";
             this.IReceiptDate.DefaultCellStyle = dataGridViewCellStyle21;
             this.IReceiptDate.HeaderText = "收據日期";
             this.IReceiptDate.Name = "IReceiptDate";
@@ -1599,7 +1599,7 @@
             // ReciveDate
             // 
             this.ReciveDate.DataPropertyName = "ReciveDate";
-            dataGridViewCellStyle27.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle27.Format = "yyyy-MM-dd";
             this.ReciveDate.DefaultCellStyle = dataGridViewCellStyle27;
             this.ReciveDate.HeaderText = "收件日期";
             this.ReciveDate.Name = "ReciveDate";
@@ -1608,7 +1608,7 @@
             // PaymentDate
             // 
             this.PaymentDate.DataPropertyName = "PaymentDate";
-            dataGridViewCellStyle28.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle28.Format = "yyyy-MM-dd";
             this.PaymentDate.DefaultCellStyle = dataGridViewCellStyle28;
             this.PaymentDate.HeaderText = "付款日期";
             this.PaymentDate.Name = "PaymentDate";
@@ -1617,7 +1617,7 @@
             // EstimatedPaymentDate
             // 
             this.EstimatedPaymentDate.DataPropertyName = "EstimatedPaymentDate";
-            dataGridViewCellStyle29.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle29.Format = "yyyy-MM-dd";
             this.EstimatedPaymentDate.DefaultCellStyle = dataGridViewCellStyle29;
             this.EstimatedPaymentDate.HeaderText = "預估付款日";
             this.EstimatedPaymentDate.Name = "EstimatedPaymentDate";
@@ -1643,7 +1643,7 @@
             // CloseDatePayment
             // 
             this.CloseDatePayment.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle30.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle30.Format = "yyyy-MM-dd";
             this.CloseDatePayment.DefaultCellStyle = dataGridViewCellStyle30;
             this.CloseDatePayment.HeaderText = "關帳日期";
             this.CloseDatePayment.Name = "CloseDatePayment";

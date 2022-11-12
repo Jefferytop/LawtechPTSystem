@@ -49,6 +49,7 @@
             this.feePhaseTByTMTableAdapter = new LawtechPTSystem.DataSet_DropTableAdapters.FeePhaseTByTMTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cb_Withholding = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txt_OtherTotalFeeInSideTax = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -137,7 +138,6 @@
             this.checkBox_All = new System.Windows.Forms.CheckBox();
             this.attorneyTTableAdapter = new LawtechPTSystem.DataSet_DropTableAdapters.AttorneyTTableAdapter();
             this.feePhaseItemsTTableAdapter = new LawtechPTSystem.QS_DataSetTableAdapters.FeePhaseItemsTTableAdapter();
-            this.cb_Withholding = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.feePhaseTByTMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Drop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerQuitNBindingSource)).BeginInit();
@@ -353,6 +353,16 @@
             this.groupBox3.TabIndex = 1095;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "所內收費項目(有稅額)";
+            // 
+            // cb_Withholding
+            // 
+            this.cb_Withholding.AutoSize = true;
+            this.cb_Withholding.Location = new System.Drawing.Point(235, 130);
+            this.cb_Withholding.Name = "cb_Withholding";
+            this.cb_Withholding.Size = new System.Drawing.Size(69, 22);
+            this.cb_Withholding.TabIndex = 1122;
+            this.cb_Withholding.Text = "已預扣";
+            this.cb_Withholding.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -614,7 +624,7 @@
             this.mskCollectionPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mskCollectionPeriod.Location = new System.Drawing.Point(376, 83);
             this.mskCollectionPeriod.Margin = new System.Windows.Forms.Padding(1);
-            this.mskCollectionPeriod.Mask = "0000/00/00";
+            this.mskCollectionPeriod.Mask = "0000-00-00";
             this.mskCollectionPeriod.Name = "mskCollectionPeriod";
             this.mskCollectionPeriod.Size = new System.Drawing.Size(109, 25);
             this.mskCollectionPeriod.TabIndex = 1094;
@@ -686,7 +696,6 @@
             // cb_NT
             // 
             this.cb_NT.AutoSize = true;
-            this.cb_NT.Enabled = false;
             this.cb_NT.Location = new System.Drawing.Point(71, 131);
             this.cb_NT.Name = "cb_NT";
             this.cb_NT.Size = new System.Drawing.Size(83, 22);
@@ -1469,7 +1478,7 @@
             this.mskRDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mskRDate.Location = new System.Drawing.Point(82, 83);
             this.mskRDate.Margin = new System.Windows.Forms.Padding(1);
-            this.mskRDate.Mask = "0000/00/00";
+            this.mskRDate.Mask = "0000-00-00";
             this.mskRDate.Name = "mskRDate";
             this.mskRDate.Size = new System.Drawing.Size(109, 25);
             this.mskRDate.TabIndex = 4;
@@ -1540,17 +1549,6 @@
             // feePhaseItemsTTableAdapter
             // 
             this.feePhaseItemsTTableAdapter.ClearBeforeFill = true;
-            // 
-            // cb_Withholding
-            // 
-            this.cb_Withholding.AutoSize = true;
-            this.cb_Withholding.Enabled = false;
-            this.cb_Withholding.Location = new System.Drawing.Point(235, 130);
-            this.cb_Withholding.Name = "cb_Withholding";
-            this.cb_Withholding.Size = new System.Drawing.Size(69, 22);
-            this.cb_Withholding.TabIndex = 1122;
-            this.cb_Withholding.Text = "已預扣";
-            this.cb_Withholding.UseVisualStyleBackColor = true;
             // 
             // AddTrademarkFee
             // 

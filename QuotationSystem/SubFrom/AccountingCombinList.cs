@@ -10,6 +10,10 @@ namespace LawtechPTSystem.SubFrom
     /// </summary>
     public partial class AccountingCombinList : Form
     {
+        UserPermissionForm myPermission;
+        private const string ProgramSymbol = "CombinFeePayment";
+        private const string SourceTableName = "AccountingCombin";
+
         public AccountingCombinList()
         {
             InitializeComponent();
@@ -312,6 +316,16 @@ namespace LawtechPTSystem.SubFrom
         {
             Public.PublicForm Forms = new Public.PublicForm();
             Forms.AccountingCombinList = this;
+
+            //取得權限
+            myPermission = new UserPermissionForm(Properties.Settings.Default.WorkerKEY, ProgramSymbol);
+
+            System.Windows.Forms.BindingNavigator[] listbinding = { bindingNavigator1, bindingNavigator_Fee, bindingNavigator_Payment };
+            System.Windows.Forms.ContextMenuStrip[] listtMenu = { contextMenuStrip1 };
+
+            //確認可使用的功能選單
+            Public.CommonFunctions.CheckMeunItemVisible(listbinding, myPermission.UserPermission);
+            Public.CommonFunctions.CheckMeunItemVisible(listtMenu, myPermission.UserPermission);
 
             Public.Utility.SetLoadDataRange(userControlFilterDate1);
 

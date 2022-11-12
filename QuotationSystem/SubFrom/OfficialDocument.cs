@@ -260,18 +260,18 @@ namespace LawtechPTSystem.SubFrom
                                     comit.OfficialDocumentKey = iKey;
                                     if (isDate)
                                     {
-                                        comit.OfficerDate = dtIssuedate.ToString("yyyy/MM/dd");
+                                        comit.OfficerDate = dtIssuedate.ToString("yyyy-MM-dd");
                                     }
 
                                     if (isSubmissionTime)
                                     {
-                                        comit.OccurDate = dtSubmissionTime.ToString("yyyy/MM/dd");
-                                        comit.DueDate = dtSubmissionTime.AddMonths(imon).ToString("yyyy/MM/dd");
+                                        comit.OccurDate = dtSubmissionTime.ToString("yyyy-MM-dd");
+                                        comit.DueDate = dtSubmissionTime.AddMonths(imon).ToString("yyyy-MM-dd");
                                     }
 
                                     if (bpp)
                                     {
-                                        comit.DueDate = dtProcessingPeriod.ToString("yyyy/MM/dd");
+                                        comit.DueDate = dtProcessingPeriod.ToString("yyyy-MM-dd");
                                     }
                                     comit.Remark = "發文文號：" + strDocumentNumber + "\r\n案由：" + Summary;
                                     comit.ShowDialog();
@@ -295,18 +295,18 @@ namespace LawtechPTSystem.SubFrom
                                     comit.OfficialDocumentKey = iKey;
                                     if (isDate)
                                     {
-                                        comit.OfficerDate = dtIssuedate.ToString("yyyy/MM/dd");
+                                        comit.OfficerDate = dtIssuedate.ToString("yyyy-MM-dd");
                                     }
 
                                     if (isSubmissionTime)
                                     {
-                                        comit.OccurDate = dtSubmissionTime.ToString("yyyy/MM/dd");
-                                        comit.DueDate = dtSubmissionTime.AddMonths(imon).ToString("yyyy/MM/dd");
+                                        comit.OccurDate = dtSubmissionTime.ToString("yyyy-MM-dd");
+                                        comit.DueDate = dtSubmissionTime.AddMonths(imon).ToString("yyyy-MM-dd");
                                     }
 
                                     if (bpp)
                                     {
-                                        comit.DueDate = dtProcessingPeriod.ToString("yyyy/MM/dd");
+                                        comit.DueDate = dtProcessingPeriod.ToString("yyyy-MM-dd");
                                     }
 
                                     comit.Remark = "發文文號：" + strDocumentNumber + "\r\n案由：" + Summary;
@@ -726,7 +726,7 @@ namespace LawtechPTSystem.SubFrom
                                         log.DelTime = DateTime.Now;
                                         log.DelWorkerKey = Properties.Settings.Default.WorkerKEY;
                                         log.DelWorker = Properties.Settings.Default.WorkerName;
-                                        log.DelContent = string.Format("申請案編號:{2}\r\n申請案名稱:{3}\r\n事件內容:{0}\r\n事件發生日:{1}\r\n所內期限:{4}\r\n官方期限:{5}\r\n完成日期:{6}\r\n處理結果:{7}\r\n備註:{8}", PatentComit.EventContent, PatentComit.CreateDate.HasValue ? PatentComit.CreateDate.Value.ToString("yyyy/MM/dd") : "", pat.PatentNo, pat.Title, PatentComit.OfficeDueDate.HasValue ? PatentComit.OfficeDueDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.DueDate.HasValue ? PatentComit.DueDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.FinishDate.HasValue ? PatentComit.FinishDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.Result, PatentComit.Remark);
+                                        log.DelContent = string.Format("申請案編號:{2}\r\n申請案名稱:{3}\r\n事件內容:{0}\r\n事件發生日:{1}\r\n所內期限:{4}\r\n官方期限:{5}\r\n完成日期:{6}\r\n處理結果:{7}\r\n備註:{8}", PatentComit.EventContent, PatentComit.CreateDate.HasValue ? PatentComit.CreateDate.Value.ToString("yyyy-MM-dd") : "", pat.PatentNo, pat.Title, PatentComit.OfficeDueDate.HasValue ? PatentComit.OfficeDueDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.DueDate.HasValue ? PatentComit.DueDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.FinishDate.HasValue ? PatentComit.FinishDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.Result, PatentComit.Remark);
                                         log.DelTitle = string.Format("刪除「{0}」資料【事件記錄-{1}】", this.Text, PatentComit.EventContent);
                                         log.Create();
 
@@ -786,7 +786,7 @@ namespace LawtechPTSystem.SubFrom
                                         log.DelWorkerKey = Properties.Settings.Default.WorkerKEY;
                                         log.DelWorker = Properties.Settings.Default.WorkerName;
 
-                                        log.DelContent = string.Format("商標案號:{5}\r\n商標名稱:{6}\r\n事件內容:{0}\r\n本所來函日:{1}\r\n官方期限:{2}\r\n本所期限:{3}\r\n完成日期:{4}\r\n處理結果:{7}\r\n備註:{8}", TMdel.NotifyEventContent, TMdel.NotifyComitDate.HasValue ? TMdel.NotifyComitDate.Value.ToString("yyyy/MM/dd") : "", TMdel.DueDate.HasValue ? TMdel.DueDate.Value.ToString("yyyy/MM/dd") : "", TMdel.AttorneyDueDate.HasValue ? TMdel.AttorneyDueDate.Value.ToString("yyyy/MM/dd") : "", TMdel.FinishDate.HasValue ? TMdel.FinishDate.Value.ToString("yyyy/MM/dd") : "", tm.TrademarkNo, tm.TrademarkName, TMdel.Result, TMdel.Remark);
+                                        log.DelContent = string.Format("商標案號:{5}\r\n商標名稱:{6}\r\n事件內容:{0}\r\n本所來函日:{1}\r\n官方期限:{2}\r\n本所期限:{3}\r\n完成日期:{4}\r\n處理結果:{7}\r\n備註:{8}", TMdel.NotifyEventContent, TMdel.NotifyComitDate.HasValue ? TMdel.NotifyComitDate.Value.ToString("yyyy-MM-dd") : "", TMdel.DueDate.HasValue ? TMdel.DueDate.Value.ToString("yyyy-MM-dd") : "", TMdel.AttorneyDueDate.HasValue ? TMdel.AttorneyDueDate.Value.ToString("yyyy-MM-dd") : "", TMdel.FinishDate.HasValue ? TMdel.FinishDate.Value.ToString("yyyy-MM-dd") : "", tm.TrademarkNo, tm.TrademarkName, TMdel.Result, TMdel.Remark);
                                         log.DelTitle = string.Format("刪除「{0}」資料【事件記錄-{1}】", this.Text, TMdel.NotifyEventContent);
                                         log.Create();
 

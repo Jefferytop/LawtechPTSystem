@@ -88,7 +88,7 @@
             this.maskedTextBox_Result.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Result.Location = new System.Drawing.Point(88, 37);
             this.maskedTextBox_Result.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox_Result.Mask = "0000/00/00";
+            this.maskedTextBox_Result.Mask = "0000-00-00";
             this.maskedTextBox_Result.Name = "maskedTextBox_Result";
             this.maskedTextBox_Result.Size = new System.Drawing.Size(120, 29);
             this.maskedTextBox_Result.TabIndex = 1;

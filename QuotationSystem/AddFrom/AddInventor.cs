@@ -57,6 +57,7 @@ namespace LawtechPTSystem.AddFrom
             add.InventorName = txt_InventorName.Text;
             add.FamilyName = txt_FamilyName.Text;
             add.GivenName = txt_GivenName.Text;
+            add.MiddleName= txt_MiddleName.Text;
             add.InventorID = txt_ID.Text;
             add.FullEnName = txt_FullEnName.Text;
             add.Remark = txt_Remark.Text;
@@ -95,7 +96,7 @@ namespace LawtechPTSystem.AddFrom
 
         private void txt_FamilyName_TextChanged(object sender, EventArgs e)
         {
-            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_FamilyName.Text ;
+            txt_FullEnName.Text = txt_GivenName.Text + " " + txt_MiddleName.Text + " " + txt_FamilyName.Text ;
         }
 
         private void AddInventor_Load(object sender, EventArgs e)

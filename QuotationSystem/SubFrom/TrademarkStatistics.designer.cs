@@ -667,7 +667,7 @@
             // NoticeDate1
             // 
             this.NoticeDate1.DataPropertyName = "NoticeDate1";
-            dataGridViewCellStyle12.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle12.Format = "yyyy-MM-dd";
             this.NoticeDate1.DefaultCellStyle = dataGridViewCellStyle12;
             this.NoticeDate1.HeaderText = "公告日(1)";
             this.NoticeDate1.Name = "NoticeDate1";
@@ -683,7 +683,7 @@
             // NoticeDate
             // 
             this.NoticeDate.DataPropertyName = "NoticeDate";
-            dataGridViewCellStyle13.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle13.Format = "yyyy-MM-dd";
             this.NoticeDate.DefaultCellStyle = dataGridViewCellStyle13;
             this.NoticeDate.HeaderText = "公告日(2)";
             this.NoticeDate.Name = "NoticeDate";
@@ -699,7 +699,7 @@
             // RegistrationDate
             // 
             this.RegistrationDate.DataPropertyName = "RegistrationDate";
-            dataGridViewCellStyle14.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle14.Format = "yyyy-MM-dd";
             this.RegistrationDate.DefaultCellStyle = dataGridViewCellStyle14;
             this.RegistrationDate.HeaderText = "註冊日期";
             this.RegistrationDate.Name = "RegistrationDate";
@@ -715,7 +715,7 @@
             // LawDate
             // 
             this.LawDate.DataPropertyName = "LawDate";
-            dataGridViewCellStyle15.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle15.Format = "yyyy-MM-dd";
             this.LawDate.DefaultCellStyle = dataGridViewCellStyle15;
             this.LawDate.HeaderText = "專用期限";
             this.LawDate.Name = "LawDate";
@@ -738,7 +738,7 @@
             // ExtendedDate
             // 
             this.ExtendedDate.DataPropertyName = "ExtendedDate";
-            dataGridViewCellStyle16.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle16.Format = "yyyy-MM-dd";
             this.ExtendedDate.DefaultCellStyle = dataGridViewCellStyle16;
             this.ExtendedDate.HeaderText = "可辦延展日期";
             this.ExtendedDate.Name = "ExtendedDate";
@@ -800,7 +800,7 @@
             // CloseDate
             // 
             this.CloseDate.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle17.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle17.Format = "yyyy-MM-dd";
             this.CloseDate.DefaultCellStyle = dataGridViewCellStyle17;
             this.CloseDate.HeaderText = "結案日期";
             this.CloseDate.Name = "CloseDate";

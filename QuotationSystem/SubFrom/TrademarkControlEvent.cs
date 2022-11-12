@@ -83,7 +83,7 @@ namespace LawtechPTSystem.SubFrom
             set
             {
                 DateTime dt = value;
-                maskedTextBox_OccurDateS.Text = dt.ToString("yyyy/MM/dd");
+                maskedTextBox_OccurDateS.Text = dt.ToString("yyyy-MM-dd");
             }
         }
 
@@ -123,7 +123,7 @@ namespace LawtechPTSystem.SubFrom
             set
             {
                 DateTime dt = value;
-                maskedTextBox_OccurDateE.Text = dt.ToString("yyyy/MM/dd");
+                maskedTextBox_OccurDateE.Text = dt.ToString("yyyy-MM-dd");
             }
         }
 
@@ -240,7 +240,7 @@ namespace LawtechPTSystem.SubFrom
             }
             else if (dtStartTime.Year != 1900 && dtEndTime.Year != 1900)
             {
-                times += string.Format(" and (" + strSeachDate + " >= '{0}' and " + strSeachDate + " <= '{1} 23:59'  ) ", dtStartTime.ToString("yyyy/MM/dd"), dtEndTime.ToString("yyyy/MM/dd"));
+                times += string.Format(" and (" + strSeachDate + " >= '{0}' and " + strSeachDate + " <= '{1} 23:59'  ) ", dtStartTime.ToString("yyyy-MM-dd"), dtEndTime.ToString("yyyy-MM-dd"));
             }
 
             #region strWhere1
@@ -1139,7 +1139,7 @@ WHERE         (TrademarkControversyManagementT.CloseDate IS NULL) {1}", strWhere
 
                                 NotifyEvent.FinishDate = DateTime.Now;
 
-                                NotifyEvent.Result = DateTime.Now.ToString("yyyy/MM/dd") + " 直接歸檔";
+                                NotifyEvent.Result = DateTime.Now.ToString("yyyy-MM-dd") + " 直接歸檔";
 
                                 NotifyEvent.LastModifyWorker = Properties.Settings.Default.WorkerName;
 
@@ -1159,7 +1159,7 @@ WHERE         (TrademarkControversyManagementT.CloseDate IS NULL) {1}", strWhere
 
                                 NotifyEvent.FinishDate = DateTime.Now;
 
-                                NotifyEvent.Result = DateTime.Now.ToString("yyyy/MM/dd") + " 直接歸檔";
+                                NotifyEvent.Result = DateTime.Now.ToString("yyyy-MM-dd") + " 直接歸檔";
 
                                 NotifyEvent.LastModifyDate = DateTime.Now;
 
@@ -1204,7 +1204,7 @@ WHERE         (TrademarkControversyManagementT.CloseDate IS NULL) {1}", strWhere
                                 Public.CPatComitEvent.ReadOne(iComitEventID, ref Comit);
                                 
                                 Comit.FinishDate = null;
-                                Comit.Result = DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                                Comit.Result = DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                                 Comit.Update();
                                 dgViewMF.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
                                 dt_ControlEvent.AcceptChanges();
@@ -1215,7 +1215,7 @@ WHERE         (TrademarkControversyManagementT.CloseDate IS NULL) {1}", strWhere
                                 Public.CPatNotifyEvent NotifyEvent = new Public.CPatNotifyEvent("PatNotifyEventID=" + iEventID.ToString());
                                 NotifyEvent.SetCurrent(iEventID);
                                 NotifyEvent.FinishDate = DateTime.Parse("1900/1/1");
-                                NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                                NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                                 NotifyEvent.Updata(iEventID);
 
                                 dgViewMF.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
@@ -1572,7 +1572,7 @@ WHERE         (TrademarkControversyManagementT.CloseDate IS NULL) {1}", strWhere
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

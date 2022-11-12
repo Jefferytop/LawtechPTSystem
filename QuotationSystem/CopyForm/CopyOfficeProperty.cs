@@ -217,7 +217,7 @@ namespace LawtechPTSystem.CopyForm
             //建檔時間
             if (EditCOfficeProperty.CreateDate.Value.Year > 1900)
             {
-                mask_CreateDate.Text = EditCOfficeProperty.CreateDate.Value.ToString("yyyy/MM/dd");
+                mask_CreateDate.Text = EditCOfficeProperty.CreateDate.Value.ToString("yyyy-MM-dd");
             }
             else
             {
@@ -226,7 +226,7 @@ namespace LawtechPTSystem.CopyForm
             //購買時間
             if (EditCOfficeProperty.BuyDate.Value.Year > 1900)
             {
-                mask_BuyDate.Text = EditCOfficeProperty.BuyDate.Value.ToString("yyyy/MM/dd");
+                mask_BuyDate.Text = EditCOfficeProperty.BuyDate.Value.ToString("yyyy-MM-dd");
             }
             else
             {

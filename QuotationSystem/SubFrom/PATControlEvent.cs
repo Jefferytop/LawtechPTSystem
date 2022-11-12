@@ -52,7 +52,7 @@ namespace LawtechPTSystem.SubFrom
             set
             {
                 DateTime dt = value;
-                maskedTextBox_OccurDateS.Text = dt.ToString("yyyy/MM/dd");
+                maskedTextBox_OccurDateS.Text = dt.ToString("yyyy-MM-dd");
             }
         }
 
@@ -92,7 +92,7 @@ namespace LawtechPTSystem.SubFrom
             set
             {
                 DateTime dt = value;
-                maskedTextBox_OccurDateE.Text = dt.ToString("yyyy/MM/dd");
+                maskedTextBox_OccurDateE.Text = dt.ToString("yyyy-MM-dd");
             }
         }
 
@@ -877,7 +877,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
 
                             NotifyEvent.FinishDate = DateTime.Now;
 
-                            NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy/MM/dd") + "直接歸檔";
+                            NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy-MM-dd") + "直接歸檔";
 
                             NotifyEvent.Updata((int)dgViewMF.CurrentRow.Cells["EventID"].Value);
 
@@ -906,7 +906,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
 
                             comitEvent.FinishDate = DateTime.Now;
 
-                            comitEvent.Result = DateTime.Now.ToString("yyyy/MM/dd") + "結束管制";
+                            comitEvent.Result = DateTime.Now.ToString("yyyy-MM-dd") + "結束管制";
 
                             comitEvent.Update();
 
@@ -941,7 +941,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
 
                                 notifyEvent.FinishDate = DateTime.Now;
 
-                                notifyEvent.NotifyResult = DateTime.Now.ToString("yyyy/MM/dd") + "結束管制";
+                                notifyEvent.NotifyResult = DateTime.Now.ToString("yyyy-MM-dd") + "結束管制";
 
                                 notifyEvent.Updata((int)dgViewMF.CurrentRow.Cells["EventID"].Value);
 
@@ -977,7 +977,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
                                 Public.CPatComitEvent.ReadOne(iComitEventID, ref Comit);
                               
                                 Comit.FinishDate = null;
-                                Comit.Result = DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                                Comit.Result = DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                                 Comit.Update();
                                 dgViewMF.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
                                 dt_ControlEvent.AcceptChanges();
@@ -988,7 +988,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
                                 Public.CPatNotifyEvent NotifyEvent = new Public.CPatNotifyEvent("PatNotifyEventID=" + iEventID.ToString());
                                 NotifyEvent.SetCurrent(iEventID);
                                 NotifyEvent.FinishDate = new DateTime(1900,1,1);
-                                NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                                NotifyEvent.NotifyResult = DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                                 NotifyEvent.Updata(iEventID);
 
                                 dgViewMF.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
@@ -1766,7 +1766,7 @@ WHERE          (PatentManagementT.CloseDate IS NULL) AND (PatentManagementT.Rene
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

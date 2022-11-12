@@ -130,7 +130,7 @@
             this.maskedEndDate.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.maskedEndDate.ForeColor = System.Drawing.Color.Green;
             this.maskedEndDate.Location = new System.Drawing.Point(244, 18);
-            this.maskedEndDate.Mask = "0000/00/00";
+            this.maskedEndDate.Mask = "0000-00-00";
             this.maskedEndDate.Name = "maskedEndDate";
             this.maskedEndDate.Size = new System.Drawing.Size(76, 27);
             this.maskedEndDate.TabIndex = 3;
@@ -142,7 +142,7 @@
             this.maskedStartDate.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.maskedStartDate.ForeColor = System.Drawing.Color.Green;
             this.maskedStartDate.Location = new System.Drawing.Point(139, 18);
-            this.maskedStartDate.Mask = "0000/00/00";
+            this.maskedStartDate.Mask = "0000-00-00";
             this.maskedStartDate.Name = "maskedStartDate";
             this.maskedStartDate.Size = new System.Drawing.Size(75, 27);
             this.maskedStartDate.TabIndex = 1;

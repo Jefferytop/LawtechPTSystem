@@ -210,7 +210,7 @@
             this.maskedTextBox_D.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.maskedTextBox_D.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_D.Location = new System.Drawing.Point(348, 7);
-            this.maskedTextBox_D.Mask = "0000/00/00";
+            this.maskedTextBox_D.Mask = "0000-00-00";
             this.maskedTextBox_D.Name = "maskedTextBox_D";
             this.maskedTextBox_D.Size = new System.Drawing.Size(114, 29);
             this.maskedTextBox_D.TabIndex = 1010;
@@ -222,7 +222,7 @@
             this.maskedTextBox_S.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_S.Location = new System.Drawing.Point(205, 7);
             this.maskedTextBox_S.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_S.Mask = "0000/00/00";
+            this.maskedTextBox_S.Mask = "0000-00-00";
             this.maskedTextBox_S.Name = "maskedTextBox_S";
             this.maskedTextBox_S.Size = new System.Drawing.Size(112, 29);
             this.maskedTextBox_S.TabIndex = 1009;
@@ -347,7 +347,7 @@
             // createDateDataGridViewTextBoxColumn
             // 
             this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle2.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle2.Format = "yyyy-MM-dd";
             this.createDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.createDateDataGridViewTextBoxColumn.HeaderText = "建檔日期";
             this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
@@ -356,7 +356,7 @@
             // buyDateDataGridViewTextBoxColumn
             // 
             this.buyDateDataGridViewTextBoxColumn.DataPropertyName = "BuyDate";
-            dataGridViewCellStyle3.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle3.Format = "yyyy-MM-dd";
             this.buyDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.buyDateDataGridViewTextBoxColumn.HeaderText = "購買日期";
             this.buyDateDataGridViewTextBoxColumn.Name = "buyDateDataGridViewTextBoxColumn";
@@ -904,7 +904,7 @@
             this.mask_BuyDate.BackColor = System.Drawing.Color.White;
             this.mask_BuyDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.mask_BuyDate.Location = new System.Drawing.Point(296, 72);
-            this.mask_BuyDate.Mask = "0000/00/00";
+            this.mask_BuyDate.Mask = "0000-00-00";
             this.mask_BuyDate.Name = "mask_BuyDate";
             this.mask_BuyDate.ReadOnly = true;
             this.mask_BuyDate.Size = new System.Drawing.Size(100, 25);
@@ -925,7 +925,7 @@
             this.mask_CreateDate.BackColor = System.Drawing.Color.White;
             this.mask_CreateDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.mask_CreateDate.Location = new System.Drawing.Point(106, 72);
-            this.mask_CreateDate.Mask = "0000/00/00";
+            this.mask_CreateDate.Mask = "0000-00-00";
             this.mask_CreateDate.Name = "mask_CreateDate";
             this.mask_CreateDate.ReadOnly = true;
             this.mask_CreateDate.Size = new System.Drawing.Size(100, 25);

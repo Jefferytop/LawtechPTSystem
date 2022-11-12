@@ -96,7 +96,7 @@ namespace LawtechPTSystem.AddFrom
             this.attorneyTTableAdapter.FillByCountry(this.dataSet_Drop.AttorneyT, Country);
             this.worker_QuitNTableAdapter.Fill(this.qS_DataSet.Worker_QuitN);
             bs_EventContent = new BindingSource();
-            maskedTextBox_ComitDate.Text = DateTime.Now.ToString("yyyy/MM/dd"); //來函收文日預設今天
+            maskedTextBox_ComitDate.Text = DateTime.Now.ToString("yyyy-MM-dd"); //來函收文日預設今天
 
             Combo_EClientWorker.SelectedValue = Properties.Settings.Default.WorkerKEY;
 
@@ -517,7 +517,7 @@ namespace LawtechPTSystem.AddFrom
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

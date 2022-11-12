@@ -244,7 +244,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1065, 392);
+            this.tabControl1.Size = new System.Drawing.Size(1065, 396);
             this.tabControl1.TabIndex = 39;
             // 
             // tabPage1
@@ -291,7 +291,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1057, 354);
+            this.tabPage1.Size = new System.Drawing.Size(1057, 358);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "  客戶基本資料  ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -395,7 +395,7 @@
             this.maskedTextBox_StartedDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_StartedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_StartedDate.Location = new System.Drawing.Point(121, 251);
-            this.maskedTextBox_StartedDate.Mask = "0000/00/00";
+            this.maskedTextBox_StartedDate.Mask = "0000-00-00";
             this.maskedTextBox_StartedDate.Name = "maskedTextBox_StartedDate";
             this.maskedTextBox_StartedDate.ReadOnly = true;
             this.maskedTextBox_StartedDate.Size = new System.Drawing.Size(115, 29);
@@ -756,7 +756,7 @@
             this.tabPage3.Controls.Add(this.label38);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1057, 350);
+            this.tabPage3.Size = new System.Drawing.Size(1057, 358);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "  客戶基本資料  ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1259,7 +1259,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1057, 350);
+            this.tabPage2.Size = new System.Drawing.Size(1057, 358);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  客戶連絡人  ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1282,7 +1282,7 @@
             this.bindingNavigatorMoveLastItem1,
             this.bindingNavigatorSeparator5,
             this.toolStripButton_AddAttLiaisoner});
-            this.bindingNavigator2.Location = new System.Drawing.Point(3, 320);
+            this.bindingNavigator2.Location = new System.Drawing.Point(3, 328);
             this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator2.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -1398,10 +1398,11 @@
             this.GridView_AttLiaisoner.DataSource = this.liaisonerTBindingSource;
             this.GridView_AttLiaisoner.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.GridView_AttLiaisoner.Location = new System.Drawing.Point(3, 6);
+            this.GridView_AttLiaisoner.Margin = new System.Windows.Forms.Padding(0);
             this.GridView_AttLiaisoner.Name = "GridView_AttLiaisoner";
             this.GridView_AttLiaisoner.ReadOnly = true;
             this.GridView_AttLiaisoner.RowTemplate.Height = 24;
-            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1049, 311);
+            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1049, 322);
             this.GridView_AttLiaisoner.TabIndex = 22;
             this.GridView_AttLiaisoner.Tag = "Applicant_Liaisoner";
             this.GridView_AttLiaisoner.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_AttLiaisoner_CellClick);
@@ -1544,7 +1545,7 @@
             this.GridView_Applicant.ReadOnly = true;
             this.GridView_Applicant.RowHeadersWidth = 25;
             this.GridView_Applicant.RowTemplate.Height = 24;
-            this.GridView_Applicant.Size = new System.Drawing.Size(1058, 175);
+            this.GridView_Applicant.Size = new System.Drawing.Size(1058, 171);
             this.GridView_Applicant.TabIndex = 33;
             this.GridView_Applicant.Tag = "ApplicantSearch";
             this.GridView_Applicant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Applicant_CellContentClick);
@@ -1672,7 +1673,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.toolStripButton_Add});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 278);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 274);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -1818,7 +1819,7 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1067, 707);
-            this.splitContainer1.SplitterDistance = 305;
+            this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 42;
             // 

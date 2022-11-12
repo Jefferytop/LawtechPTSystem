@@ -142,7 +142,7 @@ namespace LawtechPTSystem.SubFrom
             string times = "";
             string sfilter = "";
             string sfilter1 = "";
-            if (comboBox_SelectValue.Text == "" && comboBox_SelectValue1.Text == "" && maskedTextBox_S.Text == "    /  /" && maskedTextBox_D.Text == "    /  /")
+            if (comboBox_SelectValue.Text == "" && comboBox_SelectValue1.Text == "" && maskedTextBox_S.Text == "    -  -" && maskedTextBox_D.Text == "    -  -")
             {
                 sfilter = " 1=1 ";
             }
@@ -150,7 +150,7 @@ namespace LawtechPTSystem.SubFrom
             {
                 DateTime dtS = new DateTime(), dtE = new DateTime();
 
-                if (maskedTextBox_S.Text != "    /  /")
+                if (maskedTextBox_S.Text != "    -  -")
                 {
                     bool IsS = DateTime.TryParse(maskedTextBox_S.Text, out dtS);
                     if (!IsS)
@@ -160,7 +160,7 @@ namespace LawtechPTSystem.SubFrom
                     }
                 }
 
-                if (maskedTextBox_D.Text != "    /  /")
+                if (maskedTextBox_D.Text != "    -  -")
                 {
                     bool IsE = DateTime.TryParse(maskedTextBox_D.Text, out dtE);
                     if (!IsE)
@@ -170,28 +170,28 @@ namespace LawtechPTSystem.SubFrom
                     }
                 }
 
-                if (maskedTextBox_S.Text != "    /  /" && maskedTextBox_D.Text != "    /  /")
+                if (maskedTextBox_S.Text != "    -  -" && maskedTextBox_D.Text != "    -  -")
                 {
 
                     if (dtS > dtE)
                     {
-                        maskedTextBox_S.Text = dtE.ToString("yyyy/MM/dd");
-                        maskedTextBox_D.Text = dtS.ToString("yyyy/MM/dd");
+                        maskedTextBox_S.Text = dtE.ToString("yyyy-MM-dd");
+                        maskedTextBox_D.Text = dtS.ToString("yyyy-MM-dd");
                     }
                 }
 
 
                 string strDateMode = comboBox_DateMode.SelectedValue.ToString();
 
-                if (maskedTextBox_S.Text != "    /  /" && maskedTextBox_D.Text == "    /  /")
+                if (maskedTextBox_S.Text != "    -  -" && maskedTextBox_D.Text == "    -  -")
                 {
                     times += " " + strDateMode + ">='" + maskedTextBox_S.Text + "'";
                 }
-                else if (maskedTextBox_S.Text == "    /  /" && maskedTextBox_D.Text != "    /  /")
+                else if (maskedTextBox_S.Text == "    -  -" && maskedTextBox_D.Text != "    -  -")
                 {
                     times += " " + strDateMode + "<='" + maskedTextBox_D.Text + "'";
                 }
-                else if (maskedTextBox_S.Text != "    /  /" && maskedTextBox_D.Text != "    /  /")
+                else if (maskedTextBox_S.Text != "    -  -" && maskedTextBox_D.Text != "    -  -")
                 {
                     times += " (" + strDateMode + " >= '" + maskedTextBox_S.Text + "' and " + strDateMode + "<= '" + maskedTextBox_D.Text + "')";
                 }

@@ -32,7 +32,7 @@ namespace LawtechPTSystem.US
             set {
                 if (value.HasValue)
                 {
-                    mtb_CurrentDate.Text = value.Value.ToString("yyyy/MM/dd");
+                    mtb_CurrentDate.Text = value.Value.ToString("yyyy-MM-dd");
                 }
                 else
                 {
@@ -59,7 +59,7 @@ namespace LawtechPTSystem.US
                 int iYear=int.Parse(numericUpDown_Year.Value.ToString());
                 int iMonth = int.Parse(numericUpDown_Month.Value.ToString());
                 int iDay = int.Parse(numericUpDown_Day.Value.ToString());
-               maskedTextBox_Result.Text= dtCurrentDate.AddYears(iYear).AddMonths(iMonth).AddDays(iDay).ToString("yyyy/MM/dd");
+               maskedTextBox_Result.Text= dtCurrentDate.AddYears(iYear).AddMonths(iMonth).AddDays(iDay).ToString("yyyy-MM-dd");
             }
         }
 
@@ -76,7 +76,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

@@ -201,15 +201,15 @@ namespace LawtechPTSystem.ViewFrom
 
             //請款日期
             maskedTextBox_RDate.DataBindings.Clear();
-            maskedTextBox_RDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_RDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收款日期
             maskedTextBox_PayDate.DataBindings.Clear();
-            maskedTextBox_PayDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PayDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收據日期
             maskedTextBox_ReceiptDate.DataBindings.Clear();
-            maskedTextBox_ReceiptDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "ReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ReceiptDate.DataBindings.Add("Text", TrademarkFeeTBindingSource, "ReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //簽核
             txt_SingCode.DataBindings.Clear();

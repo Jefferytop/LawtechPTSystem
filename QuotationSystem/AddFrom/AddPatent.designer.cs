@@ -715,7 +715,7 @@
             this.mask_IntroductionDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mask_IntroductionDate.Location = new System.Drawing.Point(91, 46);
             this.mask_IntroductionDate.Margin = new System.Windows.Forms.Padding(1);
-            this.mask_IntroductionDate.Mask = "0000/00/00";
+            this.mask_IntroductionDate.Mask = "0000-00-00";
             this.mask_IntroductionDate.Name = "mask_IntroductionDate";
             this.mask_IntroductionDate.Size = new System.Drawing.Size(162, 25);
             this.mask_IntroductionDate.TabIndex = 130;

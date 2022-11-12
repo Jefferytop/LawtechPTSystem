@@ -58,7 +58,7 @@
             this.SearchDateSplitContainer1.Panel2.Controls.Add(this.maskedStartDate);
             this.SearchDateSplitContainer1.Panel2.Controls.Add(this.lab_Separated);
             this.SearchDateSplitContainer1.Size = new System.Drawing.Size(367, 29);
-            this.SearchDateSplitContainer1.SplitterDistance = 135;
+            this.SearchDateSplitContainer1.SplitterDistance = 137;
             this.SearchDateSplitContainer1.SplitterWidth = 2;
             this.SearchDateSplitContainer1.TabIndex = 55;
             // 
@@ -73,7 +73,7 @@
             this.cb_DateMode.Location = new System.Drawing.Point(1, 1);
             this.cb_DateMode.Margin = new System.Windows.Forms.Padding(0);
             this.cb_DateMode.Name = "cb_DateMode";
-            this.cb_DateMode.Size = new System.Drawing.Size(133, 25);
+            this.cb_DateMode.Size = new System.Drawing.Size(135, 25);
             this.cb_DateMode.TabIndex = 53;
             this.cb_DateMode.ValueMember = "ValueString";
             // 
@@ -83,7 +83,7 @@
             this.maskedEndDate.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedEndDate.Location = new System.Drawing.Point(125, 1);
             this.maskedEndDate.Margin = new System.Windows.Forms.Padding(0);
-            this.maskedEndDate.Mask = "0000/00/00";
+            this.maskedEndDate.Mask = "0000-00-00";
             this.maskedEndDate.Name = "maskedEndDate";
             this.maskedEndDate.Size = new System.Drawing.Size(100, 25);
             this.maskedEndDate.TabIndex = 53;
@@ -96,7 +96,7 @@
             this.maskedStartDate.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedStartDate.Location = new System.Drawing.Point(3, 1);
             this.maskedStartDate.Margin = new System.Windows.Forms.Padding(0);
-            this.maskedStartDate.Mask = "0000/00/00";
+            this.maskedStartDate.Mask = "0000-00-00";
             this.maskedStartDate.Name = "maskedStartDate";
             this.maskedStartDate.Size = new System.Drawing.Size(100, 25);
             this.maskedStartDate.TabIndex = 52;

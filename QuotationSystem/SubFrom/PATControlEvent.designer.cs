@@ -1361,7 +1361,7 @@
             this.maskedTextBox_OccurDateE.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_OccurDateE.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OccurDateE.Location = new System.Drawing.Point(295, 67);
-            this.maskedTextBox_OccurDateE.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDateE.Mask = "0000-00-00";
             this.maskedTextBox_OccurDateE.Name = "maskedTextBox_OccurDateE";
             this.maskedTextBox_OccurDateE.Size = new System.Drawing.Size(100, 29);
             this.maskedTextBox_OccurDateE.TabIndex = 4;
@@ -1374,7 +1374,7 @@
             this.maskedTextBox_OccurDateS.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_OccurDateS.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OccurDateS.Location = new System.Drawing.Point(148, 68);
-            this.maskedTextBox_OccurDateS.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDateS.Mask = "0000-00-00";
             this.maskedTextBox_OccurDateS.Name = "maskedTextBox_OccurDateS";
             this.maskedTextBox_OccurDateS.Size = new System.Drawing.Size(100, 29);
             this.maskedTextBox_OccurDateS.TabIndex = 3;

@@ -108,31 +108,31 @@ namespace LawtechPTSystem.ViewFrom
             txt_NotifyRemark.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "Remark", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_NotifyComitDate.DataBindings.Clear();
-            maskedTextBox_NotifyComitDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NotifyComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NotifyComitDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NotifyComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_NotifyOfficerDate.DataBindings.Clear();
-            maskedTextBox_NotifyOfficerDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NotifyOfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NotifyOfficerDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NotifyOfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_OccurDate.DataBindings.Clear();
-            maskedTextBox_OccurDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OccurDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_DueDate.DataBindings.Clear();
-            maskedTextBox_DueDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_DueDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_Notice.DataBindings.Clear();
-            maskedTextBox_Notice.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_Notice.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_CustomerAuthorizationDate.DataBindings.Clear();
-            maskedTextBox_CustomerAuthorizationDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "CustomerAuthorizationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CustomerAuthorizationDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "CustomerAuthorizationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             mtb_OutsourcingDate.DataBindings.Clear();
-            mtb_OutsourcingDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            mtb_OutsourcingDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_FinishDate.DataBindings.Clear();
-            maskedTextBox_FinishDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_FinishDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_AttorneyDueDate.DataBindings.Clear();
-            maskedTextBox_AttorneyDueDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "AttorneyDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_AttorneyDueDate.DataBindings.Add("Text", TrademarkComitEventTBindingSource, "AttorneyDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
         }
         #endregion

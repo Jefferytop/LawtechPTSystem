@@ -58,20 +58,20 @@ namespace LawtechPTSystem.US
                     txt_IMoney.Text = pay.IMoney;
                     txt_ExchangeRate.Text = pay.ExchangeRate.HasValue ? pay.ExchangeRate.Value.ToString("#,##0.##") : "0";
 
-                    maskedTextBox_ReciveDate.Text = pay.ReciveDate.HasValue ? pay.ReciveDate.Value.ToString("yyyy/MM/dd") : "";
+                    maskedTextBox_ReciveDate.Text = pay.ReciveDate.HasValue ? pay.ReciveDate.Value.ToString("yyyy-MM-dd") : "";
 
-                    maskedTextBox_PaymentDate.Text = pay.PaymentDate.HasValue ? pay.PaymentDate.Value.ToString("yyyy/MM/dd") : "";
+                    maskedTextBox_PaymentDate.Text = pay.PaymentDate.HasValue ? pay.PaymentDate.Value.ToString("yyyy-MM-dd") : "";
 
 
                     //checkBox_IsBilling.Checked = pay.IsBilling;
                     //checkBox_IsCopyFile.Checked = pay.IsCopyFile;
                     //checkBox_IsScan.Checked = pay.IsScan;
 
-                    maskedTextBox_PayDueDate.Text = pay.PayDueDate.HasValue ? pay.PayDueDate.Value.ToString("yyyy/MM/dd") : "";
+                    maskedTextBox_PayDueDate.Text = pay.PayDueDate.HasValue ? pay.PayDueDate.Value.ToString("yyyy-MM-dd") : "";
 
                     txt_Totall.Text = pay.Totall.HasValue ? pay.Totall.Value.ToString("#,##0.##") : "0";
 
-                    maskedTextBox_IReceiptDate.Text = pay.IReceiptDate.HasValue ? pay.IReceiptDate.Value.ToString("yyyy/MM/dd") : DateTime.Now.ToString("yyyy/MM/dd");
+                    maskedTextBox_IReceiptDate.Text = pay.IReceiptDate.HasValue ? pay.IReceiptDate.Value.ToString("yyyy-MM-dd") : DateTime.Now.ToString("yyyy-MM-dd");
 
 
                     break;
@@ -98,12 +98,12 @@ namespace LawtechPTSystem.US
 
                     if (TmPay.ReciveDate.HasValue)
                     {
-                        maskedTextBox_ReciveDate.Text = TmPay.ReciveDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReciveDate.Text = TmPay.ReciveDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (TmPay.PayDueDate.HasValue)
                     {
-                        maskedTextBox_PayDueDate.Text = TmPay.PayDueDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDueDate.Text = TmPay.PayDueDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     txt_Totall.Text = TmPay.Totall.Value.ToString("#,##0.##");
@@ -111,16 +111,16 @@ namespace LawtechPTSystem.US
 
                     if (TmPay.IReceiptDate.HasValue)
                     {
-                        maskedTextBox_IReceiptDate.Text = TmPay.IReceiptDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = TmPay.IReceiptDate.Value.ToString("yyyy-MM-dd");
                     }
                     else
                     {
-                        maskedTextBox_IReceiptDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                     }
 
                     if (TmPay.PaymentDate.HasValue)
                     {
-                        maskedTextBox_PaymentDate.Text = TmPay.PaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PaymentDate.Text = TmPay.PaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
 
@@ -140,12 +140,12 @@ namespace LawtechPTSystem.US
 
                     if (TmCoPay.ReciveDate.Year > 1900)
                     {
-                        maskedTextBox_ReciveDate.Text = TmCoPay.ReciveDate.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReciveDate.Text = TmCoPay.ReciveDate.ToString("yyyy-MM-dd");
                     }
 
                     if (TmCoPay.PayDueDate.Year > 1900)
                     {
-                        maskedTextBox_PayDueDate.Text = TmCoPay.PayDueDate.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDueDate.Text = TmCoPay.PayDueDate.ToString("yyyy-MM-dd");
                     }
 
                     txt_Totall.Text = TmCoPay.Totall.ToString("#,##0.##");
@@ -153,16 +153,16 @@ namespace LawtechPTSystem.US
 
                     if (TmCoPay.IReceiptDate.Year > 1900)
                     {
-                        maskedTextBox_IReceiptDate.Text = TmCoPay.IReceiptDate.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = TmCoPay.IReceiptDate.ToString("yyyy-MM-dd");
                     }
                     else
                     {
-                        maskedTextBox_IReceiptDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                     }
 
                     if (TmCoPay.PaymentDate.Year > 1900)
                     {
-                        maskedTextBox_PaymentDate.Text = TmCoPay.PaymentDate.ToString("yyyy/MM/dd");
+                        maskedTextBox_PaymentDate.Text = TmCoPay.PaymentDate.ToString("yyyy-MM-dd");
                     }
 
 
@@ -182,7 +182,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

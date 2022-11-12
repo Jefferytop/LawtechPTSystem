@@ -447,7 +447,7 @@
             // ComitDate
             // 
             this.ComitDate.DataPropertyName = "ComitDate";
-            dataGridViewCellStyle5.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle5.Format = "yyyy-MM-dd";
             this.ComitDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.ComitDate.HeaderText = "事件日";
             this.ComitDate.Name = "ComitDate";
@@ -472,7 +472,7 @@
             // OfficeDueDate
             // 
             this.OfficeDueDate.DataPropertyName = "OfficeDueDate";
-            dataGridViewCellStyle7.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle7.Format = "yyyy-MM-dd";
             dataGridViewCellStyle7.NullValue = null;
             this.OfficeDueDate.DefaultCellStyle = dataGridViewCellStyle7;
             this.OfficeDueDate.HeaderText = "本所期限";
@@ -484,7 +484,7 @@
             this.DueDate.DataPropertyName = "DueDate";
             dataGridViewCellStyle8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle8.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle8.Format = "yyyy-MM-dd";
             this.DueDate.DefaultCellStyle = dataGridViewCellStyle8;
             this.DueDate.HeaderText = "官方期限";
             this.DueDate.Name = "DueDate";
@@ -517,7 +517,7 @@
             // 
             this.FinishDate.DataPropertyName = "FinishDate";
             dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle10.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle10.Format = "yyyy-MM-dd";
             this.FinishDate.DefaultCellStyle = dataGridViewCellStyle10;
             this.FinishDate.HeaderText = "完成日期";
             this.FinishDate.Name = "FinishDate";
@@ -583,7 +583,7 @@
             // ApplicationDate
             // 
             this.ApplicationDate.DataPropertyName = "ApplicationDate";
-            dataGridViewCellStyle13.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle13.Format = "yyyy-MM-dd";
             this.ApplicationDate.DefaultCellStyle = dataGridViewCellStyle13;
             this.ApplicationDate.HeaderText = "申請日期";
             this.ApplicationDate.Name = "ApplicationDate";
@@ -599,7 +599,7 @@
             // RegistrationDate
             // 
             this.RegistrationDate.DataPropertyName = "RegistrationDate";
-            dataGridViewCellStyle14.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle14.Format = "yyyy-MM-dd";
             this.RegistrationDate.DefaultCellStyle = dataGridViewCellStyle14;
             this.RegistrationDate.HeaderText = "註冊日期";
             this.RegistrationDate.Name = "RegistrationDate";
@@ -1120,7 +1120,7 @@
             this.maskedTextBox_OccurDateE.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OccurDateE.Location = new System.Drawing.Point(307, 73);
             this.maskedTextBox_OccurDateE.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_OccurDateE.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDateE.Mask = "0000-00-00";
             this.maskedTextBox_OccurDateE.Name = "maskedTextBox_OccurDateE";
             this.maskedTextBox_OccurDateE.Size = new System.Drawing.Size(114, 29);
             this.maskedTextBox_OccurDateE.TabIndex = 373;
@@ -1133,7 +1133,7 @@
             this.maskedTextBox_OccurDateS.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OccurDateS.Location = new System.Drawing.Point(169, 73);
             this.maskedTextBox_OccurDateS.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_OccurDateS.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDateS.Mask = "0000-00-00";
             this.maskedTextBox_OccurDateS.Name = "maskedTextBox_OccurDateS";
             this.maskedTextBox_OccurDateS.Size = new System.Drawing.Size(114, 29);
             this.maskedTextBox_OccurDateS.TabIndex = 372;

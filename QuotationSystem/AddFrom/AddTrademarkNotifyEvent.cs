@@ -154,7 +154,7 @@ namespace LawtechPTSystem.AddFrom
             TrademarkChange = false;
 
             comboBox_WorkerKey.SelectedValue = Properties.Settings.Default.WorkerKEY;
-            maskedTextBox_NotifyComitDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_NotifyComitDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         #endregion
 
@@ -417,7 +417,7 @@ namespace LawtechPTSystem.AddFrom
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

@@ -74,7 +74,7 @@ namespace LawtechPTSystem.CopyForm
             Combo_Priority.SelectedValue = pat.Priority;
             if (pat.EarlyPriorityDate.HasValue)
             {
-                maskedTextBox_EarlyPriorityDate.Text = pat.EarlyPriorityDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_EarlyPriorityDate.Text = pat.EarlyPriorityDate.Value.ToString("yyyy-MM-dd");
             }
             Combo_ISExam.SelectedValue = pat.ISexam;
 
@@ -108,39 +108,39 @@ namespace LawtechPTSystem.CopyForm
 
             if (pat.EarlyMotherDate.HasValue)
             {
-                maskedTextBox_EarlyMotherDate.Text = pat.EarlyMotherDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_EarlyMotherDate.Text = pat.EarlyMotherDate.Value.ToString("yyyy-MM-dd");
             }
             if (pat.ApplicationDate.HasValue)
             {
-                maskedTextBox_ApplicationDate.Text = pat.ApplicationDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_ApplicationDate.Text = pat.ApplicationDate.Value.ToString("yyyy-MM-dd");
             }
             txt_ApplicationNo.Text = pat.ApplicationNo;
 
             if (pat.Pubdate.HasValue)
             {
-                maskedTextBox_Pubdate.Text = pat.Pubdate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_Pubdate.Text = pat.Pubdate.Value.ToString("yyyy-MM-dd");
             }
             txt_PubNo.Text = pat.PubNo;
 
             if (pat.AllowDate.HasValue)
             {
-                maskedTextBox_AllowDate.Text = pat.AllowDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_AllowDate.Text = pat.AllowDate.Value.ToString("yyyy-MM-dd");
             }
 
             txt_Inventor.Text = pat.Inventor;
             if (pat.AllowPubDate.HasValue)
             {
-                maskedTextBox_AllowPubdate.Text = pat.AllowPubDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_AllowPubdate.Text = pat.AllowPubDate.Value.ToString("yyyy-MM-dd");
             }
             txt_AllowPubNo.Text = pat.AllowPubNo;
             if (pat.GetDate.HasValue)
             {
-                maskedTextBox_GetDate.Text = pat.GetDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_GetDate.Text = pat.GetDate.Value.ToString("yyyy-MM-dd");
             }
             txt_CertifyNo.Text = pat.CertifyNo;
             if (pat.RegisterDate.HasValue)
             {
-                maskedTextBox_Registerdate.Text = pat.RegisterDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_Registerdate.Text = pat.RegisterDate.Value.ToString("yyyy-MM-dd");
             }
             if (pat.AddDay.HasValue)
             {
@@ -149,7 +149,7 @@ namespace LawtechPTSystem.CopyForm
 
             if (pat.DueDate.HasValue)
             {
-                maskedTextBox_DueDate.Text = pat.DueDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_DueDate.Text = pat.DueDate.Value.ToString("yyyy-MM-dd");
             }
             if (pat.PayYear.HasValue)
             {
@@ -157,12 +157,12 @@ namespace LawtechPTSystem.CopyForm
             }
             if (pat.RenewTo.HasValue)
             {
-                maskedTextBox_RenewTo.Text = pat.RenewTo.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_RenewTo.Text = pat.RenewTo.Value.ToString("yyyy-MM-dd");
             }
 
             if (pat.CloseDate.HasValue)
             {
-                maskedTextBox_CloseDate.Text = pat.CloseDate.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_CloseDate.Text = pat.CloseDate.Value.ToString("yyyy-MM-dd");
             }
             txt_CloseCaus.Text = pat.CloseCaus;
             txt_Remark.Text = pat.Remark;
@@ -198,7 +198,7 @@ namespace LawtechPTSystem.CopyForm
             txt_Introducer.Text = pat.Introducer;
 
             if (pat.IntroductionDate.HasValue)
-                mask_IntroductionDate.Text = pat.IntroductionDate.Value.ToString("yyyy/MM/dd");
+                mask_IntroductionDate.Text = pat.IntroductionDate.Value.ToString("yyyy-MM-dd");
 
             if (!Mode)
             {
@@ -496,7 +496,7 @@ WHERE          (ApplicantKey in ({0}) )", ApplicantKey);
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

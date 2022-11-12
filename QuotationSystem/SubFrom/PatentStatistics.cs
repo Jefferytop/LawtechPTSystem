@@ -76,7 +76,7 @@ namespace LawtechPTSystem.SubFrom
 
         private void but_Search_Click(object sender, EventArgs e)        
         {
-            //if (searchMain1.comboBox2.Text == "" && maskedTextBox_S.Text == "    /  /" && maskedTextBox_D.Text == "    /  /" && comboBox_Nature.SelectedIndex == 0 && comboBox_Kind.SelectedIndex == 0 && comboBox_Status.SelectedIndex == 0 && comboBox_Country.SelectedIndex == 0)
+            //if (searchMain1.comboBox2.Text == "" && maskedTextBox_S.Text == "    -  -" && maskedTextBox_D.Text == "    -  -" && comboBox_Nature.SelectedIndex == 0 && comboBox_Kind.SelectedIndex == 0 && comboBox_Status.SelectedIndex == 0 && comboBox_Country.SelectedIndex == 0)
             //{
             //    MessageBox.Show("請輸入查詢條件", "提示訊息");
             //}
@@ -308,7 +308,7 @@ namespace LawtechPTSystem.SubFrom
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

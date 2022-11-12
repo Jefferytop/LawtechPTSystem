@@ -307,6 +307,8 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonEditItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationEvent = new System.Windows.Forms.ToolStripButton();
             this.txt_ALiaisonerKey = new System.Windows.Forms.TextBox();
             this.txt_AttorneyKey = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -351,6 +353,8 @@
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_FeeEdit = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationFee = new System.Windows.Forms.ToolStripButton();
             this.GridView_Fee = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -475,6 +479,8 @@
             this.toolStripButton_PayRecordAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_PayRecordEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_PayRecordDel = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationPayment = new System.Windows.Forms.ToolStripButton();
             this.dataGridView_Billing = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -547,6 +553,8 @@
             this.toolStripButton_ES_Add = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_ES_Edit = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_ES_Del = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_OrientationCost = new System.Windows.Forms.ToolStripButton();
             this.dataGridView_EstimateCost = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstimateCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -628,14 +636,6 @@
             this.dataGridView_PatentRightLoc = new System.Windows.Forms.DataGridView();
             this.tagTitle7 = new LawtechPTSystem.US.TagTitle();
             this.bSource_File = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton_OrientationEvent = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton_OrientationFee = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton_OrientationPayment = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton_OrientationCost = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip_Pat.SuspendLayout();
             this.contextMenuStrip_Billing.SuspendLayout();
             this.contextMenuStrip_Fee.SuspendLayout();
@@ -1259,7 +1259,7 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel2.Controls.Add(this.Tabcontrol1);
             this.splitContainer1.Size = new System.Drawing.Size(1179, 765);
-            this.splitContainer1.SplitterDistance = 353;
+            this.splitContainer1.SplitterDistance = 351;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 1013;
             // 
@@ -1337,7 +1337,7 @@
             this.GridView_File.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Blue;
             this.GridView_File.RowTemplate.Height = 24;
             this.GridView_File.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridView_File.Size = new System.Drawing.Size(1171, 206);
+            this.GridView_File.Size = new System.Drawing.Size(1171, 204);
             this.GridView_File.TabIndex = 15;
             this.GridView_File.Tag = "PatListMF";
             this.GridView_File.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_File_CellDoubleClick);
@@ -1450,7 +1450,7 @@
             // ApplicationDate
             // 
             this.ApplicationDate.DataPropertyName = "ApplicationDate";
-            dataGridViewCellStyle4.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle4.Format = "yyyy-MM-dd";
             this.ApplicationDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.ApplicationDate.HeaderText = "申請日期";
             this.ApplicationDate.Name = "ApplicationDate";
@@ -1466,7 +1466,7 @@
             // RenewTo
             // 
             this.RenewTo.DataPropertyName = "RenewTo";
-            dataGridViewCellStyle5.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle5.Format = "yyyy-MM-dd";
             dataGridViewCellStyle5.NullValue = null;
             this.RenewTo.DefaultCellStyle = dataGridViewCellStyle5;
             this.RenewTo.HeaderText = "年費有效期限";
@@ -1564,7 +1564,7 @@
             this.toolStripButton_OpenFile,
             this.toolStripSeparator21,
             this.toolStripButton_Orientation});
-            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 326);
+            this.bindingNavigator_Patent.Location = new System.Drawing.Point(0, 324);
             this.bindingNavigator_Patent.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_Patent.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_Patent.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -1860,7 +1860,7 @@
             this.Tabcontrol1.Margin = new System.Windows.Forms.Padding(0);
             this.Tabcontrol1.Name = "Tabcontrol1";
             this.Tabcontrol1.SelectedIndex = 0;
-            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 404);
+            this.Tabcontrol1.Size = new System.Drawing.Size(1177, 406);
             this.Tabcontrol1.TabIndex = 12;
             // 
             // TabPage2
@@ -1872,7 +1872,7 @@
             this.TabPage2.Location = new System.Drawing.Point(4, 34);
             this.TabPage2.Name = "TabPage2";
             this.TabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage2.Size = new System.Drawing.Size(1169, 366);
+            this.TabPage2.Size = new System.Drawing.Size(1169, 368);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = " 申請案基本資料 ";
             this.TabPage2.UseVisualStyleBackColor = true;
@@ -1885,7 +1885,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 358);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1161, 360);
             this.flowLayoutPanel1.TabIndex = 370;
             // 
             // panel2
@@ -2019,7 +2019,7 @@
             this.maskedTextBox_GracePeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_GracePeriod.Location = new System.Drawing.Point(102, 349);
             this.maskedTextBox_GracePeriod.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_GracePeriod.Mask = "0000/00/00";
+            this.maskedTextBox_GracePeriod.Mask = "0000-00-00";
             this.maskedTextBox_GracePeriod.Name = "maskedTextBox_GracePeriod";
             this.maskedTextBox_GracePeriod.ReadOnly = true;
             this.maskedTextBox_GracePeriod.Size = new System.Drawing.Size(115, 23);
@@ -2408,7 +2408,7 @@
             this.maskedTextBox_AllowDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_AllowDate.Location = new System.Drawing.Point(321, 223);
             this.maskedTextBox_AllowDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_AllowDate.Mask = "0000/00/00";
+            this.maskedTextBox_AllowDate.Mask = "0000-00-00";
             this.maskedTextBox_AllowDate.Name = "maskedTextBox_AllowDate";
             this.maskedTextBox_AllowDate.ReadOnly = true;
             this.maskedTextBox_AllowDate.Size = new System.Drawing.Size(115, 23);
@@ -2453,7 +2453,7 @@
             this.maskedTextBox_RenewTo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_RenewTo.Location = new System.Drawing.Point(321, 391);
             this.maskedTextBox_RenewTo.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_RenewTo.Mask = "0000/00/00";
+            this.maskedTextBox_RenewTo.Mask = "0000-00-00";
             this.maskedTextBox_RenewTo.Name = "maskedTextBox_RenewTo";
             this.maskedTextBox_RenewTo.ReadOnly = true;
             this.maskedTextBox_RenewTo.Size = new System.Drawing.Size(115, 23);
@@ -2478,7 +2478,7 @@
             this.maskedTextBox_DueDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_DueDate.Location = new System.Drawing.Point(321, 343);
             this.maskedTextBox_DueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_DueDate.Mask = "0000/00/00";
+            this.maskedTextBox_DueDate.Mask = "0000-00-00";
             this.maskedTextBox_DueDate.Name = "maskedTextBox_DueDate";
             this.maskedTextBox_DueDate.ReadOnly = true;
             this.maskedTextBox_DueDate.Size = new System.Drawing.Size(115, 23);
@@ -2503,7 +2503,7 @@
             this.maskedTextBox_Registerdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Registerdate.Location = new System.Drawing.Point(321, 295);
             this.maskedTextBox_Registerdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_Registerdate.Mask = "0000/00/00";
+            this.maskedTextBox_Registerdate.Mask = "0000-00-00";
             this.maskedTextBox_Registerdate.Name = "maskedTextBox_Registerdate";
             this.maskedTextBox_Registerdate.ReadOnly = true;
             this.maskedTextBox_Registerdate.Size = new System.Drawing.Size(115, 23);
@@ -2528,7 +2528,7 @@
             this.maskedTextBox_GetDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_GetDate.Location = new System.Drawing.Point(321, 247);
             this.maskedTextBox_GetDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_GetDate.Mask = "0000/00/00";
+            this.maskedTextBox_GetDate.Mask = "0000-00-00";
             this.maskedTextBox_GetDate.Name = "maskedTextBox_GetDate";
             this.maskedTextBox_GetDate.ReadOnly = true;
             this.maskedTextBox_GetDate.Size = new System.Drawing.Size(115, 23);
@@ -2553,7 +2553,7 @@
             this.maskedTextBox_AllowPubdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_AllowPubdate.Location = new System.Drawing.Point(321, 175);
             this.maskedTextBox_AllowPubdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_AllowPubdate.Mask = "0000/00/00";
+            this.maskedTextBox_AllowPubdate.Mask = "0000-00-00";
             this.maskedTextBox_AllowPubdate.Name = "maskedTextBox_AllowPubdate";
             this.maskedTextBox_AllowPubdate.ReadOnly = true;
             this.maskedTextBox_AllowPubdate.Size = new System.Drawing.Size(115, 23);
@@ -2578,7 +2578,7 @@
             this.maskedTextBox_Pubdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Pubdate.Location = new System.Drawing.Point(321, 127);
             this.maskedTextBox_Pubdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_Pubdate.Mask = "0000/00/00";
+            this.maskedTextBox_Pubdate.Mask = "0000-00-00";
             this.maskedTextBox_Pubdate.Name = "maskedTextBox_Pubdate";
             this.maskedTextBox_Pubdate.ReadOnly = true;
             this.maskedTextBox_Pubdate.Size = new System.Drawing.Size(115, 23);
@@ -2593,7 +2593,7 @@
             this.maskedTextBox_EarlyPriorityDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_EarlyPriorityDate.Location = new System.Drawing.Point(102, 252);
             this.maskedTextBox_EarlyPriorityDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_EarlyPriorityDate.Mask = "0000/00/00";
+            this.maskedTextBox_EarlyPriorityDate.Mask = "0000-00-00";
             this.maskedTextBox_EarlyPriorityDate.Name = "maskedTextBox_EarlyPriorityDate";
             this.maskedTextBox_EarlyPriorityDate.ReadOnly = true;
             this.maskedTextBox_EarlyPriorityDate.Size = new System.Drawing.Size(115, 23);
@@ -2608,7 +2608,7 @@
             this.maskedTextBox_ApplicationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(102, 300);
             this.maskedTextBox_ApplicationDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ApplicationDate.Mask = "0000/00/00";
+            this.maskedTextBox_ApplicationDate.Mask = "0000-00-00";
             this.maskedTextBox_ApplicationDate.Name = "maskedTextBox_ApplicationDate";
             this.maskedTextBox_ApplicationDate.ReadOnly = true;
             this.maskedTextBox_ApplicationDate.Size = new System.Drawing.Size(115, 23);
@@ -2623,7 +2623,7 @@
             this.maskedTextBox_EarlyMotherDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_EarlyMotherDate.Location = new System.Drawing.Point(102, 276);
             this.maskedTextBox_EarlyMotherDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_EarlyMotherDate.Mask = "0000/00/00";
+            this.maskedTextBox_EarlyMotherDate.Mask = "0000-00-00";
             this.maskedTextBox_EarlyMotherDate.Name = "maskedTextBox_EarlyMotherDate";
             this.maskedTextBox_EarlyMotherDate.ReadOnly = true;
             this.maskedTextBox_EarlyMotherDate.Size = new System.Drawing.Size(115, 23);
@@ -2856,7 +2856,7 @@
             this.maskedTextBox_CloseDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(301, 143);
             this.maskedTextBox_CloseDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CloseDate.Mask = "0000/00/00";
+            this.maskedTextBox_CloseDate.Mask = "0000-00-00";
             this.maskedTextBox_CloseDate.Name = "maskedTextBox_CloseDate";
             this.maskedTextBox_CloseDate.ReadOnly = true;
             this.maskedTextBox_CloseDate.Size = new System.Drawing.Size(139, 23);
@@ -3070,7 +3070,7 @@
             this.mask_IntroductionDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mask_IntroductionDate.Location = new System.Drawing.Point(65, 46);
             this.mask_IntroductionDate.Margin = new System.Windows.Forms.Padding(1);
-            this.mask_IntroductionDate.Mask = "0000/00/00";
+            this.mask_IntroductionDate.Mask = "0000-00-00";
             this.mask_IntroductionDate.Name = "mask_IntroductionDate";
             this.mask_IntroductionDate.ReadOnly = true;
             this.mask_IntroductionDate.Size = new System.Drawing.Size(139, 23);
@@ -3238,7 +3238,7 @@
             this.TabPage3.Location = new System.Drawing.Point(4, 34);
             this.TabPage3.Name = "TabPage3";
             this.TabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage3.Size = new System.Drawing.Size(1169, 366);
+            this.TabPage3.Size = new System.Drawing.Size(1169, 368);
             this.TabPage3.TabIndex = 2;
             this.TabPage3.Text = " 事件記錄 ";
             this.TabPage3.UseVisualStyleBackColor = true;
@@ -3288,7 +3288,7 @@
             this.splitContainer4.Panel2.Controls.Add(this.txt_eRemark);
             this.splitContainer4.Panel2.Controls.Add(this.label74);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer4.Size = new System.Drawing.Size(1161, 358);
+            this.splitContainer4.Size = new System.Drawing.Size(1161, 360);
             this.splitContainer4.SplitterDistance = 780;
             this.splitContainer4.TabIndex = 1004;
             // 
@@ -3330,7 +3330,7 @@
             this.GridView_PatComit.ReadOnly = true;
             this.GridView_PatComit.RowHeadersWidth = 30;
             this.GridView_PatComit.RowTemplate.Height = 24;
-            this.GridView_PatComit.Size = new System.Drawing.Size(776, 329);
+            this.GridView_PatComit.Size = new System.Drawing.Size(776, 331);
             this.GridView_PatComit.TabIndex = 0;
             this.GridView_PatComit.Tag = "PatListMF_Event";
             this.GridView_PatComit.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_PatComit_CellDoubleClick);
@@ -3358,7 +3358,7 @@
             this.bindingNavigatorDeleteItem,
             this.toolStripSeparator22,
             this.toolStripButton_OrientationEvent});
-            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 331);
+            this.bindingNavigator_PatComit.Location = new System.Drawing.Point(0, 333);
             this.bindingNavigator_PatComit.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_PatComit.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_PatComit.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -3469,6 +3469,20 @@
             this.bindingNavigatorDeleteItem.Text = "刪除事件記錄";
             this.bindingNavigatorDeleteItem.ToolTipText = "刪除事件記錄";
             // 
+            // toolStripSeparator22
+            // 
+            this.toolStripSeparator22.Name = "toolStripSeparator22";
+            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationEvent
+            // 
+            this.toolStripButton_OrientationEvent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationEvent.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationEvent.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationEvent.Name = "toolStripButton_OrientationEvent";
+            this.toolStripButton_OrientationEvent.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationEvent.Text = "水平/垂直";
+            // 
             // txt_ALiaisonerKey
             // 
             this.txt_ALiaisonerKey.ImeMode = System.Windows.Forms.ImeMode.Close;
@@ -3504,7 +3518,7 @@
             this.maskedTextBox_CreateDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_CreateDate.Location = new System.Drawing.Point(77, 54);
             this.maskedTextBox_CreateDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CreateDate.Mask = "0000/00/00";
+            this.maskedTextBox_CreateDate.Mask = "0000-00-00";
             this.maskedTextBox_CreateDate.Name = "maskedTextBox_CreateDate";
             this.maskedTextBox_CreateDate.ReadOnly = true;
             this.maskedTextBox_CreateDate.Size = new System.Drawing.Size(105, 23);
@@ -3553,7 +3567,7 @@
             this.maskedTextBox_OfficeDueDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OfficeDueDate.Location = new System.Drawing.Point(77, 129);
             this.maskedTextBox_OfficeDueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_OfficeDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_OfficeDueDate.Mask = "0000-00-00";
             this.maskedTextBox_OfficeDueDate.Name = "maskedTextBox_OfficeDueDate";
             this.maskedTextBox_OfficeDueDate.ReadOnly = true;
             this.maskedTextBox_OfficeDueDate.Size = new System.Drawing.Size(105, 23);
@@ -3619,7 +3633,7 @@
             this.maskedTextBox_OccurDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OccurDate.Location = new System.Drawing.Point(77, 104);
             this.maskedTextBox_OccurDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_OccurDate.Mask = "0000/00/00";
+            this.maskedTextBox_OccurDate.Mask = "0000-00-00";
             this.maskedTextBox_OccurDate.Name = "maskedTextBox_OccurDate";
             this.maskedTextBox_OccurDate.ReadOnly = true;
             this.maskedTextBox_OccurDate.Size = new System.Drawing.Size(105, 23);
@@ -3643,7 +3657,7 @@
             this.maskedTextBox_FinishDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_FinishDate.Location = new System.Drawing.Point(77, 179);
             this.maskedTextBox_FinishDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_FinishDate.Mask = "0000/00/00";
+            this.maskedTextBox_FinishDate.Mask = "0000-00-00";
             this.maskedTextBox_FinishDate.Name = "maskedTextBox_FinishDate";
             this.maskedTextBox_FinishDate.ReadOnly = true;
             this.maskedTextBox_FinishDate.Size = new System.Drawing.Size(105, 23);
@@ -3657,7 +3671,7 @@
             this.maskedTextBox_ComitDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_ComitDate.Location = new System.Drawing.Point(261, 104);
             this.maskedTextBox_ComitDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ComitDate.Mask = "0000/00/00";
+            this.maskedTextBox_ComitDate.Mask = "0000-00-00";
             this.maskedTextBox_ComitDate.Name = "maskedTextBox_ComitDate";
             this.maskedTextBox_ComitDate.ReadOnly = true;
             this.maskedTextBox_ComitDate.Size = new System.Drawing.Size(105, 23);
@@ -3671,7 +3685,7 @@
             this.maskedTextBox_StartDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_StartDate.Location = new System.Drawing.Point(261, 79);
             this.maskedTextBox_StartDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_StartDate.Mask = "0000/00/00";
+            this.maskedTextBox_StartDate.Mask = "0000-00-00";
             this.maskedTextBox_StartDate.Name = "maskedTextBox_StartDate";
             this.maskedTextBox_StartDate.ReadOnly = true;
             this.maskedTextBox_StartDate.Size = new System.Drawing.Size(105, 23);
@@ -3685,7 +3699,7 @@
             this.maskedTextBox_ComitDueDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_ComitDueDate.Location = new System.Drawing.Point(77, 154);
             this.maskedTextBox_ComitDueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ComitDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_ComitDueDate.Mask = "0000-00-00";
             this.maskedTextBox_ComitDueDate.Name = "maskedTextBox_ComitDueDate";
             this.maskedTextBox_ComitDueDate.ReadOnly = true;
             this.maskedTextBox_ComitDueDate.Size = new System.Drawing.Size(105, 23);
@@ -3699,7 +3713,7 @@
             this.maskedTextBox_OfficerDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_OfficerDate.Location = new System.Drawing.Point(77, 79);
             this.maskedTextBox_OfficerDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_OfficerDate.Mask = "0000/00/00";
+            this.maskedTextBox_OfficerDate.Mask = "0000-00-00";
             this.maskedTextBox_OfficerDate.Name = "maskedTextBox_OfficerDate";
             this.maskedTextBox_OfficerDate.ReadOnly = true;
             this.maskedTextBox_OfficerDate.Size = new System.Drawing.Size(105, 23);
@@ -3803,7 +3817,7 @@
             this.TabPage7.Location = new System.Drawing.Point(4, 34);
             this.TabPage7.Name = "TabPage7";
             this.TabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPage7.Size = new System.Drawing.Size(1169, 366);
+            this.TabPage7.Size = new System.Drawing.Size(1169, 368);
             this.TabPage7.TabIndex = 6;
             this.TabPage7.Text = " 請款記錄 ";
             this.TabPage7.UseVisualStyleBackColor = true;
@@ -3826,7 +3840,7 @@
             this.splitContainer2.Panel2.AutoScroll = true;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel2);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer2.Size = new System.Drawing.Size(1161, 358);
+            this.splitContainer2.Size = new System.Drawing.Size(1161, 360);
             this.splitContainer2.SplitterDistance = 483;
             this.splitContainer2.TabIndex = 342;
             // 
@@ -3852,7 +3866,7 @@
             this.bindingNavigatorDeleteItem1,
             this.toolStripSeparator23,
             this.toolStripButton_OrientationFee});
-            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 331);
+            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 333);
             this.bindingNavigator_Fee.MoveFirstItem = this.toolStripButton4;
             this.bindingNavigator_Fee.MoveLastItem = this.toolStripButton7;
             this.bindingNavigator_Fee.MoveNextItem = this.toolStripButton6;
@@ -3962,6 +3976,20 @@
             this.bindingNavigatorDeleteItem1.Tag = "Delete";
             this.bindingNavigatorDeleteItem1.Text = "刪除請款記錄";
             // 
+            // toolStripSeparator23
+            // 
+            this.toolStripSeparator23.Name = "toolStripSeparator23";
+            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationFee
+            // 
+            this.toolStripButton_OrientationFee.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationFee.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationFee.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationFee.Name = "toolStripButton_OrientationFee";
+            this.toolStripButton_OrientationFee.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationFee.Text = "水平/垂直";
+            // 
             // GridView_Fee
             // 
             this.GridView_Fee.AllowUserToAddRows = false;
@@ -4000,7 +4028,7 @@
             this.GridView_Fee.ReadOnly = true;
             this.GridView_Fee.RowHeadersWidth = 30;
             this.GridView_Fee.RowTemplate.Height = 24;
-            this.GridView_Fee.Size = new System.Drawing.Size(476, 327);
+            this.GridView_Fee.Size = new System.Drawing.Size(476, 329);
             this.GridView_Fee.TabIndex = 0;
             this.GridView_Fee.Tag = "PatListMF_Fee";
             this.GridView_Fee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Fee_CellDoubleClick);
@@ -4014,7 +4042,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 356);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(672, 358);
             this.flowLayoutPanel2.TabIndex = 1151;
             // 
             // groupBox8
@@ -4306,7 +4334,7 @@
             this.maskedTextBox_CollectionPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CollectionPeriod.Location = new System.Drawing.Point(61, 87);
             this.maskedTextBox_CollectionPeriod.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CollectionPeriod.Mask = "0000/00/00";
+            this.maskedTextBox_CollectionPeriod.Mask = "0000-00-00";
             this.maskedTextBox_CollectionPeriod.Name = "maskedTextBox_CollectionPeriod";
             this.maskedTextBox_CollectionPeriod.ReadOnly = true;
             this.maskedTextBox_CollectionPeriod.Size = new System.Drawing.Size(97, 23);
@@ -4994,7 +5022,7 @@
             this.maskedTextBox_RDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_RDate.Location = new System.Drawing.Point(61, 62);
             this.maskedTextBox_RDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_RDate.Mask = "0000/00/00";
+            this.maskedTextBox_RDate.Mask = "0000-00-00";
             this.maskedTextBox_RDate.Name = "maskedTextBox_RDate";
             this.maskedTextBox_RDate.ReadOnly = true;
             this.maskedTextBox_RDate.Size = new System.Drawing.Size(97, 23);
@@ -5130,7 +5158,7 @@
             this.maskedTextBox_aBillDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_aBillDate.Location = new System.Drawing.Point(61, 66);
             this.maskedTextBox_aBillDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_aBillDate.Mask = "0000/00/00";
+            this.maskedTextBox_aBillDate.Mask = "0000-00-00";
             this.maskedTextBox_aBillDate.Name = "maskedTextBox_aBillDate";
             this.maskedTextBox_aBillDate.ReadOnly = true;
             this.maskedTextBox_aBillDate.Size = new System.Drawing.Size(95, 23);
@@ -5165,7 +5193,7 @@
             this.maskedTextBox_ReceiptDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ReceiptDate.Location = new System.Drawing.Point(61, 41);
             this.maskedTextBox_ReceiptDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ReceiptDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReceiptDate.Mask = "0000-00-00";
             this.maskedTextBox_ReceiptDate.Name = "maskedTextBox_ReceiptDate";
             this.maskedTextBox_ReceiptDate.ReadOnly = true;
             this.maskedTextBox_ReceiptDate.Size = new System.Drawing.Size(95, 23);
@@ -5211,7 +5239,7 @@
             this.maskedTextBox_PayDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_PayDate.Location = new System.Drawing.Point(220, 41);
             this.maskedTextBox_PayDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_PayDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDate.Name = "maskedTextBox_PayDate";
             this.maskedTextBox_PayDate.ReadOnly = true;
             this.maskedTextBox_PayDate.Size = new System.Drawing.Size(95, 23);
@@ -5306,7 +5334,7 @@
             this.tabPage5.Controls.Add(this.splitContainer3);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1169, 366);
+            this.tabPage5.Size = new System.Drawing.Size(1169, 368);
             this.tabPage5.TabIndex = 8;
             this.tabPage5.Text = " 付款記錄 ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -5330,7 +5358,7 @@
             this.splitContainer3.Panel2.AutoScroll = true;
             this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel3);
             this.splitContainer3.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer3.Size = new System.Drawing.Size(1167, 364);
+            this.splitContainer3.Size = new System.Drawing.Size(1167, 366);
             this.splitContainer3.SplitterDistance = 593;
             this.splitContainer3.TabIndex = 343;
             // 
@@ -5356,7 +5384,7 @@
             this.toolStripButton_PayRecordDel,
             this.toolStripSeparator24,
             this.toolStripButton_OrientationPayment});
-            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 337);
+            this.bindingNavigator_Payment.Location = new System.Drawing.Point(0, 339);
             this.bindingNavigator_Payment.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator_Payment.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator_Payment.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -5466,6 +5494,20 @@
             this.toolStripButton_PayRecordDel.Tag = "Delete";
             this.toolStripButton_PayRecordDel.Text = "刪除付款記錄";
             // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationPayment
+            // 
+            this.toolStripButton_OrientationPayment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationPayment.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationPayment.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationPayment.Name = "toolStripButton_OrientationPayment";
+            this.toolStripButton_OrientationPayment.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationPayment.Text = "水平/垂直";
+            // 
             // dataGridView_Billing
             // 
             this.dataGridView_Billing.AllowUserToAddRows = false;
@@ -5497,7 +5539,7 @@
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView_Billing.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView_Billing.RowTemplate.Height = 24;
-            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 331);
+            this.dataGridView_Billing.Size = new System.Drawing.Size(585, 333);
             this.dataGridView_Billing.TabIndex = 0;
             this.dataGridView_Billing.Tag = "PatListMF_Payment";
             this.dataGridView_Billing.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Billing_CellDoubleClick);
@@ -5511,7 +5553,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 362);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(568, 364);
             this.flowLayoutPanel3.TabIndex = 1080;
             // 
             // groupBox7
@@ -5597,7 +5639,7 @@
             this.maskedTextBox_ReciveDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_ReciveDate.Location = new System.Drawing.Point(72, 135);
             this.maskedTextBox_ReciveDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ReciveDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReciveDate.Mask = "0000-00-00";
             this.maskedTextBox_ReciveDate.Name = "maskedTextBox_ReciveDate";
             this.maskedTextBox_ReciveDate.ReadOnly = true;
             this.maskedTextBox_ReciveDate.Size = new System.Drawing.Size(110, 23);
@@ -5622,7 +5664,7 @@
             this.maskedTextBox_PayDueDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_PayDueDate.Location = new System.Drawing.Point(246, 135);
             this.maskedTextBox_PayDueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_PayDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDueDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDueDate.Name = "maskedTextBox_PayDueDate";
             this.maskedTextBox_PayDueDate.ReadOnly = true;
             this.maskedTextBox_PayDueDate.Size = new System.Drawing.Size(110, 23);
@@ -6030,7 +6072,7 @@
             this.maskedTextBox_PaymentDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PaymentDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_PaymentDate.Location = new System.Drawing.Point(241, 22);
-            this.maskedTextBox_PaymentDate.Mask = "0000/00/00";
+            this.maskedTextBox_PaymentDate.Mask = "0000-00-00";
             this.maskedTextBox_PaymentDate.Name = "maskedTextBox_PaymentDate";
             this.maskedTextBox_PaymentDate.ReadOnly = true;
             this.maskedTextBox_PaymentDate.Size = new System.Drawing.Size(90, 23);
@@ -6143,7 +6185,7 @@
             this.maskedTextBox_IReceiptDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_IReceiptDate.Location = new System.Drawing.Point(72, 72);
             this.maskedTextBox_IReceiptDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_IReceiptDate.Mask = "0000/00/00";
+            this.maskedTextBox_IReceiptDate.Mask = "0000-00-00";
             this.maskedTextBox_IReceiptDate.Name = "maskedTextBox_IReceiptDate";
             this.maskedTextBox_IReceiptDate.ReadOnly = true;
             this.maskedTextBox_IReceiptDate.Size = new System.Drawing.Size(110, 23);
@@ -6166,7 +6208,7 @@
             this.tabPage1.Controls.Add(this.splitContainer5);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1169, 366);
+            this.tabPage1.Size = new System.Drawing.Size(1169, 368);
             this.tabPage1.TabIndex = 9;
             this.tabPage1.Text = " 預估費用 ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -6236,7 +6278,7 @@
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_Remark);
             this.splitContainer5.Panel2.Controls.Add(this.linkLabel_ES_PayMemo);
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.splitContainer5.Size = new System.Drawing.Size(1169, 366);
+            this.splitContainer5.Size = new System.Drawing.Size(1169, 368);
             this.splitContainer5.SplitterDistance = 591;
             this.splitContainer5.TabIndex = 2;
             // 
@@ -6262,7 +6304,7 @@
             this.toolStripButton_ES_Del,
             this.toolStripSeparator25,
             this.toolStripButton_OrientationCost});
-            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 339);
+            this.bindingNavigator_EstimateCost.Location = new System.Drawing.Point(0, 341);
             this.bindingNavigator_EstimateCost.MoveFirstItem = this.toolStripButton19;
             this.bindingNavigator_EstimateCost.MoveLastItem = this.toolStripButton22;
             this.bindingNavigator_EstimateCost.MoveNextItem = this.toolStripButton21;
@@ -6372,6 +6414,20 @@
             this.toolStripButton_ES_Del.Tag = "Delete";
             this.toolStripButton_ES_Del.Text = "刪除預估費用";
             // 
+            // toolStripSeparator25
+            // 
+            this.toolStripSeparator25.Name = "toolStripSeparator25";
+            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_OrientationCost
+            // 
+            this.toolStripButton_OrientationCost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_OrientationCost.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
+            this.toolStripButton_OrientationCost.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_OrientationCost.Name = "toolStripButton_OrientationCost";
+            this.toolStripButton_OrientationCost.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_OrientationCost.Text = "水平/垂直";
+            // 
             // dataGridView_EstimateCost
             // 
             this.dataGridView_EstimateCost.AllowUserToAddRows = false;
@@ -6411,7 +6467,7 @@
             this.dataGridView_EstimateCost.ReadOnly = true;
             this.dataGridView_EstimateCost.RowHeadersWidth = 30;
             this.dataGridView_EstimateCost.RowTemplate.Height = 24;
-            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 333);
+            this.dataGridView_EstimateCost.Size = new System.Drawing.Size(583, 335);
             this.dataGridView_EstimateCost.TabIndex = 1;
             this.dataGridView_EstimateCost.Tag = "PatListMF_EstimateCost";
             this.dataGridView_EstimateCost.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_EstimateCost_CellDoubleClick);
@@ -6419,7 +6475,7 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle20.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle20.Format = "yyyy-MM-dd";
             this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTextBoxColumn8.HeaderText = "預估日期";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -7031,7 +7087,7 @@
             this.tabPage4.Controls.Add(this.splitContainer10);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1169, 366);
+            this.tabPage4.Size = new System.Drawing.Size(1169, 368);
             this.tabPage4.TabIndex = 10;
             this.tabPage4.Text = "智財局專利資料";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -7052,7 +7108,7 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer10.Size = new System.Drawing.Size(1167, 364);
+            this.splitContainer10.Size = new System.Drawing.Size(1167, 366);
             this.splitContainer10.SplitterDistance = 135;
             this.splitContainer10.SplitterWidth = 5;
             this.splitContainer10.TabIndex = 1059;
@@ -7124,7 +7180,7 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer6.Size = new System.Drawing.Size(1167, 224);
+            this.splitContainer6.Size = new System.Drawing.Size(1167, 226);
             this.splitContainer6.SplitterDistance = 571;
             this.splitContainer6.TabIndex = 1058;
             // 
@@ -7144,7 +7200,7 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.dataGridView_inventors);
             this.splitContainer7.Panel2.Controls.Add(this.tagTitle4);
-            this.splitContainer7.Size = new System.Drawing.Size(571, 224);
+            this.splitContainer7.Size = new System.Drawing.Size(571, 226);
             this.splitContainer7.SplitterDistance = 283;
             this.splitContainer7.TabIndex = 0;
             // 
@@ -7164,7 +7220,7 @@
             this.dataGridView_applicants.Name = "dataGridView_applicants";
             this.dataGridView_applicants.ReadOnly = true;
             this.dataGridView_applicants.RowTemplate.Height = 24;
-            this.dataGridView_applicants.Size = new System.Drawing.Size(277, 185);
+            this.dataGridView_applicants.Size = new System.Drawing.Size(277, 187);
             this.dataGridView_applicants.TabIndex = 1059;
             this.dataGridView_applicants.Tag = "PatListMF_applicants";
             // 
@@ -7199,7 +7255,7 @@
             this.dataGridView_inventors.Name = "dataGridView_inventors";
             this.dataGridView_inventors.ReadOnly = true;
             this.dataGridView_inventors.RowTemplate.Height = 24;
-            this.dataGridView_inventors.Size = new System.Drawing.Size(276, 185);
+            this.dataGridView_inventors.Size = new System.Drawing.Size(276, 187);
             this.dataGridView_inventors.TabIndex = 1061;
             this.dataGridView_inventors.Tag = "PatListMF_inventors";
             // 
@@ -7233,7 +7289,7 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.splitContainer9);
-            this.splitContainer8.Size = new System.Drawing.Size(592, 224);
+            this.splitContainer8.Size = new System.Drawing.Size(592, 226);
             this.splitContainer8.SplitterDistance = 291;
             this.splitContainer8.TabIndex = 0;
             // 
@@ -7253,7 +7309,7 @@
             this.dataGridView_PatentAnnuity.Name = "dataGridView_PatentAnnuity";
             this.dataGridView_PatentAnnuity.ReadOnly = true;
             this.dataGridView_PatentAnnuity.RowTemplate.Height = 24;
-            this.dataGridView_PatentAnnuity.Size = new System.Drawing.Size(283, 185);
+            this.dataGridView_PatentAnnuity.Size = new System.Drawing.Size(283, 187);
             this.dataGridView_PatentAnnuity.TabIndex = 1061;
             this.dataGridView_PatentAnnuity.Tag = "PatListMF_PatentAnnuity";
             // 
@@ -7289,7 +7345,7 @@
             // 
             this.splitContainer9.Panel2.Controls.Add(this.dataGridView_PatentRightLoc);
             this.splitContainer9.Panel2.Controls.Add(this.tagTitle7);
-            this.splitContainer9.Size = new System.Drawing.Size(297, 224);
+            this.splitContainer9.Size = new System.Drawing.Size(297, 226);
             this.splitContainer9.SplitterDistance = 106;
             this.splitContainer9.TabIndex = 1064;
             // 
@@ -7344,7 +7400,7 @@
             this.dataGridView_PatentRightLoc.Name = "dataGridView_PatentRightLoc";
             this.dataGridView_PatentRightLoc.ReadOnly = true;
             this.dataGridView_PatentRightLoc.RowTemplate.Height = 24;
-            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 75);
+            this.dataGridView_PatentRightLoc.Size = new System.Drawing.Size(293, 77);
             this.dataGridView_PatentRightLoc.TabIndex = 1065;
             this.dataGridView_PatentRightLoc.Tag = "PatListMF_PatentRightLoc";
             // 
@@ -7362,62 +7418,6 @@
             this.tagTitle7.TabIndex = 1064;
             this.tagTitle7.TagTitleStyle = "Style2";
             this.tagTitle7.TitleLableText = "智財局專利 LOC分類資訊";
-            // 
-            // toolStripSeparator22
-            // 
-            this.toolStripSeparator22.Name = "toolStripSeparator22";
-            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton_OrientationEvent
-            // 
-            this.toolStripButton_OrientationEvent.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_OrientationEvent.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
-            this.toolStripButton_OrientationEvent.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_OrientationEvent.Name = "toolStripButton_OrientationEvent";
-            this.toolStripButton_OrientationEvent.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_OrientationEvent.Text = "水平/垂直";
-            // 
-            // toolStripSeparator23
-            // 
-            this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton_OrientationFee
-            // 
-            this.toolStripButton_OrientationFee.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_OrientationFee.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
-            this.toolStripButton_OrientationFee.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_OrientationFee.Name = "toolStripButton_OrientationFee";
-            this.toolStripButton_OrientationFee.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_OrientationFee.Text = "水平/垂直";
-            // 
-            // toolStripButton_OrientationPayment
-            // 
-            this.toolStripButton_OrientationPayment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_OrientationPayment.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
-            this.toolStripButton_OrientationPayment.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_OrientationPayment.Name = "toolStripButton_OrientationPayment";
-            this.toolStripButton_OrientationPayment.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_OrientationPayment.Text = "水平/垂直";
-            // 
-            // toolStripSeparator24
-            // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator25
-            // 
-            this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton_OrientationCost
-            // 
-            this.toolStripButton_OrientationCost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton_OrientationCost.Image = global::LawtechPTSystem.Properties.Resources.Vertical;
-            this.toolStripButton_OrientationCost.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton_OrientationCost.Name = "toolStripButton_OrientationCost";
-            this.toolStripButton_OrientationCost.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton_OrientationCost.Text = "水平/垂直";
             // 
             // PatListMF
             // 

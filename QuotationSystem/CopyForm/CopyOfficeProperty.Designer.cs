@@ -451,7 +451,7 @@
             this.mask_BuyDate.ForeColor = System.Drawing.Color.Green;
             this.mask_BuyDate.Location = new System.Drawing.Point(288, 140);
             this.mask_BuyDate.Margin = new System.Windows.Forms.Padding(2);
-            this.mask_BuyDate.Mask = "0000/00/00";
+            this.mask_BuyDate.Mask = "0000-00-00";
             this.mask_BuyDate.Name = "mask_BuyDate";
             this.mask_BuyDate.Size = new System.Drawing.Size(100, 25);
             this.mask_BuyDate.TabIndex = 5;
@@ -474,7 +474,7 @@
             this.mask_CreateDate.ForeColor = System.Drawing.Color.Green;
             this.mask_CreateDate.Location = new System.Drawing.Point(98, 140);
             this.mask_CreateDate.Margin = new System.Windows.Forms.Padding(2);
-            this.mask_CreateDate.Mask = "0000/00/00";
+            this.mask_CreateDate.Mask = "0000-00-00";
             this.mask_CreateDate.Name = "mask_CreateDate";
             this.mask_CreateDate.Size = new System.Drawing.Size(100, 25);
             this.mask_CreateDate.TabIndex = 4;

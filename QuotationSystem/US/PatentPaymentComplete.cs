@@ -72,7 +72,7 @@ namespace LawtechPTSystem.US
             txtPatentNo.Text = Patent.PatentNo;
             txtTitle.Text = Patent.Title;
             txt_PayYear.Value = Patent.PayYear .Value+ 1;
-            maskedTextBox_RenewTo.Text = Patent.RenewTo.Value.AddYears(1).ToString("yyyy/MM/dd");
+            maskedTextBox_RenewTo.Text = Patent.RenewTo.Value.AddYears(1).ToString("yyyy-MM-dd");
         }
         #endregion
 

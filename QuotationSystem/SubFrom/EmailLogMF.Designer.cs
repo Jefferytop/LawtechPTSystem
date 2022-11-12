@@ -228,7 +228,7 @@
             // 
             // but_Search
             // 
-            this.but_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("but_Search.BackgroundImage")));
+            this.but_Search.BackgroundImage = global::LawtechPTSystem.Properties.Resources.btnSearch;
             this.but_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.but_Search.Font = new System.Drawing.Font("微軟正黑體", 10F);
             this.but_Search.Image = global::LawtechPTSystem.Properties.Resources.SearchIcon;
@@ -247,7 +247,7 @@
             this.maskedTextBox_D.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_D.Location = new System.Drawing.Point(282, 9);
             this.maskedTextBox_D.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_D.Mask = "0000/00/00";
+            this.maskedTextBox_D.Mask = "0000-00-00";
             this.maskedTextBox_D.Name = "maskedTextBox_D";
             this.maskedTextBox_D.Size = new System.Drawing.Size(114, 25);
             this.maskedTextBox_D.TabIndex = 1050;
@@ -260,7 +260,7 @@
             this.maskedTextBox_S.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_S.Location = new System.Drawing.Point(145, 9);
             this.maskedTextBox_S.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_S.Mask = "0000/00/00";
+            this.maskedTextBox_S.Mask = "0000-00-00";
             this.maskedTextBox_S.Name = "maskedTextBox_S";
             this.maskedTextBox_S.Size = new System.Drawing.Size(112, 25);
             this.maskedTextBox_S.TabIndex = 1049;

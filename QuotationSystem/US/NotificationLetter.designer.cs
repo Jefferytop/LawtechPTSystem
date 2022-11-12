@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Bcc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,6 +65,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_SampleDescription = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sampleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailSampleDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MailBody = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Format = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailSampleListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.but_Cancel = new System.Windows.Forms.Button();
             this.mailFormatTableAdapter = new LawtechPTSystem.DataSet_EmailTableAdapters.MailFormatTableAdapter();
@@ -72,18 +84,6 @@
             this.emailSampleListTableAdapter = new LawtechPTSystem.DataSet_EmailTableAdapters.EmailSampleListTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lab_ms = new System.Windows.Forms.Label();
-            this.workerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Format = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mailFormatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailBody = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailPriority = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MailSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailSampleDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sampleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eSIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -98,8 +98,8 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -126,7 +126,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(655, 574);
+            this.groupBox2.Size = new System.Drawing.Size(653, 574);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "通．知．函";
@@ -142,7 +142,7 @@
             this.txt_Bcc.Multiline = true;
             this.txt_Bcc.Name = "txt_Bcc";
             this.txt_Bcc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Bcc.Size = new System.Drawing.Size(550, 35);
+            this.txt_Bcc.Size = new System.Drawing.Size(548, 35);
             this.txt_Bcc.TabIndex = 62;
             // 
             // label7
@@ -176,8 +176,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listView1);
             this.splitContainer2.Panel2.Controls.Add(this.linkLabel1);
-            this.splitContainer2.Size = new System.Drawing.Size(644, 328);
-            this.splitContainer2.SplitterDistance = 229;
+            this.splitContainer2.Size = new System.Drawing.Size(642, 328);
+            this.splitContainer2.SplitterDistance = 227;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 60;
             // 
@@ -196,7 +196,7 @@
             this.editorHTML1.Location = new System.Drawing.Point(91, 5);
             this.editorHTML1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.editorHTML1.Name = "editorHTML1";
-            this.editorHTML1.Size = new System.Drawing.Size(549, 218);
+            this.editorHTML1.Size = new System.Drawing.Size(547, 216);
             this.editorHTML1.TabIndex = 52;
             // 
             // label4
@@ -221,7 +221,7 @@
             this.textBox_Body.Multiline = true;
             this.textBox_Body.Name = "textBox_Body";
             this.textBox_Body.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_Body.Size = new System.Drawing.Size(547, 217);
+            this.textBox_Body.Size = new System.Drawing.Size(545, 215);
             this.textBox_Body.TabIndex = 50;
             // 
             // listView1
@@ -236,7 +236,7 @@
             this.listView1.Location = new System.Drawing.Point(91, 4);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(549, 79);
+            this.listView1.Size = new System.Drawing.Size(547, 79);
             this.listView1.TabIndex = 59;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -295,7 +295,7 @@
             this.txt_cc.Multiline = true;
             this.txt_cc.Name = "txt_cc";
             this.txt_cc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_cc.Size = new System.Drawing.Size(550, 35);
+            this.txt_cc.Size = new System.Drawing.Size(548, 35);
             this.txt_cc.TabIndex = 58;
             // 
             // label6
@@ -320,7 +320,7 @@
             this.txt_Sender.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Sender.Name = "txt_Sender";
             this.txt_Sender.ReadOnly = true;
-            this.txt_Sender.Size = new System.Drawing.Size(550, 29);
+            this.txt_Sender.Size = new System.Drawing.Size(548, 29);
             this.txt_Sender.TabIndex = 55;
             // 
             // label2
@@ -390,7 +390,7 @@
             this.txt_Reciver.Multiline = true;
             this.txt_Reciver.Name = "txt_Reciver";
             this.txt_Reciver.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Reciver.Size = new System.Drawing.Size(550, 49);
+            this.txt_Reciver.Size = new System.Drawing.Size(548, 49);
             this.txt_Reciver.TabIndex = 1;
             // 
             // txt_Subject
@@ -402,7 +402,7 @@
             this.txt_Subject.Location = new System.Drawing.Point(96, 177);
             this.txt_Subject.Margin = new System.Windows.Forms.Padding(1);
             this.txt_Subject.Name = "txt_Subject";
-            this.txt_Subject.Size = new System.Drawing.Size(550, 29);
+            this.txt_Subject.Size = new System.Drawing.Size(548, 29);
             this.txt_Subject.TabIndex = 42;
             // 
             // comboBox_Priority
@@ -479,7 +479,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(925, 584);
-            this.splitContainer1.SplitterDistance = 664;
+            this.splitContainer1.SplitterDistance = 662;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 12;
             // 
@@ -525,6 +525,139 @@
             this.txt_SampleDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txt_SampleDescription.Size = new System.Drawing.Size(224, 236);
             this.txt_SampleDescription.TabIndex = 56;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sortDataGridViewTextBoxColumn,
+            this.eSIDDataGridViewTextBoxColumn,
+            this.sampleNameDataGridViewTextBoxColumn,
+            this.emailSampleDescriptionDataGridViewTextBoxColumn,
+            this.MailSubject,
+            this.MailPriority,
+            this.MailBody,
+            this.mailFormatDataGridViewTextBoxColumn,
+            this.createDateDataGridViewTextBoxColumn,
+            this.Format,
+            this.workerNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.emailSampleListBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 30;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(226, 266);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            // 
+            // sortDataGridViewTextBoxColumn
+            // 
+            this.sortDataGridViewTextBoxColumn.DataPropertyName = "Sort";
+            this.sortDataGridViewTextBoxColumn.HeaderText = "排序";
+            this.sortDataGridViewTextBoxColumn.Name = "sortDataGridViewTextBoxColumn";
+            this.sortDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sortDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // eSIDDataGridViewTextBoxColumn
+            // 
+            this.eSIDDataGridViewTextBoxColumn.DataPropertyName = "ESID";
+            this.eSIDDataGridViewTextBoxColumn.HeaderText = "ESID";
+            this.eSIDDataGridViewTextBoxColumn.Name = "eSIDDataGridViewTextBoxColumn";
+            this.eSIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.eSIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sampleNameDataGridViewTextBoxColumn
+            // 
+            this.sampleNameDataGridViewTextBoxColumn.DataPropertyName = "SampleName";
+            this.sampleNameDataGridViewTextBoxColumn.HeaderText = "範本名稱";
+            this.sampleNameDataGridViewTextBoxColumn.Name = "sampleNameDataGridViewTextBoxColumn";
+            this.sampleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailSampleDescriptionDataGridViewTextBoxColumn
+            // 
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.DataPropertyName = "EmailSampleDescription";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.HeaderText = "EmailSampleDescription";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.Name = "emailSampleDescriptionDataGridViewTextBoxColumn";
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailSampleDescriptionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // MailSubject
+            // 
+            this.MailSubject.DataPropertyName = "MailSubject";
+            this.MailSubject.HeaderText = "MailSubject";
+            this.MailSubject.Name = "MailSubject";
+            this.MailSubject.ReadOnly = true;
+            this.MailSubject.Visible = false;
+            // 
+            // MailPriority
+            // 
+            this.MailPriority.DataPropertyName = "MailPriority";
+            this.MailPriority.HeaderText = "MailPriority";
+            this.MailPriority.Name = "MailPriority";
+            this.MailPriority.ReadOnly = true;
+            this.MailPriority.Visible = false;
+            // 
+            // MailBody
+            // 
+            this.MailBody.DataPropertyName = "MailBody";
+            this.MailBody.HeaderText = "MailBody";
+            this.MailBody.Name = "MailBody";
+            this.MailBody.ReadOnly = true;
+            this.MailBody.Visible = false;
+            // 
+            // mailFormatDataGridViewTextBoxColumn
+            // 
+            this.mailFormatDataGridViewTextBoxColumn.DataPropertyName = "MailFormat";
+            this.mailFormatDataGridViewTextBoxColumn.HeaderText = "MailFormat";
+            this.mailFormatDataGridViewTextBoxColumn.Name = "mailFormatDataGridViewTextBoxColumn";
+            this.mailFormatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mailFormatDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // createDateDataGridViewTextBoxColumn
+            // 
+            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
+            dataGridViewCellStyle2.Format = "yyyy/MM/dd HH:mm";
+            this.createDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.createDateDataGridViewTextBoxColumn.HeaderText = "建立時間";
+            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
+            this.createDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Format
+            // 
+            this.Format.DataPropertyName = "Format";
+            this.Format.HeaderText = "Format";
+            this.Format.Name = "Format";
+            this.Format.ReadOnly = true;
+            this.Format.Visible = false;
+            // 
+            // workerNameDataGridViewTextBoxColumn
+            // 
+            this.workerNameDataGridViewTextBoxColumn.DataPropertyName = "WorkerName";
+            this.workerNameDataGridViewTextBoxColumn.HeaderText = "建立者";
+            this.workerNameDataGridViewTextBoxColumn.Name = "workerNameDataGridViewTextBoxColumn";
+            this.workerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailSampleListBindingSource
             // 
@@ -576,140 +709,6 @@
             this.lab_ms.Text = "上傳附件中，請等候...";
             this.lab_ms.Visible = false;
             // 
-            // workerNameDataGridViewTextBoxColumn
-            // 
-            this.workerNameDataGridViewTextBoxColumn.DataPropertyName = "WorkerName";
-            this.workerNameDataGridViewTextBoxColumn.HeaderText = "建立者";
-            this.workerNameDataGridViewTextBoxColumn.Name = "workerNameDataGridViewTextBoxColumn";
-            this.workerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Format
-            // 
-            this.Format.DataPropertyName = "Format";
-            this.Format.HeaderText = "Format";
-            this.Format.Name = "Format";
-            this.Format.ReadOnly = true;
-            this.Format.Visible = false;
-            // 
-            // createDateDataGridViewTextBoxColumn
-            // 
-            this.createDateDataGridViewTextBoxColumn.DataPropertyName = "CreateDate";
-            dataGridViewCellStyle2.Format = "yyyy/MM/dd HH:mm";
-            this.createDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.createDateDataGridViewTextBoxColumn.HeaderText = "建立時間";
-            this.createDateDataGridViewTextBoxColumn.Name = "createDateDataGridViewTextBoxColumn";
-            this.createDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mailFormatDataGridViewTextBoxColumn
-            // 
-            this.mailFormatDataGridViewTextBoxColumn.DataPropertyName = "MailFormat";
-            this.mailFormatDataGridViewTextBoxColumn.HeaderText = "MailFormat";
-            this.mailFormatDataGridViewTextBoxColumn.Name = "mailFormatDataGridViewTextBoxColumn";
-            this.mailFormatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mailFormatDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // MailBody
-            // 
-            this.MailBody.DataPropertyName = "MailBody";
-            this.MailBody.HeaderText = "MailBody";
-            this.MailBody.Name = "MailBody";
-            this.MailBody.ReadOnly = true;
-            this.MailBody.Visible = false;
-            // 
-            // MailPriority
-            // 
-            this.MailPriority.DataPropertyName = "MailPriority";
-            this.MailPriority.HeaderText = "MailPriority";
-            this.MailPriority.Name = "MailPriority";
-            this.MailPriority.ReadOnly = true;
-            this.MailPriority.Visible = false;
-            // 
-            // MailSubject
-            // 
-            this.MailSubject.DataPropertyName = "MailSubject";
-            this.MailSubject.HeaderText = "MailSubject";
-            this.MailSubject.Name = "MailSubject";
-            this.MailSubject.ReadOnly = true;
-            this.MailSubject.Visible = false;
-            // 
-            // emailSampleDescriptionDataGridViewTextBoxColumn
-            // 
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.DataPropertyName = "EmailSampleDescription";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.HeaderText = "EmailSampleDescription";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.Name = "emailSampleDescriptionDataGridViewTextBoxColumn";
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailSampleDescriptionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sampleNameDataGridViewTextBoxColumn
-            // 
-            this.sampleNameDataGridViewTextBoxColumn.DataPropertyName = "SampleName";
-            this.sampleNameDataGridViewTextBoxColumn.HeaderText = "範本名稱";
-            this.sampleNameDataGridViewTextBoxColumn.Name = "sampleNameDataGridViewTextBoxColumn";
-            this.sampleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // eSIDDataGridViewTextBoxColumn
-            // 
-            this.eSIDDataGridViewTextBoxColumn.DataPropertyName = "ESID";
-            this.eSIDDataGridViewTextBoxColumn.HeaderText = "ESID";
-            this.eSIDDataGridViewTextBoxColumn.Name = "eSIDDataGridViewTextBoxColumn";
-            this.eSIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.eSIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sortDataGridViewTextBoxColumn
-            // 
-            this.sortDataGridViewTextBoxColumn.DataPropertyName = "Sort";
-            this.sortDataGridViewTextBoxColumn.HeaderText = "排序";
-            this.sortDataGridViewTextBoxColumn.Name = "sortDataGridViewTextBoxColumn";
-            this.sortDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sortDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sortDataGridViewTextBoxColumn,
-            this.eSIDDataGridViewTextBoxColumn,
-            this.sampleNameDataGridViewTextBoxColumn,
-            this.emailSampleDescriptionDataGridViewTextBoxColumn,
-            this.MailSubject,
-            this.MailPriority,
-            this.MailBody,
-            this.mailFormatDataGridViewTextBoxColumn,
-            this.createDateDataGridViewTextBoxColumn,
-            this.Format,
-            this.workerNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.emailSampleListBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 30;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(226, 266);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-          
-            // 
             // NotificationLetter
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -744,8 +743,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailSampleListBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

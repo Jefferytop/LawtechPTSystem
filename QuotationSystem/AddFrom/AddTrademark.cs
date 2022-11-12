@@ -50,7 +50,7 @@ namespace LawtechPTSystem.AddFrom
 
             comboBox_DelegateType.SelectedIndex = 0;
             cb_WorkerName.SelectedValue = Properties.Settings.Default.WorkerKEY;
-            maskedTextBox_EntrustDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_EntrustDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             chb_IsBySelf.Checked = true;
             comboBox_DelegateType_SelectedIndexChanged(comboBox_DelegateType,null);
         }
@@ -415,7 +415,7 @@ WHERE          (ApplicantKey in ({0}) ) and Quit<>1 ", ApplicantKey);
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

@@ -242,10 +242,10 @@ namespace LawtechPTSystem.Public
         // DataRow
         // *********************************
         // DataTable
-        
+
         #region  取得專利的資料 public static void GetPatentList(string strWhere, ref DataTable dtSource)
         /// <summary>
-        /// 取得專利的資料
+        /// 取得專利的資料 V_PatentList
         /// </summary>
         /// <param name="strWhere"></param>
         /// <returns></returns>

@@ -172,23 +172,23 @@ namespace LawtechPTSystem.EditForm
 
             comboBox_EventType.Text = CCTrademarkNotifyEvent.EventType;
 
-            maskedTextBox_NotifyComitDate.Text = CCTrademarkNotifyEvent.NotifyComitDate.HasValue ? CCTrademarkNotifyEvent.NotifyComitDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_NotifyComitDate.Text = CCTrademarkNotifyEvent.NotifyComitDate.HasValue ? CCTrademarkNotifyEvent.NotifyComitDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_OccurDate.Text = CCTrademarkNotifyEvent.OccurDate.HasValue ? CCTrademarkNotifyEvent.OccurDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_OccurDate.Text = CCTrademarkNotifyEvent.OccurDate.HasValue ? CCTrademarkNotifyEvent.OccurDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_NotifyOfficerDate.Text = CCTrademarkNotifyEvent.NotifyOfficerDate.HasValue ? CCTrademarkNotifyEvent.NotifyOfficerDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_NotifyOfficerDate.Text = CCTrademarkNotifyEvent.NotifyOfficerDate.HasValue ? CCTrademarkNotifyEvent.NotifyOfficerDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_DueDate.Text = CCTrademarkNotifyEvent.DueDate.HasValue ? CCTrademarkNotifyEvent.DueDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_DueDate.Text = CCTrademarkNotifyEvent.DueDate.HasValue ? CCTrademarkNotifyEvent.DueDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_NoticeDate.Text = CCTrademarkNotifyEvent.NoticeDate.HasValue ? CCTrademarkNotifyEvent.NoticeDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_NoticeDate.Text = CCTrademarkNotifyEvent.NoticeDate.HasValue ? CCTrademarkNotifyEvent.NoticeDate.Value.ToString("yyyy-MM-dd") : "";
 
-            //maskedTextBox_CustomerAuthorizationDate.Text = CCTrademarkNotifyEvent.CustomerAuthorizationDate.HasValue ? CCTrademarkNotifyEvent.CustomerAuthorizationDate.Value.ToString("yyyy/MM/dd") : "";
+            //maskedTextBox_CustomerAuthorizationDate.Text = CCTrademarkNotifyEvent.CustomerAuthorizationDate.HasValue ? CCTrademarkNotifyEvent.CustomerAuthorizationDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_OutsourcingDate.Text = CCTrademarkNotifyEvent.OutsourcingDate.HasValue ? CCTrademarkNotifyEvent.OutsourcingDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_OutsourcingDate.Text = CCTrademarkNotifyEvent.OutsourcingDate.HasValue ? CCTrademarkNotifyEvent.OutsourcingDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_FinishDate.Text = CCTrademarkNotifyEvent.FinishDate.HasValue ? CCTrademarkNotifyEvent.FinishDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_FinishDate.Text = CCTrademarkNotifyEvent.FinishDate.HasValue ? CCTrademarkNotifyEvent.FinishDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_AttorneyDueDate.Text = CCTrademarkNotifyEvent.AttorneyDueDate.HasValue ? CCTrademarkNotifyEvent.AttorneyDueDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_AttorneyDueDate.Text = CCTrademarkNotifyEvent.AttorneyDueDate.HasValue ? CCTrademarkNotifyEvent.AttorneyDueDate.Value.ToString("yyyy-MM-dd") : "";
 
             txt_Result.Text = CCTrademarkNotifyEvent.Result;
 
@@ -553,7 +553,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

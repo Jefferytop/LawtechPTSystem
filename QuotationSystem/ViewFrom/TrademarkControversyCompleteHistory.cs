@@ -72,13 +72,13 @@ namespace LawtechPTSystem.ViewFrom
                                 nodeHistory.Text = "案件記錄-" + Notify.NotifyEventContent;
                                 nodeHistory.ForeColor = System.Drawing.Color.OliveDrab;
 
-                                TreeNode nodeNotifyComitDate = new TreeNode(string.Format("來函收文日：{0}", Notify.NotifyComitDate.HasValue? "無資料" : Notify.NotifyComitDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeNotifyComitDate = new TreeNode(string.Format("來函收文日：{0}", Notify.NotifyComitDate.HasValue? "無資料" : Notify.NotifyComitDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeNotifyComitDate);
-                                TreeNode nodeNotifyOfficerDate = new TreeNode(string.Format("官方發文日：{0}", Notify.NotifyOfficerDate.HasValue ? "無資料" : Notify.NotifyOfficerDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeNotifyOfficerDate = new TreeNode(string.Format("官方發文日：{0}", Notify.NotifyOfficerDate.HasValue ? "無資料" : Notify.NotifyOfficerDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeNotifyOfficerDate);
-                                TreeNode nodeNotifyDueDate = new TreeNode(string.Format("法定答覆期限：{0}", Notify.DueDate.HasValue ? "無資料" : Notify.DueDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeNotifyDueDate = new TreeNode(string.Format("法定答覆期限：{0}", Notify.DueDate.HasValue ? "無資料" : Notify.DueDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeNotifyDueDate);
-                                TreeNode nodeNotifyFinishDate = new TreeNode(string.Format("完成時間：{0}", Notify.FinishDate.HasValue ? "未完成" : Notify.FinishDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeNotifyFinishDate = new TreeNode(string.Format("完成時間：{0}", Notify.FinishDate.HasValue ? "未完成" : Notify.FinishDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeNotifyFinishDate);
                                 TreeNode nodeNotifyResult = new TreeNode("處理結果：" + Notify.Result);
                                 nodeHistory.Nodes.Add(nodeNotifyResult);
@@ -95,7 +95,7 @@ namespace LawtechPTSystem.ViewFrom
 
                                 TreeNode nodePPP = new TreeNode(string.Format("請款單號：{0}", TmFee.PPP));
                                 nodeHistory.Nodes.Add(nodePPP);
-                                TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", TmFee.RDate.HasValue ? "無資料" : TmFee.RDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", TmFee.RDate.HasValue ? "無資料" : TmFee.RDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeFeeRDate);
                                 TreeNode nodeOAttorneyGovFee = new TreeNode(string.Format("代收代付合計NT：{0}", TmFee.OAttorneyGovFee.Value.ToString("#,##0.##")));
                                 nodeHistory.Nodes.Add(nodeOAttorneyGovFee);
@@ -103,7 +103,7 @@ namespace LawtechPTSystem.ViewFrom
                                 nodeHistory.Nodes.Add(nodeTotall);
                                 TreeNode nodePay = new TreeNode(string.Format("已收款：{0}", TmFee.Pay == true ? "是" : "否"));
                                 nodeHistory.Nodes.Add(nodePay);
-                                TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", TmFee.PayDate.HasValue ? "無資料" : TmFee.PayDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", TmFee.PayDate.HasValue ? "無資料" : TmFee.PayDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodePayDate);
 
                                 break;
@@ -117,9 +117,9 @@ namespace LawtechPTSystem.ViewFrom
 
                                 TreeNode nodeBillingNo = new TreeNode(string.Format("請款單號：{0}", TmPay.BillingNo));
                                 nodeHistory.Nodes.Add(nodeBillingNo);
-                                TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", TmPay.ReciveDate.HasValue ? "無資料" : TmPay.ReciveDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", TmPay.ReciveDate.HasValue ? "無資料" : TmPay.ReciveDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodeReciveDate);
-                                TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", TmPay.PayDueDate.HasValue ? "無資料" : TmPay.PayDueDate.Value.ToString("yyyy/MM/dd")));
+                                TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", TmPay.PayDueDate.HasValue ? "無資料" : TmPay.PayDueDate.Value.ToString("yyyy-MM-dd")));
                                 nodeHistory.Nodes.Add(nodePayDueDate);
                                 TreeNode nodeIMoney = new TreeNode(string.Format("幣別：{0}", TmPay.IMoney));
                                 nodeHistory.Nodes.Add(nodeIMoney);
@@ -173,11 +173,11 @@ namespace LawtechPTSystem.ViewFrom
                         //    nodeHistory.Text = "委辦-" + comit.EventContent;
                         //    nodeHistory.ForeColor = System.Drawing.Color.DarkGoldenrod;
 
-                        //    TreeNode nodeOccurDate = new TreeNode(string.Format("委辦日期：{0}", comit.OccurDate.Year == 1900 ? "無資料" : comit.OccurDate.ToString("yyyy/MM/dd")));
+                        //    TreeNode nodeOccurDate = new TreeNode(string.Format("委辦日期：{0}", comit.OccurDate.Year == 1900 ? "無資料" : comit.OccurDate.ToString("yyyy-MM-dd")));
                         //    nodeHistory.Nodes.Add(nodeOccurDate);
-                        //    TreeNode nodeDueDate = new TreeNode(string.Format("官方送件期限：{0}", comit.DueDate.Year == 1900 ? "無資料" : comit.DueDate.ToString("yyyy/MM/dd")));
+                        //    TreeNode nodeDueDate = new TreeNode(string.Format("官方送件期限：{0}", comit.DueDate.Year == 1900 ? "無資料" : comit.DueDate.ToString("yyyy-MM-dd")));
                         //    nodeHistory.Nodes.Add(nodeDueDate);
-                        //    TreeNode nodeFinishDate = new TreeNode(string.Format("完成日期：{0}", comit.FinishDate.Year == 1900 ? "未完成" : comit.FinishDate.Year == 1900 ? "未完成" : comit.FinishDate.ToString("yyyy/MM/dd")));
+                        //    TreeNode nodeFinishDate = new TreeNode(string.Format("完成日期：{0}", comit.FinishDate.Year == 1900 ? "未完成" : comit.FinishDate.Year == 1900 ? "未完成" : comit.FinishDate.ToString("yyyy-MM-dd")));
                         //    nodeHistory.Nodes.Add(nodeFinishDate);
                         //    TreeNode nodeResult = new TreeNode("處理結果：" + comit.Result);
                         //    nodeHistory.Nodes.Add(nodeResult);
@@ -191,13 +191,13 @@ namespace LawtechPTSystem.ViewFrom
                             nodeHistory.Text = "案件記錄-" + Notify.NotifyEventContent;
                             nodeHistory.ForeColor = System.Drawing.Color.OliveDrab;
 
-                            TreeNode nodeNotifyComitDate = new TreeNode(string.Format("來函收文日：{0}", Notify.NotifyComitDate.HasValue? "無資料" : Notify.NotifyComitDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeNotifyComitDate = new TreeNode(string.Format("來函收文日：{0}", Notify.NotifyComitDate.HasValue? "無資料" : Notify.NotifyComitDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeNotifyComitDate);
-                            TreeNode nodeNotifyOfficerDate = new TreeNode(string.Format("官方發文日：{0}", Notify.NotifyOfficerDate.HasValue ? "無資料" : Notify.NotifyOfficerDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeNotifyOfficerDate = new TreeNode(string.Format("官方發文日：{0}", Notify.NotifyOfficerDate.HasValue ? "無資料" : Notify.NotifyOfficerDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeNotifyOfficerDate);
-                            TreeNode nodeNotifyDueDate = new TreeNode(string.Format("法定答覆期限：{0}", Notify.DueDate.HasValue ? "無資料" : Notify.DueDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeNotifyDueDate = new TreeNode(string.Format("法定答覆期限：{0}", Notify.DueDate.HasValue ? "無資料" : Notify.DueDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeNotifyDueDate);
-                            TreeNode nodeNotifyFinishDate = new TreeNode(string.Format("完成時間：{0}", Notify.FinishDate.HasValue ? "未完成" : Notify.FinishDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeNotifyFinishDate = new TreeNode(string.Format("完成時間：{0}", Notify.FinishDate.HasValue ? "未完成" : Notify.FinishDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeNotifyFinishDate);
                             TreeNode nodeNotifyResult = new TreeNode("處理結果：" + Notify.Result);
                             nodeHistory.Nodes.Add(nodeNotifyResult);
@@ -214,7 +214,7 @@ namespace LawtechPTSystem.ViewFrom
 
                             TreeNode nodePPP = new TreeNode(string.Format("請款單號：{0}", TmFee.PPP));
                             nodeHistory.Nodes.Add(nodePPP);
-                            TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", TmFee.RDate.HasValue? "無資料" : TmFee.RDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", TmFee.RDate.HasValue? "無資料" : TmFee.RDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeFeeRDate);
                             TreeNode nodeOAttorneyGovFee = new TreeNode(string.Format("代收代付合計NT：{0}", TmFee.OAttorneyGovFee.Value.ToString("#,##0.##")));
                             nodeHistory.Nodes.Add(nodeOAttorneyGovFee);
@@ -222,7 +222,7 @@ namespace LawtechPTSystem.ViewFrom
                             nodeHistory.Nodes.Add(nodeTotall);
                             TreeNode nodePay = new TreeNode(string.Format("已收款：{0}", TmFee.Pay == true ? "是" : "否"));
                             nodeHistory.Nodes.Add(nodePay);
-                            TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", TmFee.PayDate.HasValue ? "無資料" : TmFee.PayDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", TmFee.PayDate.HasValue ? "無資料" : TmFee.PayDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodePayDate);
 
                             break;
@@ -235,9 +235,9 @@ namespace LawtechPTSystem.ViewFrom
 
                             TreeNode nodeBillingNo = new TreeNode(string.Format("請款單號：{0}", TmPay.BillingNo));
                             nodeHistory.Nodes.Add(nodeBillingNo);
-                            TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", TmPay.ReciveDate.HasValue ? "無資料" : TmPay.ReciveDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", TmPay.ReciveDate.HasValue ? "無資料" : TmPay.ReciveDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodeReciveDate);
-                            TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", TmPay.PayDueDate.HasValue ? "無資料" : TmPay.PayDueDate.Value.ToString("yyyy/MM/dd")));
+                            TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", TmPay.PayDueDate.HasValue ? "無資料" : TmPay.PayDueDate.Value.ToString("yyyy-MM-dd")));
                             nodeHistory.Nodes.Add(nodePayDueDate);
                             TreeNode nodeIMoney = new TreeNode(string.Format("幣別：{0}", TmPay.IMoney));
                             nodeHistory.Nodes.Add(nodeIMoney);
@@ -345,7 +345,7 @@ namespace LawtechPTSystem.ViewFrom
 
                 TreeNode nodePPP = new TreeNode(string.Format("請款單號：{0}", ds.Tables[0].Rows[iFeeRow]["PPP"].ToString()));
                 nodeHistory.Nodes.Add(nodePPP);
-                TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", ds.Tables[0].Rows[iFeeRow]["RDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[0].Rows[iFeeRow]["RDate"]).ToString("yyyy/MM/dd")));
+                TreeNode nodeFeeRDate = new TreeNode(string.Format("請款日期：{0}", ds.Tables[0].Rows[iFeeRow]["RDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[0].Rows[iFeeRow]["RDate"]).ToString("yyyy-MM-dd")));
                 nodeHistory.Nodes.Add(nodeFeeRDate);
                 TreeNode nodeOAttorneyGovFee = new TreeNode(string.Format("代收代付合計NT：{0}", ds.Tables[0].Rows[iFeeRow]["OAttorneyGovFee"] == DBNull.Value ? "無資料" : ((decimal)ds.Tables[0].Rows[iFeeRow]["OAttorneyGovFee"]).ToString("#,##0.##")));
                 nodeHistory.Nodes.Add(nodeOAttorneyGovFee);
@@ -360,7 +360,7 @@ namespace LawtechPTSystem.ViewFrom
                 TreeNode nodePay = new TreeNode(string.Format("已收款：{0}", IsPay == true ? "是" : "否"));
                 nodeHistory.Nodes.Add(nodePay);
 
-                TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", ds.Tables[0].Rows[iFeeRow]["PayDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[0].Rows[iFeeRow]["PayDate"]).ToString("yyyy/MM/dd")));
+                TreeNode nodePayDate = new TreeNode(string.Format("收款日期：{0}", ds.Tables[0].Rows[iFeeRow]["PayDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[0].Rows[iFeeRow]["PayDate"]).ToString("yyyy-MM-dd")));
                 nodeHistory.Nodes.Add(nodePayDate);
 
                 node.Nodes.Add(nodeHistory);
@@ -373,9 +373,9 @@ namespace LawtechPTSystem.ViewFrom
 
                 TreeNode nodeBillingNo = new TreeNode(string.Format("請款單號：{0}", ds.Tables[1].Rows[iPayRow]["BillingNo"].ToString()));
                 nodeHistory.Nodes.Add(nodeBillingNo);
-                TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", ds.Tables[1].Rows[iPayRow]["ReciveDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[1].Rows[iPayRow]["ReciveDate"]).ToString("yyyy/MM/dd")));
+                TreeNode nodeReciveDate = new TreeNode(string.Format("收件日期：{0}", ds.Tables[1].Rows[iPayRow]["ReciveDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[1].Rows[iPayRow]["ReciveDate"]).ToString("yyyy-MM-dd")));
                 nodeHistory.Nodes.Add(nodeReciveDate);
-                TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", ds.Tables[1].Rows[iPayRow]["PayDueDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[1].Rows[iPayRow]["PayDueDate"]).ToString("yyyy/MM/dd")));
+                TreeNode nodePayDueDate = new TreeNode(string.Format("付款期限：{0}", ds.Tables[1].Rows[iPayRow]["PayDueDate"] == DBNull.Value ? "無資料" : ((DateTime)ds.Tables[1].Rows[iPayRow]["PayDueDate"]).ToString("yyyy-MM-dd")));
                 nodeHistory.Nodes.Add(nodePayDueDate);
                 TreeNode nodeIMoney = new TreeNode(string.Format("幣別：{0}", ds.Tables[1].Rows[iPayRow]["IMoney"] == DBNull.Value ? "無資料" : ds.Tables[1].Rows[iPayRow]["IMoney"].ToString()));
                 nodeHistory.Nodes.Add(nodeIMoney);

@@ -132,7 +132,7 @@ namespace LawtechPTSystem.AddFrom
 
             this.officeRoleTTableAdapter.Fill(this.qS_DataSet.OfficeRoleT);
 
-            maskedTextBox_ReachDay.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_ReachDay.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         
         #endregion

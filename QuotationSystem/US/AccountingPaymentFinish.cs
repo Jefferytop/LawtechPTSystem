@@ -82,17 +82,17 @@ namespace LawtechPTSystem.US
                     comboBox_AcountingFirmKey.SelectedValue =pay.AcountingFirmKey.HasValue ? pay.AcountingFirmKey.Value:0;
                     if (pay.ReciveDate.HasValue)
                     {
-                        maskedTextBox_ReciveDate.Text = pay.ReciveDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReciveDate.Text = pay.ReciveDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (pay.PaymentDate.HasValue)
                     {
-                        maskedTextBox_PaymentDate.Text = pay.PaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PaymentDate.Text = pay.PaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (pay.EstimatedPaymentDate.HasValue)
                     {
-                        maskedTextBox_EstimatedPaymentDate.Text = pay.EstimatedPaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_EstimatedPaymentDate.Text = pay.EstimatedPaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     checkBox_IsBilling.Checked = pay.IsBilling.HasValue?pay.IsBilling.Value:false;
@@ -101,7 +101,7 @@ namespace LawtechPTSystem.US
 
                     if (pay.PayDueDate.HasValue)
                     {
-                        maskedTextBox_PayDueDate.Text = pay.PayDueDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDueDate.Text = pay.PayDueDate.Value.ToString("yyyy-MM-dd");
                     }
 
                  
@@ -115,14 +115,14 @@ namespace LawtechPTSystem.US
                     //完成日期
                     if (pay.IReceiptDate.HasValue)
                     {
-                        maskedTextBox_IReceiptDate.Text = pay.IReceiptDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = pay.IReceiptDate.Value.ToString("yyyy-MM-dd");
                     }
                    
 
                     //預估付款日
                     if (pay.EstimatedPaymentDate.HasValue)
                     {
-                        maskedTextBox_EstimatedPaymentDate.Text = pay.EstimatedPaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_EstimatedPaymentDate.Text = pay.EstimatedPaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
 
@@ -160,12 +160,12 @@ namespace LawtechPTSystem.US
 
                     if (TmPay.ReciveDate.HasValue)
                     {
-                        maskedTextBox_ReciveDate.Text = TmPay.ReciveDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReciveDate.Text = TmPay.ReciveDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (TmPay.PayDueDate.HasValue)
                     {
-                        maskedTextBox_PayDueDate.Text = TmPay.PayDueDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDueDate.Text = TmPay.PayDueDate.Value.ToString("yyyy-MM-dd");
                     }
 
                   
@@ -178,19 +178,19 @@ namespace LawtechPTSystem.US
 
                     if (TmPay.IReceiptDate.HasValue)
                     {
-                        maskedTextBox_IReceiptDate.Text = TmPay.IReceiptDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_IReceiptDate.Text = TmPay.IReceiptDate.Value.ToString("yyyy-MM-dd");
                     }
 
 
                     if (TmPay.PaymentDate.HasValue)
                     {
-                        maskedTextBox_PaymentDate.Text = TmPay.PaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PaymentDate.Text = TmPay.PaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     //預估付款日
                     if (TmPay.EstimatedPaymentDate.HasValue)
                     {
-                        maskedTextBox_EstimatedPaymentDate.Text = TmPay.EstimatedPaymentDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_EstimatedPaymentDate.Text = TmPay.EstimatedPaymentDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     break;
@@ -418,7 +418,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

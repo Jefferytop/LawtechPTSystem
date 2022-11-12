@@ -233,11 +233,11 @@ namespace LawtechPTSystem.EditForm
 
             numericUpDown_ExchangeRate.Value=edit.ExchangeRate.HasValue?edit.ExchangeRate.Value:0;
 
-            maskedTextBox_IReceiptDate.Text = edit.IReceiptDate.HasValue ? edit.IReceiptDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_IReceiptDate.Text = edit.IReceiptDate.HasValue ? edit.IReceiptDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_ReciveDate.Text = edit.ReciveDate.HasValue ? edit.ReciveDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_ReciveDate.Text = edit.ReciveDate.HasValue ? edit.ReciveDate.Value.ToString("yyyy-MM-dd") : "";
 
-            maskedTextBox_PayDueDate.Text = edit.PayDueDate.HasValue ? edit.PayDueDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_PayDueDate.Text = edit.PayDueDate.HasValue ? edit.PayDueDate.Value.ToString("yyyy-MM-dd") : "";
 
             comboBox_Attormey.SelectedValue = edit.Attorney;
 
@@ -297,7 +297,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

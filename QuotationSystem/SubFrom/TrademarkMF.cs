@@ -392,31 +392,31 @@ namespace LawtechPTSystem.SubFrom
             txt_RegisterProduct.DataBindings.Add("Text", trademarkManagementTBindingSource, "RegisterProduct", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_EntrustDate.DataBindings.Clear();
-            maskedTextBox_EntrustDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "EntrustDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_EntrustDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "EntrustDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_RegistrationDate.DataBindings.Clear();
-            maskedTextBox_RegistrationDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "RegistrationDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_RegistrationDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "RegistrationDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_LawDate.DataBindings.Clear();
-            maskedTextBox_LawDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "LawDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_LawDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "LawDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_NoticeDate.DataBindings.Clear();
-            maskedTextBox_NoticeDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "NoticeDate1", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NoticeDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "NoticeDate1", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_NoticeDate2.DataBindings.Clear();
-            maskedTextBox_NoticeDate2.DataBindings.Add("Text", trademarkManagementTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NoticeDate2.DataBindings.Add("Text", trademarkManagementTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_DueDate.DataBindings.Clear();
-            maskedTextBox_DueDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_DueDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_ExtendedDate.DataBindings.Clear();
-            maskedTextBox_ExtendedDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "ExtendedDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ExtendedDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "ExtendedDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_CloseDate.DataBindings.Clear();
-            maskedTextBox_CloseDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "CloseDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CloseDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "CloseDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_ApplicationDate.DataBindings.Clear();
-            maskedTextBox_ApplicationDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "ApplicationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ApplicationDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "ApplicationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //委託性質
             txt_DelegateFeatureName.DataBindings.Clear();
@@ -452,7 +452,7 @@ namespace LawtechPTSystem.SubFrom
 
             //承辦事務所-委辦日期
             maskedTextBox_OutsourcingDate.DataBindings.Clear();
-            maskedTextBox_OutsourcingDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OutsourcingDate.DataBindings.Add("Text", trademarkManagementTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //提案家族
             txt_TrademarkOvertureName.DataBindings.Clear();
@@ -477,31 +477,31 @@ namespace LawtechPTSystem.SubFrom
             txt_NotifyRemark.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "Remark", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_NotifyComitDate.DataBindings.Clear();
-            maskedTextBox_NotifyComitDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NotifyComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NotifyComitDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NotifyComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_NotifyOfficerDate.DataBindings.Clear();
-            maskedTextBox_NotifyOfficerDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NotifyOfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_NotifyOfficerDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NotifyOfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_OccurDate.DataBindings.Clear();
-            maskedTextBox_OccurDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OccurDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_DueDate.DataBindings.Clear();
-            maskedTextBox_DueDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_DueDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_Notice.DataBindings.Clear();
-            maskedTextBox_Notice.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_Notice.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "NoticeDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //maskedTextBox_CustomerAuthorizationDate.DataBindings.Clear();
-            //maskedTextBox_CustomerAuthorizationDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "CustomerAuthorizationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            //maskedTextBox_CustomerAuthorizationDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "CustomerAuthorizationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             mtb_OutsourcingDate.DataBindings.Clear();
-            mtb_OutsourcingDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            mtb_OutsourcingDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "OutsourcingDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_FinishDate.DataBindings.Clear();
-            maskedTextBox_FinishDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_FinishDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_AttorneyDueDate.DataBindings.Clear();
-            maskedTextBox_AttorneyDueDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "AttorneyDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_AttorneyDueDate.DataBindings.Add("Text", trademarkNotifyEventTBindingSource, "AttorneyDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
         }
         #endregion
@@ -609,19 +609,19 @@ namespace LawtechPTSystem.SubFrom
 
             //請款日期
             maskedTextBox_RDate.DataBindings.Clear();
-            maskedTextBox_RDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_RDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //收款期限
             maskedTextBox_CollectionPeriod.DataBindings.Clear();
-            maskedTextBox_CollectionPeriod.DataBindings.Add("Text", trademarkFeeTBindingSource, "CollectionPeriod", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CollectionPeriod.DataBindings.Add("Text", trademarkFeeTBindingSource, "CollectionPeriod", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //收款日期
             maskedTextBox_PayDate.DataBindings.Clear();
-            maskedTextBox_PayDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PayDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //發票日期
             maskedTextBox_aBillDate.DataBindings.Clear();
-            maskedTextBox_aBillDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "aBillDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_aBillDate.DataBindings.Add("Text", trademarkFeeTBindingSource, "aBillDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //發票號碼
             txt_aBill.DataBindings.Clear();
@@ -796,7 +796,7 @@ namespace LawtechPTSystem.SubFrom
             txt_IReceiptNo.DataBindings.Add("Text", trademarkPaymentTBindingSource, "IReceiptNo", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_IReceiptDate.DataBindings.Clear();
-            maskedTextBox_IReceiptDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "IReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_IReceiptDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "IReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             txt_PayTotall.DataBindings.Clear();
             txt_PayTotall.DataBindings.Add("Text", trademarkPaymentTBindingSource, "Totall", true, DataSourceUpdateMode.OnValidation, "", "#,##0.##");
@@ -811,13 +811,13 @@ namespace LawtechPTSystem.SubFrom
             txt_BillCheck.DataBindings.Add("Text", trademarkPaymentTBindingSource, "BillCheck", true, DataSourceUpdateMode.OnValidation, "", "");
 
             maskedTextBox_ReciveDate.DataBindings.Clear();
-            maskedTextBox_ReciveDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "ReciveDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ReciveDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "ReciveDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_PayDueDate.DataBindings.Clear();
-            maskedTextBox_PayDueDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "PayDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PayDueDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "PayDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_PaymentDate.DataBindings.Clear();
-            maskedTextBox_PaymentDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "PaymentDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PaymentDate.DataBindings.Add("Text", trademarkPaymentTBindingSource, "PaymentDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             checkBox_IsBilling.DataBindings.Clear();
             checkBox_IsBilling.DataBindings.Add("Checked", trademarkPaymentTBindingSource, "IsBilling", true, DataSourceUpdateMode.OnValidation, false);
@@ -1379,7 +1379,7 @@ namespace LawtechPTSystem.SubFrom
                                 log.DelWorkerKey = Properties.Settings.Default.WorkerKEY;
                                 log.DelWorker = Properties.Settings.Default.WorkerName;
 
-                                log.DelContent = string.Format("商標案號:{5}\r\n商標名稱:{6}\r\n事件內容:{0}\r\n本所來函日:{1}\r\n官方期限:{2}\r\n本所期限:{3}\r\n完成日期:{4}\r\n處理結果:{7}\r\n備註:{8}", TMdel.NotifyEventContent, TMdel.NotifyComitDate.HasValue ? TMdel.NotifyComitDate.Value.ToString("yyyy/MM/dd") : "", TMdel.DueDate.HasValue ? TMdel.DueDate.Value.ToString("yyyy/MM/dd") : "", TMdel.AttorneyDueDate.HasValue ? TMdel.AttorneyDueDate.Value.ToString("yyyy/MM/dd") : "", TMdel.FinishDate.HasValue ? TMdel.FinishDate.Value.ToString("yyyy/MM/dd") : "", tm.TrademarkNo, tm.TrademarkName, TMdel.Result, TMdel.Remark);
+                                log.DelContent = string.Format("商標案號:{5}\r\n商標名稱:{6}\r\n事件內容:{0}\r\n本所來函日:{1}\r\n官方期限:{2}\r\n本所期限:{3}\r\n完成日期:{4}\r\n處理結果:{7}\r\n備註:{8}", TMdel.NotifyEventContent, TMdel.NotifyComitDate.HasValue ? TMdel.NotifyComitDate.Value.ToString("yyyy-MM-dd") : "", TMdel.DueDate.HasValue ? TMdel.DueDate.Value.ToString("yyyy-MM-dd") : "", TMdel.AttorneyDueDate.HasValue ? TMdel.AttorneyDueDate.Value.ToString("yyyy-MM-dd") : "", TMdel.FinishDate.HasValue ? TMdel.FinishDate.Value.ToString("yyyy-MM-dd") : "", tm.TrademarkNo, tm.TrademarkName, TMdel.Result, TMdel.Remark);
                                 log.DelTitle = string.Format("刪除「{0}」資料【事件記錄-{1}】", this.Text, TMdel.NotifyEventContent);
                                 log.Create();
 
@@ -2047,7 +2047,7 @@ namespace LawtechPTSystem.SubFrom
                         payment.IMoney = txt_PayIMoney.Text;
                         payment.InvoiceNo = txt_IReceiptNo.Text;
                         payment.CountryName = trademarkManagementTDataGridView.CurrentRow.Cells["CountryName"].Value.ToString();
-                        payment.ApplicantDate = DateTime.Now.ToString("yyyy/MM/dd");
+                        payment.ApplicantDate = DateTime.Now.ToString("yyyy-MM-dd");
                         payment.ReciveDate = maskedTextBox_ReciveDate.Text;
                         payment.PayDueDate = maskedTextBox_PayDueDate.Text;
                         payment.Show();
@@ -2295,7 +2295,7 @@ namespace LawtechPTSystem.SubFrom
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

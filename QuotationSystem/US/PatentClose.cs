@@ -31,7 +31,7 @@ namespace LawtechPTSystem.US
 
             txtPatentNo.Text = Patent.PatentNo;
             txtTitle.Text = Patent.Title;
-            maskedTextBox_CloseDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_CloseDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             if (string.IsNullOrEmpty(Patent.CloseCaus))
             {
                 txt_CloseCaus.Text = maskedTextBox_CloseDate.Text + " 結案";

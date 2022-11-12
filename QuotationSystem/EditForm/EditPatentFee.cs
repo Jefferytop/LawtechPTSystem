@@ -156,8 +156,8 @@ namespace LawtechPTSystem.EditForm
                 comboBox_Attorney.SelectedValue = Edit.Attorney;
             }
 
-            mskRDate.Text = Edit.RDate.HasValue ? Edit.RDate.Value.ToString("yyyy/MM/dd") : "";
-            mskCollectionPeriod.Text = Edit.CollectionPeriod.HasValue ? Edit.CollectionPeriod.Value.ToString("yyyy/MM/dd") : "";
+            mskRDate.Text = Edit.RDate.HasValue ? Edit.RDate.Value.ToString("yyyy-MM-dd") : "";
+            mskCollectionPeriod.Text = Edit.CollectionPeriod.HasValue ? Edit.CollectionPeriod.Value.ToString("yyyy-MM-dd") : "";
 
             cboFClientTransactor.SelectedValue =Edit.FClientTransactor.HasValue? Edit.FClientTransactor:0;
            
@@ -539,7 +539,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

@@ -492,7 +492,7 @@
             this.maskedTextBox_Birthday.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.maskedTextBox_Birthday.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedTextBox_Birthday.Location = new System.Drawing.Point(334, 80);
-            this.maskedTextBox_Birthday.Mask = "0000/00/00";
+            this.maskedTextBox_Birthday.Mask = "0000-00-00";
             this.maskedTextBox_Birthday.Name = "maskedTextBox_Birthday";
             this.maskedTextBox_Birthday.Size = new System.Drawing.Size(147, 29);
             this.maskedTextBox_Birthday.TabIndex = 5;

@@ -211,7 +211,7 @@
             this.mtb_CurrentDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mtb_CurrentDate.Location = new System.Drawing.Point(132, 27);
             this.mtb_CurrentDate.Margin = new System.Windows.Forms.Padding(4);
-            this.mtb_CurrentDate.Mask = "0000/00/00";
+            this.mtb_CurrentDate.Mask = "0000-00-00";
             this.mtb_CurrentDate.Name = "mtb_CurrentDate";
             this.mtb_CurrentDate.Size = new System.Drawing.Size(120, 29);
             this.mtb_CurrentDate.TabIndex = 0;
@@ -247,7 +247,7 @@
             this.maskedTextBox_Result.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Result.Location = new System.Drawing.Point(154, 182);
             this.maskedTextBox_Result.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox_Result.Mask = "0000/00/00";
+            this.maskedTextBox_Result.Mask = "0000-00-00";
             this.maskedTextBox_Result.Name = "maskedTextBox_Result";
             this.maskedTextBox_Result.Size = new System.Drawing.Size(120, 29);
             this.maskedTextBox_Result.TabIndex = 4;

@@ -121,7 +121,7 @@ namespace LawtechPTSystem.ReportView
                     txt_PPP.Text = fee.PPP;
                     if (fee.RDate.HasValue)
                     {
-                        maskedTextBox_RDate.Text = fee.RDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_RDate.Text = fee.RDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     txt_AttorneyRefNo.Text = patent.MainCustomerRefNo;
@@ -132,7 +132,7 @@ namespace LawtechPTSystem.ReportView
                     txt_ApplicationNo.Text = patent.ApplicationNo;
                     if (patent.ApplicationDate.HasValue)
                     {
-                        maskedTextBox_ApplicationDate.Text = patent.ApplicationDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ApplicationDate.Text = patent.ApplicationDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     txt_FeeSubject.Text = "專利 " + fee.FeeSubject;
@@ -169,7 +169,7 @@ namespace LawtechPTSystem.ReportView
                     txt_PPP.Text = TMfee.PPP;
                     if (TMfee.RDate.HasValue)
                     {
-                        maskedTextBox_RDate.Text = TMfee.RDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_RDate.Text = TMfee.RDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     txt_AttorneyRefNo.Text = Tm.MainCustomerRefNo;
@@ -180,7 +180,7 @@ namespace LawtechPTSystem.ReportView
                     txt_ApplicationNo.Text = Tm.ApplicationNo;
                     if (Tm.ApplicationDate.HasValue)
                     {
-                        maskedTextBox_ApplicationDate.Text = Tm.ApplicationDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ApplicationDate.Text = Tm.ApplicationDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     txt_FeeSubject.Text = "商標 " + TMfee.FeeSubject;
@@ -240,7 +240,7 @@ namespace LawtechPTSystem.ReportView
             ReportParameter PPP = new ReportParameter("Report_PPP", txt_PPP.Text);
             Params.Add(PPP);
 
-            ReportParameter RDate = new ReportParameter("Report_RDate", maskedTextBox_RDate.Text != "    /  /" ? maskedTextBox_RDate.Text : "");
+            ReportParameter RDate = new ReportParameter("Report_RDate", maskedTextBox_RDate.Text != "    -  -" ? maskedTextBox_RDate.Text : "");
             Params.Add(RDate);
 
             ReportParameter AttorneyRefNo = new ReportParameter("Report_AttorneyRefNo", txt_AttorneyRefNo.Text);
@@ -264,7 +264,7 @@ namespace LawtechPTSystem.ReportView
             ReportParameter ApplicationNo = new ReportParameter("Report_ApplicationNo", txt_ApplicationNo.Text);
             Params.Add(ApplicationNo);
 
-            ReportParameter ApplicationDate = new ReportParameter("Report_ApplicationDate", maskedTextBox_ApplicationDate.Text != "    /  /" ? maskedTextBox_ApplicationDate.Text : "");
+            ReportParameter ApplicationDate = new ReportParameter("Report_ApplicationDate", maskedTextBox_ApplicationDate.Text != "    -  -" ? maskedTextBox_ApplicationDate.Text : "");
             Params.Add(ApplicationDate);
 
             //收據總計

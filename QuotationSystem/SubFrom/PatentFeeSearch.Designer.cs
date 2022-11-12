@@ -296,7 +296,7 @@
             // RDate
             // 
             this.RDate.DataPropertyName = "RDate";
-            dataGridViewCellStyle4.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle4.Format = "yyyy-MM-dd";
             this.RDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.RDate.HeaderText = "請款日期";
             this.RDate.Name = "RDate";
@@ -333,7 +333,7 @@
             // ApplicationDate
             // 
             this.ApplicationDate.DataPropertyName = "ApplicationDate";
-            dataGridViewCellStyle5.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle5.Format = "yyyy-MM-dd";
             this.ApplicationDate.DefaultCellStyle = dataGridViewCellStyle5;
             this.ApplicationDate.HeaderText = "申請日";
             this.ApplicationDate.Name = "ApplicationDate";
@@ -356,7 +356,7 @@
             // OccurDate
             // 
             this.OccurDate.DataPropertyName = "OccurDate";
-            dataGridViewCellStyle6.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle6.Format = "yyyy-MM-dd";
             this.OccurDate.DefaultCellStyle = dataGridViewCellStyle6;
             this.OccurDate.HeaderText = "委辦日期";
             this.OccurDate.Name = "OccurDate";
@@ -499,7 +499,7 @@
             // ReceiptDate
             // 
             this.ReceiptDate.DataPropertyName = "ReceiptDate";
-            dataGridViewCellStyle18.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle18.Format = "yyyy-MM-dd";
             this.ReceiptDate.DefaultCellStyle = dataGridViewCellStyle18;
             this.ReceiptDate.HeaderText = "收據日期";
             this.ReceiptDate.Name = "ReceiptDate";
@@ -508,7 +508,7 @@
             // PayDate
             // 
             this.PayDate.DataPropertyName = "PayDate";
-            dataGridViewCellStyle19.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle19.Format = "yyyy-MM-dd";
             this.PayDate.DefaultCellStyle = dataGridViewCellStyle19;
             this.PayDate.HeaderText = "收款日期";
             this.PayDate.Name = "PayDate";

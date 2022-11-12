@@ -89,7 +89,7 @@
             this.maskedTextBox_IReceiptDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_IReceiptDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_IReceiptDate.Location = new System.Drawing.Point(323, 213);
-            this.maskedTextBox_IReceiptDate.Mask = "0000/00/00";
+            this.maskedTextBox_IReceiptDate.Mask = "0000-00-00";
             this.maskedTextBox_IReceiptDate.Name = "maskedTextBox_IReceiptDate";
             this.maskedTextBox_IReceiptDate.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_IReceiptDate.TabIndex = 418;
@@ -132,7 +132,7 @@
             this.maskedTextBox_PayDueDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PayDueDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_PayDueDate.Location = new System.Drawing.Point(323, 46);
-            this.maskedTextBox_PayDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDueDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDueDate.Name = "maskedTextBox_PayDueDate";
             this.maskedTextBox_PayDueDate.ReadOnly = true;
             this.maskedTextBox_PayDueDate.Size = new System.Drawing.Size(110, 29);
@@ -154,7 +154,7 @@
             this.maskedTextBox_ReciveDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ReciveDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ReciveDate.Location = new System.Drawing.Point(94, 45);
-            this.maskedTextBox_ReciveDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReciveDate.Mask = "0000-00-00";
             this.maskedTextBox_ReciveDate.Name = "maskedTextBox_ReciveDate";
             this.maskedTextBox_ReciveDate.ReadOnly = true;
             this.maskedTextBox_ReciveDate.Size = new System.Drawing.Size(110, 29);
@@ -245,7 +245,7 @@
             this.maskedTextBox_PaymentDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PaymentDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_PaymentDate.Location = new System.Drawing.Point(94, 211);
-            this.maskedTextBox_PaymentDate.Mask = "0000/00/00";
+            this.maskedTextBox_PaymentDate.Mask = "0000-00-00";
             this.maskedTextBox_PaymentDate.Name = "maskedTextBox_PaymentDate";
             this.maskedTextBox_PaymentDate.ReadOnly = true;
             this.maskedTextBox_PaymentDate.Size = new System.Drawing.Size(110, 29);

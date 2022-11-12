@@ -363,7 +363,7 @@ namespace LawtechPTSystem.Public
         /// </summary>
         /// <param name="mtb"> MaskedTextBox控制項</param>
         /// <param name="formatDate">日期格式</param>        
-        public static void MaskedTextBoxDoubleClick(MaskedTextBox mtb, string formatDate = "yyyy/MM/dd")
+        public static void MaskedTextBoxDoubleClick(MaskedTextBox mtb, string formatDate = "yyyy-MM-dd")
         {           
             DateTime dt;
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);

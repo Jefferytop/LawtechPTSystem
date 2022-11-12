@@ -106,7 +106,7 @@ namespace LawtechPTSystem.AddFrom
                 this.patComitContentTTableAdapter.FillBy(this.dataSet_Drop.PatComitContentT, CountrySymbol,patent.Status.Value);
             }
             txt_StatusExplain.Text = patent.StatusExplain;
-            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             Combo_EClientWorker.SelectedValue = Properties.Settings.Default.WorkerKEY;
 
             attorneyTBindingSource.Filter = "CountrySymbol ='" + CountrySymbol + "'";
@@ -401,7 +401,7 @@ namespace LawtechPTSystem.AddFrom
             bool IsSuccess=DateTime.TryParse(mtb.Text,out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion 

@@ -297,7 +297,7 @@
             this.emailSampleTDataGridView.AllowUserToAddRows = false;
             this.emailSampleTDataGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
             this.emailSampleTDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.emailSampleTDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -331,7 +331,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.emailSampleTDataGridView.DefaultCellStyle = dataGridViewCellStyle4;

@@ -153,7 +153,7 @@
             this.maskedTextBox_FinishDate.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.maskedTextBox_FinishDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_FinishDate.Location = new System.Drawing.Point(106, 77);
-            this.maskedTextBox_FinishDate.Mask = "0000/00/00";
+            this.maskedTextBox_FinishDate.Mask = "0000-00-00";
             this.maskedTextBox_FinishDate.Name = "maskedTextBox_FinishDate";
             this.maskedTextBox_FinishDate.Size = new System.Drawing.Size(116, 29);
             this.maskedTextBox_FinishDate.TabIndex = 20;
@@ -181,7 +181,7 @@
             this.maskedTextBox_ComitDate.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.maskedTextBox_ComitDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ComitDate.Location = new System.Drawing.Point(106, 45);
-            this.maskedTextBox_ComitDate.Mask = "0000/00/00";
+            this.maskedTextBox_ComitDate.Mask = "0000-00-00";
             this.maskedTextBox_ComitDate.Name = "maskedTextBox_ComitDate";
             this.maskedTextBox_ComitDate.Size = new System.Drawing.Size(116, 29);
             this.maskedTextBox_ComitDate.TabIndex = 26;

@@ -79,7 +79,7 @@ namespace LawtechPTSystem.EditForm
             txt_Background.Text = worker.Background;
             if (worker.Birthday.HasValue)
             {
-                maskedTextBox_Birthday.Text = worker.Birthday.Value.ToString("yyyy/MM/dd");
+                maskedTextBox_Birthday.Text = worker.Birthday.Value.ToString("yyyy-MM-dd");
             }
           
            

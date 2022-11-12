@@ -1405,7 +1405,7 @@
             this.maskedTextBox_StartedDate.ForeColor = System.Drawing.Color.MediumBlue;
             this.maskedTextBox_StartedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_StartedDate.Location = new System.Drawing.Point(647, 109);
-            this.maskedTextBox_StartedDate.Mask = "0000/00/00";
+            this.maskedTextBox_StartedDate.Mask = "0000-00-00";
             this.maskedTextBox_StartedDate.Name = "maskedTextBox_StartedDate";
             this.maskedTextBox_StartedDate.Size = new System.Drawing.Size(160, 29);
             this.maskedTextBox_StartedDate.TabIndex = 7;

@@ -213,7 +213,7 @@
             // 
             this.mskFinishDate.ForeColor = System.Drawing.Color.Green;
             this.mskFinishDate.Location = new System.Drawing.Point(92, 93);
-            this.mskFinishDate.Mask = "0000/00/00";
+            this.mskFinishDate.Mask = "0000-00-00";
             this.mskFinishDate.Name = "mskFinishDate";
             this.mskFinishDate.Size = new System.Drawing.Size(120, 29);
             this.mskFinishDate.TabIndex = 1;
@@ -288,7 +288,7 @@
             this.maskedTextBox_CloseDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(125, 86);
             this.maskedTextBox_CloseDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CloseDate.Mask = "0000/00/00";
+            this.maskedTextBox_CloseDate.Mask = "0000-00-00";
             this.maskedTextBox_CloseDate.Name = "maskedTextBox_CloseDate";
             this.maskedTextBox_CloseDate.Size = new System.Drawing.Size(120, 29);
             this.maskedTextBox_CloseDate.TabIndex = 10;

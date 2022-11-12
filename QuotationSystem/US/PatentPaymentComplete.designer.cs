@@ -85,7 +85,7 @@
             this.maskedTextBox_RenewTo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_RenewTo.Location = new System.Drawing.Point(133, 126);
             this.maskedTextBox_RenewTo.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox_RenewTo.Mask = "0000/00/00";
+            this.maskedTextBox_RenewTo.Mask = "0000-00-00";
             this.maskedTextBox_RenewTo.Name = "maskedTextBox_RenewTo";
             this.maskedTextBox_RenewTo.Size = new System.Drawing.Size(111, 29);
             this.maskedTextBox_RenewTo.TabIndex = 315;

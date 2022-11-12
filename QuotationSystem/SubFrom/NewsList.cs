@@ -115,7 +115,7 @@ namespace LawtechPTSystem.SubFrom
            
             //建立時間
            txt_CreateDate.DataBindings.Clear();
-           txt_CreateDate.DataBindings.Add("Text", newsBindingSource, "CreateDateTime", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd HH:mm");
+           txt_CreateDate.DataBindings.Add("Text", newsBindingSource, "CreateDateTime", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd HH:mm");
                       
 
         }

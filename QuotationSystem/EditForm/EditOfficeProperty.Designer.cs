@@ -431,7 +431,7 @@
             this.mask_BuyDate.BackColor = System.Drawing.Color.White;
             this.mask_BuyDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.mask_BuyDate.Location = new System.Drawing.Point(276, 144);
-            this.mask_BuyDate.Mask = "0000/00/00";
+            this.mask_BuyDate.Mask = "0000-00-00";
             this.mask_BuyDate.Name = "mask_BuyDate";
             this.mask_BuyDate.Size = new System.Drawing.Size(100, 29);
             this.mask_BuyDate.TabIndex = 5;
@@ -454,7 +454,7 @@
             this.mask_CreateDate.BackColor = System.Drawing.Color.White;
             this.mask_CreateDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.mask_CreateDate.Location = new System.Drawing.Point(86, 144);
-            this.mask_CreateDate.Mask = "0000/00/00";
+            this.mask_CreateDate.Mask = "0000-00-00";
             this.mask_CreateDate.Name = "mask_CreateDate";
             this.mask_CreateDate.Size = new System.Drawing.Size(100, 29);
             this.mask_CreateDate.TabIndex = 4;

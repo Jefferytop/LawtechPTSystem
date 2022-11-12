@@ -224,7 +224,7 @@
             this.maskedTextBox_D.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_D.Location = new System.Drawing.Point(294, 58);
             this.maskedTextBox_D.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_D.Mask = "0000/00/00";
+            this.maskedTextBox_D.Mask = "0000-00-00";
             this.maskedTextBox_D.Name = "maskedTextBox_D";
             this.maskedTextBox_D.Size = new System.Drawing.Size(114, 25);
             this.maskedTextBox_D.TabIndex = 1010;
@@ -252,7 +252,7 @@
             this.maskedTextBox_S.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_S.Location = new System.Drawing.Point(157, 58);
             this.maskedTextBox_S.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_S.Mask = "0000/00/00";
+            this.maskedTextBox_S.Mask = "0000-00-00";
             this.maskedTextBox_S.Name = "maskedTextBox_S";
             this.maskedTextBox_S.Size = new System.Drawing.Size(112, 25);
             this.maskedTextBox_S.TabIndex = 1009;
@@ -382,7 +382,7 @@
             // RDate
             // 
             this.RDate.DataPropertyName = "RDate";
-            dataGridViewCellStyle3.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle3.Format = "yyyy-MM-dd";
             this.RDate.DefaultCellStyle = dataGridViewCellStyle3;
             this.RDate.HeaderText = "請款日期";
             this.RDate.Name = "RDate";
@@ -499,7 +499,7 @@
             // ReceiptDate
             // 
             this.ReceiptDate.DataPropertyName = "ReceiptDate";
-            dataGridViewCellStyle9.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle9.Format = "yyyy-MM-dd";
             this.ReceiptDate.DefaultCellStyle = dataGridViewCellStyle9;
             this.ReceiptDate.HeaderText = "收據日期";
             this.ReceiptDate.Name = "ReceiptDate";
@@ -533,7 +533,7 @@
             this.PayDate.DataPropertyName = "PayDate";
             dataGridViewCellStyle11.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle11.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle11.Format = "yyyy-MM-dd";
             this.PayDate.DefaultCellStyle = dataGridViewCellStyle11;
             this.PayDate.HeaderText = "收款日期";
             this.PayDate.Name = "PayDate";
@@ -638,7 +638,7 @@
             // CloseDate
             // 
             this.CloseDate.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle19.Format = "yyyy/MM/dd HH:mm";
+            dataGridViewCellStyle19.Format = "yyyy-MM-dd HH:mm";
             dataGridViewCellStyle19.NullValue = null;
             this.CloseDate.DefaultCellStyle = dataGridViewCellStyle19;
             this.CloseDate.HeaderText = "關帳日期";
@@ -648,7 +648,7 @@
             // OccurDate
             // 
             this.OccurDate.DataPropertyName = "OccurDate";
-            dataGridViewCellStyle20.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle20.Format = "yyyy-MM-dd";
             this.OccurDate.DefaultCellStyle = dataGridViewCellStyle20;
             this.OccurDate.HeaderText = "承辦日期";
             this.OccurDate.Name = "OccurDate";
@@ -665,7 +665,7 @@
             // ApplicationDate
             // 
             this.ApplicationDate.DataPropertyName = "ApplicationDate";
-            dataGridViewCellStyle21.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle21.Format = "yyyy-MM-dd";
             this.ApplicationDate.DefaultCellStyle = dataGridViewCellStyle21;
             this.ApplicationDate.HeaderText = "申請日";
             this.ApplicationDate.Name = "ApplicationDate";

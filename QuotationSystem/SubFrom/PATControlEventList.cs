@@ -335,7 +335,7 @@ namespace LawtechPTSystem.SubFrom
 
                         Comit.FinishDate = null;                       
                         Comit.LastModifyWorker = Properties.Settings.Default.WorkerName;
-                        Comit.Result =Comit.LastModifyWorker+" "+ DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                        Comit.Result =Comit.LastModifyWorker+" "+ DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                         Comit.Update();
                         dgViewMF.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
                         dt_ControlEvent.AcceptChanges();

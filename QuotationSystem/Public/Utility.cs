@@ -327,13 +327,13 @@ namespace LawtechPTSystem.Public
             switch (Properties.Settings.Default.LoadDataRange)
             {
                 case 3:
-                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-3).ToString("yyyy/MM/dd");
+                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-3).ToString("yyyy-MM-dd");
                     break;
                 case 6:
-                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-6).ToString("yyyy/MM/dd");
+                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-6).ToString("yyyy-MM-dd");
                     break;
                 case 12:
-                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-12).ToString("yyyy/MM/dd");
+                    userControlFilterDate1.MaskedStartDate.Text = DateTime.Now.AddMonths(-12).ToString("yyyy-MM-dd");
                     break;
                 default:
 
@@ -350,7 +350,7 @@ namespace LawtechPTSystem.Public
         /// <param name="mak"></param>
         public static void CheckMaskedtextbox(MaskedTextBox mak)
         {
-            if (mak.Text != "    /  /")
+            if (mak.Text != "    -  -")
             {
                 DateTime dtime;
                 bool bSuccess = DateTime.TryParse(mak.Text, out dtime);

@@ -65,13 +65,13 @@ namespace LawtechPTSystem.EditForm
 
             Combo_EClientWorker.SelectedValue = edit.WorkerKey;
 
-            maskedTextBox_ComitDate.Text = edit.NotifyComitDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.NotifyComitDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_OccurDate.Text = edit.OccurDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.OccurDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_OfficerDate.Text = edit.NotifyOfficerDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.NotifyOfficerDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_NotifyDueDate.Text = edit.DueDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.DueDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_NotifyAttorneyDueDate.Text = edit.NotifyAttorneyDueDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.NotifyAttorneyDueDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_NotifyStartDate.Text = edit.NotifyStartDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.NotifyStartDate.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_NotifyFinishDate.Text = edit.FinishDate.ToString("yyyy/MM/dd") != "1900/01/01" ? edit.FinishDate.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_ComitDate.Text = edit.NotifyComitDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.NotifyComitDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_OccurDate.Text = edit.OccurDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.OccurDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_OfficerDate.Text = edit.NotifyOfficerDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.NotifyOfficerDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_NotifyDueDate.Text = edit.DueDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.DueDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_NotifyAttorneyDueDate.Text = edit.NotifyAttorneyDueDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.NotifyAttorneyDueDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_NotifyStartDate.Text = edit.NotifyStartDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.NotifyStartDate.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_NotifyFinishDate.Text = edit.FinishDate.ToString("yyyy-MM-dd") != "1900/01/01" ? edit.FinishDate.ToString("yyyy-MM-dd") : "";
             txt_NotifyResult.Text = edit.NotifyResult ;
             txt_NotifyRemark.Text = edit.NotifyRemark;
             txt_NotifyRespond.Text = edit.NotifyRespond;
@@ -365,7 +365,7 @@ namespace LawtechPTSystem.EditForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
     }

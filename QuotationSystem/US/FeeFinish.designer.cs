@@ -206,7 +206,7 @@
             this.maskedTextBox_ReceiptDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ReceiptDate.Location = new System.Drawing.Point(96, 404);
             this.maskedTextBox_ReceiptDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ReceiptDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReceiptDate.Mask = "0000-00-00";
             this.maskedTextBox_ReceiptDate.Name = "maskedTextBox_ReceiptDate";
             this.maskedTextBox_ReceiptDate.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_ReceiptDate.TabIndex = 2;
@@ -241,7 +241,7 @@
             this.maskedTextBox_PayDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PayDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_PayDate.Location = new System.Drawing.Point(500, 528);
-            this.maskedTextBox_PayDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDate.Name = "maskedTextBox_PayDate";
             this.maskedTextBox_PayDate.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_PayDate.TabIndex = 3;
@@ -442,7 +442,7 @@
             this.maskedTextBox_CollectionPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CollectionPeriod.Location = new System.Drawing.Point(286, 404);
             this.maskedTextBox_CollectionPeriod.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CollectionPeriod.Mask = "0000/00/00";
+            this.maskedTextBox_CollectionPeriod.Mask = "0000-00-00";
             this.maskedTextBox_CollectionPeriod.Name = "maskedTextBox_CollectionPeriod";
             this.maskedTextBox_CollectionPeriod.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_CollectionPeriod.TabIndex = 1094;
@@ -1318,7 +1318,7 @@
             this.maskedTextBox_aBillDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_aBillDate.Location = new System.Drawing.Point(96, 435);
             this.maskedTextBox_aBillDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_aBillDate.Mask = "0000/00/00";
+            this.maskedTextBox_aBillDate.Mask = "0000-00-00";
             this.maskedTextBox_aBillDate.Name = "maskedTextBox_aBillDate";
             this.maskedTextBox_aBillDate.Size = new System.Drawing.Size(110, 29);
             this.maskedTextBox_aBillDate.TabIndex = 1166;

@@ -108,22 +108,22 @@ namespace LawtechPTSystem.US
 
                     if (fee.ReceiptDate.HasValue)
                     {
-                        maskedTextBox_ReceiptDate.Text = fee.ReceiptDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReceiptDate.Text = fee.ReceiptDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (fee.PayDate.HasValue)
                     {
-                        maskedTextBox_PayDate.Text = fee.PayDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDate.Text = fee.PayDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (fee.CollectionPeriod.HasValue)
                     {
-                        maskedTextBox_CollectionPeriod.Text = fee.CollectionPeriod.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_CollectionPeriod.Text = fee.CollectionPeriod.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (fee.aBillDate.HasValue)
                     {
-                        maskedTextBox_aBillDate.Text = fee.aBillDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_aBillDate.Text = fee.aBillDate.Value.ToString("yyyy-MM-dd");
                     }
 
 
@@ -157,22 +157,22 @@ namespace LawtechPTSystem.US
 
                     if (Tmfee.ReceiptDate.HasValue)
                     {
-                        maskedTextBox_ReceiptDate.Text = Tmfee.ReceiptDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_ReceiptDate.Text = Tmfee.ReceiptDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (Tmfee.PayDate.HasValue)
                     {
-                        maskedTextBox_PayDate.Text = Tmfee.PayDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_PayDate.Text = Tmfee.PayDate.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (Tmfee.CollectionPeriod.HasValue)
                     {
-                        maskedTextBox_CollectionPeriod.Text = Tmfee.CollectionPeriod.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_CollectionPeriod.Text = Tmfee.CollectionPeriod.Value.ToString("yyyy-MM-dd");
                     }
 
                     if (Tmfee.aBillDate.HasValue)
                     {
-                        maskedTextBox_aBillDate.Text = Tmfee.aBillDate.Value.ToString("yyyy/MM/dd");
+                        maskedTextBox_aBillDate.Text = Tmfee.aBillDate.Value.ToString("yyyy-MM-dd");
                     }
 
 
@@ -657,7 +657,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 
@@ -703,7 +703,7 @@ namespace LawtechPTSystem.US
             if (checkBox_Pay.Checked)
             {
                 maskedTextBox_PayDate.Enabled = true;
-                maskedTextBox_PayDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                maskedTextBox_PayDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             else
             {

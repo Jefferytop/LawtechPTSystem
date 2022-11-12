@@ -14,7 +14,7 @@ namespace LawtechPTSystem.SubFrom
         BindingSource bSource_Control;
 
         UserPermissionForm myPermission;
-        private const string ProgramSymbol = "AccountingFeeList";
+        private const string ProgramSymbol = "AccountingFeeMF";
         private const string SourceTableName = "V_TrademarkEventList";
 
         #region =====property=====

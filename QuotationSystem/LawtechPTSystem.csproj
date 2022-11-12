@@ -47,12 +47,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://yipo-ev.bfbip.net/</UpdateUrl>
+    <UpdateUrl>http://fz.bfbip.net/</UpdateUrl>
     <ProductName>智財雲專利商標事務所管理系統</ProductName>
     <PublisherName>柏豐商務智權股份有限公司</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>263</ApplicationRevision>
+    <ApplicationRevision>264</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

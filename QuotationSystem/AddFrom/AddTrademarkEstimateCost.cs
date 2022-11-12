@@ -194,7 +194,7 @@ namespace LawtechPTSystem.AddFrom
            
             this.moneyTTableAdapter.Fill(this.dataSet_Drop.MoneyT);
 
-            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_CreateDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             //numericUpDown_EstimateProfit.Value = 20;
         }

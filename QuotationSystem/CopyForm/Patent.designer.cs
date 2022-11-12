@@ -282,7 +282,7 @@
             this.maskedTextBox_CloseDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(70, 21);
             this.maskedTextBox_CloseDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_CloseDate.Mask = "0000/00/00";
+            this.maskedTextBox_CloseDate.Mask = "0000-00-00";
             this.maskedTextBox_CloseDate.Name = "maskedTextBox_CloseDate";
             this.maskedTextBox_CloseDate.Size = new System.Drawing.Size(108, 25);
             this.maskedTextBox_CloseDate.TabIndex = 0;
@@ -481,7 +481,7 @@
             this.mask_IntroductionDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mask_IntroductionDate.Location = new System.Drawing.Point(76, 41);
             this.mask_IntroductionDate.Margin = new System.Windows.Forms.Padding(1);
-            this.mask_IntroductionDate.Mask = "0000/00/00";
+            this.mask_IntroductionDate.Mask = "0000-00-00";
             this.mask_IntroductionDate.Name = "mask_IntroductionDate";
             this.mask_IntroductionDate.Size = new System.Drawing.Size(136, 25);
             this.mask_IntroductionDate.TabIndex = 1;
@@ -1270,7 +1270,7 @@
             this.maskedTextBox_AllowDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_AllowDate.Location = new System.Drawing.Point(328, 288);
             this.maskedTextBox_AllowDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_AllowDate.Mask = "0000/00/00";
+            this.maskedTextBox_AllowDate.Mask = "0000-00-00";
             this.maskedTextBox_AllowDate.Name = "maskedTextBox_AllowDate";
             this.maskedTextBox_AllowDate.Size = new System.Drawing.Size(131, 25);
             this.maskedTextBox_AllowDate.TabIndex = 23;
@@ -1390,7 +1390,7 @@
             this.maskedTextBox_EarlyPriorityDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_EarlyPriorityDate.Location = new System.Drawing.Point(109, 209);
             this.maskedTextBox_EarlyPriorityDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_EarlyPriorityDate.Mask = "0000/00/00";
+            this.maskedTextBox_EarlyPriorityDate.Mask = "0000-00-00";
             this.maskedTextBox_EarlyPriorityDate.Name = "maskedTextBox_EarlyPriorityDate";
             this.maskedTextBox_EarlyPriorityDate.Size = new System.Drawing.Size(115, 25);
             this.maskedTextBox_EarlyPriorityDate.TabIndex = 8;
@@ -1406,7 +1406,7 @@
             this.maskedTextBox_EarlyMotherDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_EarlyMotherDate.Location = new System.Drawing.Point(109, 235);
             this.maskedTextBox_EarlyMotherDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_EarlyMotherDate.Mask = "0000/00/00";
+            this.maskedTextBox_EarlyMotherDate.Mask = "0000-00-00";
             this.maskedTextBox_EarlyMotherDate.Name = "maskedTextBox_EarlyMotherDate";
             this.maskedTextBox_EarlyMotherDate.Size = new System.Drawing.Size(115, 25);
             this.maskedTextBox_EarlyMotherDate.TabIndex = 9;
@@ -1422,7 +1422,7 @@
             this.maskedTextBox_RenewTo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_RenewTo.Location = new System.Drawing.Point(328, 389);
             this.maskedTextBox_RenewTo.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_RenewTo.Mask = "0000/00/00";
+            this.maskedTextBox_RenewTo.Mask = "0000-00-00";
             this.maskedTextBox_RenewTo.Name = "maskedTextBox_RenewTo";
             this.maskedTextBox_RenewTo.Size = new System.Drawing.Size(132, 25);
             this.maskedTextBox_RenewTo.TabIndex = 27;
@@ -1438,7 +1438,7 @@
             this.maskedTextBox_ApplicationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(109, 261);
             this.maskedTextBox_ApplicationDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ApplicationDate.Mask = "0000/00/00";
+            this.maskedTextBox_ApplicationDate.Mask = "0000-00-00";
             this.maskedTextBox_ApplicationDate.Name = "maskedTextBox_ApplicationDate";
             this.maskedTextBox_ApplicationDate.Size = new System.Drawing.Size(115, 25);
             this.maskedTextBox_ApplicationDate.TabIndex = 10;
@@ -1454,7 +1454,7 @@
             this.maskedTextBox_DueDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_DueDate.Location = new System.Drawing.Point(328, 339);
             this.maskedTextBox_DueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_DueDate.Mask = "0000/00/00";
+            this.maskedTextBox_DueDate.Mask = "0000-00-00";
             this.maskedTextBox_DueDate.Name = "maskedTextBox_DueDate";
             this.maskedTextBox_DueDate.Size = new System.Drawing.Size(131, 25);
             this.maskedTextBox_DueDate.TabIndex = 25;
@@ -1470,7 +1470,7 @@
             this.maskedTextBox_Pubdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Pubdate.Location = new System.Drawing.Point(109, 313);
             this.maskedTextBox_Pubdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_Pubdate.Mask = "0000/00/00";
+            this.maskedTextBox_Pubdate.Mask = "0000-00-00";
             this.maskedTextBox_Pubdate.Name = "maskedTextBox_Pubdate";
             this.maskedTextBox_Pubdate.Size = new System.Drawing.Size(115, 25);
             this.maskedTextBox_Pubdate.TabIndex = 12;
@@ -1486,7 +1486,7 @@
             this.maskedTextBox_Registerdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_Registerdate.Location = new System.Drawing.Point(328, 236);
             this.maskedTextBox_Registerdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_Registerdate.Mask = "0000/00/00";
+            this.maskedTextBox_Registerdate.Mask = "0000-00-00";
             this.maskedTextBox_Registerdate.Name = "maskedTextBox_Registerdate";
             this.maskedTextBox_Registerdate.Size = new System.Drawing.Size(131, 25);
             this.maskedTextBox_Registerdate.TabIndex = 21;
@@ -1502,7 +1502,7 @@
             this.maskedTextBox_AllowPubdate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_AllowPubdate.Location = new System.Drawing.Point(109, 364);
             this.maskedTextBox_AllowPubdate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_AllowPubdate.Mask = "0000/00/00";
+            this.maskedTextBox_AllowPubdate.Mask = "0000-00-00";
             this.maskedTextBox_AllowPubdate.Name = "maskedTextBox_AllowPubdate";
             this.maskedTextBox_AllowPubdate.Size = new System.Drawing.Size(115, 25);
             this.maskedTextBox_AllowPubdate.TabIndex = 14;
@@ -1518,7 +1518,7 @@
             this.maskedTextBox_GetDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_GetDate.Location = new System.Drawing.Point(328, 210);
             this.maskedTextBox_GetDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_GetDate.Mask = "0000/00/00";
+            this.maskedTextBox_GetDate.Mask = "0000-00-00";
             this.maskedTextBox_GetDate.Name = "maskedTextBox_GetDate";
             this.maskedTextBox_GetDate.Size = new System.Drawing.Size(132, 25);
             this.maskedTextBox_GetDate.TabIndex = 20;

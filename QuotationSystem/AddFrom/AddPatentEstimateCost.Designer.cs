@@ -508,7 +508,7 @@
             this.maskedTextBox_CreateDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CreateDate.Location = new System.Drawing.Point(88, 12);
             this.maskedTextBox_CreateDate.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox_CreateDate.Mask = "0000/00/00";
+            this.maskedTextBox_CreateDate.Mask = "0000-00-00";
             this.maskedTextBox_CreateDate.Name = "maskedTextBox_CreateDate";
             this.maskedTextBox_CreateDate.Size = new System.Drawing.Size(110, 25);
             this.maskedTextBox_CreateDate.TabIndex = 1049;

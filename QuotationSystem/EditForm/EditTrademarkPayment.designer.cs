@@ -437,7 +437,7 @@
             this.maskedTextBox_PayDueDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_PayDueDate.Location = new System.Drawing.Point(319, 195);
             this.maskedTextBox_PayDueDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_PayDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDueDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDueDate.Name = "maskedTextBox_PayDueDate";
             this.maskedTextBox_PayDueDate.Size = new System.Drawing.Size(123, 29);
             this.maskedTextBox_PayDueDate.TabIndex = 12;
@@ -476,7 +476,7 @@
             this.maskedTextBox_ReciveDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_ReciveDate.Location = new System.Drawing.Point(105, 195);
             this.maskedTextBox_ReciveDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ReciveDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReciveDate.Mask = "0000-00-00";
             this.maskedTextBox_ReciveDate.Name = "maskedTextBox_ReciveDate";
             this.maskedTextBox_ReciveDate.Size = new System.Drawing.Size(130, 29);
             this.maskedTextBox_ReciveDate.TabIndex = 11;
@@ -551,7 +551,7 @@
             this.maskedTextBox_IReceiptDate.ImeMode = System.Windows.Forms.ImeMode.Close;
             this.maskedTextBox_IReceiptDate.Location = new System.Drawing.Point(525, 195);
             this.maskedTextBox_IReceiptDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_IReceiptDate.Mask = "0000/00/00";
+            this.maskedTextBox_IReceiptDate.Mask = "0000-00-00";
             this.maskedTextBox_IReceiptDate.Name = "maskedTextBox_IReceiptDate";
             this.maskedTextBox_IReceiptDate.Size = new System.Drawing.Size(153, 29);
             this.maskedTextBox_IReceiptDate.TabIndex = 13;

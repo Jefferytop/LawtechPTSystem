@@ -396,7 +396,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1095, 707);
-            this.splitContainer1.SplitterDistance = 285;
+            this.splitContainer1.SplitterDistance = 283;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 5;
             // 
@@ -436,7 +436,7 @@
             this.toolStripButton_Upload,
             this.toolStripSeparator10,
             this.toolStripButton_Orientation});
-            this.bindingNavigator_App.Location = new System.Drawing.Point(0, 258);
+            this.bindingNavigator_App.Location = new System.Drawing.Point(0, 256);
             this.bindingNavigator_App.MoveFirstItem = this.toolStripButton7;
             this.bindingNavigator_App.MoveLastItem = this.toolStripButton10;
             this.bindingNavigator_App.MoveNextItem = this.toolStripButton9;
@@ -636,7 +636,7 @@
             this.GridView_Applicant.ReadOnly = true;
             this.GridView_Applicant.RowHeadersWidth = 25;
             this.GridView_Applicant.RowTemplate.Height = 24;
-            this.GridView_Applicant.Size = new System.Drawing.Size(1087, 133);
+            this.GridView_Applicant.Size = new System.Drawing.Size(1087, 131);
             this.GridView_Applicant.TabIndex = 5;
             this.GridView_Applicant.Tag = "ApplicantList";
             this.GridView_Applicant.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_Applicant_CellClick);
@@ -874,7 +874,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1093, 414);
+            this.tabControl1.Size = new System.Drawing.Size(1093, 416);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -886,7 +886,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage1.Size = new System.Drawing.Size(1085, 378);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "客戶基本資料";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -900,7 +900,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1077, 368);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1077, 370);
             this.flowLayoutPanel2.TabIndex = 331;
             // 
             // panel4
@@ -1248,7 +1248,7 @@
             this.maskedTextBox_StartedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_StartedDate.Location = new System.Drawing.Point(105, 3);
             this.maskedTextBox_StartedDate.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox_StartedDate.Mask = "0000/00/00";
+            this.maskedTextBox_StartedDate.Mask = "0000-00-00";
             this.maskedTextBox_StartedDate.Name = "maskedTextBox_StartedDate";
             this.maskedTextBox_StartedDate.ReadOnly = true;
             this.maskedTextBox_StartedDate.Size = new System.Drawing.Size(115, 29);
@@ -1510,7 +1510,7 @@
             this.tabPage3.Controls.Add(this.flowLayoutPanel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage3.Size = new System.Drawing.Size(1085, 378);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "客戶附加資料";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1523,7 +1523,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1083, 374);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1083, 376);
             this.flowLayoutPanel1.TabIndex = 227;
             // 
             // panel2
@@ -1954,7 +1954,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage2.Size = new System.Drawing.Size(1085, 378);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  連 絡 人   ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1981,7 +1981,7 @@
             this.toolStripButton1_DelLiaisoner,
             this.toolStripSeparator8,
             this.toolStripButton__ExportLiaisoner});
-            this.bindingNavigator_AttLiaisoner.Location = new System.Drawing.Point(3, 346);
+            this.bindingNavigator_AttLiaisoner.Location = new System.Drawing.Point(3, 348);
             this.bindingNavigator_AttLiaisoner.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator_AttLiaisoner.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator_AttLiaisoner.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -2145,7 +2145,7 @@
             this.GridView_AttLiaisoner.Name = "GridView_AttLiaisoner";
             this.GridView_AttLiaisoner.RowHeadersWidth = 25;
             this.GridView_AttLiaisoner.RowTemplate.Height = 24;
-            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1074, 343);
+            this.GridView_AttLiaisoner.Size = new System.Drawing.Size(1074, 345);
             this.GridView_AttLiaisoner.TabIndex = 22;
             this.GridView_AttLiaisoner.Tag = "Applicant_Liaisoner";
             this.GridView_AttLiaisoner.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_AttLiaisoner_CellClick);
@@ -2243,7 +2243,7 @@
             this.tabPage5.Controls.Add(this.bindingNavigator_Inventor);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage5.Size = new System.Drawing.Size(1085, 378);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "  發明人資料  ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2313,7 +2313,7 @@
             this.inventorTDataGridView.ReadOnly = true;
             this.inventorTDataGridView.RowHeadersWidth = 25;
             this.inventorTDataGridView.RowTemplate.Height = 24;
-            this.inventorTDataGridView.Size = new System.Drawing.Size(1077, 314);
+            this.inventorTDataGridView.Size = new System.Drawing.Size(1077, 316);
             this.inventorTDataGridView.TabIndex = 1;
             this.inventorTDataGridView.Tag = "Applicant_Inventor";
             this.inventorTDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventorTDataGridView_CellDoubleClick);
@@ -2408,7 +2408,7 @@
             this.toolStripButton_DelInventor,
             this.toolStripSeparator9,
             this.toolStripButton_inventorExport});
-            this.bindingNavigator_Inventor.Location = new System.Drawing.Point(0, 349);
+            this.bindingNavigator_Inventor.Location = new System.Drawing.Point(0, 351);
             this.bindingNavigator_Inventor.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator_Inventor.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.bindingNavigator_Inventor.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -2542,7 +2542,7 @@
             this.tabPage4.Controls.Add(this.splitContainer2);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage4.Size = new System.Drawing.Size(1085, 378);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "  來往記錄  ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2568,7 +2568,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.label36);
             this.splitContainer2.Panel2.Controls.Add(this.txt_VitalRecord);
             this.splitContainer2.Panel2.Controls.Add(this.label35);
-            this.splitContainer2.Size = new System.Drawing.Size(1083, 374);
+            this.splitContainer2.Size = new System.Drawing.Size(1083, 376);
             this.splitContainer2.SplitterDistance = 547;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -2592,7 +2592,7 @@
             this.toolStripButton_AddRcord,
             this.toolStripButton_EditRecord,
             this.toolStripButton_DelRecord});
-            this.bindingNavigator_customerTracking.Location = new System.Drawing.Point(0, 347);
+            this.bindingNavigator_customerTracking.Location = new System.Drawing.Point(0, 349);
             this.bindingNavigator_customerTracking.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_customerTracking.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_customerTracking.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -2733,7 +2733,7 @@
             this.customerTrackingRecordTDataGridView.ReadOnly = true;
             this.customerTrackingRecordTDataGridView.RowHeadersWidth = 25;
             this.customerTrackingRecordTDataGridView.RowTemplate.Height = 24;
-            this.customerTrackingRecordTDataGridView.Size = new System.Drawing.Size(539, 341);
+            this.customerTrackingRecordTDataGridView.Size = new System.Drawing.Size(539, 343);
             this.customerTrackingRecordTDataGridView.TabIndex = 0;
             this.customerTrackingRecordTDataGridView.Tag = "Applicant_TrackingRecord";
             this.customerTrackingRecordTDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerTrackingRecordTDataGridView_CellDoubleClick);
@@ -2816,7 +2816,7 @@
             this.txt_ComplaintsComments.Name = "txt_ComplaintsComments";
             this.txt_ComplaintsComments.ReadOnly = true;
             this.txt_ComplaintsComments.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_ComplaintsComments.Size = new System.Drawing.Size(517, 133);
+            this.txt_ComplaintsComments.Size = new System.Drawing.Size(517, 135);
             this.txt_ComplaintsComments.TabIndex = 322;
             // 
             // label36
@@ -2865,7 +2865,7 @@
             this.tabPage6.Controls.Add(this.bindingNavigator_patent);
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage6.Size = new System.Drawing.Size(1085, 378);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "專利案件";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -2899,7 +2899,7 @@
             this.dataGridView_Patent.ReadOnly = true;
             this.dataGridView_Patent.RowTemplate.Height = 24;
             this.dataGridView_Patent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Patent.Size = new System.Drawing.Size(1074, 346);
+            this.dataGridView_Patent.Size = new System.Drawing.Size(1074, 348);
             this.dataGridView_Patent.TabIndex = 1;
             this.dataGridView_Patent.Tag = "PatListMF";
             // 
@@ -2943,7 +2943,7 @@
             this.bindingNavigatorMoveNextItem3,
             this.bindingNavigatorMoveLastItem3,
             this.bindingNavigatorSeparator11});
-            this.bindingNavigator_patent.Location = new System.Drawing.Point(0, 349);
+            this.bindingNavigator_patent.Location = new System.Drawing.Point(0, 351);
             this.bindingNavigator_patent.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
             this.bindingNavigator_patent.MoveLastItem = this.bindingNavigatorMoveLastItem3;
             this.bindingNavigator_patent.MoveNextItem = this.bindingNavigatorMoveNextItem3;
@@ -3029,7 +3029,7 @@
             this.tabPage7.Controls.Add(this.bindingNavigator_Trademark);
             this.tabPage7.Location = new System.Drawing.Point(4, 34);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage7.Size = new System.Drawing.Size(1085, 378);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "商標案件";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -3063,7 +3063,7 @@
             this.dataGridView_Trademark.ReadOnly = true;
             this.dataGridView_Trademark.RowTemplate.Height = 24;
             this.dataGridView_Trademark.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Trademark.Size = new System.Drawing.Size(1076, 346);
+            this.dataGridView_Trademark.Size = new System.Drawing.Size(1076, 348);
             this.dataGridView_Trademark.TabIndex = 1;
             this.dataGridView_Trademark.Tag = "TrademarkMF";
             // 
@@ -3107,7 +3107,7 @@
             this.bindingNavigatorMoveNextItem4,
             this.bindingNavigatorMoveLastItem4,
             this.bindingNavigatorSeparator14});
-            this.bindingNavigator_Trademark.Location = new System.Drawing.Point(0, 349);
+            this.bindingNavigator_Trademark.Location = new System.Drawing.Point(0, 351);
             this.bindingNavigator_Trademark.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
             this.bindingNavigator_Trademark.MoveLastItem = this.bindingNavigatorMoveLastItem4;
             this.bindingNavigator_Trademark.MoveNextItem = this.bindingNavigatorMoveNextItem4;
@@ -3194,7 +3194,7 @@
             this.tabPage8.Controls.Add(this.tagTitle1);
             this.tabPage8.Location = new System.Drawing.Point(4, 34);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1085, 376);
+            this.tabPage8.Size = new System.Drawing.Size(1085, 378);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "未完成請款記錄";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -3220,7 +3220,7 @@
             this.dataGridView_Fee.RowHeadersWidth = 30;
             this.dataGridView_Fee.RowTemplate.Height = 24;
             this.dataGridView_Fee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Fee.Size = new System.Drawing.Size(1071, 315);
+            this.dataGridView_Fee.Size = new System.Drawing.Size(1071, 317);
             this.dataGridView_Fee.TabIndex = 1;
             this.dataGridView_Fee.Tag = "Applicant_Fee";
             this.dataGridView_Fee.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.GridView_Applicant_DataError);
@@ -3244,7 +3244,7 @@
             this.bindingNavigatorSeparator17,
             this.toolStripLabel2,
             this.toolStripLabel_NoPaySum});
-            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 349);
+            this.bindingNavigator_Fee.Location = new System.Drawing.Point(0, 351);
             this.bindingNavigator_Fee.MoveFirstItem = this.bindingNavigatorMoveFirstItem5;
             this.bindingNavigator_Fee.MoveLastItem = this.bindingNavigatorMoveLastItem5;
             this.bindingNavigator_Fee.MoveNextItem = this.bindingNavigatorMoveNextItem5;

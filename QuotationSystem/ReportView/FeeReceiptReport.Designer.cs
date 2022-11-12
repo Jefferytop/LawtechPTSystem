@@ -350,7 +350,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_ApplicationDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ApplicationDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_ApplicationDate.Location = new System.Drawing.Point(94, 153);
-            this.maskedTextBox_ApplicationDate.Mask = "0000/00/00";
+            this.maskedTextBox_ApplicationDate.Mask = "0000-00-00";
             this.maskedTextBox_ApplicationDate.Name = "maskedTextBox_ApplicationDate";
             this.maskedTextBox_ApplicationDate.Size = new System.Drawing.Size(268, 25);
             this.maskedTextBox_ApplicationDate.TabIndex = 307;
@@ -524,7 +524,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_RDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_RDate.Location = new System.Drawing.Point(103, 259);
             this.maskedTextBox_RDate.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_RDate.Mask = "0000/00/00";
+            this.maskedTextBox_RDate.Mask = "0000-00-00";
             this.maskedTextBox_RDate.Name = "maskedTextBox_RDate";
             this.maskedTextBox_RDate.Size = new System.Drawing.Size(268, 25);
             this.maskedTextBox_RDate.TabIndex = 306;

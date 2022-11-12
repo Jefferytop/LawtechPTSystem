@@ -867,7 +867,7 @@
             // earlyPriorityColumn
             // 
             this.earlyPriorityColumn.DataPropertyName = "EarlyPriorityDate";
-            dataGridViewCellStyle3.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle3.Format = "yyyy-MM-dd";
             this.earlyPriorityColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.earlyPriorityColumn.HeaderText = "最早優先申請日";
             this.earlyPriorityColumn.Name = "earlyPriorityColumn";
@@ -877,7 +877,7 @@
             // earlyMotherColumn
             // 
             this.earlyMotherColumn.DataPropertyName = "EarlyMotherDate";
-            dataGridViewCellStyle4.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle4.Format = "yyyy-MM-dd";
             this.earlyMotherColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.earlyMotherColumn.HeaderText = "最早母案申請日";
             this.earlyMotherColumn.Name = "earlyMotherColumn";
@@ -887,7 +887,7 @@
             // applicationColumn
             // 
             this.applicationColumn.DataPropertyName = "ApplicationDate";
-            dataGridViewCellStyle5.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle5.Format = "yyyy-MM-dd";
             this.applicationColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.applicationColumn.HeaderText = "實際申請日";
             this.applicationColumn.Name = "applicationColumn";
@@ -904,7 +904,7 @@
             // pubdateDataGridViewTextBoxColumn
             // 
             this.pubdateDataGridViewTextBoxColumn.DataPropertyName = "Pubdate";
-            dataGridViewCellStyle6.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle6.Format = "yyyy-MM-dd";
             this.pubdateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.pubdateDataGridViewTextBoxColumn.HeaderText = "公開日期";
             this.pubdateDataGridViewTextBoxColumn.Name = "pubdateDataGridViewTextBoxColumn";
@@ -920,7 +920,7 @@
             // allowDateDataGridViewTextBoxColumn
             // 
             this.allowDateDataGridViewTextBoxColumn.DataPropertyName = "AllowDate";
-            dataGridViewCellStyle7.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle7.Format = "yyyy-MM-dd";
             this.allowDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.allowDateDataGridViewTextBoxColumn.HeaderText = "核准日期";
             this.allowDateDataGridViewTextBoxColumn.Name = "allowDateDataGridViewTextBoxColumn";
@@ -929,7 +929,7 @@
             // allowPubDateColumn
             // 
             this.allowPubDateColumn.DataPropertyName = "AllowPubDate";
-            dataGridViewCellStyle8.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle8.Format = "yyyy-MM-dd";
             this.allowPubDateColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.allowPubDateColumn.HeaderText = "公告日期";
             this.allowPubDateColumn.Name = "allowPubDateColumn";
@@ -945,7 +945,7 @@
             // getDateDataGridViewTextBoxColumn
             // 
             this.getDateDataGridViewTextBoxColumn.DataPropertyName = "GetDate";
-            dataGridViewCellStyle9.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle9.Format = "yyyy-MM-dd";
             this.getDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.getDateDataGridViewTextBoxColumn.HeaderText = "收到證書日";
             this.getDateDataGridViewTextBoxColumn.Name = "getDateDataGridViewTextBoxColumn";
@@ -961,7 +961,7 @@
             // registerDateDataGridViewTextBoxColumn
             // 
             this.registerDateDataGridViewTextBoxColumn.DataPropertyName = "RegisterDate";
-            dataGridViewCellStyle10.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle10.Format = "yyyy-MM-dd";
             this.registerDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.registerDateDataGridViewTextBoxColumn.HeaderText = "授予專利權日";
             this.registerDateDataGridViewTextBoxColumn.Name = "registerDateDataGridViewTextBoxColumn";
@@ -970,7 +970,7 @@
             // dueDateDataGridViewTextBoxColumn
             // 
             this.dueDateDataGridViewTextBoxColumn.DataPropertyName = "DueDate";
-            dataGridViewCellStyle11.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle11.Format = "yyyy-MM-dd";
             this.dueDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.dueDateDataGridViewTextBoxColumn.HeaderText = "專利權終止日";
             this.dueDateDataGridViewTextBoxColumn.Name = "dueDateDataGridViewTextBoxColumn";
@@ -987,7 +987,7 @@
             // renewToDataGridViewTextBoxColumn
             // 
             this.renewToDataGridViewTextBoxColumn.DataPropertyName = "RenewTo";
-            dataGridViewCellStyle12.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle12.Format = "yyyy-MM-dd";
             dataGridViewCellStyle12.NullValue = null;
             this.renewToDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.renewToDataGridViewTextBoxColumn.HeaderText = "年費有效期限";
@@ -1012,7 +1012,7 @@
             // introductionDateDataGridViewTextBoxColumn
             // 
             this.introductionDateDataGridViewTextBoxColumn.DataPropertyName = "IntroductionDate";
-            dataGridViewCellStyle13.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle13.Format = "yyyy-MM-dd";
             this.introductionDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.introductionDateDataGridViewTextBoxColumn.HeaderText = "引案日期";
             this.introductionDateDataGridViewTextBoxColumn.Name = "introductionDateDataGridViewTextBoxColumn";
@@ -1021,7 +1021,7 @@
             // closeDateDataGridViewTextBoxColumn
             // 
             this.closeDateDataGridViewTextBoxColumn.DataPropertyName = "CloseDate";
-            dataGridViewCellStyle14.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle14.Format = "yyyy-MM-dd";
             this.closeDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle14;
             this.closeDateDataGridViewTextBoxColumn.HeaderText = "結案日期";
             this.closeDateDataGridViewTextBoxColumn.Name = "closeDateDataGridViewTextBoxColumn";

@@ -237,7 +237,7 @@ namespace LawtechPTSystem.SubFrom
 
 
             //int LastYear = DateTime.Now.Year - 1;
-            //maskedTextBox_S.Text = new DateTime(LastYear, 1, 1).ToString("yyyy/MM/dd");
+            //maskedTextBox_S.Text = new DateTime(LastYear, 1, 1).ToString("yyyy-MM-dd");
             SetBindingSource();
 
             TabFileBinding();
@@ -395,43 +395,43 @@ namespace LawtechPTSystem.SubFrom
 
             //引案日期
             mask_IntroductionDate.DataBindings.Clear();
-            mask_IntroductionDate.DataBindings.Add("Text", vPatentListBindingSource, "IntroductionDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            mask_IntroductionDate.DataBindings.Add("Text", vPatentListBindingSource, "IntroductionDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //最早母案申請日
             maskedTextBox_EarlyMotherDate.DataBindings.Clear();
-            maskedTextBox_EarlyMotherDate.DataBindings.Add("Text", vPatentListBindingSource, "EarlyMotherDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_EarlyMotherDate.DataBindings.Add("Text", vPatentListBindingSource, "EarlyMotherDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //實際申請日
             maskedTextBox_ApplicationDate.DataBindings.Clear();
-            maskedTextBox_ApplicationDate.DataBindings.Add("Text", vPatentListBindingSource, "ApplicationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ApplicationDate.DataBindings.Add("Text", vPatentListBindingSource, "ApplicationDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //公開日期
             maskedTextBox_Pubdate.DataBindings.Clear();
-            maskedTextBox_Pubdate.DataBindings.Add("Text", vPatentListBindingSource, "Pubdate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_Pubdate.DataBindings.Add("Text", vPatentListBindingSource, "Pubdate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //核准日期
             maskedTextBox_AllowDate.DataBindings.Clear();
-            maskedTextBox_AllowDate.DataBindings.Add("Text", vPatentListBindingSource, "AllowDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_AllowDate.DataBindings.Add("Text", vPatentListBindingSource, "AllowDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //公告日期
             maskedTextBox_AllowPubdate.DataBindings.Clear();
-            maskedTextBox_AllowPubdate.DataBindings.Add("Text", vPatentListBindingSource, "AllowPubdate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_AllowPubdate.DataBindings.Add("Text", vPatentListBindingSource, "AllowPubdate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收到證書日
             maskedTextBox_GetDate.DataBindings.Clear();
-            maskedTextBox_GetDate.DataBindings.Add("Text", vPatentListBindingSource, "GetDate", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_GetDate.DataBindings.Add("Text", vPatentListBindingSource, "GetDate", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_Registerdate.DataBindings.Clear();
-            maskedTextBox_Registerdate.DataBindings.Add("Text", vPatentListBindingSource, "Registerdate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_Registerdate.DataBindings.Add("Text", vPatentListBindingSource, "Registerdate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_DueDate.DataBindings.Clear();
-            maskedTextBox_DueDate.DataBindings.Add("Text", vPatentListBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_DueDate.DataBindings.Add("Text", vPatentListBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_RenewTo.DataBindings.Clear();
-            maskedTextBox_RenewTo.DataBindings.Add("Text", vPatentListBindingSource, "RenewTo", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_RenewTo.DataBindings.Add("Text", vPatentListBindingSource, "RenewTo", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_CloseDate.DataBindings.Clear();
-            maskedTextBox_CloseDate.DataBindings.Add("Text", vPatentListBindingSource, "CloseDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CloseDate.DataBindings.Add("Text", vPatentListBindingSource, "CloseDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //備註
             txt_CloseCaus.DataBindings.Clear();
@@ -443,7 +443,7 @@ namespace LawtechPTSystem.SubFrom
 
             //最早優先申請日
             maskedTextBox_EarlyPriorityDate.DataBindings.Clear();
-            maskedTextBox_EarlyPriorityDate.DataBindings.Add("Text", vPatentListBindingSource, "EarlyPriorityDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_EarlyPriorityDate.DataBindings.Add("Text", vPatentListBindingSource, "EarlyPriorityDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //優先權申請號
             txt_EarlyPriorityNo.DataBindings.Clear();
@@ -451,7 +451,7 @@ namespace LawtechPTSystem.SubFrom
 
             //優惠期日期
             maskedTextBox_GracePeriod.DataBindings.Clear();
-            maskedTextBox_GracePeriod.DataBindings.Add("Text", vPatentListBindingSource, "GracePeriod", true, DataSourceUpdateMode.OnValidation, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_GracePeriod.DataBindings.Add("Text", vPatentListBindingSource, "GracePeriod", true, DataSourceUpdateMode.OnValidation, "    -  -", "yyyy-MM-dd");
 
             //優惠期公開事由
             txt_GraceRemark.DataBindings.Clear();
@@ -480,28 +480,28 @@ namespace LawtechPTSystem.SubFrom
             txt_WorkerKey.DataBindings.Add("Text", patComitEventTBindingSource, "EmployeeName", true, DataSourceUpdateMode.OnPropertyChanged, "", "");
 
             maskedTextBox_CreateDate.DataBindings.Clear();
-            maskedTextBox_CreateDate.DataBindings.Add("Text", patComitEventTBindingSource, "CreateDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CreateDate.DataBindings.Add("Text", patComitEventTBindingSource, "CreateDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_OccurDate.DataBindings.Clear();
-            maskedTextBox_OccurDate.DataBindings.Add("Text", patComitEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OccurDate.DataBindings.Add("Text", patComitEventTBindingSource, "OccurDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_OfficerDate.DataBindings.Clear();
-            maskedTextBox_OfficerDate.DataBindings.Add("Text", patComitEventTBindingSource, "OfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OfficerDate.DataBindings.Add("Text", patComitEventTBindingSource, "OfficerDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_ComitDueDate.DataBindings.Clear();
-            maskedTextBox_ComitDueDate.DataBindings.Add("Text", patComitEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ComitDueDate.DataBindings.Add("Text", patComitEventTBindingSource, "DueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_OfficeDueDate.DataBindings.Clear();
-            maskedTextBox_OfficeDueDate.DataBindings.Add("Text", patComitEventTBindingSource, "OfficeDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_OfficeDueDate.DataBindings.Add("Text", patComitEventTBindingSource, "OfficeDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_StartDate.DataBindings.Clear();
-            maskedTextBox_StartDate.DataBindings.Add("Text", patComitEventTBindingSource, "StartDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_StartDate.DataBindings.Add("Text", patComitEventTBindingSource, "StartDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_ComitDate.DataBindings.Clear();
-            maskedTextBox_ComitDate.DataBindings.Add("Text", patComitEventTBindingSource, "ComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ComitDate.DataBindings.Add("Text", patComitEventTBindingSource, "ComitDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             maskedTextBox_FinishDate.DataBindings.Clear();
-            maskedTextBox_FinishDate.DataBindings.Add("Text", patComitEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_FinishDate.DataBindings.Add("Text", patComitEventTBindingSource, "FinishDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             txt_eRemark.DataBindings.Clear();
             txt_eRemark.DataBindings.Add("Text", patComitEventTBindingSource, "Remark", true, DataSourceUpdateMode.OnPropertyChanged, "", "");
@@ -622,23 +622,23 @@ namespace LawtechPTSystem.SubFrom
 
             //請款日期
             maskedTextBox_RDate.DataBindings.Clear();
-            maskedTextBox_RDate.DataBindings.Add("Text", patentFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_RDate.DataBindings.Add("Text", patentFeeTBindingSource, "RDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收款期限
             maskedTextBox_CollectionPeriod.DataBindings.Clear();
-            maskedTextBox_CollectionPeriod.DataBindings.Add("Text", patentFeeTBindingSource, "CollectionPeriod", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_CollectionPeriod.DataBindings.Add("Text", patentFeeTBindingSource, "CollectionPeriod", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收款日期
             maskedTextBox_PayDate.DataBindings.Clear();
-            maskedTextBox_PayDate.DataBindings.Add("Text", patentFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PayDate.DataBindings.Add("Text", patentFeeTBindingSource, "PayDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //收據日期
             maskedTextBox_ReceiptDate.DataBindings.Clear();
-            maskedTextBox_ReceiptDate.DataBindings.Add("Text", patentFeeTBindingSource, "ReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ReceiptDate.DataBindings.Add("Text", patentFeeTBindingSource, "ReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //發票日期
             maskedTextBox_aBillDate.DataBindings.Clear();
-            maskedTextBox_aBillDate.DataBindings.Add("Text", patentFeeTBindingSource, "aBillDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_aBillDate.DataBindings.Add("Text", patentFeeTBindingSource, "aBillDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //發票號碼
             txt_aBill.DataBindings.Clear();
@@ -749,19 +749,19 @@ namespace LawtechPTSystem.SubFrom
 
             //收件日期
             maskedTextBox_ReciveDate.DataBindings.Clear();
-            maskedTextBox_ReciveDate.DataBindings.Add("Text", patentPaymentTBindingSource, "ReciveDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_ReciveDate.DataBindings.Add("Text", patentPaymentTBindingSource, "ReciveDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //付款期限
             maskedTextBox_PayDueDate.DataBindings.Clear();
-            maskedTextBox_PayDueDate.DataBindings.Add("Text", patentPaymentTBindingSource, "PayDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PayDueDate.DataBindings.Add("Text", patentPaymentTBindingSource, "PayDueDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //付款日期
             maskedTextBox_PaymentDate.DataBindings.Clear();
-            maskedTextBox_PaymentDate.DataBindings.Add("Text", patentPaymentTBindingSource, "PaymentDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_PaymentDate.DataBindings.Add("Text", patentPaymentTBindingSource, "PaymentDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             //完成日期
             maskedTextBox_IReceiptDate.DataBindings.Clear();
-            maskedTextBox_IReceiptDate.DataBindings.Add("Text", patentPaymentTBindingSource, "IReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    /  /", "yyyy/MM/dd");
+            maskedTextBox_IReceiptDate.DataBindings.Add("Text", patentPaymentTBindingSource, "IReceiptDate", true, DataSourceUpdateMode.OnPropertyChanged, "    -  -", "yyyy-MM-dd");
 
             checkBox_IsBilling.DataBindings.Clear();
             checkBox_IsBilling.DataBindings.Add("Checked", patentPaymentTBindingSource, "IsBilling", true, DataSourceUpdateMode.OnValidation, false);
@@ -1465,7 +1465,7 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                                 log.DelTime = DateTime.Now;
                                 log.DelWorkerKey = Properties.Settings.Default.WorkerKEY;
                                 log.DelWorker = Properties.Settings.Default.WorkerName;
-                                log.DelContent = string.Format("申請案編號:{2}\r\n申請案名稱:{3}\r\n事件內容:{0}\r\n事件發生日:{1}\r\n所內期限:{4}\r\n官方期限:{5}\r\n完成日期:{6}\r\n處理結果:{7}\r\n備註:{8}", PatentComit.EventContent, PatentComit.CreateDate.HasValue ? PatentComit.CreateDate.Value.ToString("yyyy/MM/dd") : "", pat.PatentNo, pat.Title, PatentComit.OfficeDueDate.HasValue ? PatentComit.OfficeDueDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.DueDate.HasValue ? PatentComit.DueDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.FinishDate.HasValue ? PatentComit.FinishDate.Value.ToString("yyyy/MM/dd") : "", PatentComit.Result, PatentComit.Remark);
+                                log.DelContent = string.Format("申請案編號:{2}\r\n申請案名稱:{3}\r\n事件內容:{0}\r\n事件發生日:{1}\r\n所內期限:{4}\r\n官方期限:{5}\r\n完成日期:{6}\r\n處理結果:{7}\r\n備註:{8}", PatentComit.EventContent, PatentComit.CreateDate.HasValue ? PatentComit.CreateDate.Value.ToString("yyyy-MM-dd") : "", pat.PatentNo, pat.Title, PatentComit.OfficeDueDate.HasValue ? PatentComit.OfficeDueDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.DueDate.HasValue ? PatentComit.DueDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.FinishDate.HasValue ? PatentComit.FinishDate.Value.ToString("yyyy-MM-dd") : "", PatentComit.Result, PatentComit.Remark);
                                 log.DelTitle = string.Format("刪除「{0}」資料【事件記錄-{1}】", this.Text, PatentComit.EventContent);
                                 log.Create();
 
@@ -1812,7 +1812,7 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                             log.DelTime = DateTime.Now;
                             log.DelWorkerKey = Properties.Settings.Default.WorkerKEY;
                             log.DelWorker = Properties.Settings.Default.WorkerName;
-                            log.DelContent = string.Format("申請案編號:{5}\r\n申請案名稱:{6}\r\n費用內容:{0}\r\n請款日期:{1}\r\n請款單號:{2}\r\n請款合計:{3}\r\n幣別:{4}", DelFee.FeeSubject, DelFee.RDate.HasValue ? DelFee.RDate.Value.ToString("yyyy/MM/dd") : "", DelFee.PPP, DelFee.Totall.HasValue ? DelFee.Totall.Value.ToString("#,##0.##") : "", DelFee.TMoney, pat.PatentNo, pat.Title);
+                            log.DelContent = string.Format("申請案編號:{5}\r\n申請案名稱:{6}\r\n費用內容:{0}\r\n請款日期:{1}\r\n請款單號:{2}\r\n請款合計:{3}\r\n幣別:{4}", DelFee.FeeSubject, DelFee.RDate.HasValue ? DelFee.RDate.Value.ToString("yyyy-MM-dd") : "", DelFee.PPP, DelFee.Totall.HasValue ? DelFee.Totall.Value.ToString("#,##0.##") : "", DelFee.TMoney, pat.PatentNo, pat.Title);
                             log.DelTitle = string.Format("刪除「{0}」資料【請款記錄-{1}】", this.Text, DelFee.FeeSubject);
                             log.Create();
 
@@ -2078,9 +2078,9 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                                 log.DelWorker = Properties.Settings.Default.WorkerName;
                                 log.DelContent = string.Format("申請案編號:{7}\r\n申請案名稱: {8}\r\n費用內容: {0}\r\n收件日期:{1}\r\n付款期限:{2}\r\n付款日期:{3}\r\n請款單編號:{4}\r\n金額合計:{5}\r\n幣別:{6}",
                                     DelBilling.FeeSubject,
-                                    DelBilling.ReciveDate.HasValue ? DelBilling.ReciveDate.Value.ToString("yyyy/MM/dd") : "",
-                                    DelBilling.PayDueDate.HasValue ? DelBilling.PayDueDate.Value.ToString("yyyy/MM/dd") : "",
-                                    DelBilling.PaymentDate.HasValue ? DelBilling.PaymentDate.Value.ToString("yyyy/MM/dd") : "",
+                                    DelBilling.ReciveDate.HasValue ? DelBilling.ReciveDate.Value.ToString("yyyy-MM-dd") : "",
+                                    DelBilling.PayDueDate.HasValue ? DelBilling.PayDueDate.Value.ToString("yyyy-MM-dd") : "",
+                                    DelBilling.PaymentDate.HasValue ? DelBilling.PaymentDate.Value.ToString("yyyy-MM-dd") : "",
                                     DelBilling.BillingNo ?? "",
                                     DelBilling.Totall.HasValue ? DelBilling.Totall.Value.ToString("#,##0.##") : "",
                                     DelBilling.IMoney,
@@ -2161,7 +2161,7 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
                         payment.IMoney = txt_PayIMoney.Text;
                         payment.InvoiceNo = txt_IReceiptNo.Text;
                         payment.CountryName = GridView_File.CurrentRow.Cells["CountryName"].Value.ToString();
-                        payment.ApplicantDate = DateTime.Now.ToString("yyyy/MM/dd");
+                        payment.ApplicantDate = DateTime.Now.ToString("yyyy-MM-dd");
                         payment.ReciveDate = maskedTextBox_ReciveDate.Text;
                         payment.PayDueDate = maskedTextBox_PayDueDate.Text;
                         payment.Show();
@@ -2329,7 +2329,7 @@ delete PatComitEventT where  PatentID={0};", GridView_File.CurrentRow.Cells["Pat
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

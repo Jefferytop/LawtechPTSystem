@@ -50,6 +50,7 @@
             this.toolStripButton_Export = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewCountrySetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
@@ -193,6 +194,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 22);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -247,14 +249,25 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(134, 22);
             this.toolStripLabel1.Text = "儲存格點擊2下進行編輯";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label1.Location = new System.Drawing.Point(143, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 20);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "(依智財局官方公佈的國別資料為主)";
+            // 
             // CountrySetting
             // 
             this.AcceptButton = this.but_Update;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(236)))), ((int)(((byte)(247)))));
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(958, 656);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGridViewCountrySetting);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.button2);
@@ -292,5 +305,6 @@
         private System.Windows.Forms.BindingSource CountryBindingSource;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -941,7 +941,7 @@
             this.mskRDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mskRDate.Location = new System.Drawing.Point(103, 85);
             this.mskRDate.Margin = new System.Windows.Forms.Padding(1);
-            this.mskRDate.Mask = "0000/00/00";
+            this.mskRDate.Mask = "0000-00-00";
             this.mskRDate.Name = "mskRDate";
             this.mskRDate.Size = new System.Drawing.Size(110, 25);
             this.mskRDate.TabIndex = 1;

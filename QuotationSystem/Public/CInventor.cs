@@ -81,6 +81,23 @@ namespace LawtechPTSystem.Public
                 m_FamilyName = value;
             }
         }
+        
+              private string m_MiddleName;
+        /// <summary>
+        /// 英文中間名
+        /// </summary>
+        [TableColumnSetting("MiddleName", DataLength = 200)]
+        public string MiddleName
+        {
+            get
+            {
+                return m_MiddleName;
+            }
+            set
+            {
+                m_MiddleName = value;
+            }
+        }
 
         private string m_GivenName;
         /// <summary>

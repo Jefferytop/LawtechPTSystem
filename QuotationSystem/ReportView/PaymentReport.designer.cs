@@ -224,7 +224,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_PayDueDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.maskedTextBox_PayDueDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_PayDueDate.Location = new System.Drawing.Point(89, 119);
-            this.maskedTextBox_PayDueDate.Mask = "0000/00/00";
+            this.maskedTextBox_PayDueDate.Mask = "0000-00-00";
             this.maskedTextBox_PayDueDate.Name = "maskedTextBox_PayDueDate";
             this.maskedTextBox_PayDueDate.Size = new System.Drawing.Size(100, 25);
             this.maskedTextBox_PayDueDate.TabIndex = 342;
@@ -235,7 +235,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_ReciveDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.maskedTextBox_ReciveDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ReciveDate.Location = new System.Drawing.Point(89, 91);
-            this.maskedTextBox_ReciveDate.Mask = "0000/00/00";
+            this.maskedTextBox_ReciveDate.Mask = "0000-00-00";
             this.maskedTextBox_ReciveDate.Name = "maskedTextBox_ReciveDate";
             this.maskedTextBox_ReciveDate.Size = new System.Drawing.Size(100, 25);
             this.maskedTextBox_ReciveDate.TabIndex = 340;
@@ -341,7 +341,7 @@ namespace LawtechPTSystem.ReportView
             this.maskedTextBox_ApplicantDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F);
             this.maskedTextBox_ApplicantDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_ApplicantDate.Location = new System.Drawing.Point(89, 63);
-            this.maskedTextBox_ApplicantDate.Mask = "0000/00/00";
+            this.maskedTextBox_ApplicantDate.Mask = "0000-00-00";
             this.maskedTextBox_ApplicantDate.Name = "maskedTextBox_ApplicantDate";
             this.maskedTextBox_ApplicantDate.Size = new System.Drawing.Size(100, 25);
             this.maskedTextBox_ApplicantDate.TabIndex = 324;

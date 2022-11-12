@@ -134,7 +134,7 @@ namespace LawtechPTSystem.CopyForm
             //複代
             comboBox_Attorney.SelectedValue = Edit.Attorney;
 
-            mskRDate.Text = Edit.RDate.HasValue? Edit.RDate.Value.ToString("yyyy/MM/dd") : "";
+            mskRDate.Text = Edit.RDate.HasValue? Edit.RDate.Value.ToString("yyyy-MM-dd") : "";
 
 
             cboFClientTransactor.SelectedValue =Properties.Settings.Default.WorkerKEY;
@@ -375,7 +375,7 @@ namespace LawtechPTSystem.CopyForm
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

@@ -115,7 +115,7 @@ namespace LawtechPTSystem.EditForm
             {
                 cb_WorkerKey.SelectedValue = CCTrademarkManagement.WorkerKey;
             }
-            maskedTextBox_EntrustDate.Text = CCTrademarkManagement.EntrustDate.HasValue? CCTrademarkManagement.EntrustDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_EntrustDate.Text = CCTrademarkManagement.EntrustDate.HasValue? CCTrademarkManagement.EntrustDate.Value.ToString("yyyy-MM-dd") : "";
 
             if (CCTrademarkManagement.OutsourcingAttorney.HasValue)
             {
@@ -128,22 +128,22 @@ namespace LawtechPTSystem.EditForm
             }
             txt_OutsourcingTrademarkNo.Text = CCTrademarkManagement.OutsourcingTrademarkNo;
 
-            maskedTextBox_ApplicationDate.Text = CCTrademarkManagement.ApplicationDate.HasValue ? CCTrademarkManagement.ApplicationDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_ApplicationDate.Text = CCTrademarkManagement.ApplicationDate.HasValue ? CCTrademarkManagement.ApplicationDate.Value.ToString("yyyy-MM-dd") : "";
             txt_ApplicationNo.Text = CCTrademarkManagement.ApplicationNo;
 
-            maskedTextBox_NoticeDate1.Text = CCTrademarkManagement.NoticeDate1.HasValue ? CCTrademarkManagement.NoticeDate1.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_NoticeDate1.Text = CCTrademarkManagement.NoticeDate1.HasValue ? CCTrademarkManagement.NoticeDate1.Value.ToString("yyyy-MM-dd") : "";
             txt_NoticeNo1.Text = CCTrademarkManagement.NoticeNo;
 
-            maskedTextBox_NoticeDate2.Text = CCTrademarkManagement.NoticeDate.HasValue ? CCTrademarkManagement.NoticeDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_NoticeDate2.Text = CCTrademarkManagement.NoticeDate.HasValue ? CCTrademarkManagement.NoticeDate.Value.ToString("yyyy-MM-dd") : "";
             txt_NoticeNo2.Text = CCTrademarkManagement.NoticeNo;
 
-            maskedTextBox_RegistrationDate.Text = CCTrademarkManagement.RegistrationDate.HasValue ? CCTrademarkManagement.RegistrationDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_RegistrationDate.Text = CCTrademarkManagement.RegistrationDate.HasValue ? CCTrademarkManagement.RegistrationDate.Value.ToString("yyyy-MM-dd") : "";
             txt_RegistrationNo.Text = CCTrademarkManagement.RegistrationNo;
-            maskedTextBox_LawDate.Text = CCTrademarkManagement.LawDate.HasValue ? CCTrademarkManagement.LawDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_LawDate.Text = CCTrademarkManagement.LawDate.HasValue ? CCTrademarkManagement.LawDate.Value.ToString("yyyy-MM-dd") : "";
             txt_RegisterProductName.Text = CCTrademarkManagement.RegisterProductName;
             txt_RegisterProduct.Text = CCTrademarkManagement.RegisterProduct;
-            maskedTextBox_ExtendedDate.Text = CCTrademarkManagement.ExtendedDate.HasValue ? CCTrademarkManagement.ExtendedDate.Value.ToString("yyyy/MM/dd") : "";
-            maskedTextBox_CloseDate.Text = CCTrademarkManagement.CloseDate.HasValue ? CCTrademarkManagement.CloseDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_ExtendedDate.Text = CCTrademarkManagement.ExtendedDate.HasValue ? CCTrademarkManagement.ExtendedDate.Value.ToString("yyyy-MM-dd") : "";
+            maskedTextBox_CloseDate.Text = CCTrademarkManagement.CloseDate.HasValue ? CCTrademarkManagement.CloseDate.Value.ToString("yyyy-MM-dd") : "";
             txt_Remarks.Text = CCTrademarkManagement.Remarks;
             txt_PicPath.Text = CCTrademarkManagement.PicPath;
             txt_TrademarkOvertureName.Text = CCTrademarkManagement.TrademarkOvertureName;
@@ -216,7 +216,7 @@ namespace LawtechPTSystem.EditForm
                 }
             }
 
-            maskedTextBox_OutsourcingDate.Text = CCTrademarkManagement.OutsourcingDate.HasValue ? CCTrademarkManagement.OutsourcingDate.Value.ToString("yyyy/MM/dd") : "";
+            maskedTextBox_OutsourcingDate.Text = CCTrademarkManagement.OutsourcingDate.HasValue ? CCTrademarkManagement.OutsourcingDate.Value.ToString("yyyy-MM-dd") : "";
 
             Public.DLL dll = new Public.DLL();
             pictureBox1.ImageLocation = dll.TrademarkFolderRoot + "\\" + txt_PicPath.Text;
@@ -738,7 +738,7 @@ WHERE          (ApplicantKey in ({0}) ) and Quit<>1 ", ApplicantKey);
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
         #endregion

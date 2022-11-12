@@ -769,7 +769,7 @@
             this.maskedTextBox_StartedDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_StartedDate.Location = new System.Drawing.Point(105, 3);
             this.maskedTextBox_StartedDate.Margin = new System.Windows.Forms.Padding(2);
-            this.maskedTextBox_StartedDate.Mask = "0000/00/00";
+            this.maskedTextBox_StartedDate.Mask = "0000-00-00";
             this.maskedTextBox_StartedDate.Name = "maskedTextBox_StartedDate";
             this.maskedTextBox_StartedDate.ReadOnly = true;
             this.maskedTextBox_StartedDate.Size = new System.Drawing.Size(115, 29);

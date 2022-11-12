@@ -60,12 +60,12 @@ namespace LawtechPTSystem.AddFrom
 
                 case "上傳時間"://上傳時間
                     string sTimeSpan = string.Empty;
-                    if (maskedStartDate.Text!="    /  /")
+                    if (maskedStartDate.Text!="    -  -")
                     {
                         sTimeSpan += "BuildDate >= '" + maskedStartDate.Text + "'";
                     }
 
-                    if (maskedEndDate.Text!="    /  /")
+                    if (maskedEndDate.Text!="    -  -")
                     {
                         if (sTimeSpan.Length > 0)
                             sTimeSpan += " And BuildDate <= '" + maskedEndDate.Text + "'";

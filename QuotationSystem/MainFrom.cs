@@ -2850,7 +2850,7 @@ namespace LawtechPTSystem
 
                         Comit.FinishDate = null;
                         Comit.LastModifyWorker = Properties.Settings.Default.WorkerName;
-                        Comit.Result = Comit.LastModifyWorker + " " + DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                        Comit.Result = Comit.LastModifyWorker + " " + DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                         Comit.Update();
                         dataGridView_Patent.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
                         dt_PatentComitEvent.AcceptChanges();
@@ -3003,7 +3003,7 @@ namespace LawtechPTSystem
 
                         Comit.FinishDate = null;
                         Comit.LastModifyWorker = Properties.Settings.Default.WorkerName;
-                        Comit.Result = Comit.LastModifyWorker + " " + DateTime.Now.ToString("yyyy/MM/dd") + " 變更為未完成事件";
+                        Comit.Result = Comit.LastModifyWorker + " " + DateTime.Now.ToString("yyyy-MM-dd") + " 變更為未完成事件";
                         Comit.Update();
                         dataGridView_Trademark.CurrentRow.Cells["FinishDate"].Value = System.DBNull.Value;
                         dt_TrademarkControlEvent.AcceptChanges();
@@ -3014,12 +3014,12 @@ namespace LawtechPTSystem
                     if (dataGridView_Trademark.CurrentRow != null)
                     {
                         US.NotificationLetter letter = new LawtechPTSystem.US.NotificationLetter();
-                        letter.ApplicantKeys = dataGridView_Trademark.CurrentRow.Cells["ApplicantKeys"].Value.ToString();
+                        letter.ApplicantKeys = dataGridView_Trademark.CurrentRow.Cells["MainTmApplicantKeys"].Value.ToString();
                         letter.CaseKey = dataGridView_Trademark.CurrentRow.Cells["TMNotifyEventID"].Value != null ? (int)dataGridView_Trademark.CurrentRow.Cells["TMNotifyEventID"].Value : -1;
 
                         letter.EmailSampleType = "TrademarkEvent";
-                        letter.DelegateType = dataGridView_Trademark.CurrentRow.Cells["DelegateType"].Value != null ? (int)dataGridView_Trademark.CurrentRow.Cells["DelegateType"].Value : -1;
-                        letter.Attorney = dataGridView_Trademark.CurrentRow.Cells["AttorneyKey"].Value != DBNull.Value ? (int)dataGridView_Trademark.CurrentRow.Cells["AttorneyKey"].Value : -1;
+                        letter.DelegateType = dataGridView_Trademark.CurrentRow.Cells["MainTmDelegateType"].Value != null ? (int)dataGridView_Trademark.CurrentRow.Cells["MainTmDelegateType"].Value : -1;
+                        letter.Attorney = dataGridView_Trademark.CurrentRow.Cells["MainTmAttorneyKey"].Value != DBNull.Value ? (int)dataGridView_Trademark.CurrentRow.Cells["MainTmAttorneyKey"].Value : -1;
                         letter.CaseNo = dataGridView_Trademark.CurrentRow.Cells["TrademarkID"].Value.ToString();
                         letter.Show();
                     }

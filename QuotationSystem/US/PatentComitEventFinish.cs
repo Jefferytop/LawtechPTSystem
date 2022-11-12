@@ -91,9 +91,9 @@ namespace LawtechPTSystem.US
 
             txt_EventContent.Text =comitEvent.EventContent;
 
-            maskedTextBox_ComitDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_ComitDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
-            maskedTextBox_FinishDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            maskedTextBox_FinishDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
             txt_Result.Text = comitEvent.Result;
 
@@ -155,7 +155,7 @@ namespace LawtechPTSystem.US
             bool IsSuccess = DateTime.TryParse(mtb.Text, out dt);
             if (!IsSuccess)
             {
-                mtb.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                mtb.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
         }
 

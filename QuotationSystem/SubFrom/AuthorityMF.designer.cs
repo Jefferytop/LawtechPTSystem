@@ -283,7 +283,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(974, 161);
+            this.dataGridView1.Size = new System.Drawing.Size(974, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Tag = "AuthorityMF";
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
@@ -357,7 +357,7 @@
             // 
             this.Birthday.DataPropertyName = "Birthday";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle5.Format = "yyyy-MM-dd";
             this.Birthday.DefaultCellStyle = dataGridViewCellStyle5;
             this.Birthday.HeaderText = "生日";
             this.Birthday.Name = "Birthday";
@@ -385,7 +385,7 @@
             // 
             this.ReachDay.DataPropertyName = "ReachDay";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle6.Format = "yyyy-MM-dd";
             this.ReachDay.DefaultCellStyle = dataGridViewCellStyle6;
             this.ReachDay.HeaderText = "到職日";
             this.ReachDay.Name = "ReachDay";
@@ -402,7 +402,7 @@
             // 
             this.DepartDay.DataPropertyName = "DepartDay";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle7.Format = "yyyy-MM-dd";
             this.DepartDay.DefaultCellStyle = dataGridViewCellStyle7;
             this.DepartDay.HeaderText = "離職日";
             this.DepartDay.Name = "DepartDay";
@@ -455,7 +455,7 @@
             this.toolStripMenuItem_Export,
             this.toolStripMenuItem_Orientation});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 142);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 120);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // AddToolStripMenuItem
@@ -549,7 +549,7 @@
             this.toolStripButton1,
             this.toolStripSeparator3,
             this.toolStripLabel1});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 256);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 245);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -733,7 +733,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 25;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(632, 342);
+            this.dataGridView2.Size = new System.Drawing.Size(632, 292);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
@@ -899,7 +899,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(2, 2);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(987, 445);
+            this.tabControl1.Size = new System.Drawing.Size(987, 395);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage4
@@ -909,7 +909,7 @@
             this.tabPage4.Controls.Add(this.splitContainer2);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(979, 407);
+            this.tabPage4.Size = new System.Drawing.Size(979, 357);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "  權限設定  ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -931,7 +931,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.txt_Description);
             this.splitContainer2.Panel2.Controls.Add(this.label15);
-            this.splitContainer2.Size = new System.Drawing.Size(977, 405);
+            this.splitContainer2.Size = new System.Drawing.Size(977, 355);
             this.splitContainer2.SplitterDistance = 638;
             this.splitContainer2.TabIndex = 8;
             // 
@@ -951,7 +951,7 @@
             this.bindingNavigatorMoveNextItem1,
             this.bindingNavigatorMoveLastItem1,
             this.bindingNavigatorSeparator5});
-            this.bindingNavigator_AuthProgram.Location = new System.Drawing.Point(0, 380);
+            this.bindingNavigator_AuthProgram.Location = new System.Drawing.Point(0, 330);
             this.bindingNavigator_AuthProgram.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator_AuthProgram.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.bindingNavigator_AuthProgram.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -1051,7 +1051,7 @@
             this.txt_Description.Location = new System.Drawing.Point(3, 33);
             this.txt_Description.Multiline = true;
             this.txt_Description.Name = "txt_Description";
-            this.txt_Description.Size = new System.Drawing.Size(329, 369);
+            this.txt_Description.Size = new System.Drawing.Size(329, 319);
             this.txt_Description.TabIndex = 6;
             // 
             // label15
@@ -1074,7 +1074,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(979, 403);
+            this.tabPage1.Size = new System.Drawing.Size(979, 357);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " 員工資料  ";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1086,7 +1086,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(971, 395);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(971, 349);
             this.flowLayoutPanel1.TabIndex = 39;
             // 
             // panel2
@@ -1424,7 +1424,7 @@
             this.maskedTextBox_Birthday.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedTextBox_Birthday.Location = new System.Drawing.Point(82, 106);
             this.maskedTextBox_Birthday.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_Birthday.Mask = "0000/00/00";
+            this.maskedTextBox_Birthday.Mask = "0000-00-00";
             this.maskedTextBox_Birthday.Name = "maskedTextBox_Birthday";
             this.maskedTextBox_Birthday.Size = new System.Drawing.Size(155, 29);
             this.maskedTextBox_Birthday.TabIndex = 10;
@@ -1457,7 +1457,7 @@
             this.maskedTextBox_ReachDay.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedTextBox_ReachDay.Location = new System.Drawing.Point(82, 138);
             this.maskedTextBox_ReachDay.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_ReachDay.Mask = "0000/00/00";
+            this.maskedTextBox_ReachDay.Mask = "0000-00-00";
             this.maskedTextBox_ReachDay.Name = "maskedTextBox_ReachDay";
             this.maskedTextBox_ReachDay.Size = new System.Drawing.Size(155, 29);
             this.maskedTextBox_ReachDay.TabIndex = 11;
@@ -1500,7 +1500,7 @@
             this.maskedTextBox_DepartDay.ForeColor = System.Drawing.Color.RoyalBlue;
             this.maskedTextBox_DepartDay.Location = new System.Drawing.Point(82, 234);
             this.maskedTextBox_DepartDay.Margin = new System.Windows.Forms.Padding(1);
-            this.maskedTextBox_DepartDay.Mask = "0000/00/00";
+            this.maskedTextBox_DepartDay.Mask = "0000-00-00";
             this.maskedTextBox_DepartDay.Name = "maskedTextBox_DepartDay";
             this.maskedTextBox_DepartDay.Size = new System.Drawing.Size(155, 29);
             this.maskedTextBox_DepartDay.TabIndex = 12;
@@ -1537,7 +1537,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(979, 403);
+            this.tabPage2.Size = new System.Drawing.Size(979, 357);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "學歷/經驗/專長領域   ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1560,7 +1560,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(973, 397);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(973, 351);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // label8
@@ -1568,7 +1568,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label8.Location = new System.Drawing.Point(41, 30);
+            this.label8.Location = new System.Drawing.Point(41, 26);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 18);
             this.label8.TabIndex = 3;
@@ -1580,11 +1580,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Specialty.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.txt_Specialty.Location = new System.Drawing.Point(83, 240);
+            this.txt_Specialty.Location = new System.Drawing.Point(83, 213);
             this.txt_Specialty.Multiline = true;
             this.txt_Specialty.Name = "txt_Specialty";
             this.txt_Specialty.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Specialty.Size = new System.Drawing.Size(887, 154);
+            this.txt_Specialty.Size = new System.Drawing.Size(887, 135);
             this.txt_Specialty.TabIndex = 8;
             // 
             // label9
@@ -1592,7 +1592,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label9.Location = new System.Drawing.Point(41, 149);
+            this.label9.Location = new System.Drawing.Point(41, 131);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 18);
             this.label9.TabIndex = 5;
@@ -1604,11 +1604,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Experience.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.txt_Experience.Location = new System.Drawing.Point(83, 82);
+            this.txt_Experience.Location = new System.Drawing.Point(83, 73);
             this.txt_Experience.Multiline = true;
             this.txt_Experience.Name = "txt_Experience";
             this.txt_Experience.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Experience.Size = new System.Drawing.Size(887, 152);
+            this.txt_Experience.Size = new System.Drawing.Size(887, 134);
             this.txt_Experience.TabIndex = 6;
             // 
             // label10
@@ -1616,7 +1616,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.label10.Location = new System.Drawing.Point(37, 299);
+            this.label10.Location = new System.Drawing.Point(37, 262);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 36);
             this.label10.TabIndex = 7;
@@ -1633,7 +1633,7 @@
             this.txt_Background.Multiline = true;
             this.txt_Background.Name = "txt_Background";
             this.txt_Background.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_Background.Size = new System.Drawing.Size(887, 73);
+            this.txt_Background.Size = new System.Drawing.Size(887, 64);
             this.txt_Background.TabIndex = 4;
             // 
             // tabPage3
@@ -1643,7 +1643,7 @@
             this.tabPage3.Controls.Add(this.txt_WorkScope);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(979, 403);
+            this.tabPage3.Size = new System.Drawing.Size(979, 357);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "  工作職掌  ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1658,7 +1658,7 @@
             this.txt_WorkScope.Multiline = true;
             this.txt_WorkScope.Name = "txt_WorkScope";
             this.txt_WorkScope.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_WorkScope.Size = new System.Drawing.Size(957, 427);
+            this.txt_WorkScope.Size = new System.Drawing.Size(957, 381);
             this.txt_WorkScope.TabIndex = 0;
             // 
             // btnClose
@@ -1705,8 +1705,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(989, 738);
-            this.splitContainer1.SplitterDistance = 283;
+            this.splitContainer1.Size = new System.Drawing.Size(989, 677);
+            this.splitContainer1.SplitterDistance = 272;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -1856,7 +1856,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(236)))), ((int)(((byte)(247)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(989, 738);
+            this.ClientSize = new System.Drawing.Size(989, 677);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -131,7 +131,7 @@
             this.maskedTextBox_CloseDate.ForeColor = System.Drawing.Color.Green;
             this.maskedTextBox_CloseDate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.maskedTextBox_CloseDate.Location = new System.Drawing.Point(114, 78);
-            this.maskedTextBox_CloseDate.Mask = "0000/00/00";
+            this.maskedTextBox_CloseDate.Mask = "0000-00-00";
             this.maskedTextBox_CloseDate.Name = "maskedTextBox_CloseDate";
             this.maskedTextBox_CloseDate.Size = new System.Drawing.Size(115, 29);
             this.maskedTextBox_CloseDate.TabIndex = 334;
@@ -144,6 +144,7 @@
             this.label95.AutoSize = true;
             this.label95.BackColor = System.Drawing.Color.Transparent;
             this.label95.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label95.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label95.Location = new System.Drawing.Point(56, 81);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(57, 20);
